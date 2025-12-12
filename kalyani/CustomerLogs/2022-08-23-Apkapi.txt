@@ -1,0 +1,57 @@
+2022-08-23 09:19:07.7224|INFO|apkRegLogger|
+
+ -------- Pulling data from mssql to autosherpa -------------AT  : 23-08-2022 9:19:07 am
+2022-08-23 09:19:10.0307|INFO|apkRegLogger|
+
+ --------  Extraction Error Outer ExeptionThe underlying provider failed on Open. -------------: 
+2022-08-23 09:19:10.0327|INFO|apkRegLogger|
+
+ -------- Pulling data from mssql to autosherpa Ended -------------AT  : 23-08-2022 9:19:10 am
+2022-08-23 09:24:06.3558|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 9:24:06 am
+2022-08-23 09:24:06.3618|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 9:24:06 am
+2022-08-23 09:32:06.3637|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 9:32:06 am
+2022-08-23 09:32:06.3637|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 9:32:06 am
+2022-08-23 09:40:06.3679|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 9:40:06 am
+2022-08-23 09:40:06.3818|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 9:40:06 am
+2022-08-23 09:48:06.3621|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 9:48:06 am
+2022-08-23 09:48:06.3621|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 9:48:06 am
+2022-08-23 09:54:31.3470|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-08-23 09:54:31.4481|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-08-23 09:54:31.5234|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 9:54:31 am
+2022-08-23 09:54:31.5234|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 9:54:31 am
+2022-08-23 10:55:39.7373|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-08-23 10:55:39.8051|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-08-23 10:55:39.8460|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 10:55:39 am
+2022-08-23 10:55:39.8460|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 10:55:39 am
+2022-08-23 11:03:39.8207|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 11:03:39 am
+2022-08-23 11:03:39.8397|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 11:03:39 am
+2022-08-23 12:23:39.8249|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 12:23:39 pm
+2022-08-23 12:23:39.8249|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 12:23:39 pm
+2022-08-23 12:31:39.8253|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-08-2022 12:31:39 pm
+2022-08-23 12:31:39.8253|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-08-2022 12:31:39 pm

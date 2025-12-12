@@ -1,0 +1,53 @@
+﻿@model AutoSherpa_project.Models.herodealer
+@{
+    ViewBag.Title = "ChangeAssignment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .lblmandatory {
+        color: #d00;
+        font-family: 'FontAwesome';
+        font-weight: bold;
+        font-size: 10px;
+        content: "\f069";
+        top: 4px;
+        position: absolute;
+        margin-left: 8px;
+    }
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Change Assignment</div>
+    <div class="panel-body">
+        <div class="col-md-12">
+            <div class="row filterDiv">
+                <div class="col-md-2">
+                    <label>Module Type:<sup class="text-danger">*</sup> </label>
+                    <div class="form-group">
+                      
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label>Agent Name :<sup class="text-danger">*</sup> </label>
+                    <div class="form-group">
+                     
+                    </div>
+                </div>
+                <div class="col-md-2" id="workshopDiv">
+                    <div class="form-group">
+                        <label>Workshops : </label>
+                        <br />
+                        <select id="workshopLoc" class="form-control selectpicker" data-column-index="4" multiple>
+                        </select>
+                    </div>
+                </div>
+             
+            </div>
+         
+         
+        </div>
+    </div>
+
+  
+
+</div>

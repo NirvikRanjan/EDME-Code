@@ -1,0 +1,285 @@
+2025-03-14 11:40:54.6600|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 11:40:54.7080|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 11:40:54.7387|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 11:40:54 am
+2025-03-14 11:40:54.7387|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 11:40:54.7896|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 11:40:54 am
+2025-03-14 11:40:54.7896|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 11:40:54 am
+2025-03-14 11:40:54.8084|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 11:40:54 am
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 11:49:05.1051|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 11:49:05 am
+2025-03-14 11:49:05.1356|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 11:49:05 am
+2025-03-14 11:57:01.9013|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 11:57:01 am
+2025-03-14 11:57:01.9013|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 11:57:01 am
+2025-03-14 12:01:32.4404|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 12:01:32.4706|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 12:01:32.5107|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 12:01:32 pm
+2025-03-14 12:01:32.5168|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 12:01:32.5549|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 12:01:32 pm
+2025-03-14 12:01:32.5549|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 12:01:32 pm
+2025-03-14 12:01:32.5659|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 12:01:32 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 12:09:32.4855|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 12:09:32 pm
+2025-03-14 12:09:32.4855|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 12:09:32 pm
+2025-03-14 12:17:32.4794|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 12:17:32 pm
+2025-03-14 12:17:32.4794|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 12:17:32 pm
+2025-03-14 12:25:32.4904|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 12:25:32 pm
+2025-03-14 12:25:32.4904|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 12:25:32 pm
+2025-03-14 12:45:12.8783|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 12:45:12.9500|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 12:45:12.9879|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 12:45:12 pm
+2025-03-14 12:45:12.9879|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 12:45:13.0444|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 12:45:13 pm
+2025-03-14 12:45:13.0444|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 12:45:13 pm
+2025-03-14 12:45:13.0657|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 12:45:13 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 14:28:47.1727|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 14:28:47.2255|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 14:28:47.2506|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 2:28:47 pm
+2025-03-14 14:28:47.2506|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 14:28:47.3168|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 2:28:47 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 14:28:47.5697|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 2:28:47 pm
+2025-03-14 14:28:47.5697|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 2:28:47 pm
+2025-03-14 14:36:47.2227|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 2:36:47 pm
+2025-03-14 14:36:47.2227|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 2:36:47 pm
+2025-03-14 14:44:47.2245|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 2:44:47 pm
+2025-03-14 14:44:47.2245|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 2:44:47 pm
+2025-03-14 14:52:47.2167|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 2:52:47 pm
+2025-03-14 14:52:47.2216|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 2:52:47 pm
+2025-03-14 15:00:00.0326|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 14-03-2025 3:00:00 pm
+2025-03-14 15:00:00.0326|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 14-03-2025 3:00:00 pm
+2025-03-14 15:00:47.2135|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:00:47 pm
+2025-03-14 15:00:47.2548|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:00:47 pm
+2025-03-14 15:08:47.2200|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:08:47 pm
+2025-03-14 15:08:47.2200|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:08:47 pm
+2025-03-14 15:16:47.2219|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:16:47 pm
+2025-03-14 15:16:47.2219|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:16:47 pm
+2025-03-14 15:24:47.2230|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:24:47 pm
+2025-03-14 15:24:47.2230|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:24:47 pm
+2025-03-14 15:49:00.8453|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 15:49:00.8965|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 15:49:00.9259|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 3:49:00 pm
+2025-03-14 15:49:00.9259|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 15:49:00.9616|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 3:49:00 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 15:49:01.0373|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:49:01 pm
+2025-03-14 15:49:01.0373|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:49:01 pm
+2025-03-14 15:57:00.8947|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 3:57:00 pm
+2025-03-14 15:57:00.8947|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 3:57:00 pm
+2025-03-14 16:00:00.0531|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 14-03-2025 4:00:00 pm
+2025-03-14 16:00:00.0531|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 14-03-2025 4:00:00 pm
+2025-03-14 16:05:00.8946|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:05:00 pm
+2025-03-14 16:05:00.8946|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:05:00 pm
+2025-03-14 16:13:00.8931|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:13:00 pm
+2025-03-14 16:13:00.8931|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:13:00 pm
+2025-03-14 16:16:21.0324|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:16:21.0974|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:16:21.1313|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:16:21 pm
+2025-03-14 16:16:21.1429|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:16:21.1908|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:16:21 pm
+2025-03-14 16:16:21.1908|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:16:21 pm
+2025-03-14 16:16:21.2144|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:16:21 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:24:00.2507|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:24:00.3174|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:24:00.3499|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:24:00 pm
+2025-03-14 16:24:00.3499|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:24:00.4171|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:24:00 pm
+2025-03-14 16:24:00.4171|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:24:00 pm
+2025-03-14 16:24:00.4309|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:24:00 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:26:59.5949|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:26:59.6586|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:26:59.6907|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:26:59 pm
+2025-03-14 16:26:59.6907|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:26:59.7388|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:26:59 pm
+2025-03-14 16:26:59.7388|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:26:59 pm
+2025-03-14 16:26:59.7520|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:26:59 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:39:24.4380|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:39:24.4820|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:39:24.5173|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:39:24 pm
+2025-03-14 16:39:24.5173|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:39:24.5631|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:39:24 pm
+2025-03-14 16:39:24.5631|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:39:24 pm
+2025-03-14 16:39:24.5631|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:39:24 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:45:54.2822|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:45:54.3641|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:45:54.4097|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:45:54 pm
+2025-03-14 16:45:54.4097|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:45:54.4770|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:45:54 pm
+2025-03-14 16:45:54.4770|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:45:54 pm
+2025-03-14 16:45:54.4770|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:45:54 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:51:09.0481|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-03-14 16:51:09.1323|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-03-14 16:51:09.1746|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 14-03-2025 4:51:09 pm
+2025-03-14 16:51:09.1746|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-03-14 16:51:09.2376|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:51:09 pm
+2025-03-14 16:51:09.2376|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:51:09 pm
+2025-03-14 16:51:09.2376|ERROR|apkRegLogger|[ERROR] Renewal Data Job Scheduler Initialization Failed | AT: 14-03-2025 4:51:09 pm
+Error: '/' must be followed by an integer.
+Method: Int32 StoreExpressionVals(Int32, System.String, Int32)
+StackTrace:    at Quartz.CronExpression.StoreExpressionVals(Int32 pos, String s, Int32 type)
+   at Quartz.CronExpression.BuildExpression(String expression)
+   at Quartz.CronScheduleTriggerBuilderExtensions.WithCronSchedule(TriggerBuilder triggerBuilder, String cronExpression)
+   at AutoSherpa_project.Models.Schedulers.RenewalApi.<InitializeSchedulerAsync>d__1.MoveNext() in C:\AdithyaBirlaCode\Edme360\kalyani\Models\Schedulers\RenewalApi.cs:line 182
+2025-03-14 16:59:09.1216|INFO|apkRegLogger|
+ Android CallSynch Started at: 14-03-2025 4:59:09 pm
+2025-03-14 16:59:09.1276|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 14-03-2025 4:59:09 pm
+2025-03-14 17:00:00.0357|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 14-03-2025 5:00:00 pm
+2025-03-14 17:00:00.0357|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 14-03-2025 5:00:00 pm

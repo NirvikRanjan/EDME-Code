@@ -1,0 +1,651 @@
+2023-01-23 09:14:16.0875|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 09:14:16.2293|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 09:14:16.8150|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:14:16 am
+2023-01-23 09:14:16.8150|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:14:16 am
+2023-01-23 09:22:16.2631|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:22:16 am
+2023-01-23 09:22:16.2631|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:22:16 am
+2023-01-23 09:30:16.2455|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:30:16 am
+2023-01-23 09:30:16.2614|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:30:16 am
+2023-01-23 09:38:16.2607|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:38:16 am
+2023-01-23 09:38:16.2607|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:38:16 am
+2023-01-23 09:46:16.2597|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:46:16 am
+2023-01-23 09:46:16.2597|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:46:16 am
+2023-01-23 09:54:16.2616|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 9:54:16 am
+2023-01-23 09:54:16.2616|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 9:54:16 am
+2023-01-23 10:02:16.2598|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 10:02:16 am
+2023-01-23 10:02:16.2598|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 10:02:16 am
+2023-01-23 10:10:16.2487|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 10:10:16 am
+2023-01-23 10:10:16.2627|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 10:10:16 am
+2023-01-23 11:01:10.0929|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 11:01:10.3078|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 11:01:10.8505|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:01:10 am
+2023-01-23 11:01:10.8505|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:01:10 am
+2023-01-23 11:09:10.3241|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:09:10 am
+2023-01-23 11:09:10.3241|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:09:10 am
+2023-01-23 11:13:57.7365|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 11:13:57.9044|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 11:13:58.2572|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:13:58 am
+2023-01-23 11:13:58.2572|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:13:58 am
+2023-01-23 11:16:59.2471|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 11:16:59.4050|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 11:16:59.5270|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:16:59 am
+2023-01-23 11:16:59.5270|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:16:59 am
+2023-01-23 11:19:49.7296|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 11:19:49 am
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 11:19:56.6656|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 11:19:56 am
+2023-01-23 11:24:59.4212|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:24:59 am
+2023-01-23 11:24:59.4212|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:24:59 am
+2023-01-23 11:29:36.8209|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 11:29:36 am
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 11:29:42.0869|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 11:29:42 am
+2023-01-23 11:32:59.4329|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:32:59 am
+2023-01-23 11:32:59.4329|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:32:59 am
+2023-01-23 11:40:59.4338|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:40:59 am
+2023-01-23 11:40:59.4338|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:40:59 am
+2023-01-23 11:48:59.4349|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:48:59 am
+2023-01-23 11:48:59.4349|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:48:59 am
+2023-01-23 11:56:59.4322|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 11:56:59 am
+2023-01-23 11:56:59.4322|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 11:56:59 am
+2023-01-23 12:04:59.4237|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:04:59 pm
+2023-01-23 12:04:59.4237|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:04:59 pm
+2023-01-23 12:06:59.3871|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:06:59.5101|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:06:59.6010|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:06:59 pm
+2023-01-23 12:06:59.6030|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:06:59 pm
+2023-01-23 12:21:02.5590|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:21:02.7380|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:21:03.3400|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:21:03 pm
+2023-01-23 12:21:03.3400|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:21:03 pm
+2023-01-23 12:22:53.8519|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 12:22:53 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 12:23:05.3764|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 12:23:05 pm
+2023-01-23 12:26:23.6119|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 12:26:23 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 12:26:25.0106|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 12:26:25 pm
+2023-01-23 12:29:02.7601|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:29:02 pm
+2023-01-23 12:29:02.7601|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:29:02 pm
+2023-01-23 12:31:09.3565|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:31:09.5423|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:31:09.9500|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:31:09 pm
+2023-01-23 12:31:09.9500|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:31:09 pm
+2023-01-23 12:32:43.8752|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 12:32:43 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 12:32:46.1247|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 12:32:46 pm
+2023-01-23 12:41:33.9168|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:41:34.1287|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:41:34.5097|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:41:34 pm
+2023-01-23 12:41:34.5097|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:41:34 pm
+2023-01-23 12:45:29.8684|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:45:30.0572|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:45:30.3959|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:45:30 pm
+2023-01-23 12:45:30.3959|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:45:30 pm
+2023-01-23 12:48:50.2311|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:48:50.4541|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:48:50.7994|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:48:50 pm
+2023-01-23 12:48:50.7994|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:48:50 pm
+2023-01-23 12:52:48.3903|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 12:52:48 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 12:52:50.7375|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 12:52:50 pm
+2023-01-23 12:57:09.0121|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 12:57:09.2130|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 12:57:09.6847|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 12:57:09 pm
+2023-01-23 12:57:09.7117|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 12:57:09 pm
+2023-01-23 12:59:04.3467|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 12:59:04 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 12:59:06.7911|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 12:59:06 pm
+2023-01-23 13:05:09.2448|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:05:09 pm
+2023-01-23 13:05:09.2448|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:05:09 pm
+2023-01-23 13:05:48.4236|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:05:48 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:05:50.7022|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:05:50 pm
+2023-01-23 13:07:38.3193|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:07:38 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:07:40.5712|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:07:40 pm
+2023-01-23 13:11:12.1847|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 13:11:12.3267|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 13:11:12.6854|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:11:12 pm
+2023-01-23 13:11:12.6854|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:11:12 pm
+2023-01-23 13:12:32.9222|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:12:32 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:12:35.2162|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:12:35 pm
+2023-01-23 13:15:38.4981|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 13:15:38.6510|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 13:15:39.0308|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:15:39 pm
+2023-01-23 13:15:39.0308|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:15:39 pm
+2023-01-23 13:17:49.3286|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:17:49 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:17:51.5899|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:17:51 pm
+2023-01-23 13:21:37.6676|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:21:37 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:21:39.1318|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:21:39 pm
+2023-01-23 13:23:38.6606|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:23:38 pm
+2023-01-23 13:23:38.6656|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:23:38 pm
+2023-01-23 13:23:47.9034|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:23:47 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:23:49.3790|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:23:49 pm
+2023-01-23 13:30:16.3884|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 13:30:16.5303|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 13:30:16.8761|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:30:16 pm
+2023-01-23 13:30:16.8761|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:30:16 pm
+2023-01-23 13:33:35.2590|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:33:35 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:33:37.5963|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:33:37 pm
+2023-01-23 13:35:44.3875|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 13:35:44.5194|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 13:35:44.8678|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:35:44 pm
+2023-01-23 13:35:44.8708|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:35:44 pm
+2023-01-23 13:37:33.0927|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:37:33 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:37:35.9672|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:37:35 pm
+2023-01-23 13:40:48.7437|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 13:40:48.9026|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 13:40:49.0436|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:40:49 pm
+2023-01-23 13:40:49.0436|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:40:49 pm
+2023-01-23 13:43:40.4675|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:43:40 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 13:43:42.8103|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:43:42 pm
+2023-01-23 13:48:02.7951|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 1:48:02 pm
+ CustId: 41379 VehId: 41401 User: demo_tw1
+2023-01-23 13:48:05.3422|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 1:48:05 pm
+2023-01-23 13:48:48.9252|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:48:48 pm
+2023-01-23 13:48:48.9252|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:48:48 pm
+2023-01-23 13:56:48.9328|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 1:56:48 pm
+2023-01-23 13:56:48.9328|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 1:56:48 pm
+2023-01-23 14:04:48.9202|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:04:48 pm
+2023-01-23 14:04:48.9202|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:04:48 pm
+2023-01-23 14:12:48.9317|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:12:48 pm
+2023-01-23 14:12:48.9317|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:12:48 pm
+2023-01-23 14:20:48.9214|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:20:48 pm
+2023-01-23 14:20:48.9214|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:20:48 pm
+2023-01-23 14:28:48.9224|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:28:48 pm
+2023-01-23 14:28:48.9224|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:28:48 pm
+2023-01-23 14:29:58.2860|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 2:29:58 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 14:29:59.8502|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 2:29:59 pm
+2023-01-23 14:36:48.9186|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:36:48 pm
+2023-01-23 14:36:48.9186|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:36:48 pm
+2023-01-23 14:44:48.9201|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:44:48 pm
+2023-01-23 14:44:48.9201|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:44:48 pm
+2023-01-23 14:52:48.9317|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 2:52:48 pm
+2023-01-23 14:52:48.9317|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 2:52:48 pm
+2023-01-23 15:00:48.9192|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 3:00:48 pm
+2023-01-23 15:00:48.9192|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 3:00:48 pm
+2023-01-23 15:06:01.8383|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 3:06:01 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 15:06:03.3480|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 3:06:03 pm
+2023-01-23 15:08:05.1341|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 3:08:05 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 15:08:07.6485|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 3:08:07 pm
+2023-01-23 15:08:48.9239|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 3:08:48 pm
+2023-01-23 15:08:48.9349|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 3:08:48 pm
+2023-01-23 15:16:48.9341|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 3:16:48 pm
+2023-01-23 15:16:48.9481|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 3:16:48 pm
+2023-01-23 15:24:48.9166|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 3:24:48 pm
+2023-01-23 15:24:48.9166|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 3:24:48 pm
+2023-01-23 15:30:46.3708|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 3:30:46 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 15:30:47.9550|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 3:30:47 pm
+2023-01-23 15:32:48.9332|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 3:32:48 pm
+2023-01-23 15:32:48.9332|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 3:32:48 pm
+2023-01-23 16:03:57.3062|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 16:03:57.4481|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 16:03:57.7609|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:03:57 pm
+2023-01-23 16:03:57.7609|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:03:57 pm
+2023-01-23 16:05:14.4365|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:05:14 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:05:16.7422|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:05:16 pm
+2023-01-23 16:11:57.4787|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:11:57 pm
+2023-01-23 16:11:57.4787|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:11:57 pm
+2023-01-23 16:19:57.4565|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:19:57 pm
+2023-01-23 16:19:57.4659|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:19:57 pm
+2023-01-23 16:24:29.7139|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 16:24:29.8618|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 16:24:30.1926|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:24:30 pm
+2023-01-23 16:24:30.1926|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:24:30 pm
+2023-01-23 16:25:58.5419|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:25:58 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:26:01.0199|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:26:01 pm
+2023-01-23 16:32:29.8869|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:32:29 pm
+2023-01-23 16:32:29.8869|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:32:29 pm
+2023-01-23 16:34:57.0367|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:34:57 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:34:58.5571|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:34:58 pm
+2023-01-23 16:36:30.2182|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 16:36:30.3541|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 16:36:30.7879|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:36:30 pm
+2023-01-23 16:36:30.7879|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:36:30 pm
+2023-01-23 16:40:36.7949|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 16:40:36.9858|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 16:40:37.5315|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:40:37 pm
+2023-01-23 16:40:37.5315|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:40:37 pm
+2023-01-23 16:42:15.8240|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:42:15 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:42:18.2012|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:42:18 pm
+2023-01-23 16:48:41.0558|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:48:41 pm
+2023-01-23 16:48:41.0558|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:48:41 pm
+2023-01-23 16:49:05.3907|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:49:05 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:49:06.9290|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:49:06 pm
+2023-01-23 16:51:33.5014|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 4:51:33 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 16:51:35.0334|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 4:51:35 pm
+2023-01-23 16:56:52.3388|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:56:52 pm
+2023-01-23 16:56:56.0086|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:56:56 pm
+2023-01-23 16:59:09.4812|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 16:59:09.6261|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 16:59:09.9649|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 4:59:09 pm
+2023-01-23 16:59:09.9649|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 4:59:09 pm
+2023-01-23 17:00:49.2526|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 5:00:49 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 17:00:51.5621|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 5:00:51 pm
+2023-01-23 17:04:35.6972|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 17:04:35.8371|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 17:04:36.1829|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:04:36 pm
+2023-01-23 17:04:36.1829|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:04:36 pm
+2023-01-23 17:08:53.6964|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 17:08:53.8263|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 17:08:54.1851|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:08:54 pm
+2023-01-23 17:08:54.1851|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:08:54 pm
+2023-01-23 17:10:00.0963|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 5:10:00 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 17:10:02.5456|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 5:10:02 pm
+2023-01-23 17:10:52.6380|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 5:10:52 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 17:10:54.1150|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 5:10:54 pm
+2023-01-23 17:16:53.8564|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:16:53 pm
+2023-01-23 17:16:53.8564|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:16:53 pm
+2023-01-23 17:24:53.8532|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:24:53 pm
+2023-01-23 17:24:53.8532|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:24:53 pm
+2023-01-23 17:32:53.8403|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:32:53 pm
+2023-01-23 17:32:53.8403|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:32:53 pm
+2023-01-23 17:40:53.8527|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:40:53 pm
+2023-01-23 17:40:53.8527|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:40:53 pm
+2023-01-23 17:48:53.8628|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:48:53 pm
+2023-01-23 17:48:53.8698|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:48:53 pm
+2023-01-23 17:56:53.8528|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 5:56:53 pm
+2023-01-23 17:56:53.8528|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 5:56:53 pm
+2023-01-23 18:04:53.8432|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 6:04:53 pm
+2023-01-23 18:04:53.8432|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 6:04:53 pm
+2023-01-23 18:07:40.1036|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-23 18:07:40.2355|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-23 18:07:40.5603|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 6:07:40 pm
+2023-01-23 18:07:40.5773|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 6:07:40 pm
+2023-01-23 18:08:50.8515|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 6:08:50 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 18:08:53.1558|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 6:08:53 pm
+2023-01-23 18:11:21.1930|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 6:11:21 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 18:11:22.6556|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 6:11:22 pm
+2023-01-23 18:13:39.5524|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/01/2023 6:13:39 pm
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-23 18:13:40.9732|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/01/2023 6:13:40 pm
+2023-01-23 18:15:40.2635|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 6:15:40 pm
+2023-01-23 18:15:40.2635|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 6:15:40 pm
+2023-01-23 18:23:40.2593|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-01-2023 6:23:40 pm
+2023-01-23 18:23:40.2593|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-01-2023 6:23:40 pm

@@ -1,0 +1,124 @@
+2024-12-24 13:46:03.4351|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2024-12-24 13:46:03.5047|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2024-12-24 13:46:03.5813|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 1:46:03 pm
+2024-12-24 13:46:03.5813|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 1:46:03 pm
+2024-12-24 13:54:03.5724|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 1:54:03 pm
+2024-12-24 13:54:03.6292|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 1:54:03 pm
+2024-12-24 14:00:00.0420|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 24-12-2024 2:00:00 pm
+2024-12-24 14:00:00.0440|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 24-12-2024 2:00:00 pm
+2024-12-24 14:02:03.4956|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 2:02:03 pm
+2024-12-24 14:02:03.4956|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 2:02:03 pm
+2024-12-24 14:10:03.4972|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 2:10:03 pm
+2024-12-24 14:10:03.4972|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 2:10:03 pm
+2024-12-24 14:58:54.5284|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2024-12-24 14:58:54.6064|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2024-12-24 14:58:54.6802|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 2:58:54 pm
+2024-12-24 14:58:54.6802|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 2:58:54 pm
+2024-12-24 15:00:00.0326|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 24-12-2024 3:00:00 pm
+2024-12-24 15:00:00.0326|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 24-12-2024 3:00:00 pm
+2024-12-24 15:06:54.5977|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:06:54 pm
+2024-12-24 15:06:54.6067|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:06:54 pm
+2024-12-24 15:14:54.5915|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:14:54 pm
+2024-12-24 15:14:54.5915|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:14:54 pm
+2024-12-24 15:22:54.5970|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:22:54 pm
+2024-12-24 15:22:54.6050|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:22:54 pm
+2024-12-24 15:30:54.5940|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:30:54 pm
+2024-12-24 15:30:54.5940|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:30:54 pm
+2024-12-24 15:38:54.5897|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:38:54 pm
+2024-12-24 15:38:54.5897|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:38:54 pm
+2024-12-24 15:46:54.5921|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:46:54 pm
+2024-12-24 15:46:54.6081|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:46:54 pm
+2024-12-24 15:54:54.6051|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 3:54:54 pm
+2024-12-24 15:54:54.6051|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 3:54:54 pm
+2024-12-24 16:00:00.0154|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 24-12-2024 4:00:00 pm
+2024-12-24 16:00:00.0274|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 24-12-2024 4:00:00 pm
+2024-12-24 16:02:54.5900|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:02:54 pm
+2024-12-24 16:02:54.5900|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:02:54 pm
+2024-12-24 16:10:54.5946|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:10:54 pm
+2024-12-24 16:10:54.5946|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:10:54 pm
+2024-12-24 16:18:54.5908|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:18:54 pm
+2024-12-24 16:18:54.5908|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:18:54 pm
+2024-12-24 16:26:54.5963|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:26:54 pm
+2024-12-24 16:26:54.5963|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:26:54 pm
+2024-12-24 16:34:54.5964|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:34:54 pm
+2024-12-24 16:34:54.5964|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:34:54 pm
+2024-12-24 16:42:54.5989|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:42:54 pm
+2024-12-24 16:42:54.5989|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:42:54 pm
+2024-12-24 16:50:54.5896|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:50:54 pm
+2024-12-24 16:50:54.5896|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:50:54 pm
+2024-12-24 16:58:54.7640|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 4:58:54 pm
+2024-12-24 16:58:54.7640|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 4:58:54 pm
+2024-12-24 17:00:00.0041|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 24-12-2024 5:00:00 pm
+2024-12-24 17:00:00.0120|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 24-12-2024 5:00:00 pm
+2024-12-24 17:06:54.5963|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 5:06:54 pm
+2024-12-24 17:06:54.5963|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 5:06:54 pm
+2024-12-24 17:14:54.6068|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 5:14:54 pm
+2024-12-24 17:14:54.6068|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 5:14:54 pm
+2024-12-24 17:22:54.5892|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 5:22:54 pm
+2024-12-24 17:22:54.5892|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 5:22:54 pm
+2024-12-24 17:30:54.6435|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-12-2024 5:30:54 pm
+2024-12-24 17:30:54.6634|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-12-2024 5:30:54 pm

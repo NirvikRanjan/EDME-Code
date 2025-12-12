@@ -1,0 +1,28 @@
+2025-04-24 12:16:54.9212|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-04-24 12:16:54.9848|INFO|apkRegLogger|
+
+2025-04-24 12:16:54.9848|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 24-04-2025 12:16:54 pm
+2025-04-24 12:16:54.9848|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-04-24 12:16:55.0128|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-04-24 12:16:55.0349|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 24-04-2025 12:16:55 pm
+
+2025-04-24 12:16:55.0349|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2025 12:16:55 pm
+2025-04-24 12:16:55.0349|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2025 12:16:55 pm
+2025-04-24 12:16:59.9174|INFO|apkRegLogger|
+
+2025-04-24 12:16:59.9241|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 24-04-2025 12:16:59 pm
+2025-04-24 12:16:59.9241|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-24 12:16:59.9409|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-04-24 12:16:59.9409|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 24-04-2025 12:16:59 pm
+
+2025-04-24 12:17:00.0477|INFO|apkRegLogger|
+
+2025-04-24 12:17:00.0477|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 24-04-2025 12:17:00 pm
+2025-04-24 12:17:00.0477|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-24 12:17:00.0477|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 1/1 * ? *
+2025-04-24 12:17:00.0477|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 24-04-2025 12:17:00 pm
+

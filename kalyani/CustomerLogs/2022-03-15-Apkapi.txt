@@ -1,0 +1,174 @@
+2022-03-15 10:58:23.1129|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-15 10:58:23.2549|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-15 10:58:23.3279|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 10:58:23 am
+2022-03-15 10:58:23.3279|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 10:58:23 am
+2022-03-15 11:02:03.8989|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 15/03/2022 11:02:03 am
+ CustId: 13339 VehId: 28901 User: 10852_Apporva
+2022-03-15 11:02:19.6710|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":113,"vehicleregno":"pb03ab6986","vehicleregdate":"2022-03-09T00:00:00","modelname":"GLAMOUR -CDRS BSIV","modelvarinat":"GLAMOUR -CDRS BSIV","email":"sdcsds@gmail.com","mobile":"8800257636","salutation":"Mr   ","customername":"CHUKKALA","middlename":"SRISELAM","lastname":null,"Address":"S/O CH RAMULU # 3-56, DATHAR PALLE, YADAGIRIGUTTA","Address_Line_2":null,"cityname":"YADHADRI","cityid":5173,"pincode":"508115","insurancecompany":null,"policynumber":"3005/43580492/10852/000","policyexpirydate":"2022-01-28","nomineename":"HEMALAMMA","nomineeage":35,"nomineerelationship":"Wife","nomineerelationshipid":1,"renewwaltype":"SAOD","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":0,"RTI_Tenure":0,"Basic_IDV_Tenure":0,"NCB_Per_Tenure":0,"NCB_Value_Tenure":0,"GST_Per":18,"grosspremium":0.0,"totalpremium":0.0,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":13339,"vehicleid":28901,"disposeddate":"2022-03-15","disposedtime":"11:02 am","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"N","additionalcoverRTI":"N","riskstartdate":null,"state":null,"stateid":36,"totalgstamt":0.0,"creID":1706,"creName":"10852_Apporva","campaignName":"Winback","ispolicygenerated":false,"insuranceassignedinteractionId":42672,"herodealerId":18,"ResponseCode":null,"ResponseMessage":null}
+2022-03-15 11:02:26.4993|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":0,"cpa_opted":"Y","zd_opted":"N","rti_opted":"N","risk_start_date":"2022-03-22","policy_expiry_date":"2022-01-28","first_name":"CHUKKALA","middle_name":"SRISELAM","last_name":null,"email":"sdcsds@gmail.com","mobile_no":"8800257636","address1":"S/O CH RAMULU # 3-56, DATHAR PALLE, YADAGIRIGUTTA","address3":null,"city":5173,"state":36,"pin":"508115","nominee_name":"HEMALAMMA","nominee_age":35,"nominee_relationship":1,"vehRegDate":"2022-03-09T00:00:00","vehReg1":"pb","vehReg2":"03","vehReg3":"ab","vehReg4":"6986","total_premium_collected":0,"pre_Policy_No":"3005/43580492/10852/000","GrossPremiumWoGST":0.0,"TotalGSTAmount":0.0,"GSTPercentage":18}
+2022-03-15 11:02:28.0656|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 15-03-2022 11:02:28 am
+2022-03-15 11:06:23.2712|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:06:23 am
+2022-03-15 11:06:23.2712|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:06:23 am
+2022-03-15 11:14:23.2647|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:14:23 am
+2022-03-15 11:14:23.2727|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:14:23 am
+2022-03-15 11:22:23.2633|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:22:23 am
+2022-03-15 11:22:23.2633|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:22:23 am
+2022-03-15 11:30:23.2696|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:30:23 am
+2022-03-15 11:30:23.2953|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:30:23 am
+2022-03-15 11:38:23.2647|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:38:23 am
+2022-03-15 11:38:23.2647|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:38:23 am
+2022-03-15 11:46:23.2724|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:46:23 am
+2022-03-15 11:46:23.2724|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:46:23 am
+2022-03-15 11:54:23.2695|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 11:54:23 am
+2022-03-15 11:54:23.2695|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 11:54:23 am
+2022-03-15 12:02:23.2748|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:02:23 pm
+2022-03-15 12:02:23.2748|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:02:23 pm
+2022-03-15 12:10:23.2711|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:10:23 pm
+2022-03-15 12:10:23.2711|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:10:23 pm
+2022-03-15 12:18:23.2592|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:18:23 pm
+2022-03-15 12:18:23.2592|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:18:23 pm
+2022-03-15 12:24:50.7542|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-15 12:24:50.8642|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-15 12:24:51.8686|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:24:51 pm
+2022-03-15 12:24:51.8686|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:24:51 pm
+2022-03-15 12:32:50.8813|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:32:50 pm
+2022-03-15 12:32:50.8813|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:32:50 pm
+2022-03-15 12:40:50.8808|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:40:50 pm
+2022-03-15 12:40:50.8808|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:40:50 pm
+2022-03-15 12:48:50.8784|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:48:50 pm
+2022-03-15 12:48:50.8784|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:48:50 pm
+2022-03-15 12:56:50.8845|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 12:56:50 pm
+2022-03-15 12:56:50.8845|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 12:56:50 pm
+2022-03-15 13:04:50.8825|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:04:50 pm
+2022-03-15 13:04:50.8825|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:04:50 pm
+2022-03-15 13:12:50.8761|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:12:50 pm
+2022-03-15 13:12:50.8791|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:12:50 pm
+2022-03-15 13:20:50.8741|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:20:50 pm
+2022-03-15 13:20:50.8741|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:20:50 pm
+2022-03-15 13:28:50.9411|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:28:50 pm
+2022-03-15 13:28:50.9411|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:28:50 pm
+2022-03-15 13:36:50.8725|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:36:50 pm
+2022-03-15 13:36:50.8725|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:36:50 pm
+2022-03-15 13:44:50.8823|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:44:50 pm
+2022-03-15 13:44:50.8823|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:44:50 pm
+2022-03-15 13:52:50.9606|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 1:52:50 pm
+2022-03-15 13:52:50.9606|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 1:52:50 pm
+2022-03-15 14:00:50.8796|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:00:50 pm
+2022-03-15 14:00:50.8796|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:00:50 pm
+2022-03-15 14:08:50.8748|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:08:50 pm
+2022-03-15 14:08:50.8798|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:08:50 pm
+2022-03-15 14:16:50.8789|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:16:50 pm
+2022-03-15 14:16:50.8789|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:16:50 pm
+2022-03-15 14:24:50.8843|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:24:50 pm
+2022-03-15 14:24:50.8843|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:24:50 pm
+2022-03-15 14:32:50.8757|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:32:50 pm
+2022-03-15 14:32:50.8757|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:32:50 pm
+2022-03-15 14:40:50.8817|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 2:40:50 pm
+2022-03-15 14:40:50.8817|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 2:40:50 pm
+2022-03-15 15:28:50.8981|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 3:28:50 pm
+2022-03-15 15:28:50.8981|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 3:28:50 pm
+2022-03-15 15:36:50.8825|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 3:36:50 pm
+2022-03-15 15:36:50.8825|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 3:36:50 pm
+2022-03-15 16:40:50.8993|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 4:40:50 pm
+2022-03-15 16:40:50.8993|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 4:40:50 pm
+2022-03-15 16:48:50.8832|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 4:48:50 pm
+2022-03-15 16:48:50.8832|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 4:48:50 pm
+2022-03-15 16:56:50.9106|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 4:56:50 pm
+2022-03-15 16:56:50.9106|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 4:56:50 pm
+2022-03-15 17:04:50.8717|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 5:04:50 pm
+2022-03-15 17:04:50.8717|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 5:04:50 pm
+2022-03-15 17:12:50.8813|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 5:12:50 pm
+2022-03-15 17:12:50.8813|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 5:12:50 pm
+2022-03-15 18:08:50.8805|INFO|apkRegLogger|
+ Android CallSynch Started at: 15-03-2022 6:08:50 pm
+2022-03-15 18:08:50.8805|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 15-03-2022 6:08:50 pm

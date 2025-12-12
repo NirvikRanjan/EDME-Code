@@ -1,0 +1,2594 @@
+﻿@model AutoSherpa_project.Models.ViewModels.CallLoggingViewModel
+<style>
+    .red-tooltip + .tooltip > .tooltip-inner {
+        background-color: wheat;
+        border: 1px;
+        color: black;
+        min-width: 260px;
+    }
+
+    .red-tooltip + .tooltip > .tooltip-arrow {
+        border-bottom-color: burlywood;
+        border: 1px;
+        color: black;
+        min-width: 260px;
+        font-weight: bold;
+    }
+
+    input[type=radio].turncheckbox {
+        padding: 0.5em;
+        -webkit-appearance: none;
+        outline: 0.1em solid black;
+        outline-offset: 0.1em;
+    }
+
+        input[type=radio].turncheckbox:checked {
+            display: inline-block;
+            background-color: forestgreen;
+        }
+
+    .inputcolorchange:focus {
+        background-color: white;
+    }
+
+    :read-only {
+    }
+
+    /* ... so you might want to scope it */
+    input[type=text]:read-only {
+        cursor: not-allowed;
+        background-color: red;
+    }
+
+    input[type=text]:focus {
+        border-color: dodgerBlue;
+    }
+
+    .inputWithIcon input[type=text] {
+        padding-left: 14px;
+        padding-right: 34px;
+    }
+
+    .inputWithIcon {
+        position: relative;
+    }
+
+        .inputWithIcon i {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            padding: 3px 8px;
+            color: #aaa;
+            transition: .3s;
+        }
+
+        .inputWithIcon input[type=text]:focus + i {
+            color: dodgerBlue;
+        }
+
+        .inputWithIcon.inputIconBg i {
+            background-color: #aaa;
+            color: #fff;
+            padding: 9px 4px;
+            border-radius: 4px 0 0 4px;
+        }
+
+    .checkboxes {
+        width: 30px;
+        height: 20px;
+    }
+</style>
+@{
+
+    #region Fetching values
+    string nomineeRelation = string.Empty;
+    string UserfullName = string.Empty;
+    //  string pincodeval = string.Empty;
+    string custphone = Model.vehi.Mobile;
+    string regdate = (Model.vehi.Vehicle_Reg_date).ToString();
+    string vehemail = Model.vehi.email;
+    UserfullName = Model.vehi.first_name + " " + Model.vehi.Middle_Name + " " + Model.vehi.last_name;
+    if (Model.vehi.Nominee_Relationship != null)
+    {
+        nomineeRelation = Model.vehi.Nominee_Relationship.ToLower().Trim(); ;
+    }
+    long? Ex_Basic_OD_Tenure1 = Model.vehi.Ex_Basic_OD_WithOutNCB_Tenure1;
+    //long? Ex_Basic_OD_Tenure1 = Model.vehi.Ex_Basic_OD_Tenure1;
+    long? Ex_NCB_Value_Tenure1 = Model.vehi.Ex_NCB_Value_Tenure1;
+    long? Ex_Basic_TP_Tenure1 = Model.vehi.Ex_Basic_TP_Tenure1;
+    long? Ex_Geo_OD_Ext1 = Model.vehi.Ex_Geo_OD_Ext1;
+    long? Ex_Geo_TP_Ext1 = Model.vehi.Ex_Geo_TP_Ext1;
+    long? Ex_CompulsoryPremium_Amt1 = Model.vehi.Ex_CompulsoryPremium_Amt1;
+    long? Ex_Zero_Dep_Tenure1 = Model.vehi.Ex_Zero_Dep_Tenure1;
+    long? Ex_RTI_Tenure1 = Model.vehi.Ex_RTI_Tenure1;
+
+    long? Ex_Basic_OD_Tenure2 = Model.vehi.Ex_Basic_OD_WithOutNCB_Tenure2;
+    //long? Ex_Basic_OD_Tenure2 = Model.vehi.Ex_Basic_OD_Tenure2;
+    long? Ex_NCB_Value_Tenure2 = Model.vehi.Ex_NCB_Value_Tenure2;
+    long? Ex_Basic_TP_Tenure2 = Model.vehi.Ex_Basic_TP_Tenure2;
+    long? Ex_Geo_OD_Ext2 = Model.vehi.Ex_Geo_OD_Ext2;
+    long? Ex_Geo_TP_Ext2 = Model.vehi.Ex_Geo_TP_Ext2;
+    long? Ex_CompulsoryPremium_Amt2 = Model.vehi.Ex_CompulsoryPremium_Amt2;
+    long? Ex_Zero_Dep_Tenure2 = Model.vehi.Ex_Zero_Dep_Tenure2;
+    long? Ex_RTI_Tenure2 = Model.vehi.Ex_RTI_Tenure2;
+
+    long? Ex_Basic_OD_Tenure3 = Model.vehi.Ex_Basic_OD_WithOutNCB_Tenure3;
+    //long? Ex_Basic_OD_Tenure3 = Model.vehi.Ex_Basic_OD_Tenure3;
+    long? Ex_NCB_Value_Tenure3 = Model.vehi.Ex_NCB_Value_Tenure3;
+    long? Ex_Basic_TP_Tenure3 = Model.vehi.Ex_Basic_TP_Tenure3;
+    long? Ex_Geo_OD_Ext3 = Model.vehi.Ex_Geo_OD_Ext3;
+    long? Ex_Geo_TP_Ext3 = Model.vehi.Ex_Geo_TP_Ext3;
+    long? Ex_CompulsoryPremium_Amt3 = Model.vehi.Ex_CompulsoryPremium_Amt3;
+    long? Ex_Zero_Dep_Tenure3 = Model.vehi.Ex_Zero_Dep_Tenure3;
+    long? Ex_RTI_Tenure3 = Model.vehi.Ex_RTI_Tenure3;
+
+
+    long? Basic_OD_Tenure1 = Model.vehi.Basic_OD_WithOutNCB_Tenure1;
+    //long? Basic_OD_Tenure1 = Model.vehi.Basic_OD_Tenure1;
+    long? NCB_Value_Tenure1 = Model.vehi.NCB_Value_Tenure1;
+    long? Basic_TP_Tenure1 = Model.vehi.Basic_TP_Tenure1;
+    long? Geo_OD_Ext1 = Model.vehi.Geo_OD_Ext1;
+    long? Geo_TP_Ext1 = Model.vehi.Geo_TP_Ext1;
+    long? CompulsoryPremium_Amt1 = Model.vehi.CompulsoryPremium_Amt1;
+    long? Zero_Dep_Tenure1 = Model.vehi.Zero_Dep_Tenure1;
+    long? RTI_Tenure1 = Model.vehi.RTI_Tenure1;
+
+
+    long? Basic_OD_Tenure2 = Model.vehi.Basic_OD_WithOutNCB_Tenure2;
+    //long? Basic_OD_Tenure2 = Model.vehi.Basic_OD_Tenure2;
+    long? NCB_Value_Tenure2 = Model.vehi.NCB_Value_Tenure2;
+    long? Basic_TP_Tenure2 = Model.vehi.Basic_TP_Tenure2;
+    long? Geo_OD_Ext2 = Model.vehi.Geo_OD_Ext2;
+    long? Geo_TP_Ext2 = Model.vehi.Geo_TP_Ext2;
+    long? CompulsoryPremium_Amt2 = Model.vehi.CompulsoryPremium_Amt2;
+    long? Zero_Dep_Tenure2 = Model.vehi.Zero_Dep_Tenure2;
+    long? RTI_Tenure2 = Model.vehi.RTI_Tenure2;
+
+    long? Basic_OD_Tenure3 = Model.vehi.Basic_OD_WithOutNCB_Tenure3;
+    //long? Basic_OD_Tenure3 = Model.vehi.Basic_OD_Tenure3;
+    long? NCB_Value_Tenure3 = Model.vehi.NCB_Value_Tenure3;
+    long? Basic_TP_Tenure3 = Model.vehi.Basic_TP_Tenure3;
+    long? Geo_OD_Ext3 = Model.vehi.Geo_OD_Ext3;
+    long? Geo_TP_Ext3 = Model.vehi.Geo_TP_Ext3;
+    long? CompulsoryPremium_Amt3 = Model.vehi.CompulsoryPremium_Amt3;
+    long? Zero_Dep_Tenure3 = Model.vehi.Zero_Dep_Tenure3;
+    long? RTI_Tenure3 = Model.vehi.RTI_Tenure3;
+
+
+    long? Ex_SAOD_Basic_OD_Tenure1 = Model.vehi.EX_SAOD_Basic_OD_WithOutNCB_Tenure1;
+    //long? Ex_SAOD_Basic_OD_Tenure1 = Model.vehi.Ex_SAOD_Basic_OD_Tenure1;
+    long? Ex_SAOD_NCB_Value_Tenure1 = Model.vehi.Ex_SAOD_NCB_Value_Tenure1;
+    long? Ex_SAOD_Basic_TP_Tenure1 = Model.vehi.Ex_SAOD_Basic_TP_Tenure1;
+    long? Ex_SAOD_Zero_Dep_Tenure1 = Model.vehi.Ex_SAOD_Zero_Dep_Tenure1;
+    long? Ex_SAOD_RTI_Tenure1 = Model.vehi.Ex_SAOD_RTI_Tenure1;
+
+    long? SAOD_Basic_OD_Tenure1 = Model.vehi.SAOD_Basic_OD_WithOutNCB_Tenure1;
+    //long? SAOD_Basic_OD_Tenure1 = Model.vehi.SAOD_Basic_OD_Tenure1;
+    long? SAOD_NCB_Value_Tenure1 = Model.vehi.SAOD_NCB_Value_Tenure1;
+    long? SAOD_Basic_TP_Tenure1 = Model.vehi.SAOD_Basic_TP_Tenure1;
+    long? SAOD_Zero_Dep_Tenure1 = Model.vehi.SAOD_Zero_Dep_Tenure1;
+    long? SAOD_RTI_Tenure1 = Model.vehi.SAOD_RTI_Tenure1;
+
+    long? Ex_SAOD_NCB_Per_Tenure1 = Model.vehi.Ex_SAOD_NCB_Per_Tenure1;
+    long? Ex_SAOD_Basic_IDV_Tenure1 = Model.vehi.Ex_SAOD_Basic_IDV_Tenure1;
+    long? SAOD_NCB_Per_Tenure1 = Model.vehi.SAOD_NCB_Per_Tenure1;
+    long? SAOD_Basic_IDV_Tenure1 = Model.vehi.SAOD_Basic_IDV_Tenure1;
+
+    long? Ex_NCB_Per_Tenure1 = Model.vehi.Ex_NCB_Per_Tenure1;
+    long? Ex_NCB_Per_Tenure2 = Model.vehi.Ex_NCB_Per_Tenure2;
+    long? Ex_NCB_Per_Tenure3 = Model.vehi.Ex_NCB_Per_Tenure3;
+    long? Ex_Basic_IDV_Tenure1 = Model.vehi.Ex_Basic_IDV_Tenure1;
+    long? Ex_Basic_IDV_Tenure2 = Model.vehi.Ex_Basic_IDV_Tenure2;
+    long? Ex_Basic_IDV_Tenure3 = Model.vehi.Ex_Basic_IDV_Tenure3;
+    long? NCB_Per_Tenure1 = Model.vehi.NCB_Per_Tenure1;
+    long? NCB_Per_Tenure2 = Model.vehi.NCB_Per_Tenure2;
+    long? NCB_Per_Tenure3 = Model.vehi.NCB_Per_Tenure3;
+    long? Basic_IDV_Tenure1 = Model.vehi.Basic_IDV_Tenure1;
+    long? Basic_IDV_Tenure2 = Model.vehi.Basic_IDV_Tenure2;
+    long? Basic_IDV_Tenure3 = Model.vehi.Basic_IDV_Tenure3;
+
+
+
+    //string emailaddr = string.Empty;
+    //string addrescust = string.Empty;
+    //string custcity = string.Empty;
+    //string custphone = string.Empty;
+    //string custname = Model.cust.customerName;
+    #endregion
+    //if ((Model.cust.emails.Count>0) && (Model.cust.emails.FirstOrDefault(m => m.isPreferredEmail == true) != null))
+    //{
+    //    emailaddr = Model.cust.emails.FirstOrDefault(m => m.isPreferredEmail == true).emailAddress;
+    //}
+    //if ((Model.cust.addresses.Count> 0)    && (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != null) && (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != ""))
+    //{
+    //    addrescust = Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress;
+    //    custcity = Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.city).FirstOrDefault();
+    //    pincodeval = Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.pincode).FirstOrDefault().ToString();
+    //}
+    //if (Model.custPhoneList != null && Model.custPhoneList.Count() > 0)
+    //{
+    //    custphone = Model.custPhoneList.Where(m => m.isPreferredPhone == true).Select(m => m.phoneNumber).FirstOrDefault();
+    //    custphone1 = custphone;
+    //}
+    bool isexpired = false;
+    if (Model.vehi.Previous_Policy_Expiry != null)
+    {
+        DateTime? d1 = Convert.ToDateTime(Model.vehi.Previous_Policy_Expiry).Date;
+        DateTime d2 = DateTime.Now.Date;
+        if (d1 < d2)
+        {
+            isexpired = true;
+        }
+        else
+        {
+            isexpired = false;
+        }
+    }
+
+}
+@Html.HiddenFor(m => m.isexpired, new { @Value = isexpired })
+@Html.HiddenFor(m => m.packageoptingoutcpayesno, new { @id = "cpaoptedYes" })
+@Html.HiddenFor(m => m.InsAssignCampaign)
+@Html.HiddenFor(m => m.vehi.GST_Per)
+@Html.HiddenFor(m => m.vehi.fkcity_id)
+@Html.HiddenFor(m => m.vehi.fkState_id)
+@Html.HiddenFor(m => m.insuranceassignedinteractionId)
+@Html.HiddenFor(m => m.herodealerId)
+
+<div class="container-fluid">
+    <div class="col-lg-7 ">
+        <div id="InsurancepolicyRenewalDivpartOne" style="display:none;">
+            <div class="row"><h4><b>Verify Primary Details of Customer</b></h4></div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Registration Number<sup style="color:red;font-size:16px;"><strong>*</strong></sup> </label>
+                        <div class="inputWithIcon">
+                            @Html.TextBoxFor(model => model.vehi.vehicleRegNo, new { @class = "form-control ", @id = "txtinsrenewalpolicynumber", @maxlength = "10", @readonly = "readonly", @onkeypress = "allowAlphaNumericSpace(event)" })
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" onclick="editoptions('regno');" style="color:red;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group ">
+                        <label for="customerName">Registration Date<sup style="color:red;font-size:16px;"><strong>*</strong></sup> </label>
+                        <div class="inputWithIcon">
+                            @Html.TextBoxFor(model => model.vehi.Vehicle_Reg_date, "{0:dd-MM-yyyy}", new { @class = "form-control blockfuturedate", @id = "txtrenewalregistartiondate", @autocomplete = "off" })
+                            
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" style="color:red;" id="enableregdate"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Model</label>
+                        @Html.TextBoxFor(model => model.vehi.model, new { @class = "form-control", @id = "txtrenewalmodel", @readonly = "true" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Variant </label>
+                        @Html.TextBoxFor(model => model.vehi.variant, new { @class = "form-control", @id = "txtrenewalvariant", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Email Address<sup style="color:red;font-size:16px;"><strong>*</strong></sup> </label>
+                        <div class="inputWithIcon">
+                            @Html.TextBoxFor(model => model.vehi.email, new { @class = "form-control", @id = "txtrenewalemail" })
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" style="color:red;" id="enableemail"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Phone Number </label>
+                        <div class="inputWithIcon">
+                            <input type="text" id="txtrenewalphonenum" readonly class="form-control numberOnly" />
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" onclick="editoptions('phone');" style="color:red;"></i>
+                        </div>
+                        @Html.HiddenFor(model => model.vehi.Mobile, new { @id = "txtfinalNumber" })
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Title </label>
+                        @Html.TextBoxFor(model => model.vehi.salutation, new { @class = "form-control", @id = "txtrenewaltitle", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Full Name as per RC  </label>
+                        <input type="text" id="txtrenewalfullname" class="form-control" value="@UserfullName" readonly />
+                        @Html.HiddenFor(model => model.vehi.first_name)
+                        @Html.HiddenFor(Model => Model.vehi.Middle_Name)
+                        @Html.HiddenFor(Model => Model.vehi.last_name)
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Address </label>
+                        @Html.TextBoxFor(model => model.vehi.Address_Line_1, new { @class = "form-control", @id = "txtrenewaladdress", @readonly = "readonly" })
+                        @Html.HiddenFor(Model => Model.vehi.Address_Line_2)
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">City </label>
+                        @Html.TextBoxFor(model => model.vehi.city_name, new { @class = "form-control", @id = "txtrenewalcity", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Pincode  </label>
+                        @Html.TextBoxFor(model => model.vehi.pincode, new { @class = "form-control", @id = "txtrenewalpincode", @readonly = "readonly" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label style="color:red;">* - Mandatory field</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="pull-right">
+                    <button type="button" class="btn btn-danger" id="btnInsurancepolicyRenewalpartOneBack">Back</button>
+                    <button type="button" class="btn btn-primary" id="btnInsurancepolicyRenewalpartOneNext">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="InsurancepolicyRenewalDivpartTwo" style="display:none;">
+
+            <div class="row"><h4><b>Verify Last Policy Details</b></h4></div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Insurance Company</label>
+                        @Html.TextBoxFor(model => model.vehi.Previous_Insurer_Name, new { @class = "form-control", @id = "txtrenewalinscompany", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Policy Number </label>
+                        @Html.TextBoxFor(model => model.vehi.Previous_Policy_Number, new { @class = "form-control", @id = "txtrenewalpolicynumber", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Policy Expiry Date </label>
+                        @Html.TextBoxFor(model => model.vehi.Previous_Policy_Expiry, new { @class = "form-control", @id = "txtrenewalpolicyexpirydate", @readonly = "readonly" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Nominee Name </label>
+                        <div class="inputWithIcon">
+                            @Html.TextBoxFor(model => model.vehi.Nominee_Name, new { @class = "form-control ", @id = "txtrenewalnomineename", @readonly = "readonly", @maxlength = "30" })
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" onclick="editoptions('nomineename');" style="color:red;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Nominee Age </label>
+                        <div class="inputWithIcon">
+                            @Html.TextBoxFor(model => model.vehi.Nominee_Age, new { @class = "form-control numberOnly", @maxlength = "3", @id = "txtrenewalnomineeage", @readonly = "readonly" })
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" onclick="editoptions('nomineeage');" style="color:red;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="customerName">Nominee Relationship </label>
+                        <div class="inputWithIcon">
+                            @Html.DropDownListFor(m => m.vehi.Nominee_Relationship, new SelectList(Model.nomineerelationsLists, "relationship", "relationship", nomineeRelation), "--Select--", new { @class = "form-control", @id = "ddlrenewalnomineerealationship", @disabled = "true" })
+
+                            @*@Html.DropDownListFor(model => model.vehi.Nominee_Relationship, new SelectList(new List<SelectListItem> {
+                            new SelectListItem() {Text = "--Select--", Value=""},
+                            new SelectListItem() {Text = "Father", Value="father"},
+                            new SelectListItem() {Text = "Mother", Value="mother"},
+                            new SelectListItem() {Text = "Husband", Value="husband"},
+                            new SelectListItem() {Text = "Wife", Value="wife"},
+                            new SelectListItem() {Text = "Son", Value="son"},
+                            new SelectListItem() {Text = "Daughter", Value="Daughter"}}, "Value", "Text", nomineeRelation), new { @class = "form-control", @id = "ddlrenewalnomineerealationship", @disabled = "true" })*@
+                            <i class="fa fa-edit fa-lg fa-fw" aria-hidden="true" onclick="editoptions('nomineerelationship');" style="color:red;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="pull-right-container" >
+                    <table>
+                        <tr>
+                            <td style="padding-right: 221px; border: 0px !important;">
+                                <button type="button" class="btn btn-primary" id="btnChkQuotation" onclick="CheckQuotationForNext()">Check Quotation For Other IC</button>
+                            </td>
+                            <td colspan="3" style="border: 0px !important;">
+                                <button type="button" class="btn btn-danger" id="btnInsurancepolicyRenewalpartTwoBack">Back</button>
+                                <button type="submit" class="btn btn-success" id="btnInsurancepolicyRenewalpartTwoSubmit" onclick="checkrenewalvalidation();">Renew</button>
+                            </td>
+                        </tr>
+                    </table>
+                @*</div>
+
+                <div class="pull-right">*@
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="pleaseSelectIcQuotationDiv" style="display:none">
+
+            <div class="row"><h4><b>PLEASE SELECT AN IC FOR FINAL QUOTATION</b></h4></div>
+            <div class="row">
+                <div class="form-group" id="Renewalproductlist" style="padding-top:40px">
+                    <div class="form-group"></div>
+                    <div class="form-group"></div>
+                    <label class="col-lg-4">Product<sup style="color:red;font-size:16px;"><strong>*</strong></sup> </label>
+                    <div class="col-lg-4">
+
+                        @Html.DropDownListFor(m => m.Product, new SelectList(Model.Productmaster, "Product_id", "Product_Name", Model.vehi.Product_id), new { @class = "form-control selectpicker", @multiple = "multiple", @id = "ddlproductRenewal" })
+
+                        @Html.HiddenFor(m => m.productId, new { @id = "txtRenewalproductId" })
+                        @Html.HiddenFor(m => m.isProposeRenew, new { @id = "txtisProposeRenew" })
+
+                      
+                    </div>
+                </div>
+            </div>
+         
+            <br />
+            <div class="row">
+                <div class="pull-right">
+                    <button type="button" class="btn btn-danger" id="btnIcForFinalQuotationBack" onclick="IcForFinalQuotationBack();">Back</button>
+                    <button type="submit" class="btn btn-primary" id="btnIcForFinalQuotationProposalPreview" onclick="SaveRenewalWinbackDetails();">ProposalPreview</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="InsurancepolicyRenewalDivpolicyType" style="display:none;">
+            @*<div class="row">
+                <p style="font-size:24px;"><b>Policy Type</b></p>
+            </div>*@
+            <div class="options">
+                <div class="row">
+                    @if (Model.vehi.Renewal_Type.ToUpper() == "PACKAGE")
+                    {
+                        <div class="col-sm-3">
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.vehi.Renewal_Type, "Package", new { @id = "rdorenewalpackage", @class = "turncheckbox", @style = "display:none;" })
+                            </label>
+                        </div>
+                    }
+                    else if (Model.vehi.Renewal_Type.ToUpper() == "SAOD")
+                    {
+                        <div class="col-sm-3">
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.vehi.Renewal_Type, "SAOD", new { @id = "rdorenewalsaod", @class = "turncheckbox" })SAOD&nbsp;<a href="#!" class="fa fa-info-circle red-tooltip" style="color:blue;" data-html="true" data-toggle="tooltip" title="<h4><u>Why ‘Own Damage’ (OD) Policy?</u></h4> ‘Own Damage’ policy covers the customer<br/>for any losses that may occur due to accidents, thefts,<br/>natural calamities such as floods, cyclone, earthquake etc.<br/><br/>3rd Party Insurance alone will NOT cover such losses." data-placement="right"></a>
+                                <br />
+                                <span style="color:orange;font-weight: bold;" id="SAODTotalPremiumTenure"></span>
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+
+        <br />
+        <div id="InsurancepolicyRenewalDivpolicyTypePackage" style="display:none;">
+
+            <div class="row">
+                <p style="font-size:24px;"><b>How many years do you want to cover?</b>&nbsp;<a href="#!" class="fa fa-info-circle red-tooltip" style="color:blue;" data-html="true" data-toggle="tooltip" title="<h4>Why Package Policy ?</h4><u>Customer is covered for</u> <br/> 1. 3rd party personal accidents and property damages. </br>  2. Own damage coverages due to accidents, thefts, natural calamities such as floods, cyclone, earthquake etc.<br/> 3. Personal accident coverage up to 15 Lakhs for Owner-Cum-Driver." data-placement="right"></a></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.vehi.packagepremium, "Package1", new { @id = "rdorenewal1year", @class = "turncheckbox", @onclick = "clearcheckedcheckbox();", @checked = "checked" })Package(1 Year)<br />
+                        <span style="color:orange;font-weight: bold;" id="PACKAGETotalPremiumTenure1"></span>
+                    </label>
+                </div>
+                <div class="col-sm-3">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.vehi.packagepremium, "Package2", new { @id = "rdorenewal2year", @class = "turncheckbox", @onclick = "clearcheckedcheckbox();" })Package(2 Year)<br />
+                        <span style="color:orange;font-weight: bold;" id="PACKAGETotalPremiumTenure2"></span>
+                    </label>
+                </div> <div class="col-sm-3">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.vehi.packagepremium, "Package3", new { @id = "rdorenewal3year", @class = "turncheckbox", @onclick = "clearcheckedcheckbox();" })Package(3 Year)<br />
+                        <span style="color:orange;font-weight: bold;" id="PACKAGETotalPremiumTenure3"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="InsurancepolicyRenewalDivpolicyTypeAdditionalCover" style="display:none;">
+
+            <div class="row">
+                <p style="font-size:24px;"><b>Additional Covers</b> </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                        @Html.CheckBoxFor(Model => Model.policyadditionalcoverzerodep, new { @id = "chkrenewalzerodeo", @class = "turncheckbox", @checked = "checked", @onclick = "recalculategrosamounts();", @style = "width: 30px;height: 20px;" })&nbsp;&nbsp;Zero-Dep Cover&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#!" class="fa fa-info-circle red-tooltip" style="color:blue;" data-toggle="tooltip" title="<h4><u>Zero Dep Cover</u></h4><br />No depreciation on replaced parts of Plastic, Fiber and Metal parts." data-html="true" data-placement="right"></a><br />
+                        @*@Html.RadioButtonFor(model => model.vehi.policyadditionalcoverzerodep, "ZeroDepCover", new { @id = "rdorenewalzerodeo", @class = "turncheckbox", @checked = "checked", @onclick = "recalculategrosamounts();" })Zero-Dep Cover<br />*@
+                        &nbsp;&nbsp;<span id="spnadditionalCoverzerodep" style="color: orange;font-weight: bold;padding-left: 30px;"></span>
+                    </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                        @Html.CheckBoxFor(Model => Model.policyadditionalcoverreturntoinvoice, new { @id = "chkrenewalreturninvoice", @class = "turncheckbox", @checked = "checked", @onclick = "recalculategrosamounts();", @style = "width: 30px;height: 20px;" })&nbsp;&nbsp;Return to Invoice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#!" class="fa fa-info-circle red-tooltip" style="color:blue;" data-html="true" data-toggle="tooltip" title="<h4><u>Return to Invoice</u></h4><br/>In the event of total loss or theft of<br/>vehicle, customer gets the Ex-Showroom price<br />that he paid at the time of<br />purchase of vehicle." data-placement="right"></a><br />
+                        @*@Html.RadioButtonFor(model => model.vehi.policyadditionalcoverreturntoinvoice, "RTI", new { @id = "rdorenewalreturninvoice", @class = "turncheckbox", @checked = "checked", @onclick = "checkuncheckradio('RTI');" })Return to Invoice<br />*@
+                        <span id="spnadditionalCoverRTI" style="color:orange;font-weight: bold;padding-left:30px;"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <br />
+                    <div class="pull-right">
+                        @*<button type="button" class="btn btn-danger" id="InsurancepolicyRenewalDivpolicyTypeBack">Back</button>*@
+                        <button type="button" class="btn btn-primary" id="btnInsurancepolicyRenewalpolicytypenext">Next</button>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="InsurancepolicyRenewalClaimonExistingpolicy" style="display:none;">
+            <div class="row">
+                <p style="font-size:24px;"><b>Have you made a claim on your existing policy ?</b></p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3" id="claimexistYesDiv">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.vehi.existingpolicyclaim, "YES", new { @id = "rdorenewalexistingpolicyclaimyes", @class = "turncheckbox", @onclick = "recalculategrosamounts();" })YES
+                    </label>
+                </div>
+                <div class="col-sm-3" id="claimexistNoDiv">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.vehi.existingpolicyclaim, "NO", new { @id = "rdorenewalexistingpolicyclaimno", @class = "turncheckbox", @onclick = "recalculategrosamounts();" })NO
+                    </label>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row" id="noclaimDiv" style="display:none;">
+
+                <div class="col-lg-6">
+                    <div class="small-box bg-green-active">
+                        <div class="inner">
+                            <p>
+                                <img src="~/public/img/Icon - No Claim Bonus.png" style="width: 37px;" class="" />
+                                Eligible for <span id="pncbper"></span>% NO Claim Bonus on new policy. NCB Value
+                                Rs. <span id="pncbamt"></span> for IDV Rs. <span id="pidvamt"></span>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <br />
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-danger" id="InsurancepolicyRenewalClaimonExistingpolicyBack">Back</button>
+                        <button type="button" class="btn btn-primary" id="InsurancepolicyRenewalClaimonExistingpolicynext">Next</button>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1" style="display:none;">
+
+
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Expired Premium Summary</b></p>
+                </div>
+                <br />
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_IDV_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagebasicidyear1v", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_OD_WithOutNCB_Tenure1, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_TP_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 1</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_OD_Ext1, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 1</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_TP_Ext2, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(1 Year)</label>
+                        <div class="col-lg-3">
+                            @Html.TextBoxFor(model => model.vehi.Ex_CompulsoryPremium_Amt1, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear1", @readonly = "readonly" })
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Premium Summary</b></p>
+                </div>
+                <br />
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_IDV_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagebasicidyear1v", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_OD_WithOutNCB_Tenure1, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_TP_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 1</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_OD_Ext1, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 1</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_TP_Ext1, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.CompulsoryPremium_Amt1, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear1", @readonly = "readonly" })
+                        </div>
+
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1" style="display:none;">
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Zero_Dep_Tenure1, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_RTI_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagertiyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Per_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Value_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Zero_Dep_Tenure1, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.RTI_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagertiyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Per_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Value_Tenure1, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear1", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2" style="display:none;">
+
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Expired Premium Summary</b></p>
+                </div>
+                <br />
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_IDV_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagebasicidvyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_OD_WithOutNCB_Tenure2, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_TP_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 2</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_TP_Ext2, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 2</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_TP_Ext2, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_CompulsoryPremium_Amt2, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear2", @readonly = "readonly" })
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Premium Summary</b></p>
+                </div>
+
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_IDV_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagebasicidvyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_OD_WithOutNCB_Tenure2, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_TP_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 2</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_OD_Ext2, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 2</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_TP_Ext2, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.CompulsoryPremium_Amt2, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear2", @readonly = "readonly" })
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2" style="display:none;">
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Zero_Dep_Tenure2, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_RTI_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagertiyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Per_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Value_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Zero_Dep_Tenure2, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.RTI_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagertiyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Per_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(2 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Value_Tenure2, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear2", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3" style="display:none;">
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Expired Premium Summary</b></p>
+                </div>
+                <br />
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_IDV_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagebasicidvyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_OD_WithOutNCB_Tenure3, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Basic_TP_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 3</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_OD_Ext3, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 3</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Geo_TP_Ext3, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.CompulsoryPremium_Amt3, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear3", @readonly = "readonly" })
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+            }
+            else
+            {
+                <div class="col-sm-offset-1 row">
+                    <p style="font-size:24px;"><b>Premium Summary</b></p>
+                </div>
+                <br />
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic IDV(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_IDV_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagebasicidvyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">Basic Od(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_OD_WithOutNCB_Tenure3, new { @class = "form-control", @id = "txtrenewalpackagebasicodyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">Basic TP(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Basic_TP_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagebasictpyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO OD Ext 3</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_OD_Ext3, new { @class = "form-control ", @id = "txtrenewalpackagegeoodyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">GEO TP Ext 3</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Geo_TP_Ext3, new { @class = "form-control ", @id = "txtrenewalpackagegeotpyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">CPA(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.CompulsoryPremium_Amt3, new { @class = "form-control ", @id = "txtrenewalpackagecompulsarypremiumyear3", @readonly = "readonly" })
+                        </div>
+                        <div class="col-lg-4">
+                            <input type="checkbox" class="checkboxes" onclick="showoptingoutCPAresonsDiv();" /><br /> <span style="color:red;font-size:12px;"><b>(Not Applicable? Select Here)</b></span>
+                        </div>
+                    </div>
+
+                </div>
+            }
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3" style="display:none;">
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_Zero_Dep_Tenure3, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_RTI_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagertiyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Per_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_NCB_Value_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+                    <div class="form-group">
+                        <label class="col-lg-4">Zero Dep(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Zero_Dep_Tenure3, new { @class = "form-control", @id = "txtrenewalpackagezerodepyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">RTI(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.RTI_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagertiyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Percentage(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Per_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagencbperyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">NCB Value(3 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.NCB_Value_Tenure3, new { @class = "form-control ", @id = "txtrenewalpackagencbvalyear3", @readonly = "readonly" })
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+
+
+        <div id="optingoutCPAresonsDiv" style="display:none;">
+            <div class="row col-sm-10">
+                <div class="row col-sm-offset-1">
+                    <p style="font-size:18px;"><b>Select Reason for opting out of CPA</b></p>
+                </div>
+                <div class="row col-sm-offset-1">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.packageoptingoutcpareason, "Owner not having valid Driving license", new { @id = "rdopackagenolicence" })Owner not having valid Driving license
+                    </label>
+                </div>
+                <div class="row col-sm-offset-1" ">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.packageoptingoutcpareason, "Owner having seperate General PA Cover (Non-motor prodcts)", new { @id = "rdopackagegeneralpacover" })Owner having seperate General PA Cover (Non-motor prodcts)
+                    </label>
+                </div>
+                <div class="row col-sm-offset-1" ">
+                    <label class="radio-inline">
+                        @Html.RadioButtonFor(model => model.packageoptingoutcpareason, "Owner having standalone PA Cover(Motor Product)", new { @id = "rdopackagestandalonecover" })Owner having standalone PA Cover(Motor Product)
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="packagesummry1Div" class="row" style="display:none;">
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <br />
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-danger" id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Back">Back</button>
+                        <button type="button" class="btn btn-primary" id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Next">Next</button>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="packagesummary2NexttDiv" style="display:none;">
+            <div class="col-sm-offset-1 form-horizontal">
+                <div class="form-group">
+                    <label class="  col-lg-4">Net Premium</label>
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(Model => Model.PACKAGEGrossPremiumTenure, new { @class = "form-control", @id = "txtpackagegrosspremium", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="  col-lg-4">GST Amount</label>
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(Model => Model.GST_AMT, new { @class = "form-control ", @id = "txtpackagegst", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="  col-lg-4">Premium Payable</label>
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(Model => Model.PACKAGETotalPremiumTenure, new { @class = "form-control ", @id = "txtpackagetotalpremium" })
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-8">
+                    <br />
+                    <div class="pull-right">
+                        <button type="button" class="btn btn-danger" id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Backyear1">Back</button>
+                        <button type="button" class="btn btn-primary" id="InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Nextyear1">Next</button>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <div id="InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1" style="display:none;">
+            <div class="col-sm-offset-1 row">
+                <p style="font-size:24px;"><b>Premium Summary</b></p>
+            </div>
+            <br />
+            @if (isexpired)
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Basic IDV</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_SAOD_Basic_IDV_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodbasicdiv", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">SAOD Basic OD(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.EX_SAOD_Basic_OD_WithOutNCB_Tenure1, new { @class = "form-control", @id = "txtrenewalsaodbasicod", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Basic TP(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_SAOD_Basic_TP_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodtp", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Zero Dep(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_SAOD_Zero_Dep_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodzerodep", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD RTI(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_SAOD_RTI_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodrti", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD NCB Value</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.Ex_SAOD_NCB_Value_Tenure1, new { @class = "form-control  ", @id = "txtrenewalsaodncbval", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-offset-1 form-horizontal">
+
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Basic IDV</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_Basic_IDV_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodbasicdiv", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-4">SAOD Basic OD(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_Basic_OD_WithOutNCB_Tenure1, new { @class = "form-control", @id = "txtrenewalsaodbasicod", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Basic TP(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_Basic_TP_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodtp", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD Zero Dep(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_Zero_Dep_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodzerodep", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD RTI(1 Year)</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_RTI_Tenure1, new { @class = "form-control ", @id = "txtrenewalsaodrti", @readonly = "readonly" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="  col-lg-4">SAOD NCB Value</label>
+                        <div class="col-lg-4">
+                            @Html.TextBoxFor(model => model.vehi.SAOD_NCB_Value_Tenure1, new { @class = "form-control  ", @id = "txtrenewalsaodncbval", @readonly = "readonly" })
+                        </div>
+                    </div>
+
+                </div>
+            }
+            <div class="col-sm-offset-1 form-horizontal">
+
+                <div class="form-group">
+                    <label class="  col-lg-4">Net Premium</label>
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(model => model.SAODGrossPremium, new { @class = "form-control  ", @id = "txtrenewalsaodgstper", @readonly = "readonly" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="  col-lg-4">Premium Payable</label>
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(model => model.SAODTotalPremium, new { @class = "form-control ", @id = "txtrenewalsaodpremiumamt", @readonly = "readonly" })
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-8">
+                        <br />
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-danger" id="InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1back">Back</button>
+                            <button type="button" class="btn btn-primary" id="InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1Next">Next</button>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-offset-1 col-md-3">
+        <div class="row">
+            <br />
+            <br />
+            <br />
+            <div class="card-img-bottom" width="40%">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h4 style="text-align:center;">Your Total Premium</h4>
+                        <h3 id="countCREMFollowups">
+                            <img src="~/public/img/Icon - Premium Amount.png" hieght="30%" width="30%" />
+                            &nbsp;&nbsp;&nbsp;<span style="color:white;font-weight: bold;font-size:28px;" id="totoalgropremiumbanner">0</span>
+                        </h3>
+                        <p style="text-align:center;">(Including GST)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if ('@custphone' !== "") {
+            $('#txtrenewalphonenum').val(singlephoneMasking('@custphone'));
+        }
+        if ('@regdate' == "") {
+            $("#txtrenewalregistartiondate").prop("readonly", false);
+            //$('#enableregdate').show();
+        }
+        else {
+            $("#txtrenewalregistartiondate").prop("readonly", true);
+
+            //$('#enableregdate').hide();
+        }
+        if ('@vehemail' == "") {
+            $("#txtrenewalemail").prop("readonly", false);
+            //$('#enableemail').show();
+        }
+        else {
+            $("#txtrenewalemail").prop("readonly", true);
+            //$('#enableemail').hide();
+        }
+        $('[data-toggle="tooltip"]').tooltip();
+        callpackageSaodTypes();
+        $('.regdatepicker').datepicker({
+            duration: "slow",
+            showOptions: { direction: "up" },
+            dateFormat: 'yy-mm-dd',
+            changeMonth: true,//this option for allowing user to select month
+            changeYear: true //this option for allowing user to select from year range
+
+        });
+        var claimcount = '@Model.vehi.claimcount';
+        var campaignId = $('#assignCampaignId').val();
+        if (claimcount == 0)
+        {
+            $("#rdorenewalexistingpolicyclaimno").prop("checked", true);
+            $('#noclaimDiv').show();
+            if (campaignId == "33") {
+                $("#rdorenewalexistingpolicyclaimno").attr('disabled', false);
+                $("#rdorenewalexistingpolicyclaimyes").attr('disabled', true);
+            }
+            //$('#claimexistNoDiv').show();
+            //$('#claimexistYesDiv').hide();
+
+        } else if (claimcount > 0) {
+            $("#rdorenewalexistingpolicyclaimyes").prop("checked", true);
+            $('#noclaimDiv').hide();
+            if (campaignId == "33")
+                {
+                    $("#rdorenewalexistingpolicyclaimno").attr('disabled', true);
+                    $("#rdorenewalexistingpolicyclaimyes").attr('disabled', false);
+                }
+            //$('#claimexistNoDiv').hide();
+            //$('#claimexistYesDiv').show();
+        }
+
+        //updatevaluetodisplay();
+        recalculategrosamounts();
+    });
+
+    function allowAlphaNumericSpace(e) {
+        var code = ('charCode' in e) ? e.charCode : e.keyCode;
+        if (!(code > 47 && code < 58) && // numeric (0-9)
+            !(code > 64 && code < 91) && // upper alpha (A-Z)
+            !(code > 96 && code < 123)) { // lower alpha (a-z)
+            //!(code == 32) && // space
+            e.preventDefault();
+        }
+    }
+    function editoptions(editfor)
+    {
+        if (editfor == "phone") {
+            $("#txtrenewalphonenum").prop("readonly", false);
+            $("#txtrenewalphonenum").focus();
+
+        }
+        if (editfor == "regno") {
+            $("#txtinsrenewalpolicynumber").prop("readonly", false);
+            $("#txtinsrenewalpolicynumber").focus();
+
+        }
+        if (editfor == "regdate") {
+          //  $("#txtrenewalregistartiondate").prop("readonly", false);
+
+            $("#txtrenewalregistartiondate").prop("disabled", false);
+
+            //$("#txtrenewalregistartiondate").removeClass();
+            //$("#txtrenewalregistartiondate").addClass('form-control regdatepicker hasDatepicker');
+
+        }
+        if (editfor == "email") {
+            $("#txtrenewalemail").prop("readonly", false);
+            $("#txtrenewalemail").focus();
+
+        }
+        if (editfor == "nomineename") {
+            $("#txtrenewalnomineename").prop("readonly", false);
+            $("#txtrenewalnomineename").focus();
+
+        }
+        if (editfor == "nomineeage") {
+            $("#txtrenewalnomineeage").prop("readonly", false);
+            $("#txtrenewalnomineeage").focus();
+
+        }
+        if (editfor == "nomineerelationship") {
+            $("#ddlrenewalnomineerealationship").prop("disabled", false);
+            $("#ddlrenewalnomineerealationship").focus();
+
+        }
+    }
+    $("#btnInsurancepolicyRenewalpartOneNext").click(function ()
+    {
+        var tempPhone = $('#txtrenewalphonenum').val();
+        if (tempPhone.includes("*")) {
+
+        }
+        else {
+            $('#txtfinalNumber').val('');
+            $('#txtfinalNumber').val(tempPhone);
+        }
+
+        var registrationNumber= $('#txtinsrenewalpolicynumber').val();
+        var registrationDate = $('#txtrenewalregistartiondate').val();
+        var email = $('#txtrenewalemail').val();
+        if (registrationNumber == "")
+        {
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Please Enter Registration Number'
+            });
+            return false;
+        }
+        if (registrationNumber.length < 8)
+        {
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Please Enter Valid Registration Number'
+            });
+            return false;
+        }
+
+        if (registrationDate == "") {
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Please Enter Registration Date.'
+            });
+            return false;
+        }
+        if (email == "") {
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Please Enter Email Address.'
+            });
+            return false;
+        }
+
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").show();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+    $("#btnInsurancepolicyRenewalpartTwoBack").click(function () {
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+
+        $("#InsurancepolicyRenewalDivpartOne").show();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+    $("#InsurancepolicyRenewalClaimonExistingpolicyBack").click(function () {
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        if (policytype == "SAOD") {
+            $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+
+        }
+        else {
+            $("#InsurancepolicyRenewalDivpolicyTypePackage").show();
+        }
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").show();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").show();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+    $("#InsurancepolicyRenewalClaimonExistingpolicynext").click(function () {
+
+
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        if (policytype == "Package") {
+            $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+
+            var premium = $("input[name='vehi.packagepremium']:checked").val();
+
+            if (premium == "Package1") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+
+            }
+            else if (premium == "Package2") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+
+            }
+            else if (premium == "Package3") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").show();
+
+            }
+            $("#packagesummry1Div").show();
+            showoptingoutCPAresonsDiv();
+
+        }
+        else if (policytype == "SAOD")
+        {
+            $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").show();
+            $("#packagesummry1Div").hide();
+        }
+
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummary2NexttDiv").hide();
+
+    });
+    $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Back").click(function () {
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").show();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+    $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Next").click(function ()
+    {
+
+        var ischecked = false;
+        $(".checkboxes:checked").each(function () {
+            ischecked = true;
+        });
+        if (ischecked) {
+            if ($('input[name="packageoptingoutcpareason"]:checked').length === 0) {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Select Reason for opting out of CPA'
+                });
+                return false;
+            }
+        }
+
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        if (policytype == "Package")
+        {
+
+            var premium = $("input[name='vehi.packagepremium']:checked").val();
+
+            if (premium == "Package1") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+            }
+            else if (premium == "Package2") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+            }
+            else if (premium == "Package3") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").show();
+            }
+
+        }
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").show();
+        $("#optingoutCPAresonsDiv").hide();
+
+    });
+
+    $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Backyear1").click(function () {
+
+
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        if (policytype == "Package") {
+            $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+
+            var premium = $("input[name='vehi.packagepremium']:checked").val();
+
+            if (premium == "Package1") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+            }
+            else if (premium == "Package2") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+
+            }
+            else if (premium == "Package3") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").show();
+
+            }
+        }
+        else if (policytype == "SAOD") {
+            $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").show();
+
+        }
+
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").show();
+        $("#packagesummary2NexttDiv").hide();
+        showoptingoutCPAresonsDiv();
+    });
+
+    $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1back").click(function () {
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").show();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+    $("input[name='vehi.existingpolicyclaim']").click(function () {
+        var policytype = $(this).val();
+
+        if (policytype == "NO") {
+            $('#noclaimDiv').show();
+        }
+        else {
+            $('#noclaimDiv').hide();
+            recalculategrosamounts();
+        }
+    });
+
+    $("input[name='vehi.packagepremium']").click(function ()
+    {
+       // updatevaluetodisplay();
+        recalculategrosamounts();
+    });
+
+    function showoptingoutCPAresonsDiv() {
+       var  ischecked = false;
+        $('input:checkbox.checkboxes:checked').each(function () {
+        
+            ischecked = true;
+           });
+
+        if (ischecked) {
+            $('#packagesummry1Div').hide();
+            $('#optingoutCPAresonsDiv').show();
+            $('#packagesummry1Div').show();
+            recalculategrosamounts();
+            $('#cpaoptedYes').val('N');
+        }
+        else {
+            $('#cpaoptedYes').val('Y');
+            $('#packagesummry1Div').hide();
+            $('#optingoutCPAresonsDiv').hide();
+            $('#packagesummry1Div').show();
+            const chbx = document.getElementsByName("packageoptingoutcpareason");
+
+            for (let i = 0; i < chbx.length; i++) {
+                chbx[i].checked = false;
+            }
+            recalculategrosamounts();
+
+        }
+    }
+
+    function recalculategrosamounts()
+    {
+        var ischecked = false;
+	var existingpolicycalim = $("input[name='vehi.existingpolicyclaim']:checked").val();
+
+	var myRadios = $("input[name='vehi.policyadditionalcoverreturntoinvoice']:checked").val();
+
+        var expired = '@isexpired';
+        if (expired == 'False') {
+            expired = false;
+        }
+        else {
+            expired = true;
+        }
+
+	var package = $("input[name='vehi.packagepremium']:checked").val();
+
+	var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+
+        if (policytype == "Package") {
+
+		var Ex_Basic_OD_Tenure1 = '@Ex_Basic_OD_Tenure1';
+		var Ex_NCB_Value_Tenure1 = '@Ex_NCB_Value_Tenure1';
+		var Ex_Basic_TP_Tenure1 = '@Ex_Basic_TP_Tenure1';
+		var Ex_Geo_OD_Ext1 = '@Ex_Geo_OD_Ext1';
+		var Ex_Geo_TP_Ext1 = '@Ex_Geo_TP_Ext1';
+		var Ex_CompulsoryPremium_Amt1 = '@Ex_CompulsoryPremium_Amt1';
+		var Ex_Zero_Dep_Tenure1 = '@Ex_Zero_Dep_Tenure1';
+		var Ex_RTI_Tenure1 = '@Ex_RTI_Tenure1';
+
+		var Ex_Basic_OD_Tenure2 = '@Ex_Basic_OD_Tenure2';
+		var Ex_NCB_Value_Tenure2 = '@Ex_NCB_Value_Tenure2';
+		var Ex_Basic_TP_Tenure2 = '@Ex_Basic_TP_Tenure2';
+		var Ex_Geo_OD_Ext2 = '@Ex_Geo_OD_Ext2';
+		var Ex_Geo_TP_Ext2 = '@Ex_Geo_TP_Ext2';
+		var Ex_CompulsoryPremium_Amt2 = '@Ex_CompulsoryPremium_Amt2';
+		var Ex_Zero_Dep_Tenure2 = '@Ex_Zero_Dep_Tenure2';
+		var Ex_RTI_Tenure2 = '@Ex_RTI_Tenure2';
+
+		var Ex_Basic_OD_Tenure3 = '@Ex_Basic_OD_Tenure3';
+		var Ex_NCB_Value_Tenure3 = '@Ex_NCB_Value_Tenure3';
+		var Ex_Basic_TP_Tenure3 = '@Ex_Basic_TP_Tenure3';
+		var Ex_Geo_OD_Ext3 = '@Ex_Geo_OD_Ext3';
+		var Ex_Geo_TP_Ext3 = '@Ex_Geo_TP_Ext3';
+		var Ex_CompulsoryPremium_Amt3 = '@Ex_CompulsoryPremium_Amt3';
+		var Ex_Zero_Dep_Tenure3 = '@Ex_Zero_Dep_Tenure3';
+		var Ex_RTI_Tenure3 = '@Ex_RTI_Tenure3';
+		var Basic_OD_Tenure1 = '@Basic_OD_Tenure1';
+
+		var NCB_Value_Tenure1 = '@NCB_Value_Tenure1';
+		var Basic_TP_Tenure1 = '@Basic_TP_Tenure1';
+		var Geo_OD_Ext1 = '@Geo_OD_Ext1';
+		var Geo_TP_Ext1 = '@Geo_TP_Ext1';
+		var CompulsoryPremium_Amt1 = '@CompulsoryPremium_Amt1';
+		var Zero_Dep_Tenure1 = '@Zero_Dep_Tenure1';
+		var RTI_Tenure1 = '@RTI_Tenure1';
+
+
+		var Basic_OD_Tenure2 = '@Basic_OD_Tenure2';
+		var NCB_Value_Tenure2 = '@NCB_Value_Tenure2';
+		var Basic_TP_Tenure2 = '@Basic_TP_Tenure2';
+		var Geo_OD_Ext2 = '@Geo_OD_Ext2';
+		var Geo_TP_Ext2 = '@Geo_TP_Ext2';
+		var CompulsoryPremium_Amt2 = '@CompulsoryPremium_Amt2';
+		var Zero_Dep_Tenure2 = '@Zero_Dep_Tenure2';
+		var RTI_Tenure2 = '@RTI_Tenure2';
+
+
+		var Basic_OD_Tenure3 = '@Basic_OD_Tenure3';
+		var NCB_Value_Tenure3 = '@NCB_Value_Tenure3';
+		var Basic_TP_Tenure3 = '@Basic_TP_Tenure3';
+		var Geo_OD_Ext3 = '@Geo_OD_Ext3';
+		var Geo_TP_Ext3 = '@Geo_TP_Ext3';
+		var CompulsoryPremium_Amt3 = '@CompulsoryPremium_Amt3';
+		var Zero_Dep_Tenure3 = '@Zero_Dep_Tenure3';
+            var RTI_Tenure3 = '@RTI_Tenure3';
+
+var  Ex_NCB_Per_Tenure1 = '@Ex_NCB_Per_Tenure1';
+    var  Ex_NCB_Per_Tenure2 = '@Ex_NCB_Per_Tenure2';
+    var  Ex_NCB_Per_Tenure3 = '@Ex_NCB_Per_Tenure3';
+    var  Ex_Basic_IDV_Tenure1 = '@Ex_Basic_IDV_Tenure1';
+    var  Ex_Basic_IDV_Tenure2 = '@Ex_Basic_IDV_Tenure2';
+    var  Ex_Basic_IDV_Tenure3 = '@Ex_Basic_IDV_Tenure3';
+    var  NCB_Per_Tenure1= '@NCB_Per_Tenure1';
+    var  NCB_Per_Tenure2= '@NCB_Per_Tenure2';
+    var  NCB_Per_Tenure3= '@NCB_Per_Tenure3';
+    var  Basic_IDV_Tenure1= '@Basic_IDV_Tenure1';
+    var  Basic_IDV_Tenure2= '@Basic_IDV_Tenure2';
+    var  Basic_IDV_Tenure3= '@Basic_IDV_Tenure3';
+            var Basic_IDV_Tenure3;
+
+		var grospremiumTenure1;
+		var grospremiumTenure2;
+		var grospremiumTenure3;
+		var totalgrospremium1;
+		var totalgrospremium2;
+		var totalgrospremium3;
+            var gstAmtTenure;
+
+
+            if (expired)
+            {
+
+                //if (existingpolicycalim == "YES") {
+                //    Ex_NCB_Value_Tenure1NO = 0;
+                //    Ex_NCB_Value_Tenure2NO = 0;
+                //    Ex_NCB_Value_Tenure3NO = 0;
+                //}
+                //else {
+                //    Ex_NCB_Value_Tenure1NO = Ex_NCB_Value_Tenure1;
+                //    Ex_NCB_Value_Tenure2NO = Ex_NCB_Value_Tenure2;
+                //    Ex_NCB_Value_Tenure3NO = Ex_NCB_Value_Tenure3;
+                //}
+
+                grospremiumTenure1 = ((parseFloat(Ex_Basic_OD_Tenure1)) - (parseFloat(Ex_NCB_Value_Tenure1))) + ((parseFloat(Ex_Basic_TP_Tenure1)) + (parseFloat(Ex_Geo_OD_Ext1)) + (parseFloat(Ex_Geo_TP_Ext1)) + (parseFloat(Ex_CompulsoryPremium_Amt1)));
+			grospremiumTenure1 = (parseFloat(grospremiumTenure1)).toFixed(2);
+			totalgrospremium1 = (parseFloat(grospremiumTenure1) * 1.18);
+                totalgrospremium1 = (parseFloat(totalgrospremium1)).toFixed(2);
+
+                grospremiumTenure2 = ((parseFloat(Ex_Basic_OD_Tenure2)) - (parseFloat(Ex_NCB_Value_Tenure2))) + ((parseFloat(Ex_Basic_TP_Tenure2)) + (parseFloat(Ex_Geo_OD_Ext2)) + (parseFloat(Ex_Geo_TP_Ext2)) + (parseFloat(Ex_CompulsoryPremium_Amt2)));
+			grospremiumTenure2 = (parseFloat(grospremiumTenure2)).toFixed(2);
+			totalgrospremium2 = (grospremiumTenure2) * 1.18;
+            totalgrospremium2 = (parseFloat(totalgrospremium2)).toFixed(2);
+
+
+                grospremiumTenure3 = ((parseFloat(Ex_Basic_OD_Tenure3)) - (parseFloat(Ex_NCB_Value_Tenure3))) + ((parseFloat(Ex_Basic_TP_Tenure3)) + (parseFloat(Ex_Geo_OD_Ext3)) + (parseFloat(Ex_Geo_TP_Ext3)) + (parseFloat(Ex_CompulsoryPremium_Amt3)));
+			grospremiumTenure3 = (parseFloat(grospremiumTenure3)).toFixed(2);
+                totalgrospremium3 = (grospremiumTenure3) * 1.18;
+                totalgrospremium3 = (parseFloat(totalgrospremium3)).toFixed(2);
+            }
+            else
+            {
+                //if (existingpolicycalim == "YES") {
+                //    NCB_Value_Tenure1NO = 0;
+                //    NCB_Value_Tenure2NO = 0;
+                //    NCB_Value_Tenure3NO = 0;
+                //}
+                //else {
+                //    NCB_Value_Tenure1NO = NCB_Value_Tenure1;
+                //    NCB_Value_Tenure2NO = NCB_Value_Tenure2;
+                //    NCB_Value_Tenure3NO = NCB_Value_Tenure3;
+                //}
+                grospremiumTenure1 = ((parseFloat(Basic_OD_Tenure1)) - (parseFloat(NCB_Value_Tenure1))) + ((parseFloat(Basic_TP_Tenure1)) + (parseFloat(Geo_OD_Ext1)) + (parseFloat(Geo_TP_Ext1)) + (parseFloat(CompulsoryPremium_Amt1)));
+                grospremiumTenure1 = (parseFloat(grospremiumTenure1)).toFixed(2);
+                totalgrospremium1 = (grospremiumTenure1) * 1.18;
+                totalgrospremium1 = (parseFloat(totalgrospremium1)).toFixed(2);
+
+                grospremiumTenure2 = ((parseFloat(Basic_OD_Tenure2)) - (parseFloat(NCB_Value_Tenure2))) + ((parseFloat(Basic_TP_Tenure2)) + (parseFloat(Geo_OD_Ext2)) + (parseFloat(Geo_TP_Ext2)) + (parseFloat(CompulsoryPremium_Amt2)));
+                grospremiumTenure2 = (parseFloat(grospremiumTenure2)).toFixed(2);
+                totalgrospremium2 = (grospremiumTenure2) * 1.18;
+                totalgrospremium2 = (parseFloat(totalgrospremium2)).toFixed(2);
+
+                grospremiumTenure3 = ((parseFloat(Basic_OD_Tenure3)) - (parseFloat(NCB_Value_Tenure3))) + ((parseFloat(Basic_TP_Tenure3)) + (parseFloat(Geo_OD_Ext3)) + (parseFloat(Geo_TP_Ext3)) + (parseFloat(CompulsoryPremium_Amt3)));
+                grospremiumTenure3 = (parseFloat(grospremiumTenure3)).toFixed(2);
+                totalgrospremium3 = (grospremiumTenure3) * 1.18;
+                totalgrospremium3 = (parseFloat(totalgrospremium3)).toFixed(2);
+		}
+            $('#PACKAGETotalPremiumTenure1').text("(" + totalgrospremium1 + ")");
+            $('#PACKAGETotalPremiumTenure2').text("(" + totalgrospremium2 + ")");
+            $('#PACKAGETotalPremiumTenure3').text("(" +totalgrospremium3+")");
+
+            if (package == "Package1")
+            {
+            if (expired)
+            {
+                $('#360idvamt').text(Ex_Basic_IDV_Tenure1);
+
+                $('#pncbper').text(Ex_NCB_Per_Tenure1);
+                $('#pncbamt').text(Ex_NCB_Value_Tenure1);
+                $('#pidvamt').text(Ex_Basic_IDV_Tenure1);
+
+                $('#spnadditionalCoverzerodep').text("("+Ex_Zero_Dep_Tenure1+")");
+                $('#spnadditionalCoverRTI').text("("+Ex_RTI_Tenure1+")");
+
+                if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                    Ex_RTI_Tenure1 = 0;
+                    $('#txtrenewalpackagertiyear1').val(Ex_RTI_Tenure1);
+                }
+                else {
+                    $('#txtrenewalpackagertiyear1').val(Ex_RTI_Tenure1);
+                }
+                if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                    Ex_Zero_Dep_Tenure1 = 0;
+                    $('#txtrenewalpackagezerodepyear1').val(Ex_Zero_Dep_Tenure1);
+                }
+                else {
+                    $('#txtrenewalpackagezerodepyear1').val(Ex_Zero_Dep_Tenure1);
+                }
+				//if (existingpolicycalim == "YES") {
+    //                Ex_NCB_Value_Tenure1 = 0;
+
+    //            }
+                $(".checkboxes:checked").each(function () {
+                    ischecked = true;
+                });
+                if (ischecked) {
+                    Ex_CompulsoryPremium_Amt1 = 0;
+                }
+
+                grospremiumTenure1 = ((parseFloat(Ex_Basic_OD_Tenure1)) - (parseFloat(Ex_NCB_Value_Tenure1))) + ((parseFloat(Ex_Basic_TP_Tenure1)) + (parseFloat(Ex_Geo_OD_Ext1)) + (parseFloat(Ex_Geo_TP_Ext1)) + (parseFloat(Ex_CompulsoryPremium_Amt1)) + (parseFloat(Ex_Zero_Dep_Tenure1)) + (parseFloat(Ex_RTI_Tenure1)));
+                grospremiumTenure1 = (parseFloat(grospremiumTenure1)).toFixed(2);
+                totalgrospremium1 = (parseFloat(grospremiumTenure1) * 1.18);
+                totalgrospremium1 = (parseFloat(totalgrospremium1)).toFixed(2);
+                $('#txtrenewalpackagencbvalyear1').val(Ex_NCB_Value_Tenure1);
+                $('#txtrenewalpackagecompulsarypremiumyear1').val(Ex_CompulsoryPremium_Amt1);
+            } else {
+                $('#360idvamt').text(Basic_IDV_Tenure1);
+
+                $('#pncbper').text(NCB_Per_Tenure1);
+                $('#pncbamt').text(NCB_Value_Tenure1);
+                $('#pidvamt').text(Basic_IDV_Tenure1);
+
+                $('#spnadditionalCoverzerodep').text("("+Zero_Dep_Tenure1+")");
+                $('#spnadditionalCoverRTI').text("("+RTI_Tenure1+")");
+
+
+                if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                    RTI_Tenure1 = 0;
+                    $('#txtrenewalpackagertiyear1').val(RTI_Tenure1);
+                }
+                else {
+                    $('#txtrenewalpackagertiyear1').val(RTI_Tenure1);
+
+                }
+                if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                    Zero_Dep_Tenure1 = 0;
+                    $('#txtrenewalpackagezerodepyear1').val(Zero_Dep_Tenure1);
+                }
+                else {
+                    $('#txtrenewalpackagezerodepyear1').val(Zero_Dep_Tenure1);
+                }
+				//if (existingpolicycalim == "YES") {
+				//	NCB_Value_Tenure1 = 0;
+
+    //            }
+
+                $(".checkboxes:checked").each(function () {
+                    ischecked = true;
+                });
+                if (ischecked) {
+                    CompulsoryPremium_Amt1 = 0;
+                }
+
+                grospremiumTenure1 = ((parseFloat(Basic_OD_Tenure1)) - (parseFloat(NCB_Value_Tenure1))) + ((parseFloat(Basic_TP_Tenure1)) + (parseFloat(Geo_OD_Ext1)) + (parseFloat(Geo_TP_Ext1)) + (parseFloat(CompulsoryPremium_Amt1)) + (parseFloat(Zero_Dep_Tenure1)) + (parseFloat(RTI_Tenure1)));
+                grospremiumTenure1 = (parseFloat(grospremiumTenure1)).toFixed(2);
+                totalgrospremium1 = (grospremiumTenure1) * 1.18;
+                totalgrospremium1 = (parseFloat(totalgrospremium1)).toFixed(2);
+
+                $('#txtrenewalpackagencbvalyear1').val(NCB_Value_Tenure1);
+                $('#txtrenewalpackagecompulsarypremiumyear1').val(CompulsoryPremium_Amt1);
+
+                }
+                $('#PACKAGETotalPremiumTenure1').text("(" + totalgrospremium1 + ")");
+                $('#totoalgropremiumbanner').text(totalgrospremium1);
+                $('#txtpackagegrosspremium').val(grospremiumTenure1);
+                $('#txtpackagetotalpremium').val(totalgrospremium1);
+                $('#spnrenewalpolicyTotAMT').text("Premium - RS. " + totalgrospremium1);
+                gstAmtTenure = (grospremiumTenure1 * 18) / 100;
+
+
+            }
+            else if (package == "Package2") {
+                if (expired) {
+                    $('#360idvamt').text(Ex_Basic_IDV_Tenure2);
+
+                $('#pncbper').text(Ex_NCB_Per_Tenure2);
+                $('#pncbamt').text(Ex_NCB_Value_Tenure2);
+                $('#pidvamt').text(Ex_Basic_IDV_Tenure2);
+
+                $('#spnadditionalCoverzerodep').text("("+Ex_Zero_Dep_Tenure2+")");
+                $('#spnadditionalCoverRTI').text("("+Ex_RTI_Tenure2+")");
+
+                    if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                        Ex_RTI_Tenure2 = 0;
+                        $('#txtrenewalpackagertiyear2').val(Ex_RTI_Tenure2);
+                    }
+                    else {
+                        $('#txtrenewalpackagertiyear2').val(Ex_RTI_Tenure2);
+                    }
+                    if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                        Ex_Zero_Dep_Tenure2 = 0;
+                        $('#txtrenewalpackagezerodepyear2').val(Ex_Zero_Dep_Tenure2);
+                    }
+                    else {
+                        $('#txtrenewalpackagezerodepyear2').val(Ex_Zero_Dep_Tenure2);
+                    }
+				//if (existingpolicycalim == "YES") {
+    //                Ex_NCB_Value_Tenure2 = 0;
+    //                }
+
+                    $(".checkboxes:checked").each(function () {
+                        ischecked = true;
+                    });
+                    if (ischecked) {
+                        Ex_CompulsoryPremium_Amt2 = 0;
+                    }
+                grospremiumTenure2 = ((parseFloat(Ex_Basic_OD_Tenure2)) - (parseFloat(Ex_NCB_Value_Tenure2))) + ((parseFloat(Ex_Basic_TP_Tenure2)) + (parseFloat(Ex_Geo_OD_Ext2)) + (parseFloat(Ex_Geo_TP_Ext2)) + (parseFloat(Ex_CompulsoryPremium_Amt2)) + (parseFloat(Ex_Zero_Dep_Tenure2)) + (parseFloat(Ex_RTI_Tenure2)));
+                grospremiumTenure2 = (parseFloat(grospremiumTenure2)).toFixed(2);
+                totalgrospremium2 = (grospremiumTenure2) * 1.18;
+                totalgrospremium2 = (parseFloat(totalgrospremium2)).toFixed(2);
+                    $('#txtrenewalpackagencbvalyear2').val(Ex_NCB_Value_Tenure2);
+                    $('#txtrenewalpackagecompulsarypremiumyear2').val(Ex_CompulsoryPremium_Amt2);
+
+            } else {
+                    $('#360idvamt').text(Basic_IDV_Tenure2);
+
+                $('#pncbper').text(NCB_Per_Tenure2);
+                $('#pncbamt').text(NCB_Value_Tenure2);
+                $('#pidvamt').text(Basic_IDV_Tenure2);
+
+
+                $('#spnadditionalCoverzerodep').text("("+Zero_Dep_Tenure2+")");
+                $('#spnadditionalCoverRTI').text("("+RTI_Tenure2+")");
+
+                    if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                        RTI_Tenure2 = 0;
+                        $('#txtrenewalpackagertiyear2').val(RTI_Tenure2);
+                    }
+                    else {
+                        $('#txtrenewalpackagertiyear2').val(RTI_Tenure2);
+                    }
+                    if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                        Zero_Dep_Tenure2 = 0;
+                        $('#txtrenewalpackagezerodepyear2').val(Zero_Dep_Tenure2);
+                    }
+                    else {
+                        $('#txtrenewalpackagezerodepyear2').val(Zero_Dep_Tenure2);
+                    }
+				//if (existingpolicycalim == "YES") {
+				//	NCB_Value_Tenure2 = 0;
+
+    //                }
+                    $(".checkboxes:checked").each(function () {
+                        ischecked = true;
+                    });
+                    if (ischecked) {
+                        CompulsoryPremium_Amt2 = 0;
+                    }
+                grospremiumTenure2 = ((parseFloat(Basic_OD_Tenure2)) - (parseFloat(NCB_Value_Tenure2))) + ((parseFloat(Basic_TP_Tenure2)) + (parseFloat(Geo_OD_Ext2)) + (parseFloat(Geo_TP_Ext2)) + (parseFloat(CompulsoryPremium_Amt2)) + (parseFloat(Zero_Dep_Tenure2)) + (parseFloat(RTI_Tenure2)));
+                grospremiumTenure2 = (parseFloat(grospremiumTenure2)).toFixed(2);
+                totalgrospremium2 = (grospremiumTenure2) * 1.18;
+                totalgrospremium2 = (parseFloat(totalgrospremium2)).toFixed(2);
+                    $('#txtrenewalpackagencbvalyear2').val(NCB_Value_Tenure2);
+                    $('#txtrenewalpackagecompulsarypremiumyear2').val(CompulsoryPremium_Amt2);
+
+                }
+                $('#PACKAGETotalPremiumTenure2').text("(" + totalgrospremium2 + ")");
+                $('#totoalgropremiumbanner').text(totalgrospremium2);
+                $('#txtpackagegrosspremium').val(grospremiumTenure2);
+                $('#txtpackagetotalpremium').val(totalgrospremium2);
+                $('#spnrenewalpolicyTotAMT').text("Premium - RS. " + totalgrospremium2);
+                gstAmtTenure = (grospremiumTenure2 * 18) / 100;
+
+            }
+            else if (package == "Package3")
+            {
+                if (expired) {
+                    $('#360idvamt').text(Ex_Basic_IDV_Tenure3);
+
+                $('#pncbper').text(Ex_NCB_Per_Tenure3);
+                $('#pncbamt').text(Ex_NCB_Value_Tenure3);
+                $('#pidvamt').text(Ex_Basic_IDV_Tenure3);
+
+                $('#spnadditionalCoverzerodep').text("("+Ex_Zero_Dep_Tenure3+")");
+                $('#spnadditionalCoverRTI').text("("+Ex_RTI_Tenure3+")");
+
+                    if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                        Ex_RTI_Tenure3 = 0;
+                        $('#txtrenewalpackagertiyear3').val(Ex_RTI_Tenure3);
+                    }
+                    else {
+                        $('#txtrenewalpackagertiyear3').val(Ex_RTI_Tenure3);
+                    }
+                    if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                        Ex_Zero_Dep_Tenure3 = 0;
+                        $('#txtrenewalpackagezerodepyear3').val(Ex_Zero_Dep_Tenure3);
+                    }
+                    else {
+                        $('#txtrenewalpackagezerodepyear3').val(Ex_Zero_Dep_Tenure3);
+
+                    }
+				//if (existingpolicycalim == "YES") {
+    //                Ex_NCB_Value_Tenure3 = 0;
+
+    //                }
+
+                    $(".checkboxes:checked").each(function () {
+                        ischecked = true;
+                    });
+                    if (ischecked) {
+                        Ex_CompulsoryPremium_Amt3 = 0;
+                    }
+                grospremiumTenure3 = ((parseFloat(Ex_Basic_OD_Tenure3)) - (parseFloat(Ex_NCB_Value_Tenure3))) + ((parseFloat(Ex_Basic_TP_Tenure3)) + (parseFloat(Ex_Geo_OD_Ext3)) + (parseFloat(Ex_Geo_TP_Ext3)) + (parseFloat(Ex_CompulsoryPremium_Amt3)) + (parseFloat(Ex_Zero_Dep_Tenure3)) + (parseFloat(Ex_RTI_Tenure3)));
+                grospremiumTenure3 = (parseFloat(grospremiumTenure3)).toFixed(2);
+                totalgrospremium3 = (grospremiumTenure3) * 1.18;
+                totalgrospremium3 = (parseFloat(totalgrospremium3)).toFixed(2);
+                    $('#txtrenewalpackagencbvalyear3').val(Ex_NCB_Value_Tenure3);
+                    $('#txtrenewalpackagecompulsarypremiumyear3').val(Ex_CompulsoryPremium_Amt3);
+
+                } else {
+                    $('#360idvamt').text(Basic_IDV_Tenure3);
+
+                $('#pncbper').text(NCB_Per_Tenure3);
+                $('#pncbamt').text(NCB_Value_Tenure3);
+                $('#pidvamt').text(Basic_IDV_Tenure3);
+
+
+                $('#spnadditionalCoverzerodep').text("("+Zero_Dep_Tenure3+")");
+                $('#spnadditionalCoverRTI').text("("+RTI_Tenure3+")");
+
+                    if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                        RTI_Tenure3 = 0;
+                        $('#txtrenewalpackagertiyear3').val(RTI_Tenure3);
+                    }
+                    else {
+                        $('#txtrenewalpackagertiyear3').val(RTI_Tenure3);
+                    }
+                    if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                        Zero_Dep_Tenure3 = 0;
+                        $('#txtrenewalpackagezerodepyear3').val(Zero_Dep_Tenure3);
+                    }
+                    else {
+                        $('#txtrenewalpackagezerodepyear3').val(Zero_Dep_Tenure3);
+                    }
+				//if (existingpolicycalim == "YES") {
+				//	NCB_Value_Tenure3 = 0;
+
+    //                }
+                    $(".checkboxes:checked").each(function () {
+                        ischecked = true;
+                    });
+                    if (ischecked) {
+                        CompulsoryPremium_Amt3 = 0;
+                    }
+                grospremiumTenure3 = ((parseFloat(Basic_OD_Tenure3)) - (parseFloat(NCB_Value_Tenure3))) + ((parseFloat(Basic_TP_Tenure3)) + (parseFloat(Geo_OD_Ext3)) + (parseFloat(Geo_TP_Ext3)) + (parseFloat(CompulsoryPremium_Amt3)) + (parseFloat(Zero_Dep_Tenure3)) + (parseFloat(RTI_Tenure3)));
+                grospremiumTenure3 = (parseFloat(grospremiumTenure3)).toFixed(2);
+                totalgrospremium3 = (grospremiumTenure3) * 1.18;
+                totalgrospremium3 = (parseFloat(totalgrospremium3)).toFixed(2);
+                    $('#txtrenewalpackagencbvalyear3').val(NCB_Value_Tenure3);
+                    $('#txtrenewalpackagecompulsarypremiumyear3').val(CompulsoryPremium_Amt3);
+                }
+                $('#PACKAGETotalPremiumTenure3').text("(" + totalgrospremium3 + ")");
+                $('#totoalgropremiumbanner').text(totalgrospremium3);
+                $('#txtpackagegrosspremium').val(grospremiumTenure3);
+                $('#txtpackagetotalpremium').val(totalgrospremium3);
+                $('#spnrenewalpolicyTotAMT').text("Premium - RS. " + totalgrospremium3);
+                gstAmtTenure = (grospremiumTenure3 * 18) / 100;
+
+
+            }
+            $('#txtpackagegst').val(gstAmtTenure);
+        }
+        else if (policytype == "SAOD")
+        {
+		var Ex_SAOD_Basic_OD_Tenure1 =  '@Ex_SAOD_Basic_OD_Tenure1';
+		var Ex_SAOD_NCB_Value_Tenure1 =  '@Ex_SAOD_NCB_Value_Tenure1';
+		var Ex_SAOD_Basic_TP_Tenure1 =  '@Ex_SAOD_Basic_TP_Tenure1';
+		var Ex_SAOD_Zero_Dep_Tenure1 =  '@Ex_SAOD_Zero_Dep_Tenure1';
+		var Ex_SAOD_RTI_Tenure1 =  '@Ex_SAOD_RTI_Tenure1';
+
+		var SAOD_Basic_OD_Tenure1 =  '@SAOD_Basic_OD_Tenure1';
+		var SAOD_NCB_Value_Tenure1 =  '@SAOD_NCB_Value_Tenure1';
+		var SAOD_Basic_TP_Tenure1 =  '@SAOD_Basic_TP_Tenure1';
+		var SAOD_Zero_Dep_Tenure1 =  '@SAOD_Zero_Dep_Tenure1';
+            var SAOD_RTI_Tenure1 = '@SAOD_RTI_Tenure1';
+
+             var Ex_SAOD_NCB_Per_Tenure1 = '@Ex_SAOD_NCB_Per_Tenure1';
+            var Ex_SAOD_Basic_IDV_Tenure1 = '@Ex_SAOD_Basic_IDV_Tenure1';
+
+            var SAOD_NCB_Per_Tenure1 = '@SAOD_NCB_Per_Tenure1';
+            var SAOD_Basic_IDV_Tenure1 = '@SAOD_Basic_IDV_Tenure1';
+            //if (expired) {
+
+            //    grospremium = ((parseFloat(Ex_SAOD_Basic_OD_Tenure1)) - (parseFloat(Ex_SAOD_NCB_Value_Tenure1))) + (parseFloat(Ex_SAOD_Basic_TP_Tenure1));
+            //    grospremium = (parseFloat(grospremium)).toFixed(2);
+            //    totalgrospremium = (parseFloat(grospremium) * 1.18);
+            //    totalgrospremium = (parseFloat(totalgrospremium)).toFixed(2);
+            //    $('#SAODTotalPremiumTenure').text("("+totalgrospremium+")");
+
+            //}
+            //else {
+
+            //    grospremium = ((parseFloat(SAOD_Basic_OD_Tenure1)) - (parseFloat(SAOD_NCB_Value_Tenure1))) + (parseFloat(SAOD_Basic_TP_Tenure1));
+            //    grospremium = (parseFloat(grospremium)).toFixed(2);
+            //    totalgrospremium = (parseFloat(grospremium) * 1.18);
+            //    totalgrospremium = (parseFloat(totalgrospremium)).toFixed(2);
+            //    $('#SAODTotalPremiumTenure').text("("+totalgrospremium+")");
+
+            //}
+
+            if (expired)
+            {
+                $('#360idvamt').text(Ex_SAOD_Basic_IDV_Tenure1);
+                $('#spnadditionalCoverzerodep').text("("+Ex_SAOD_Zero_Dep_Tenure1+")");
+                $('#spnadditionalCoverRTI').text("("+Ex_SAOD_RTI_Tenure1+")");
+                $('#pidvamt').text(Ex_SAOD_Basic_IDV_Tenure1);
+                $('#pncbper').text(Ex_SAOD_NCB_Per_Tenure1);
+                $('#pncbamt').text(Ex_SAOD_NCB_Value_Tenure1);
+
+                if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                    Ex_SAOD_RTI_Tenure1 = 0;
+                    $('#txtrenewalsaodrti').val(Ex_SAOD_RTI_Tenure1);
+                }
+                else {
+                    $('#txtrenewalsaodrti').val(Ex_SAOD_RTI_Tenure1);
+                }
+                if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                    Ex_SAOD_Zero_Dep_Tenure1 = 0;
+                    $('#txtrenewalsaodzerodep').val(Ex_SAOD_Zero_Dep_Tenure1);
+                }
+                else {
+                    $('#txtrenewalsaodzerodep').val(Ex_SAOD_Zero_Dep_Tenure1);
+                }
+    //        if (existingpolicycalim == "YES")
+    //        {
+				//Ex_SAOD_NCB_Value_Tenure1 = 0;
+    //            }
+                grospremium = ((parseFloat(Ex_SAOD_Basic_OD_Tenure1)) - (parseFloat(Ex_SAOD_NCB_Value_Tenure1))) + (parseFloat(Ex_SAOD_Basic_TP_Tenure1)) + (parseFloat(Ex_SAOD_Zero_Dep_Tenure1)) + (parseFloat(Ex_SAOD_RTI_Tenure1));
+                grospremium = (parseFloat(grospremium)).toFixed(2);
+                totalgrospremium = (parseFloat(grospremium) * 1.18);
+                totalgrospremium = (parseFloat(totalgrospremium)).toFixed(2);
+
+                $('#txtrenewalsaodncbval').val(Ex_SAOD_NCB_Value_Tenure1);
+            }
+            else
+            {
+                $('#360idvamt').text(SAOD_Basic_IDV_Tenure1);
+
+                $('#spnadditionalCoverzerodep').text(SAOD_Zero_Dep_Tenure1);
+                $('#spnadditionalCoverRTI').text(SAOD_RTI_Tenure1);
+
+                $('#pidvamt').text(SAOD_Basic_IDV_Tenure1);
+                $('#pncbper').text(SAOD_NCB_Per_Tenure1);
+                $('#pncbamt').text(SAOD_NCB_Value_Tenure1);
+
+                if ($('#chkrenewalreturninvoice').is(':not(:checked)')) {
+                    SAOD_RTI_Tenure1 = 0;
+                    $('#txtrenewalsaodrti').val(SAOD_RTI_Tenure1);
+                }
+                else {
+                    $('#txtrenewalsaodrti').val(SAOD_RTI_Tenure1);
+                }
+                if ($('#chkrenewalzerodeo').is(':not(:checked)')) {
+                    SAOD_Zero_Dep_Tenure1 = 0;
+                    $('#txtrenewalsaodzerodep').val(SAOD_Zero_Dep_Tenure1);
+                }
+                else {
+                    $('#txtrenewalsaodzerodep').val(SAOD_Zero_Dep_Tenure1);
+                }
+			//if (existingpolicycalim == "YES") {
+			//	SAOD_NCB_Value_Tenure1 = 0;
+
+   //             }
+                grospremium = ((parseFloat(SAOD_Basic_OD_Tenure1)) - (parseFloat(SAOD_NCB_Value_Tenure1))) + (parseFloat(SAOD_Basic_TP_Tenure1)) + (parseFloat(SAOD_Zero_Dep_Tenure1)) + (parseFloat(SAOD_RTI_Tenure1));
+                grospremium = (parseFloat(grospremium)).toFixed(2);
+                totalgrospremium = (parseFloat(grospremium) * 1.18);
+                totalgrospremium = (parseFloat(totalgrospremium)).toFixed(2);
+
+                $('#txtrenewalsaodncbval').val(SAOD_NCB_Value_Tenure1);
+            }
+            $('#SAODTotalPremiumTenure').text("("+totalgrospremium+")");
+
+            $('#totoalgropremiumbanner').text(totalgrospremium);
+            $('#txtrenewalsaodgstper').val(grospremium);
+            $('#txtrenewalsaodpremiumamt').val(totalgrospremium);
+            $('#spnrenewalpolicyTotAMT').text("Premium - RS. "+totalgrospremium);
+            gstAmtTenure = (grospremium * 18) / 100;
+            $('#txtpackagegst').val(gstAmtTenure);
+        }
+
+    }
+
+
+
+
+
+    $('#txtrenewalemail').blur(function () {
+        var customerEmail = $(this).val();
+        var re = /^(([^<>()[\]\\.,;:\s@@\"]+(\.[^<>()[\]\\.,;:\s@@\"]+)*)|(\".+\"))@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/igm;
+        if (re.test(customerEmail)) {
+
+        } else {
+            $('#txtrenewalemail').val('');
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Invalid Email Address.'
+            });
+            return false;
+        }
+    });
+    $("#txtrenewalnomineename").keypress(function (e) {
+        var code = e.keyCode || e.which;
+        if ((code < 65 || code > 90) && (code < 97 || code > 122) && code != 32 && code != 46) {
+            //Lobibox.notify('warning', {
+            //    continueDelayOnInactiveTab: true,
+            //    msg: 'Enter valid Name.'
+            //});
+
+            return false;
+        }
+    });
+
+    function callpackageSaodTypes() {
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").show();
+        if (policytype == "SAOD") {
+            $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+
+        }
+        else {
+            $("#InsurancepolicyRenewalDivpolicyTypePackage").show();
+        }
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").show();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    }
+
+   
+
+    /************ Show Hide Div Starts *********************/
+    $("#btnInsurancepolicyRenewalpolicytypenext").click(function () {
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+
+        var chkincSubmit = 0;
+        if (policytype == "Package") {
+            $('[name="vehi.packagepremium"]').each(function () {
+                if ($(this).is(':checked')) chkincSubmit++;
+            });
+            if (chkincSubmit == 0) {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Select any one Package Premium.'
+                });
+                return false;
+            }
+        }
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").show();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+
+    $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Nextyear1").click(function () {
+        $("#InsurancepolicyRenewalDivpartOne").show();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+    $("#btnInsurancepolicyRenewalpartOneBack").click(function () {
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+
+        var policytype = $("input[name='vehi.Renewal_Type']:checked").val();
+        if (policytype == "Package") {
+
+            var premium = $("input[name='vehi.packagepremium']:checked").val();
+
+            if (premium == "Package1") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+            }
+            else if (premium == "Package2") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").show();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+            }
+            else if (premium == "Package3") {
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+                $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").show();
+            }
+            $("#packagesummary2NexttDiv").show();
+
+        }
+        else {
+            $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").show();
+            $("#packagesummary2NexttDiv").hide();
+            $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+            $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+            $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        }
+        $("#InsurancepolicyRenewalDivpartOne").hide();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#optingoutCPAresonsDiv").hide();
+
+    });
+
+
+    function clearcheckedcheckbox() {
+        var ischecked = false;
+        $(".checkboxes:checked").each(function () {
+            $(".checkboxes").removeAttr("checked");
+            $('#optingoutCPAresonsDiv').hide();
+        });
+    }
+
+    $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1Next").click(function () {
+        $("#InsurancepolicyRenewalDivpartOne").show();
+        $("#InsurancepolicyRenewalDivpartTwo").hide();
+        $("#InsurancepolicyRenewalDivpolicyType").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypePackage").hide();
+        $("#InsurancepolicyRenewalDivpolicyTypeAdditionalCover").hide();
+        $("#InsurancepolicyRenewalClaimonExistingpolicy").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package1").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package2").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary1Package3").hide();
+        $("#InsurancepolicyRenewalpolicyTypePackagePremiumSummary2Package3").hide();
+        $("#packagesummry1Div").hide();
+        $("#packagesummary2NexttDiv").hide();
+        $("#InsurancepolicyRenewalpolicyTypeSAODPremiumSummary1").hide();
+        $("#optingoutCPAresonsDiv").hide();
+    });
+
+    function checkrenewalvalidation() {
+
+        $("#txtrenewalregistartiondate").prop("disabled", false);
+        $("#ddlrenewalnomineerealationship").prop("disabled", false);
+        $('#mainLoader').css({ 'display': 'block' });
+
+    }
+
+    function IcForFinalQuotationBack() {
+
+        $('#btnInsurancepolicyRenewalpartTwoBack').show();
+        $('#pleaseSelectIcQuotationDiv').hide();
+        $('#InsurancepolicyRenewalDivpartTwo').show();
+        
+    }
+
+    function CheckQuotationForNext() {
+        $('#pleaseSelectIcQuotationDiv').show();
+        $('#InsurancepolicyRenewalDivpartTwo').hide();
+        $('#btnInsurancepolicyRenewalpartTwoBack').hide();
+       
+    }
+
+
+    function SaveRenewalWinbackDetails()
+    {
+        data = $('#ddlproductRenewal option:selected').toArray().map(item => item.value).join();
+        $('#txtRenewalproductId').val(data);
+        $('#txtisProposeRenew').val(true);
+      
+            
+    }
+
+</script>

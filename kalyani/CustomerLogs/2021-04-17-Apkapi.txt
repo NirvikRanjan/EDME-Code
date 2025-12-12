@@ -1,0 +1,110 @@
+2021-04-17 00:34:59.0662|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 12:34:59 am
+2021-04-17 00:34:59.1740|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 12:34:59 am
+2021-04-17 00:39:11.0504|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 12:39:11 am
+ CustId: 1001326 VehId: 1336736 User: test_indus_ins
+2021-04-17 00:39:12.0976|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 12:39:12 am
+ CustId: 1001373 VehId: 1336784 User: test_indus_ins
+2021-04-17 00:39:16.3074|INFO|apkRegLogger|_insuranceBound Lock: 
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at AutoSherpa_project.Controllers.CallLoggingController._insuranceOutBoundSubmit(callinteraction callinteraction, insurancedisposition ir_disposition, ListingForm listingForm, appointmentbooked appointmentbooked, String bookingMode) in E:\Live Project\Autosherpa\KalyaniMotors\kalyani\Controllers\CallLoggingController.cs:line 10609
+Deadlock found when trying to get lock; try restarting transaction line 10609
+2021-04-17 00:39:16.3074|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 12:39:16 am
+2021-04-17 00:39:16.3074|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 12:39:16 am
+2021-04-17 00:39:16.4270|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1336736  SMS Type - APPOINTMENT  DateTime - 17-04-2021 12:39:16 am
+2021-04-17 00:39:25.4369|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1336736  SMS Type - APPOINTMENT  DateTime - 17-04-2021 12:39:25 am
+2021-04-17 00:42:58.9298|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 12:42:58 am
+2021-04-17 00:42:58.9298|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 12:42:58 am
+2021-04-17 00:43:05.4253|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 12:43:05 am
+ CustId: 1001320 VehId: 1336729 User: test_indus_ins
+2021-04-17 00:43:13.7633|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 12:43:13 am
+ CustId: 1001373 VehId: 1336784 User: test_indus_ins
+2021-04-17 00:46:15.1067|INFO|apkRegLogger|_insuranceBound Lock: 
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at AutoSherpa_project.Controllers.CallLoggingController._insuranceOutBoundSubmit(callinteraction callinteraction, insurancedisposition ir_disposition, ListingForm listingForm, appointmentbooked appointmentbooked, String bookingMode) in E:\Live Project\Autosherpa\KalyaniMotors\kalyani\Controllers\CallLoggingController.cs:line 10609
+Lock wait timeout exceeded; try restarting transaction line 10609
+2021-04-17 00:46:15.1167|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 12:46:15 am
+2021-04-17 00:46:15.8657|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 12:46:15 am
+2021-04-17 00:46:15.8836|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1336729  SMS Type - APPOINTMENT  DateTime - 17-04-2021 12:46:15 am
+2021-04-17 00:46:21.8421|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1336729  SMS Type - APPOINTMENT  DateTime - 17-04-2021 12:46:21 am
+2021-04-17 00:50:58.9318|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 12:50:58 am
+2021-04-17 00:50:58.9428|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 12:50:58 am
+2021-04-17 00:58:58.9301|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 12:58:58 am
+2021-04-17 00:58:58.9301|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 12:58:58 am
+2021-04-17 01:04:30.8625|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 1:04:30 am
+2021-04-17 01:04:30.9163|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 1:04:30 am
+2021-04-17 01:07:11.7697|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 1:07:11 am
+ CustId: 1079227 VehId: 1436456 User: test_indus_ins
+2021-04-17 01:07:12.3372|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 17/04/2021 1:07:12 am
+ CustId: 1076096 VehId: 1432320 User: test_indus_ins
+2021-04-17 01:07:21.1067|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 1:07:21 am
+2021-04-17 01:07:21.1067|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 17/04/2021 1:07:21 am
+2021-04-17 01:07:21.1536|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1436456  SMS Type - APPOINTMENT  DateTime - 17-04-2021 1:07:21 am
+2021-04-17 01:07:21.1536|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1432320  SMS Type - APPOINTMENT  DateTime - 17-04-2021 1:07:21 am
+2021-04-17 01:07:21.5047|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1436456  SMS Type - APPOINTMENT  DateTime - 17-04-2021 1:07:21 am
+2021-04-17 01:07:21.5047|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1432320  SMS Type - APPOINTMENT  DateTime - 17-04-2021 1:07:21 am
+2021-04-17 01:12:30.7586|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 1:12:30 am
+2021-04-17 01:12:30.7586|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 1:12:30 am
+2021-04-17 01:20:30.7555|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 1:20:30 am
+2021-04-17 01:20:30.7555|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 1:20:30 am
+2021-04-17 11:54:10.0796|INFO|apkRegLogger|
+ Driver Pushing Running DateTime: 17-04-2021 11:54:10 am
+2021-04-17 11:54:10.1644|INFO|apkRegLogger|
+ Driver History Data Pushing Completed DateTime: 17-04-2021 11:54:10 am

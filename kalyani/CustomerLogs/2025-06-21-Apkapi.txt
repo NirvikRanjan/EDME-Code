@@ -1,0 +1,111 @@
+2025-06-21 10:05:09.2998|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-06-21 10:05:09.4586|INFO|apkRegLogger|
+
+2025-06-21 10:05:09.4586|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 21-06-2025 10:05:09 am
+2025-06-21 10:05:09.4749|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-06-21 10:05:09.5371|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-06-21 10:05:09.5875|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 21-06-2025 10:05:09 am
+
+2025-06-21 10:05:09.6157|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:05:09 am
+2025-06-21 10:05:09.6157|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:05:09 am
+2025-06-21 10:05:22.6169|INFO|apkRegLogger|
+
+2025-06-21 10:05:22.6169|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 21-06-2025 10:05:22 am
+2025-06-21 10:05:22.6169|INFO|apkRegLogger|Scheduler started successfully.
+2025-06-21 10:05:22.6444|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-06-21 10:05:22.6444|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 21-06-2025 10:05:22 am
+
+2025-06-21 10:05:22.7673|INFO|apkRegLogger|
+
+2025-06-21 10:05:22.7673|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 21-06-2025 10:05:22 am
+2025-06-21 10:05:22.7794|INFO|apkRegLogger|Scheduler started successfully.
+2025-06-21 10:05:22.7858|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 1/1 * ? *
+2025-06-21 10:05:22.7858|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 21-06-2025 10:05:22 am
+
+2025-06-21 10:05:22.8066|INFO|apkRegLogger|
+
+2025-06-21 10:05:22.8066|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 21-06-2025 10:05:22 am
+2025-06-21 10:05:22.8181|INFO|apkRegLogger|Scheduler started successfully.
+2025-06-21 10:05:22.8181|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 ? * *
+2025-06-21 10:05:22.8181|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 21-06-2025 10:05:22 am
+
+2025-06-21 10:13:09.4263|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:13:09 am
+2025-06-21 10:13:09.4263|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:13:09 am
+2025-06-21 10:21:09.4165|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:21:09 am
+2025-06-21 10:21:09.4165|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:21:09 am
+2025-06-21 10:29:09.4144|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:29:09 am
+2025-06-21 10:29:09.4255|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:29:09 am
+2025-06-21 10:37:09.4139|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:37:09 am
+2025-06-21 10:37:09.4271|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:37:09 am
+2025-06-21 10:45:09.4169|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:45:09 am
+2025-06-21 10:45:09.4169|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:45:09 am
+2025-06-21 10:53:09.4305|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 10:53:09 am
+2025-06-21 10:53:09.4305|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 10:53:09 am
+2025-06-21 11:01:09.4237|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:01:09 am
+2025-06-21 11:01:09.4338|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:01:09 am
+2025-06-21 11:09:09.4173|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:09:09 am
+2025-06-21 11:09:09.4173|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:09:09 am
+2025-06-21 11:17:09.4177|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:17:09 am
+2025-06-21 11:17:09.4291|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:17:09 am
+2025-06-21 11:25:09.4196|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:25:09 am
+2025-06-21 11:25:09.4278|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:25:09 am
+2025-06-21 11:33:09.4140|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:33:09 am
+2025-06-21 11:33:09.4140|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:33:09 am
+2025-06-21 11:41:09.4184|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:41:09 am
+2025-06-21 11:41:09.4287|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:41:09 am
+2025-06-21 11:49:09.4147|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:49:09 am
+2025-06-21 11:49:09.4147|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:49:09 am
+2025-06-21 11:57:09.4572|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 11:57:09 am
+2025-06-21 11:57:09.4572|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 11:57:09 am
+2025-06-21 12:05:09.4175|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 12:05:09 pm
+2025-06-21 12:05:09.4248|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 12:05:09 pm
+2025-06-21 12:13:09.4286|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 12:13:09 pm
+2025-06-21 12:13:09.4286|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 12:13:09 pm
+2025-06-21 12:21:09.4159|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 12:21:09 pm
+2025-06-21 12:21:09.4286|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 12:21:09 pm
+2025-06-21 12:29:09.4179|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 12:29:09 pm
+2025-06-21 12:29:09.4258|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 12:29:09 pm
+2025-06-21 12:37:09.4199|INFO|apkRegLogger|
+ Android CallSynch Started at: 21-06-2025 12:37:09 pm
+2025-06-21 12:37:09.4199|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 21-06-2025 12:37:09 pm

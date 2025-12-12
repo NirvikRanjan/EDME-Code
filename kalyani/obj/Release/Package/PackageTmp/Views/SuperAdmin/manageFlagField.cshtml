@@ -1,0 +1,142 @@
+﻿@model AutoSherpa_project.Models.dealer
+@{
+    ViewBag.Title = "manageFlagField";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<style>
+    .disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+</style>
+<div class="container-fluide">
+    <input type="hidden" id="hdnrole" value="@Session["UserRole"].ToString()" />
+    <div class="row">
+
+                                    
+                                    <div class="col-lg-12">
+                                        <div class="panel panel-info">
+                                            <div class="panel-heading">
+                                                <b>Insurance Booking Day Limit</b>
+                                            </div>
+                                            <div class="panel-body">
+
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        @Html.Label("Insurance Followup DayLimit")
+                                                        @Html.TextBoxFor(m => m.insfollowupdaylimit, new { @class = "form-control numberOnly", @id = "insfollowupdaylimit" })
+                                                    </div>
+                                                    <div class="col-md-2" style="margin-top:30px;margin-bottom:20px;">
+                                                        <button type="button" class="btn btn-sm btn-primary" id="followupdaylimitdiv" onclick="updateDetails('insfollowupdaylimit')">Update</button>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        @Html.Label("Insurance BookingDay Limit")
+                                                        @Html.TextBoxFor(m => m.insbookingDayLimit, new { @class = "form-control", @id = "insbookingdaylimit" })
+                                                    </div>
+                                                    <div class="col-md-2" style="margin-top:30px;margin-bottom:20px;">
+                                                        <button type="button" class="btn btn-sm btn-primary" id="bookingdaylimitdiv" onclick="updateDetails('insbookingdaylimit')">Update</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <span class="code" id="tblException" style="font-size:11pt;font-weight:bold;"></span>
+                                </div>
+                            </div>
+                  
+
+
+
+
+@section scripts
+
+{
+    <script>
+
+        $(document).ready(function () {
+
+
+
+            $('.numberOnly').keypress(function (e) {
+
+                if (isNaN(this.value + "" + "." + String.fromCharCode(e.charCode))) {
+                    return false;
+                }
+            });
+            $(".onlyAlphabetOnly").keypress(function (a) {
+                var b = a.charCode;
+                b >= 65 && b <= 120 || 32 == b || 0 == b || a.preventDefault()
+            });
+        });
+        function updateDetails(values) {
+            var value;
+            if (values == "insbookingdaylimit") {
+                value = $('#insbookingdaylimit').val();
+                if (value == "") {
+                    Lobibox.notify('warning', {
+                        continueDelayOnInactiveTab: true,
+                        msg: 'Please Enter Insurance Booking Day Limit.'
+                    });
+                    return false;
+                }
+            }
+            else if (values == "insfollowupdaylimit") {
+                value = $('#insfollowupdaylimit').val();
+                if (value == "") {
+                    Lobibox.notify('warning', {
+                        continueDelayOnInactiveTab: true,
+                        msg: 'Please Enter Insurance Followup Limit.'
+                    });
+                    return false;
+                }
+            }
+            else {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Wrong Attempt.'
+                });
+                return false;
+            }
+
+
+            $.ajax({
+                type: 'POST',
+                url: siteRoot + "/SuperAdmin/updateDetails",
+                datatype: 'json',
+                cache: false,
+                data: { colName: values, colValues: value },
+                success: function (res) {
+                    if (res.success == true) {
+                        Lobibox.notify('success', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'Updated Successfully.'
+                        });
+
+                    }
+                    else {
+                        Lobibox.notify('warning', {
+                            continueDelayOnInactiveTab: true,
+                            msg: res.exception
+                        });
+                    }
+                },
+                error: function (err) {
+                    console.log(err);
+                    alert(err);
+                }
+            });
+
+        }
+
+    </script>
+}

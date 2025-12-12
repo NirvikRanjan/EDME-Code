@@ -1,0 +1,696 @@
+﻿@model AutoSherpa_project.Models.herodealer
+
+
+@{
+    ViewBag.Title = "addDealers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.HiddenFor(model => model.DealerID);
+
+<style>
+    .lblmandatory {
+        color: #d00;
+        font-family: 'FontAwesome';
+        font-weight: bold;
+        font-size: 10px;
+        content: "\f069";
+        top: 4px;
+        position: absolute;
+        margin-left: 8px;
+    }
+</style>
+<input type="hidden" id="txtcreId">
+
+@using (Ajax.BeginForm("saveDealerDetails", "SuperAdmin", new AjaxOptions { OnSuccess = "saveComplete", OnFailure = "saveFailure", HttpMethod = "POST" }))
+{
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Add Dealer
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Dealer Name</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DealerName, new { @class = "form-control", @id = "txtdealername", @maxlength = "100" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Display Dealer Name</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DisplayName, new { @class = "form-control", @id = "txtdealername", @maxlength = "100" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Dealer Code</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DealerCode, new { @class = "form-control", @id = "txtdealercode", @maxlength = "10" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>
+                                        <label>Dealer Classification</label><i class="lblmandatory">*</i>
+                                    </label>
+                                    @Html.TextBoxFor(model => model.DealerClassification, new { @class = "form-control", @list = "datalistdealerclassifications", @id = "txtdealerclassification", @maxlength = "10" })
+
+                                    <datalist id="datalistdealerclassifications"></datalist>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Dealer Zone</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DealerZone, new { @class = "form-control", @list = "datalistdealerzone", @id = "txtdealerzone", @maxlength = "10" })
+                                    <datalist id="datalistdealerzone"></datalist>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Allocation Flag</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.AllocationFlag, new { @class = "form-control", @id = "txtdealerflag", @maxlength = "50" })
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Dealer State</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DealerState, new { @class = "form-control ", @list = "dataliststate", @id = "txtdealerstate", @maxlength = "100" })
+                                    <datalist id="dataliststate"></datalist>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Dealer City</label><i class="lblmandatory">*</i>
+                                    @Html.TextBoxFor(model => model.DealerCity, new { @class = "form-control", @id = "txtdealercity", @maxlength = "100" })
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="pull-right">
+                            <input type="button" value="Clear" onclick="clearControls();" id="btnclear" class="btn btn-danger" />
+                            <input type="submit" value="Save" id="btnsbmt" class="btn btn-success" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Dealer Details
+            </div>
+            <div class="panel-body">
+                <table id="herotable" class="table table-striped table-bordered tblIns table-hover" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Display Name</th>
+                            <th>Code</th>
+                            <th>Classification</th>
+                            <th>Zone</th>
+                            <th>State</th>
+                            <th>City</th>
+                            <th>Category</th>
+                            <th>Edit</th>
+                            <th>Active</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="myModal" role="dialog" style="display:none">
+    <div class="modal-dialog">
+
+        Modal content
+        <div class="modal-content">
+            <div class="modal-header" style="color:red">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="font-weight:bold">Change Assignment</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtdealerid" />
+                <input type="hidden" id="txtActionName" />
+
+                <div class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="col-lg-3">Dealer Cre<sup style="color:red;font-size:16px;"><strong></strong></sup> </label>
+                        <div class="col-lg-3">
+                            <select id="ddlSourceCre" multiple class="form-control selectpicker"><option>Select</option></select>
+
+
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                    <label class="col-lg-2">Dealer Code<sup style="color:red;font-size:16px;"><strong></strong></sup> </label>
+                    <div class="col-lg-4">
+
+                        <select id="dealerCode" multiple class="form-control selectpicker"><option>Select</option></select>
+
+                    </div>
+                </div>*@
+
+
+                    <div class="form-group">
+                        <label class="  col-lg-3">Tagic Cre<sup style="color:red;font-size:16px;"><strong></strong></sup> </label>
+                        <div class="col-lg-3">
+                            <select id="ddlTargetCre" multiple class="form-control selectpicker"><option>Select</option></select>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <label class="col-lg-3">Source Cre Count <strong><label id="lblsourceCreCount"></label></strong> </label>
+            <label class="col-lg-3">Tagic Cre Count <strong><label id="lblTargetceCreCount"></label></strong> </label>
+          
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn success" onclick=" dealerActions($('#txtdealerid').val(),$('#txtActionName').val());">Submit</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+@section scripts
+{
+    <script>
+
+        $(document).ready(function () {
+            GetDetails();
+            bindValues();
+        });
+        function bindValues()
+        {
+            var dealerZone = @Html.Raw(ViewBag.dealerZone);
+            var dealerClassification = @Html.Raw(ViewBag.dealerClassification);
+            var dealerState = @Html.Raw(ViewBag.dealerState);
+
+            $.each(dealerClassification, function (i, item) {
+                $("#datalistdealerclassifications").append($("<option>").attr('value', item.DealerClassification).text(item.DealerClassification));
+            });
+            $.each(dealerState, function (i, item) {
+                $("#dataliststate").append($("<option>").attr('value', item.DealerState).text(item.DealerState));
+            });
+            $.each(dealerZone, function (i, item) {
+                $("#datalistdealerzone").append($("<option>").attr('value', item.DealerZone).text(item.DealerZone));
+            });
+
+        }
+
+        function GetDetails() {
+           var dealerDT= $("#herotable").DataTable(
+                {
+                    "destroy": true,
+                    "ajax": {
+                        "url": siteRoot + "/SuperAdmin/DealerGetDealerDetails",
+                        "type": "POST",
+                        "datatype": "json",
+                        "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+                    },
+                    "columns": [
+                        { "data": "DealerName", "name": "DealerName" },
+                        { "data": "DisplayName", "name": "DisplayName" },
+                        { "data": "DealerCode", "name": "DealerCode" },
+                        { "data": "DealerClassification", "name": "DealerClassification" },
+                        { "data": "DealerZone", "name": "DealerZone" },
+                        { "data": "DealerState", "name": "DealerState" },
+                        { "data": "DealerCity", "name": "DealerCity" },
+                        {
+                            "data": "IsActive", render: function (data, type, row) {
+                                if (row.AllocationFlag == "1") {
+                                    return `<a href="javascript:void(0);" class="btn btn-info" onclick="modalpopup(${row.DealerID} ,'ChangeCategoryTagic');" style="color:black;font-wieght:bold">Dealer</a>`;
+                                }
+                                else if (row.AllocationFlag == "2") {
+                                    return `<a href="javascript:void(0);" class="btn btn-info" onclick="modalpopup(${row.DealerID} ,'ChangeCategoryDealer');" style="color:black;font-wieght:bold">Tagic</a>`;
+                                }
+                                else {
+                                    return `-`;
+                                }
+                            }
+                        },
+
+                        {
+                            "data": "Edit", render: function (data, type, row) {
+
+                                return `<a href="javascript:void(0);"  class="btn btn-info" onclick="editdealerDetails(${row.DealerID} ,'Edit');" style="color:black;font-wieght:bold">Edit</a>`;
+                            }
+                        },
+                        {
+                            "data": "IsActive", render: function (data, type, row) {
+                                if (row.IsActive == true) {
+                                    return `<a href="javascript:void(0);" onclick="dealerActions(${row.DealerID} ,'Deactivate');" style="color:green">Deactivate</a>`;
+                                }
+                                else {
+                                    return `<a href="javascript:void(0);" onclick="dealerActions(${row.DealerID} ,'Activate');" style="color:red">Activate</a>`;
+                                }
+                            }
+                        },
+                        {
+                            "data": "Action", render: function (data, type, row) {
+                                return `<button class="btn btn-danger" onclick="dealerActions(${row.DealerID},'Delet')"; >Delete</button>`;
+                            }
+                        },
+                   ],
+                    "order":[],
+                    "processing": "true",
+                    "serverSide": false,
+                    "scrollX": "true",
+                    "scrollY": "400",
+                    "paging": true,
+                    "searching": true,
+                    "language": {
+                        "processing": "Loading Please Wait.....!"
+                    },
+                    "initComplete": function (data) {
+                        dealerDT.columns(9).visible(false)
+
+                        var exception = data.json.exception;
+                        if (exception != "" && exception != null) {
+                            Lobibox.notify('warning', {
+                                continueDelayOnInactiveTab: true,
+                                msg: exception
+                            });
+                        }
+                    }
+                });
+        }
+
+        $('#btnsbmt').click(function () {
+            var Dealer_Name = $("#txtdealername").val();
+            var Dealer_Code = $("#txtdealercode").val();
+            var Dealer_Classification = $("#txtdealerclassification").val();
+            var Dealer_Zone = $("#txtdealerzone").val();
+            var Allocation_Flag = $("#txtdealerflag").val();
+            var Dealer_State = $("#txtdealerstate").val();
+            var Dealer_City = $("#txtdealercity").val();
+            if (Dealer_Name == '' && Dealer_Code == '' && Dealer_Classification == '' && Dealer_Zone == '' && Allocation_Flag == "" &&  Dealer_State == "" && Dealer_City == "") {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter The Mandatory Fields .'
+                });
+                return false;
+
+            } else if (Dealer_Name == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer Name'
+                });
+                return false;
+            } else if (Dealer_Code == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer Code'
+                });
+                return false;
+            } else if (Dealer_Classification == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer classification'
+                });
+                return false;
+            } else if (Dealer_Zone == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer Zone'
+                });
+                return false;
+            } else if (Allocation_Flag == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Allocation Flag'
+                });
+                return false;
+            } else if (Dealer_State == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer State'
+                });
+                return false;
+            } else if (Dealer_City == '') {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please Enter Dealer City'
+                });
+                return false;
+            }
+            $('#mainLoader').css({ 'display': 'block' });
+
+        })
+
+        function saveComplete(data)
+        {
+            $('#mainLoader').css({ 'display': 'none' });
+
+            if (data.success == true) {
+                Lobibox.notify('success', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Dealer Saved Successfully.'
+                });
+            }
+            if (data.success == false) {
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: data.error
+                });
+            }
+            clearControls();
+            GetDetails();
+        }
+
+        function saveFailure(data) {
+            Lobibox.notify('warning', {
+                continueDelayOnInactiveTab: true,
+                msg: 'Error Occured While SAving Data'
+            });
+        }
+
+        $("#txtdealername").keypress(function (e) {
+            var code = e.keyCode || e.which;
+            if ((code < 65 || code > 90) && (code < 97 || code > 122) && code != 32 && code != 46) {
+                return false;
+            }
+        });
+
+        $("#txtdealercode").keydown(function (event) {
+            // Allow only backspace and delete
+            if (event.keyCode == 46 || event.keyCode == 8) {
+            }
+            else {
+                if (event.keyCode < 48 || event.keyCode > 57) {
+                    event.preventDefault();
+
+                }
+            }
+        });
+
+        function dealerActions(dealerId, actionType) {
+            var msg;
+            if (actionType == "Delet") {
+                msg = "Are you sure you want to delete this Dealer?";
+            }
+            else if (actionType == "Activate") {
+                msg = "Are you sure you want to Activate this Dealer?";
+            }
+            else if (actionType == "Deactivate") {
+                msg = "Are you sure you want to Deactivate this Dealer?";
+            }
+            else if (actionType == "ChangeCategoryTagic") {
+                SourceAndTarget();
+
+               
+                msg = "Are you sure you want to Change Dealer to Tagic?";
+            }
+            else if (actionType == "ChangeCategoryDealer") {
+              
+                SourceAndTarget();
+                msg = "Are you sure you want to Change Tagic to Dealer?";
+            }
+                Lobibox.confirm({
+                    msg: msg,
+                    callback: function ($this, type) {
+                        if (type === 'yes') {
+                            $('#mainLoader').css({ 'display': 'block' });
+
+                            $.ajax({
+                                type: 'POST',
+                                "url": siteRoot+"/SuperAdmin/dealerActions",
+                                datatype: 'json',
+                                data: { dealerId: dealerId, actionType: actionType },
+                                success: function (res) {
+                                    if (res.success == true) {
+                                        if (res.message == "Activate") {
+
+                                            Lobibox.notify('success', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Activated Successfully'
+                                            });
+                                        }
+                                        else if (res.message == "Deactivate") {
+                                            Lobibox.notify('success', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Deactivated Successfully'
+
+                                            });
+                                        }
+                                        else if (res.message == "Delet") {
+                                            Lobibox.notify('error', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Deleted Successfully'
+                                            });
+                                        }
+
+                                        else if (res.message == "ChangeCategoryTagic") {
+                                            Lobibox.notify('info', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Dealer to Tagic Saved Successfully'
+                                            });
+                                        }
+                                        else if (res.message == "ChangeCategoryDealer") {
+                                            Lobibox.notify('info', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Tagic to Dealer Saved Successfully'
+                                            });
+                                        }
+
+                                        else {
+                                            Lobibox.notify('info', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: 'Something Went Wrong!'
+                                            });
+                                        }
+                                        GetDetails();
+                                        $('#mainLoader').css({ 'display': 'none' });
+                                    }
+                                    else if (res.success == false) {
+                                        Lobibox.notify('warning', {
+                                            continueDelayOnInactiveTab: true,
+                                            msg: res.message
+                                        });
+                                        $('#mainLoader').css({ 'display': 'none' });
+                                    }
+                                }, error(error) {
+                                    $('#mainLoader').css({ 'display': 'none' });
+
+                                }
+                            });
+                        }
+                    }
+                });
+        }
+
+
+
+        function SourceAndTarget() {
+            $("#myModal").show();
+            var SourceCre = document.getElementById("ddlSourceCre").value;
+            var TargetCre = document.getElementById("ddlTargetCre").value;
+            $.ajax({
+                "type": 'POST',
+                "url": siteRoot + "/SuperAdmin/ModalpopupSubmit",
+                "datatype": 'json',
+                "cache": false,
+                "data": { 'SourceCre': SourceCre, 'TargetCre': TargetCre },
+                success: function (res) {
+                    console.log(res);
+
+                    if (res.success == true) {
+                        Lobibox.notify('success', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'Saved Successfully '
+                        });
+
+                      /*  $("#myModal").hide();*/
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'Fail'
+                        });
+                    }
+                  /*  $("#myModal").hide();*/
+                },
+               
+                error(error) {
+
+                }
+            });
+
+        }
+
+
+
+        function modalpopup(dealerId, actionType) {
+
+            $.ajax({
+                "type": 'post',
+                "url": siteRoot + "/SuperAdmin/getwyzuserdata",
+                "datatype": 'json',
+                "cache": false,
+                "data": { 'dealerId': dealerId, 'actionType': actionType },
+                success: function (res) {
+                    console.log(res);
+                    $('#lblsourceCreCount').text(res.sourceCreList.length);
+                    $('#lblTargetceCreCount').text(res.TargetCreList.length);
+
+                    if (res.success == true) {
+                        if (res.sourceCreList != "") {
+                          
+                            var dropdown = document.getElementById("ddlSourceCre");
+
+                            for (var i = 0; i < res.sourceCreList.length; i++) {
+
+                                dropdown[dropdown.length] = new Option(res.sourceCreList[i].userName, res.sourceCreList[i].id);
+
+                            }
+                            $('#ddlSourceCre').multiselect('rebuild');
+                        }
+
+                        if (res.TargetCreList != "") {
+
+                            var dropdown = document.getElementById("ddlTargetCre");
+
+                            for (var i = 0; i < res.TargetCreList.length; i++) {
+
+                                dropdown[dropdown.length] = new Option(res.TargetCreList[i].userName, res.TargetCreList[i].id);
+
+                            }
+                            $('#ddlTargetCre').multiselect('rebuild');
+                        }
+
+                        //if (res.dealerList != "") {
+
+                        //    var dropdown = document.getElementById("dealerCode");
+
+                        //    for (var i = 0; i < res.dealerList.length; i++) {
+
+                        //        dropdown[dropdown.length] = new Option(res.dealerList[i].DealerName, res.dealerList[i].DealerID);
+
+                        //    }
+                        //    $('#dealerCode').multiselect('rebuild');
+                        //}
+
+                    }
+
+                    
+
+
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'Fail'
+                        });
+                    }
+
+                }, error(error) {
+
+                }
+            });
+
+
+            $('#txtdealerid').val(dealerId)
+            $('#txtActionName').val(actionType)
+            $('#myModal').modal('show')
+        }
+
+        function editdealerDetails(dealerId, actionType) {
+            if (actionType == "Edit") {
+                Lobibox.prompt('Delete', //Any input type will be valid
+                    {
+                        title: 'Enter Display Name',
+                        attrs: {
+                            placeholder: "Dealer Name",
+                            id: "txtdisplayName"
+                        },
+                        callback: function ($this, type) {
+                            var displayName = $('#txtdisplayName').val();
+                            if (type === 'ok' && displayName != "")
+
+                            {
+                                $('#mainLoader').css({ 'display': 'block' });
+                                $.ajax({
+                                    type: 'POST',
+                                    "url": siteRoot + "/SuperAdmin/dealerActions",
+                                    datatype: 'json',
+                                    data: { dealerId: dealerId, actionType: actionType, displayName: displayName },
+                                    success: function (res) {
+                                        if (res.success == true) {
+                                            if (res.message == "Edit") {
+
+                                                Lobibox.notify('success', {
+                                                    continueDelayOnInactiveTab: true,
+                                                    msg: 'Dealer Name Updated Successfully'
+                                                });
+                                            }
+                                            else {
+                                                Lobibox.notify('info', {
+                                                    continueDelayOnInactiveTab: true,
+                                                    msg: 'Something Went Wrong!'
+                                                });
+                                            }
+                                            GetDetails();
+                                            $('#mainLoader').css({ 'display': 'none' });
+                                        }
+                                        else if (res.success == false) {
+                                            Lobibox.notify('warning', {
+                                                continueDelayOnInactiveTab: true,
+                                                msg: res.message
+                                            });
+                                            $('#mainLoader').css({ 'display': 'none' });
+                                        }
+                                    }, error(error) {
+                                        $('#mainLoader').css({ 'display': 'none' });
+
+                                    }
+                                });                            }
+                        }
+                    });
+            }
+        }
+
+        function clearControls() {
+            $("#txtdealername").val('');
+            $("#txtdealercode").val('');
+            $("#txtdealerclassification").val('');
+            $("#txtdealerzone").val('');
+            $("#txtdealerflag").val('');
+            $("#txtdealerstate").val('');
+            $("#txtdealercity").val('');
+        }
+
+    </script>
+}
+

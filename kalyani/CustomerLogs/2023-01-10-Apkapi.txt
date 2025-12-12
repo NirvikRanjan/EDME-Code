@@ -1,0 +1,50 @@
+2023-01-10 11:32:10.6093|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-01-10 11:32:10.7862|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-01-10 11:32:11.3229|INFO|apkRegLogger|
+ Android CallSynch Started at: 10-01-2023 11:32:11 am
+2023-01-10 11:32:11.3229|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 10-01-2023 11:32:11 am
+2023-01-10 11:37:04.7988|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 10/01/2023 11:37:04 am
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-10 11:37:10.2064|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 10/01/2023 11:37:10 am
+2023-01-10 11:40:11.6930|INFO|apkRegLogger|
+ Android CallSynch Started at: 10-01-2023 11:40:11 am
+2023-01-10 11:40:11.7180|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 10-01-2023 11:40:11 am
+2023-01-10 11:41:44.1149|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 10/01/2023 11:41:44 am
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-10 11:41:48.1067|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 10/01/2023 11:41:48 am
+2023-01-10 11:45:19.4111|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 10/01/2023 11:45:19 am
+ CustId: 41369 VehId: 41391 User: demo_tw1
+2023-01-10 11:45:21.3147|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 10/01/2023 11:45:21 am
+2023-01-10 11:48:10.8132|INFO|apkRegLogger|
+ Android CallSynch Started at: 10-01-2023 11:48:10 am
+2023-01-10 11:48:10.8132|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 10-01-2023 11:48:10 am
+2023-01-10 11:51:17.6985|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 10/01/2023 11:51:17 am
+ CustId: 22742 VehId: 22766 User: demo_tw1
+2023-01-10 11:51:21.4226|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 10/01/2023 11:51:21 am
+2023-01-10 11:56:10.7981|INFO|apkRegLogger|
+ Android CallSynch Started at: 10-01-2023 11:56:10 am
+2023-01-10 11:56:10.7981|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 10-01-2023 11:56:10 am

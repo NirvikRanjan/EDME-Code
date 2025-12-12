@@ -1,0 +1,92 @@
+2025-04-23 09:56:27.8126|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-04-23 09:56:27.8641|INFO|apkRegLogger|
+
+2025-04-23 09:56:27.8641|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 23-04-2025 9:56:27 am
+2025-04-23 09:56:27.8757|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-04-23 09:56:27.8916|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-04-23 09:56:27.9105|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 23-04-2025 9:56:27 am
+
+2025-04-23 09:56:27.9266|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-04-2025 9:56:27 am
+2025-04-23 09:56:27.9266|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-04-2025 9:56:27 am
+2025-04-23 09:56:32.0801|INFO|apkRegLogger|
+
+2025-04-23 09:56:32.0801|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 23-04-2025 9:56:32 am
+2025-04-23 09:56:32.0801|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-23 09:56:32.0801|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-04-23 09:56:32.0801|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 23-04-2025 9:56:32 am
+
+2025-04-23 09:56:32.1415|INFO|apkRegLogger|
+
+2025-04-23 09:56:32.1415|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 23-04-2025 9:56:32 am
+2025-04-23 09:56:32.1415|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-23 09:56:32.1415|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 1/1 * ? *
+2025-04-23 09:56:32.1415|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 23-04-2025 9:56:32 am
+
+2025-04-23 10:04:27.8596|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-04-2025 10:04:27 am
+2025-04-23 10:04:27.8596|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-04-2025 10:04:27 am
+2025-04-23 10:12:27.8680|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-04-2025 10:12:27 am
+2025-04-23 10:12:27.8774|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-04-2025 10:12:27 am
+2025-04-23 15:56:37.4866|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-04-23 15:56:37.5517|INFO|apkRegLogger|
+
+2025-04-23 15:56:37.5517|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 23-04-2025 3:56:37 pm
+2025-04-23 15:56:37.5517|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-04-23 15:56:37.5792|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-04-23 15:56:37.5943|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 23-04-2025 3:56:37 pm
+
+2025-04-23 15:56:37.6190|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-04-2025 3:56:37 pm
+2025-04-23 15:56:37.6190|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-04-2025 3:56:37 pm
+2025-04-23 15:56:53.8539|ERROR|apkRegLogger|[ERROR]  Get Master Location Data Job Scheduler Initialization Failed | AT: 23-04-2025 3:56:53 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-04-23 15:56:53.8539|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Stopped ============= | AT: 23-04-2025 3:56:53 pm
+
+2025-04-23 15:57:08.9775|ERROR|apkRegLogger|[ERROR]  Online Payment Verification Job Scheduler Initialization Failed | AT: 23-04-2025 3:57:08 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-04-23 15:57:08.9775|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Stopped ============= | AT: 23-04-2025 3:57:08 pm
+
+2025-04-23 16:07:51.7645|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-04-23 16:07:51.8676|INFO|apkRegLogger|
+
+2025-04-23 16:07:51.8676|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 23-04-2025 4:07:51 pm
+2025-04-23 16:07:51.8804|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-04-23 16:07:51.9070|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-04-23 16:07:51.9485|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 23-04-2025 4:07:51 pm
+
+2025-04-23 16:07:52.0026|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-04-2025 4:07:52 pm
+2025-04-23 16:07:52.0157|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-04-2025 4:07:52 pm
+2025-04-23 16:08:00.8129|INFO|apkRegLogger|
+
+2025-04-23 16:08:00.8129|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 23-04-2025 4:08:00 pm
+2025-04-23 16:08:00.8129|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-23 16:08:00.8289|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-04-23 16:08:00.8289|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 23-04-2025 4:08:00 pm
+
+2025-04-23 16:08:00.9571|INFO|apkRegLogger|
+
+2025-04-23 16:08:00.9571|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 23-04-2025 4:08:00 pm
+2025-04-23 16:08:01.0033|INFO|apkRegLogger|Scheduler started successfully.
+2025-04-23 16:08:01.0033|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 1/1 * ? *
+2025-04-23 16:08:01.0033|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 23-04-2025 4:08:01 pm
+

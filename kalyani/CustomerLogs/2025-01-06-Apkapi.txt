@@ -1,0 +1,54 @@
+2025-01-06 10:49:02.0822|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-01-06 10:49:02.2016|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-01-06 10:49:02.3396|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 10:49:02 am
+2025-01-06 10:49:02.3396|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 10:49:02 am
+2025-01-06 10:50:59.0800|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-01-06 10:50:59.1692|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-01-06 10:50:59.2712|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 10:50:59 am
+2025-01-06 10:50:59.2712|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 10:50:59 am
+2025-01-06 10:55:21.6571|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-01-06 10:55:21.8616|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-01-06 10:55:21.9813|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 10:55:21 am
+2025-01-06 10:55:21.9813|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 10:55:21 am
+2025-01-06 11:00:00.0899|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 06-01-2025 11:00:00 am
+2025-01-06 11:00:00.0929|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 06-01-2025 11:00:00 am
+2025-01-06 11:03:21.8264|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 11:03:21 am
+2025-01-06 11:03:21.8264|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 11:03:21 am
+2025-01-06 11:11:21.8118|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 11:11:21 am
+2025-01-06 11:11:21.8118|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 11:11:21 am
+2025-01-06 11:19:21.8242|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 11:19:21 am
+2025-01-06 11:19:21.8427|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 11:19:21 am
+2025-01-06 11:27:21.8144|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 11:27:21 am
+2025-01-06 11:27:21.8144|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 11:27:21 am
+2025-01-06 11:35:21.8143|INFO|apkRegLogger|
+ Android CallSynch Started at: 06-01-2025 11:35:21 am
+2025-01-06 11:35:21.8268|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 06-01-2025 11:35:21 am

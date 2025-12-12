@@ -1,0 +1,22 @@
+2022-06-23 19:30:18.0069|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-06-23 19:30:18.1299|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-06-23 19:30:18.6461|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-06-2022 7:30:18 pm
+2022-06-23 19:30:18.6461|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-06-2022 7:30:18 pm
+2022-06-23 19:38:18.1389|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-06-2022 7:38:18 pm
+2022-06-23 19:38:18.1389|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-06-2022 7:38:18 pm
+2022-06-23 19:43:02.2990|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/06/2022 7:43:02 pm
+ CustId: 38 VehId: 38 User: 11514_Apporva
+2022-06-23 19:47:07.0931|INFO|apkRegLogger|
+ Android CallSynch Started at: 23-06-2022 7:47:07 pm
+2022-06-23 19:47:07.0931|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 23-06-2022 7:47:07 pm

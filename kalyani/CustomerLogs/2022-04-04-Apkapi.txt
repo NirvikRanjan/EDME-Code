@@ -1,0 +1,57 @@
+2022-04-04 12:25:03.0406|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-04 12:25:03.2115|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-04 12:25:04.8906|INFO|apkRegLogger|
+ Android CallSynch Started at: 04-04-2022 12:25:04 pm
+2022-04-04 12:25:04.8906|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 04-04-2022 12:25:04 pm
+2022-04-04 12:30:41.9755|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 4/04/2022 12:30:41 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-04-04 12:31:09.5146|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 4/04/2022 12:31:09 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-04-04 21:17:58.1037|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-04 21:17:58.2552|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-04 21:17:59.6362|INFO|apkRegLogger|
+ Android CallSynch Started at: 04-04-2022 9:17:59 pm
+2022-04-04 21:17:59.6362|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 04-04-2022 9:17:59 pm
+2022-04-04 21:25:58.2647|INFO|apkRegLogger|
+ Android CallSynch Started at: 04-04-2022 9:25:58 pm
+2022-04-04 21:25:58.2807|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 04-04-2022 9:25:58 pm
+2022-04-04 21:55:28.1995|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-04 21:55:28.4463|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-04 21:55:29.9063|INFO|apkRegLogger|
+ Android CallSynch Started at: 04-04-2022 9:55:29 pm
+2022-04-04 21:55:29.9063|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 04-04-2022 9:55:29 pm
+2022-04-04 21:59:27.1673|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 4/04/2022 9:59:26 pm
+ CustId: 38 VehId: 38 User: 11514_Apporva
+2022-04-04 22:01:36.2550|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":1107,"nonNsure":false,"cubiccapacity":100,"previouspolicyno":0,"insurancecompany":"2","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":null,"yearofmanufacture":"","policystartdate":null,"previouspolicytenure":1,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":"1900-01-01T00:00:00","transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":"1","proof":false,"whetheravailedclaims":"0","previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"2","policytenure":48,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr   ","ProposerFirstName":"P","ProposerMiddleName":"GOPINATH","ProposerLastName":null,"contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":null,"CompanyName":null,"addressline1":"DNO:1-50B","addressline2":"POLISETTIPADU A KONDURU GOWDA BAZAR","addressline3":"","proposerstate":2,"proposerstatename":"ANDHRA PRADESH","proposercity":65,"proposercityname":"Krishna","registrationnumber":"AP16CG8483","pincode":511227,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":null,"Gstno":null,"fax":"","fax2":"","Designation":null,"mobilenumber":7095863989,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":0,"designationlandline2":0,"designationlandline3":0,"designationlandline4":0,"landlinenumber":null,"emailid":null,"dateofbirth":null,"RadioButtonDateofBirth":false,"age":29,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":null,"idproof":"","IdproofValue":null,"policy_type":null,"vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"0","frameno":"MBLJA06AGEGA03357","engineno":"JA06EJEGA04447","modelname":"2","color":null,"colorDropDown":null,"nomineegender":"","exshowroomprice":0.0,"tariff":null,"dateofregistration":"2022-04-02T00:00:00","registrationno":null,"registrationno2":null,"registrationno3":null,"registrationno4":null,"BasicIDV":"null","effectivedate":null,"expirydate":null,"nomineename":"SIVAKUMARI","nomineeage":29,"relation":null,"fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":"0","ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":"","CPAexclusionText":"","CPAreason":"","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":"1900-01-01T00:00:00","GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":"","SOIPaidDrvrnCleaners":"","NOIEmpOTPaidDrvrnCleaners":"","SOIEmpOTPaidDrvrnCleaners":"","MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":null,"incomelevel":"5000-10000","Membership_No":0,"educationlevel":"NA","occupationtype":"NA","AnnualTurnover":"","BusinessIndustry":"","employeename":"","PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":"","Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":0,"excutivename":"","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":null,"tpdateoffirstsale":null,"tpyearofmanufacture":null,"tppolicystartdate":null,"tppolicyenddate":null,"Odpolicynumber":0,"odinsurancecompany":null,"odstartdate":null,"odenddate":null,"previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":"2021-04-02T00:00:00","tppremiun":null,"saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":null,"ODRenewalPolicy":false,"customerId":38,"vehicleid":38,"productId":"2"}
+2022-04-04 22:02:41.1412|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":0.0,"Productid":"2","Vehicle_Class":"P","RTOId":"0","zd_opted":"Y","FirstSaleDate":"04-04-2022","Prev_Policy_EffectiveDate":"04-04-2022","Prev_Policy_ExpiryDate":"04-04-2022","PolicyeffetiveDate":"04-04-2022","PolicyexpiryDate":"04-04-2022","Cubic_Capacity":100,"policy_tenure":48,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":null,"AssessoryType":"","Fitmentdate":"04-04-2022","KitMgtDate":"04-04-2022","ExtCNGPrice":"0","BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"2","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"2","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-04-04 22:03:28.7592|INFO|apkRegLogger|
+ Android CallSynch Started at: 04-04-2022 10:03:28 pm
+2022-04-04 22:03:28.7592|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 04-04-2022 10:03:28 pm

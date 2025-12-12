@@ -1,0 +1,268 @@
+﻿
+@{
+    ViewBag.Title = "transbitlykarix";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .notice {
+        padding: 15px;
+        background-color: #fafafa;
+        border-left: 6px solid #7f7f84;
+        margin-bottom: 10px;
+        -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+        box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+    }
+
+    .notice-sm {
+        padding: 10px;
+        font-size: 80%;
+    }
+
+    .notice-lg {
+        padding: 35px;
+        font-size: large;
+    }
+
+    .notice-success {
+        border-color: #80D651;
+    }
+
+        .notice-success > strong {
+            color: #80D651;
+        }
+
+    .notice-info {
+        border-color: #45ABCD;
+    }
+
+        .notice-info > strong {
+            color: #45ABCD;
+        }
+
+    .notice-warning {
+        border-color: #FEAF20;
+    }
+
+        .notice-warning > strong {
+            color: #FEAF20;
+        }
+
+    .notice-danger {
+        border-color: #d73814;
+    }
+
+        .notice-danger > strong {
+            color: #d73814;
+        }
+
+    /*Modal Styles*/
+
+</style>
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>MSSQL Data</strong> </div>
+    <div class="panel-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" id="workshopDiv">
+                    <div class="form-group">
+                        <label>Dealer : </label>
+                        <br />
+                        @Html.DropDownList("ddldealerCode", new SelectList(ViewBag.dealerlist, "id", "name"), new { @class = "form-control selectpicker", @id = "ddldealerCode" })
+                    </div>
+                </div>
+                <div class="col-md-3" id="workshopDiv">
+                    <div class="form-group">
+                        <label>From Date : </label>
+                        <input type="text" class="form-control datepicker" id="txtfromdate" />
+                    </div>
+                </div>
+                <div class="col-md-3" id="workshopDiv">
+                    <div class="form-group">
+                        <label>To Date : </label>
+                        <input type="text" class="form-control datepicker" id="txttodate" />
+                    </div>
+                </div>
+                <div class="col-md-3" id="workshopDiv">
+                    <div class="form-group">
+                        <label> </label>
+                        <input type="button" class="btn btn-primary" value="Search" onclick="checkDataAvailability()" />
+                    </div>
+                </div>
+            </div>
+            <div class=" row">
+                <span style="color:red;font-size:24px;font-weight:bold" id="spntotalData"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Data Insertion</strong> </div>
+    <div class="panel-body">
+        <div>
+            <div class="container">
+                <div class="notice notice-success">
+                    <strong> Total Records in MSSql Rate Card Table</></strong>&nbsp;&nbsp;&nbsp;&nbsp;<b> <span id="TotalRecords"></span></b>
+                </div>
+
+                <div class="notice notice-warning">
+                    <strong> Pending Data to pull From MSSql Rate Card Table</></strong>&nbsp;&nbsp;&nbsp;&nbsp;<b> <span id="todaysdatatopull"></span></b>
+                </div>
+
+                <div class="notice notice">
+                    <strong>Total Records Present in MYSQl Rate Card Table</strong>&nbsp;&nbsp;&nbsp;&nbsp;<b> @ViewBag.mysqltotalCount</b>
+                </div>
+
+                <div class="notice notice-info">
+                    <strong>Last Updated Date Time</strong>&nbsp;&nbsp;&nbsp;&nbsp;<b>@ViewBag.lastInsertedDate&nbsp;@ViewBag.lastInsertedTime</b>
+                </div>
+
+                <div class="notice notice-danger">
+                    <strong>Insert Data From MSSQL to MYSQL</strong><br />
+                    <button type='button' class="btn btn-success" data-toggle="modal" data-target="#popUpWindow">START</button>
+                    @*<button type="submit" class="btn btn-success col-lg-offset-3" onclick="runJob('START');" name="selectedFile" style="margin-top:26px" value="assignCalls">START</button>*@
+                </div>
+                @*<div class="notice notice-sm">
+                        <strong>Small notice</strong> notice-sm
+                    </div>*@
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Authentication</h3>
+                </div>
+                <!-- body -->
+                <div class="modal-header">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password" id="txtconfirmpassword" />
+                        </div>
+                    </form>
+                </div>
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-block" onclick="runJob('START');">Insert Data</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        function runJob(jobName) {
+            var txtconfirmpassword = $('#txtconfirmpassword').val();
+
+            if (txtconfirmpassword == "hero@123") {
+                $.ajax({
+                    url: siteRoot + '/UserLog/runTransJob/',
+                    type: 'post',
+                    dataType: 'json',
+                    data: { jobName: jobName },
+                    success: function (res) {
+                        if (res.success == true) {
+                            $('#popUpWindow').modal('hide');
+
+                            Lobibox.notify('success', {
+                                msg: 'Insertinting Started.'
+                            });
+                        }
+                        else {
+                            $('#popUpWindow').modal('hide');
+
+                            Lobibox.notify('warning', {
+                                msg: res.exception
+                            });
+                        }
+                    },
+                    error: function (error) {
+                        alert(error);
+                        console.log(error);
+                    }
+                });
+            }
+            else {
+                Lobibox.notify('warning', {
+                    msg: 'Invalid Password'
+                });
+                $('#popUpWindow').modal('hide');
+                return false;
+
+            }
+        }
+        $(document).ready(function () {
+            loadsqlData();
+            $('.datepicker').datepicker({
+                duration: "slow",
+                showOptions: { direction: "up" },
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,//this option for allowing user to select month
+                changeYear: true //this option for allowing user to select from year range
+
+            });
+        });
+        function checkDataAvailability() {
+            var DealerCode = $('#ddldealerCode').val();
+            var fromDate = $('#txtfromdate').val();
+            var toDate = $('#txttodate').val();
+
+            $.ajax({
+                url: siteRoot + '/SuperAdmin/getFilteredDatatCount/',
+                type: 'post',
+                dataType: 'json',
+                data: { DealerCode: DealerCode, fromDate: fromDate, toDate: toDate },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#spntotalData').text(res.totalCount);
+                    }
+                    else {
+
+                        Lobibox.notify('warning', {
+                            msg: res.exception
+                        });
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        function loadsqlData() {
+           
+            $.ajax({
+                url: siteRoot + '/SuperAdmin/loadSQLData/',
+                type: 'post',
+                dataType: 'json',
+                data: { },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#TotalRecords').text(res.TotalRecords);
+                        $('#todaysdatatopull').text(res.todaysdatatopull);
+                    }
+                    else {
+
+                        Lobibox.notify('warning', {
+                            msg: res.exception
+                        });
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+    }

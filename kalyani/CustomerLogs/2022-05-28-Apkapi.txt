@@ -1,0 +1,44 @@
+2022-05-28 09:45:44.5023|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-05-28 09:45:44.6277|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-05-28 09:45:44.6880|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 9:45:44 am
+2022-05-28 09:45:44.6880|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 9:45:44 am
+2022-05-28 09:53:54.8091|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-05-28 09:53:54.9646|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-05-28 09:53:55.0396|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 9:53:55 am
+2022-05-28 09:53:55.0396|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 9:53:55 am
+2022-05-28 10:01:54.9812|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:01:54 am
+2022-05-28 10:01:54.9812|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:01:54 am
+2022-05-28 10:09:54.9733|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:09:54 am
+2022-05-28 10:09:54.9733|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:09:54 am
+2022-05-28 10:17:54.9817|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:17:54 am
+2022-05-28 10:17:54.9817|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:17:54 am
+2022-05-28 10:25:54.9765|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:25:54 am
+2022-05-28 10:25:54.9765|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:25:54 am
+2022-05-28 10:33:54.9749|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:33:54 am
+2022-05-28 10:33:54.9749|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:33:54 am
+2022-05-28 10:41:54.9697|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-05-2022 10:41:54 am
+2022-05-28 10:41:54.9697|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-05-2022 10:41:54 am

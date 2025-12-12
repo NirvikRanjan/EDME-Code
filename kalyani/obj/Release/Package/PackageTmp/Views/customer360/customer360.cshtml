@@ -1,0 +1,1737 @@
+﻿@model AutoSherpa_project.Models.ViewModels.CallLoggingViewModel
+@{
+    ViewBag.Title = "customer360";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/bundles/CallLoggingCSS")
+
+@{
+    long phoneCount = Model.custPhoneList.Count;
+    string fieldscheduledate = DateTime.Today.AddDays(1).ToString("dd-MM-yyyy");
+    string policyscheduledate = DateTime.Today.AddDays(1).ToString("dd-MM-yyyy");
+    string appointmntFieldtime = " ";
+    string onlineapptmntDate = "";
+    long? locfield = 0;
+    long? agentinsuranceId = 0;
+    double? insuIDV = 0.0;
+    Model.listingForm.issmsEnabled = true;
+    bool DNDbtnshow = Model.cust.doNotDisturb;
+    string UserfullName = string.Empty;
+    string dialpadcontactNo = string.Empty;
+    UserfullName = Model.vehi.salutation + ". " + Model.vehi.first_name + " " + Model.vehi.Middle_Name + " " + Model.vehi.last_name;
+
+    if (Model.callinteraction != null && Model.callinteraction.appointmentbooked != null)
+    {
+        onlineapptmntDate = Convert.ToDateTime(Model.callinteraction.appointmentbooked.appointmentDate).ToString("dd-MM-yyyy");
+    }
+
+    if (Model.LatestInsurance.idv != null)
+    {
+        insuIDV = Model.LatestInsurance.idv;
+    }
+    if (ViewBag.typeOfDispo == "insurance")
+    {
+
+        if (Model.callinteraction != null && Model.callinteraction.appointmentbooked != null)
+        {
+            // if (Session["DealerCode"].ToString() != "PAWANHYUNDAI" && Model.callinteraction.appointmentbooked.typeOfPickup == "Field" && Model.callinteraction.appointmentbooked.appointmentDate != null && Model.callinteraction.appointmentbooked.appointmentFromTime != null)
+            if (Model.callinteraction.appointmentbooked.typeOfPickup == "Field" && Model.callinteraction.appointmentbooked.appointmentDate != null && Model.callinteraction.appointmentbooked.appointmentFromTime != null && ViewBag.ISFIELDENABLED == "True")
+            {
+                fieldscheduledate = Convert.ToDateTime(Model.callinteraction.appointmentbooked.appointmentDate).ToString("dd-MM-yyyy");
+                appointmntFieldtime = Model.callinteraction.appointmentbooked.appointmentFromTime;
+                locfield = Model.callinteraction.appointmentbooked.fieldWalkinLocation;
+                agentinsuranceId = Model.callinteraction.appointmentbooked.insuranceAgent_insuranceAgentId;
+            }
+        }
+    }
+
+    if (Model.custPhoneList != null && Model.custPhoneList.Count() > 0)
+    {
+        if (Model.custPhoneList.Count(m => m.isPreferredPhone == true) > 0)
+        {
+            dialpadcontactNo = Model.custPhoneList.Where(m => m.isPreferredPhone == true).FirstOrDefault().phoneNumber;
+        }
+    }
+    int defaultWorkshopId = 0;
+
+    if (Model.cust.insurances != null)
+    {
+        Model.cust.insurances = Model.cust.insurances.OrderByDescending(i => i.policyDueDate).ToList();
+
+    }
+
+}
+
+<style>
+
+    .mightOverflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    @@media screen and (max-width : 1920px) {
+        .div-only-mobile {
+            display: none;
+        }
+    }
+
+    @@media screen and (max-width : 906px) {
+        .div-only-mobile {
+            display: block;
+        }
+    }
+
+    @@media only screen and (min-width: 767px) {
+        .show-large {
+            display: block;
+        }
+
+        .show-mobile {
+            display: none;
+        }
+    }
+
+    .panel-info > .panel-heading {
+        color: #f4fafd;
+        background-color: #3586af;
+        border-color: #bce8f1;
+    }
+
+    .dataTables_scrollBody {
+        overflow-x: hidden;
+    }
+
+    .dataTables_scrollHead {
+        overflow: auto;
+    }
+
+    #InduspullOutIns > tbody > tr, td {
+        border: 1px solid #000;
+    }
+
+    #dispoHistBody {
+        font-weight: 300;
+    }
+
+    .dispoScroll {
+        overflow-y: scroll;
+        max-height: 300px;
+        min-height: 100px;
+    }
+
+    table.dataTable tbody th, table.dataTable tbody td {
+        white-space: break-spaces;
+    }
+    /*table.dataTable tbody th,
+    table.dataTable tbody td {
+        white-space: nowrap;
+    }*/
+    .dataTables_scroll {
+        margin-right: -9px;
+    }
+
+    .dataTables_filter {
+        display: none;
+    }
+
+    .ins-col {
+        border: 3px solid red;
+    }
+
+        .ins-col > label {
+            border-left: 3px solid blue;
+            margin-left: 5px;
+        }
+
+
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .dataTables_filter {
+            display: none;
+        }
+    }
+
+    .img-container {
+        display: flex;
+    }
+
+    .img-Subcontainer {
+        padding: 5px 8px;
+        /*white-space: pre-wrap;*/
+        width: 15%;
+        cursor: pointer;
+    }
+
+        .img-Subcontainer span {
+            font-size: 10pt;
+        }
+
+    .ColorGreen {
+        background-color: green;
+    }
+
+    .ColorRed {
+        background-color: red;
+    }
+
+    .schis th,
+    .schis td {
+        border: 2px solid black;
+    }
+
+    .LightSeaGreen {
+        background-color: #20B2AA;
+    }
+
+    .control-holder {
+        display: inline-flex
+    }
+
+        .control-holder div {
+            margin: 0px 5px;
+        }
+
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        /*.sidebar1 {
+            display: none;
+        }*/
+        .divscroll {
+            min-height: 190px;
+            max-height: 190px;
+            overflow: scroll;
+        }
+
+        #dispoHistBody {
+            font-weight: 600;
+        }
+
+        .img-container {
+            flex-flow: column;
+        }
+
+        .control-holder {
+            overflow-x: scroll;
+            width: 106%;
+            margin-left: -10px;
+            margin-right: -9px;
+        }
+
+        @@media (min-width: 992px) {
+            .modal-dialog {
+                width: 70%;
+            }
+        }
+
+        @@media (max-width:768px) {
+            .modal-dialog {
+                margin-left: 0px !important;
+                width: 100%;
+                margin-top: 100px;
+            }
+
+            .modal {
+                top: auto;
+            }
+
+            .mbheight {
+                min-height: 400px;
+                overflow-y: scroll;
+                max-height: 400px;
+            }
+        }
+    }
+</style>
+<input type="hidden" id="txtwyzuserphonenum" value="@Model.wyzuser.phoneNumber">
+<input type="hidden" id="txtwyzuserfirstname" value="@Model.wyzuser.firstName">
+<input type="hidden" id="PkOEM" value="@Session["OEM"].ToString()" />
+<input type="hidden" id="PkDnd" value="@Model.cust.doNotDisturb.ToString()" />
+<input type="hidden" id="PkDealercode" value="@Session["DealerCode"].ToString()" />
+<input type="hidden" id="role1" value="@Session["UserRole1"].ToString()" />
+
+<input type="hidden" id="PkUsername" value="@Session["UserName"].ToString()" />
+<input type="hidden" id="userrole" name="userrole" value="@Model.wyzuser.role">
+@if (ViewBag.typeOfDispo == "Service" || ViewBag.typeOfDispo == "insurance" || ViewBag.TypeOfDispo == "Service_MCP")
+{
+    <input type="hidden" id="fieldenabled" value="@ViewBag.ISFIELDENABLED" />
+    <input type="hidden" id="policydropenabled" value="@ViewBag.ISPOLICYFIELDENABLED" />
+    <input type="hidden" id="insQuotation" value="0">
+    <input type="hidden" id="insQuotationMsg" value="0">
+
+    <input type="hidden" id="insQuotationId" value="0">
+    <input type="hidden" id="bucketId" value="@Session["BucketId"]">
+    <input type="hidden" id="dndCust" value="@Model.cust.doNotDisturb">
+    <input type="hidden" id="typeOfDispoPageView" name="typeOfDispoPageView" value="@ViewBag.typeOfDispo">
+    <input type="hidden" id="pFlag" name="pFlag" value=" @if (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true) != null) { @Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).addressType}">
+    <input type="hidden" name="customer_Id" id="customer_Id" value="@Model.cust.id">
+    <input type="hidden" id="wyzUser_Id" name="wyzUser_Id" value="@Model.wyzuser.id">
+    <input type="hidden" id="vehical_Id" name="vehicalId" value="@Model.vehi.vehicle_id">
+
+    <input type="hidden" name="uniqueidForCallSync" id="uniqueidForCallSync" value="0">
+    <input type="hidden" name="uniqueIdGSM" id="uniqueIdGSM" value="0">
+    <input type="hidden" id="makeCallFromGSM" name="makeCallFrom" value="MOBILE">
+    <input type="hidden" id="location_Id" value="@Model.wyzuser.location.cityId">
+    <input type="hidden" name="callInteractionId" value="@Model.callinteraction.id">
+    <input type="hidden" id="smrtagid" value="0">
+    <input type="hidden" id="instagid" value="0">
+    <input type="hidden" id="viewIS" value="@Model.wyzuser.dealerName">
+    <input type="hidden" id="assignCampaignId" value="@Model.InsAssignCampaignId">
+    if (ViewBag.typeOfDispo == "insurance")
+    {
+        <input type="hidden" id="appointBookId" name="appointBookId" value="@if (Model.callinteraction.appointmentbooked != null) {@Model.callinteraction.appointmentbooked.appointmentId; }">
+        if (Model.callinteraction.appointmentbooked != null)
+        {
+            Session["appointBookId"] = Model.callinteraction.appointmentbooked.appointmentId;
+        }
+    }
+}
+
+<!--------------------------------Side bar popup start------------------------------------------>
+<!--<div id="fixedsocial" class="sidebar1 animated bounceInDown">-->
+@*<div class="facebookflat" data-toggle="modal" data-target="#myModal1">
+        <img src='~/public/images/sports-car.jpg' style="width: 50px; border-radius: 5px;" data-toggle="tooltip" data-placement="left" title="Vehicle" />
+    </div>*@
+<!--</div>-->
+
+<div class="row">
+    <div class="col-md-4 panelsm">
+        <div id="panelDemo10" class="panel panel-info custinfoData">
+
+            <div class="panel-heading" style="text-align:center; padding: 10px;">
+
+                @if (Session["PageFor"].ToString() == "CRE")
+                {
+                    if (ViewBag.TypeOfDispo == "insurance")
+                    {
+                        @Html.ActionLink("Back", "ReturnToBucket", "customer360", new { @id = 2 }, new { @class = "btn fa fa-arrow-left", @style = "float: left; display: block;color:white; background-color: red;", @id = "backRedirect" });
+                    }
+                }
+
+                @if (Session["PageFor"].ToString() == "CREManager")
+                {
+                    if (ViewBag.TypeOfDispo == "insurance")
+                    {
+                        @Html.ActionLink("Back", "insuranceReminder", "callLogReminder", null, new { @class = "btn fa fa-arrow-left", @style = "float: left; display: block;color:white; background-color: red;", @id = "backRedirect" });
+                    }
+                }
+
+                @if (Session["PageFor"].ToString() == "Search")
+                {
+                    @Html.ActionLink("Back", "searchCustomerData", "Customer", null, new { @class = "btn fa fa-arrow-left animated bounceInDown", @style = "float: left; display: block;color:white; background-color: red;", @id = "backRedirect" });
+                }
+                @*<i class="fa fa-user"></i>*@
+                <b>
+                    <span id="custName" style="font-weight: bold; font-size: 16px;" class="mightOverflow col-xs-8">
+                        <text>@UserfullName</text>
+                    </span>
+                </b>
+                <br />
+            </div>
+            <div class="panel-body" style="height: 230px;padding: 5px;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="control-holder">
+                            <div>
+                                <select class="btn btn-primary btn-sm form-control" style="cursor:default;width: 135px;font-size: medium;display:none;" id="ddl_phone_no">
+                                    @if (Model.custPhoneList != null && Model.custPhoneList.Count() > 0)
+                                    {
+                                        foreach (var ph in Model.custPhoneList)
+                                        {
+                                            <option value="@ph.phone_Id">@ph.phoneNumber</option>
+                                        }
+                                    }
+
+                                </select>
+                                <select class="btn btn-primary btn-sm form-control" style="cursor:default;width: 135px;font-size: medium;" id="ddl_phone_noMask" onchange="copyselectedIndex()">
+                                </select>
+                            </div>
+
+                            <div>
+                                @*<a href="#advanced" role="button" data-toggle="modal" class="btn btn-warning">Advanced Sort</a>*@
+                                <button type="button" class="btn btn-success btn-sm" data-target="#LegalModal" data-toggle="modal" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil-square-o fa-lg"></i></button>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                                <button type="button" style="display:none;" id="btnDND" class="btn btn-danger btn-sm">DND</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 10px;">
+                        <div class="control-holder">
+                            <div id="docallDiv">
+                                <input type="hidden" id="isCallinitaited" name="isCallinitaited" value="NotDailed">@*customerData.getPreferredPhone().getPhone_Id()*@
+
+                                <button type="button" id="callIdBtn" class="btn btn-primary btn-lg" onclick="doCall();" style="border-radius: 29px;"><i class="fa fa-phone-square fa-2x" aria-hidden="true" title="Make Call"></i></button>
+                            </div>
+                            <div id="dialpadcallDiv" class="div-only-mobile">
+                                <button type="button" id="callIdBtn" class="btn btn-primary btn-lg" onclick="doDialpadCall();" style="border-radius: 29px;">
+                                    <i class="fa fa-mobile fa-2x" title="DialPad Call" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <button type="button" data-toggle="modal" data-target="#smsPopuId" data-backdrop="static" data-keyboard="false" class="btn btn-primary  btn-lg" style="border-radius: 29px;"><i class="fa fa-comment fa-2x" title="SMS"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <br />
+                                <span style="font-size:14px"><b><u>Phone :</u>&nbsp; </b></span> <span class="phoneBlog" id="prefPhone" style="font-size:14px">
+                                    @*@if (Model.custPhoneList != null && Model.custPhoneList.Count() > 0)
+                                        {
+                                            foreach (var ph in Model.custPhoneList)
+                                            {
+                                                @ph.phoneNumber<text>,</text>
+                                            }
+                                        }*@
+
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <span style="font-size:14px"><b><u>Address:</u>&nbsp; </b></span>
+                                <span class="addressBlog" id="prefAdressUpdate" style="font-size:14px;word-break: break-all;">
+                                    @if (Model.cust.addresses.Count != 0)
+                                    {
+                                        if (Model.cust.addresses.Any(m => m.isPreferred == true))
+                                        {
+                                            if (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != null && Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != "")
+                                            {
+                                                @Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress;
+                                            }
+                                            else
+                                            {
+                                                <text>NA</text>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <text>NA</text>
+                                        }
+                                    }
+
+
+                                </span>
+                                @*<button class="fa fa-slideshare" style="color: #0e8006;" data-target="#AddressUpdatePopup" data-toggle="modal"
+                                    data-backdrop="static" data-keyboard="false" onclick="getAddressForPopUp()"></button>*@
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <span style="font-size:14px"><b><u>City:</u>&nbsp;</b></span><span id="city" style="font-size:14px">
+                                    @if (Model.cust.addresses.Select(m => m.isPreferred == true) != null)
+                                    {
+                                        if (Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.city).FirstOrDefault() != null)
+                                        {
+                                            @Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.city).FirstOrDefault()
+                                        }
+                                        else
+                                        {
+                                            <text>NA</text>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <text>NA</text>
+                                    }
+                                </span>
+                            </div>
+                            <div class="col-xs-12">
+                                <span style="font-size:14px"><b><u>Pincode:</u>&nbsp;</b></span><span style="font-size:14px" id="pin">
+                                    @if (Model.cust.addresses.Select(m => m.isPreferred == true) != null)
+                                    {
+                                        @Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.pincode).FirstOrDefault()
+                                    }
+                                    else
+                                    {
+                                        <text>NA</text>
+                                    }
+                                    @*@{if (customerData.getPreferredAdress() != null) { customerData.getPreferredAdress().getPincode()}}*@
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--button-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 panelsm" style="padding: 0px;">
+        <div class="col-sm-6" style="padding: 0px;">
+            <!-- START panel-->
+            <div id="panelDemo10" class="panel panel-info">
+                <div class="panel-heading">
+                    <b>VEHICLE&nbsp;DETAILS</b>
+                    <img src="~/public/img/Icon -  VEHICLE DETAILS.png" class="pull-right" style="width:28px;">
+                </div>
+                <div class="panel-body" style="height: 230px;overflow: auto;padding: 5px;">
+                    @if (Model.vehi != null)
+                    {
+                        <span style="font-size: 17px"><b>Vehicle Reg Number : <span style="background-color:yellow;">@Model.vehi.vehicleRegNo </span></b></span><br />
+                        <span style="font-size: 17px"><b>Model : @Model.vehi.model</b> </span><br />
+                        <span style="font-size: 17px"><b>Variant :<span style="background-color:yellow;"> @Model.vehi.variant</span> </b></span><br />
+                        <span style="font-size: 17px">
+                            <b>
+                                Sale Date :@if (Model.vehi.saleDate != null)
+                                {@Convert.ToDateTime(Model.vehi.saleDate).ToString("dd-MM-yyyy");
+                            }
+                            </b>
+                        </span><br />
+                        <span style="font-size: 17px"><b>Frame No : @Model.vehi.Frame_no </b></span><br />
+                        <span style="font-size: 17px"><b>Engine Number : @Model.vehi.engineNo </b></span><br />
+                        <span style="font-size: 17px"><b>Dealer Name : @Model.INSAssignDealerName </b></span><br />
+                        <span style="font-size: 17px"><b>Location : @Model.vehi.city_name </b></span><br />
+                        <span style="font-size: 17px"><b>Assigned CRE : @Model.InsAssignCRE </b></span><br />
+                        <span style="font-size: 17px"><b>Campaign : @Model.InsAssignCampaign </b></span><br />
+                    }
+
+
+                </div>
+            </div>
+            <!-- END panel-->
+        </div>
+
+        <div class="col-sm-6" style="padding: 0px;">
+            <!-- START panel-->
+            <div id="panelDemo10" class="panel panel-info">
+                <div class="panel-heading"><b>LAST POLICY DETAILS&nbsp;&nbsp;&nbsp;</b><img src="~/public/img/icon - LAST POLICY DETAILS.png" class="pull-right" style="width:28px;"></div>
+                <div class="panel-body" style="height: 230px;overflow: auto;padding: 5px;">
+                    @if (Model.vehi != null)
+                    {
+                        <span style="font-size: 17px"><b>Policy Type :<span style="background-color:yellow;"> @Model.vehi.Renewal_Type</span></b> </span><br />
+                        <span style="font-size: 17px">
+                            <b>
+                                Policy Expiry Date :<span style="background-color:yellow;">
+                                    @if (Model.vehi.Previous_Policy_Expiry != null)
+                                    {@Convert.ToDateTime(@Model.vehi.Previous_Policy_Expiry).ToString("dd-MM-yyyy");
+                                }
+                                </span>
+                            </b>
+                        </span><br />
+                        <span style="font-size: 17px"><b>Policy Number :<span style="background-color:yellow">  @Model.vehi.Previous_Policy_Number </span></b></span><br />
+                        <span style="font-size: 17px"><b>Policy Start Date : @Model.vehi.Previous_Policy_Start</b></span><br />
+                        <span style="font-size: 17px"><b>IC Name : @Model.vehi.Previous_Insurer_Name </b></span><br />
+                        <span style="font-size: 17px"><b>Previous NCB Percentage : @Model.vehi.Prev_Ncb_per </b></span><br />
+                        <span style="font-size: 17px"><b>Claim Count : @Model.vehi.claimcount </b></span><br />
+                        <span style="font-size: 17px"><b>IDV :<span id="360idvamt"> @Model.vehi.Basic_IDV_Tenure1 </span> </b></span><br />
+                        <span style="font-size: 17px"><b>Nominee Name : @Model.vehi.Nominee_Name </b></span><br />
+                        <span style="font-size: 17px"><b>Nominee Age : @Model.vehi.Nominee_Age  </b></span><br />
+                        <span style="font-size: 17px"><b>Nominee Relationship : @Model.vehi.Nominee_Relationship </b></span><br />
+                        <span style="font-size: 17px">
+                            <b>
+                                3<sup>rd</sup> Party Start Date :@if (Model.vehi.TP_Start_Date != null)
+                                {@Convert.ToDateTime(@Model.vehi.TP_Start_Date).ToString("dd-MM-yyyy");
+                            }
+                            </b>
+                        </span><br />
+                        <span style="font-size: 17px">
+                            <b>
+                                3<sup>rd</sup> Party End Date : @if (Model.vehi.TP_End_Date != null)
+                                {@Convert.ToDateTime(@Model.vehi.TP_End_Date).ToString("dd-MM-yyyy");
+                            }
+                            </b>
+                        </span><br />
+                        <span style="font-size: 17px"><b>3<sup>rd</sup> Party Insurer : @Model.vehi.TP_Insurer </b></span><br />
+                    }
+                </div>
+
+            </div>
+            <!-- END panel-->
+        </div>
+    </div>
+
+</div>
+<br />
+
+
+
+<!-- Winback-->
+@*<div class="row ">
+        <div class="col-lg-12 ">
+
+
+
+            @if (Session["PageFor"].ToString() != "CREManager" && Session["PageFor"].ToString() != "Search" && Model.InsAssignCampaign == "Winback" && Model.isuploadedDate == false)
+            {
+                <div class="panel panel-primary">
+
+
+                    <div class="panel-heading " align="center" ; style="background-color:#1797be;" data-toggle="collapse" data-parent="#accordion" data-target="#callpasewinbackpolicy">
+
+                        <div class="col-lg-11">
+                            <img src="~/public/img/policy.png" id="imgInter" style="width:17px"><b id="interHeading">WINBACK POLICY</b><span id="" class="left"></span>
+
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <div id="callpasewinbackpolicy" class="panel-collapse collapse in">
+                        @if (ViewBag.typeOfDispo == "insurance")
+                        {
+                            <div class="row animated  bounceInRight">
+                                <div class="col-md-12 animated  bounceInRight" id="Winbackpolicydiv" style="display:block;">
+
+                                    @using (Ajax.BeginForm("Winbackpolicy", "customer360", new AjaxOptions { OnSuccess = "onwinbacksuccess()", OnFailure = "onwinbackfail()", HttpMethod = "POST" }))
+                                    {
+                                        @Html.TextBoxFor(m => m.CustomerId, new { @type = "hidden" })
+                                        @Html.TextBoxFor(m => m.vehi.vehicle_id, new { @type = "hidden" })
+                                        @Html.TextBoxFor(m => m.winbackPolicy.policy_type, new { @type = "hidden", @Value = Model.vehi.Renewal_Type })
+                                        Html.RenderPartial("~/Views/customer360/_Winback.cshtml", Model);
+
+
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>*@
+
+
+
+<div class="row ">
+    <div class="col-lg-12 ">
+
+
+
+        @if (Session["PageFor"].ToString() != "CREManager" && Session["PageFor"].ToString() != "Search" && Model.InsAssignCampaign == "Winback" && Model.isuploadedDate == false)
+        {
+            <div class="panel panel-primary">
+
+
+                <div class="panel-heading " align="center" ; style="background-color:#1797be;" data-toggle="collapse" data-parent="#accordion" data-target="#callpasewinbackpolicy">
+
+                    <div class="col-lg-11">
+                        <img src="~/public/img/policy.png" id="imgInter" style="width:17px"><b id="interHeading">WINBACK POLICY</b><span id="" class="left"></span>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <div id="callpasewinbackpolicy" class="panel-collapse collapse in">
+                    @if (ViewBag.typeOfDispo == "insurance")
+                    {
+                        <div class="row animated  bounceInRight">
+                            <div class="col-md-12 animated  bounceInRight" id="Winbackpolicydiv" style="display:block;">
+
+                                @using (Ajax.BeginForm("Winbackpolicy", "customer360", new AjaxOptions { OnSuccess = "onwinbacksuccess()", OnFailure = "onwinbackfail()", HttpMethod = "POST" }))
+                                {
+                                    @Html.TextBoxFor(m => m.CustomerId, new { @type = "hidden" })
+                                    @Html.TextBoxFor(m => m.vehi.vehicle_id, new { @type = "hidden" })
+                                    @Html.TextBoxFor(m => m.winbackPolicy.policy_type, new { @type = "hidden", @Value = Model.vehi.Renewal_Type })
+                                    Html.RenderPartial("~/Views/customer360/_Winback.cshtml", Model);
+
+
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+    <div class="col-md-12  panelsm">
+
+
+        @if (Session["PageFor"].ToString() != "CREManager" && Session["PageFor"].ToString() != "Search" && (Model.InsAssignCampaign == "Renewal" || Model.InsAssignCampaign == "Customer Search" || Model.InsAssignCampaign == "Others") || (Model.isuploadedDate == true && Model.InsAssignCampaign == "Winback"))
+        {
+            <div class="panel panel-primary">
+                <div class="panel-heading " style="background-color:#1797be;" data-toggle="collapse" data-parent="#accordion" data-target="#collpaserenewalpolicy">
+                    <div align="center">
+                        <img src="~/public/img/policy.png" id="imgInter" style="width:17px"> &nbsp;&nbsp;<b id="interHeading">RENEW POLICY</b><span id="spnrenewalpolicyTotAMT" class="pull-right"></span>
+                    </div>
+                    <div class="clearfix"></div>
+
+                </div>
+                <div id="collpaserenewalpolicy" class="panel-collapse collapse in">
+                    @if (ViewBag.typeOfDispo == "insurance")
+                    {
+                        <div class="row animated  bounceInRight">
+                            <div class="col-md-12 animated  bounceInRight" id="renewalpolicyDiv" style="display:block;">
+                                @if (Model.vehi.isrenewalquotation == true)
+                                {
+                                    using (Ajax.BeginForm("saverenewalPolicy", "customer360", new AjaxOptions { OnSuccess = "onrenewalSaved()", OnFailure = "onrenewalSaveFailed()", HttpMethod = "POST" }))
+                                    {
+                                        @Html.TextBoxFor(m => m.CustomerId, new { @type = "hidden" })
+                                        @Html.TextBoxFor(m => m.vehi.vehicle_id, new { @type = "hidden" })
+                                        Html.RenderPartial("~/Views/customer360/_renewalpolicy.cshtml", Model);
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+<!--WinBack Final Proposal-->
+
+
+
+@if (Model.InsAssignCampaign == "Winback" || Model.InsAssignCampaign == "Renewal" && Model.isuploadedDate == false)
+{
+    <div class="row" id="divFinalProposal">
+        <div class="col-lg-12  panelsm">
+            <div class="panel panel-primary">
+                <div class="panel-heading " align="center" ; style="background-color: #1797be" data-toggle="collapse" data-parent="#accordion" data-target="#winbackProposalHistry" onclick="GetWinbackFinalProposal();">
+                    <div class="col-lg-11">
+                        <img src="~/public/img/policy.png" id="imgInter" style="width:17px">&nbsp;<b id="interHeading">FINAL PROPOSAL</b><span style="color:#1797be" class="pull-left"></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div id="winbackProposalHistry" class="panel-collapse collapse">
+                    <div class="panel-body panelsm">
+                        <div class="tab-content">
+                            <div>
+                                <div class="row">
+                                    @*<div class="col-lg-12">*@
+                                    <table class="table table-striped table-bordered table-hover" id="Final_Proposal" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>SL No</th>
+                                                <th>PRODUCT NAME</th>
+                                                @*<th>IDV</th>*@
+                                                <th>BASIC IDV</th>
+                                                <th>BASIC PREMIUM</th>
+                                                <th>NCB VALUE</th>
+                                                @*<th>TOTAL DISCOUNTS</th>*@
+                                                <th>CPA AMOUNT</th>
+                                                <th>OD PREMIUM</th>
+                                                <th>LIABILITY PREMIUM</th>
+                                                <th>RTI PREMIUM</th>
+                                                <th>NIL DEP PREMIUM</th>
+                                                <th>NET PREMIUM</th>
+                                                <th>TOTAL GST</th>
+                                                <th>GROSS PREMIUM</th>
+                                                <th>DATE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <div class="pull-right">
+                                        <input type="button" class="btn btn-success" id="btnfinalproposalsubmit" style="display:none;" value="SUBMIT" />
+                                    </div>
+                                    <span id="tblProposalResult" style="font-size:12pt;color:red;"></span>
+
+                                    @*</div>*@
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+
+<!--Renewal Final Proposal-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="row animated backInRight">
+    <div class="col-lg-12 disposit  panelsm" id="callDispoI">
+        @if (Session["PageFor"].ToString() != "CREManager" && Session["PageFor"].ToString() != "Search")
+        {
+            <div class="panel panel-primary">
+                <div class="panel-heading " align="center" ; style="background-color:#1797be;" data-toggle="collapse" data-parent="#accordion" data-target="#callapsediposition">
+                    <img src="~/public/images/phone1.png" id="imgInter" style="width:17px">&nbsp;<b id="interHeading">UPDATE CALL STATUS</b><span style="color:#1797be">Premium - 102586</span>
+                </div>
+                <div id="callapsediposition" class="panel-collapse collapse">
+                    <div class="panel-body disposit">
+                        @if (ViewBag.typeOfDispo == "insurance")
+                        {
+                            <div class="row animated  bounceInRight">
+                                @*<div class="col-sm-12" id="SMRInteractionFirst">
+                                        <h4>Select The Mode of Interaction :-&nbsp;&nbsp;</h4>
+
+                                        <div class="radio-inline">
+                                            <label>
+                                                <input type="radio" name="InOutCallName" value="OutCall" checked id="OutGoingID">
+                                                Outbound Call
+                                            </label>
+                                        </div>
+                                    </div>*@
+                                <div class="col-md-12 animated  bounceInRight" id="OutBoundDiv" style="display:block;">
+                                    @using (Html.BeginForm("customer360", "customer360", FormMethod.Post))
+                                    {
+                                        @Html.TextBoxFor(m => m.CustomerId, new { @type = "hidden" })
+                                        @Html.TextBoxFor(m => m.VehicleId, new { @type = "hidden" })
+                                        @Html.TextBoxFor(m => m.listingForm.issmsEnabled, new { @type = "hidden", id = "issmsenbledsave" })
+                                        <div class="">
+                                            <div id="DidYouTalkDiv">
+                                                <label for=""><b>Did you talk to the customer ?</b></label>
+                                                <br>
+                                                <div class="radio-inline">
+                                                    <label>
+                                                        @Html.RadioButtonFor(m => m.insudisposition.typeOfDisposition, "Contact", new { @value = "Contact", @id = "SpeakYes" })
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="radio-inline">
+                                                    <label>
+                                                        @Html.RadioButtonFor(m => m.insudisposition.typeOfDisposition, "NonContact", new { @value = "NonContact", @id = "SpeakNo" })
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!--Book My Insurance-->
+                                            <div style="display:none;" class="animated  bounceInRight whatDidCustSayDiv" id="WhatdidtheCustomersayDIV">
+                                                <div id="whatDidCustSayDiv">
+                                                    <label for=""><b>What did the customer say?</b></label>
+                                                    <br>
+                                                    @if (ViewBag.typeOfDispo == "insurance" && Model.callinteraction.appointmentbooked == null)
+                                                    {
+                                                        <div class="radio-inline">
+                                                            <label>
+                                                                @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "Book Appointment", new { @value = "Book Appointment", @id = "BookMyAppointment" })
+                                                                Book Appointment
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio-inline">
+                                                            <label>
+                                                                @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "Renewal Not Required", new { @value = "Renewal Not Required", @id = "RenewalNotRequired" })
+                                                                Renewal Not Required
+                                                            </label>
+                                                        </div>
+                                                    }
+                                                    @if (ViewBag.typeOfDispo == "insurance" && Model.callinteraction.appointmentbooked != null && Model.callinteraction.appointmentbooked.insuranceBookStatus_id != 34)
+                                                    {
+                                                        <div class="radio-inline">
+                                                            <label>
+                                                                @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "ConfirmedInsu", new { @value = "ConfirmedInsu", @id = "ConfirmedId" })
+                                                                Confirmed
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="radio-inline">
+                                                            <label>
+                                                                @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "Book Appointment", new { @value = "Book Appointment", @id = "BookMyAppointment" })
+                                                                @*<input type="radio" name="disposition" value="Book Appointment" id="BookMyAppointment">*@
+                                                                Reschedule
+                                                            </label>
+                                                        </div>
+
+
+                                                        <div class="radio-inline">
+                                                            <label>
+                                                                @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "Cancel Appointment", new { @value = "Cancel Appointment", @id = "CancelId" })
+                                                                @*<input type="radio" name="disposition" value="Cancel Appointment">*@
+                                                                Cancel
+                                                            </label>
+                                                        </div>
+                                                    }
+                                                    <div class="radio-inline">
+                                                        <label>
+                                                            @Html.RadioButtonFor(m => m.insudisposition.dispoCustAns, "Call Me Later", new { @value = "Call Me Later", @id = "CallMeLatter" })
+                                                            Call Me Later
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                @if (ViewBag.TypeOfDispo == "insurance")
+                                                {
+                                                    Html.RenderPartial("~/Views/customer360/_insuranceOutBound.cshtml", Model);
+                                                }
+                                                <!--call me latter-->
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+                <div class="row animated  bounceInRight" style="display:none;" id="SendSMSDiv">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="form-check-label"><input type="checkbox" id="sendbookingsmschk" checked class="form-check-input" onclick="checksmsenable()" /><b>  Send SMS </b> </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+
+</div>
+
+
+<!--INTERACTION HISTORY-->
+<div class="row">
+    <div class="col-md-12  panelsm">
+        <div class="panel panel-primary">
+            <div class="panel-heading " align="center" style="background-color:#1797be;" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne3">
+                <img src="@Request.ApplicationPath/public/images/INTERACTION.png" style="width:17px">&nbsp;<b>INTERACTION HISTORY</b><span style="color:#1797be">Premium - 102586</span>
+            </div>
+            <div id="collapseOne3" class="panel-collapse collapse">
+                <div class="panel-body panelsm">
+                    <div class="panel with-nav-tabs">
+                        <div class="panel-heading clearfix panelsm">
+                            <div>
+                                <ul class="nav nav-tabs">
+                                    <li class="expand"><a href="#tab2primary" data-toggle="tab" onclick="callHistoryByVehicle('INS');">Call History</a></li>
+                                    <li class="expand"><a href="#tab3primary" data-toggle="tab" onclick="smsHistoryOfUser();">WHATSAPP</a></li>
+                                    <li class="expand"><a href="#tab4primary" data-toggle="tab" onclick="renewalHistoryOfVehicle();">QUOTATIONS</a></li>
+                                    <li class="expand"><a href="#tab7primary" data-toggle="tab" onclick="AssignmentHistoryOfCustomer('insurance');">ASSIGNMENT HISTORY</a></li>
+                                    <li class="expand"><a href="#tab6primary" data-toggle="tab" onclick="getFinalQuoteResponse();">WINBACK</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body panelsm">
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="tab2primary">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <table width="100%" class="table table-striped table-bordered table-hove" id="dispositionHistory">
+                                                    <thead style="overflow:hidden;">
+                                                        <tr>
+                                                            <th style="text-align:center">AssignID</th>
+                                                            <th style="text-align:center">Call Date</th>
+                                                            <th style="text-align:center">Call Time</th>
+                                                            <th style="text-align:center">CRE</th>
+                                                            <th style="text-align:center">Campaign</th>
+                                                            <th style="text-align:center">Secondary Disposition</th>
+                                                            <th style="text-align:center">Details</th>
+                                                            <th style="text-align:center; width:50px;">CRE Remarks</th>
+                                                            <th style="text-align:center">Feedback</th>
+                                                            <th style="text-align:center" id="thcallMadeType" class="callMadeCs">CallMade Type</th>
+                                                            <th style="text-align:center">IsCallinitiated?</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="dispoHistBody" style="font-weight: 100; color:black;font-weight:600"></tbody>
+
+                                                </table>
+                                                <span id="tblException" style="font-size:12pt;color:red;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="tab3primary">
+                                    <div class="row table-responsive">
+                                        <div class="col-sm-12">
+                                            <table class="table table-striped table-bordered table-responsive" id="sms_history" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>DATE</th>
+                                                        <th>TIME</th>
+                                                        <th>CRE</th>
+                                                        <th>Mobile</th>
+                                                        <th>MSG TYPE</th>
+                                                        <th>MESSAGE</th>
+                                                        <th>STATUS</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                            <span id="tblsmsHstry" style="font-size:12pt;color:red;"></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="tab4primary">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group table-responsive">
+                                                <table class="table table-bordered table-responsive table-user-information" width="100%" id="renewal_history" style="overflow: auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Action</th>
+                                                            <th>Quotation Date</th>
+                                                            <th>IsSuccess</th>
+                                                            <th>Response Message</th>
+                                                            <th>Response Code</th>
+                                                            <th>Campaign Name</th>
+                                                            <th>CRE Name</th>
+                                                            <th>Insurance Company</th>
+                                                            <th>Renewal Type</th>
+                                                            <th>IDV</th>
+                                                            <th>OD</th>
+                                                            <th>NCB Value</th>
+                                                            <th>Zero Dep</th>
+                                                            <th>RTI</th>
+                                                            <th>TP</th>
+                                                            <th>NET Premium</th>
+                                                            <th>GST Amount</th>
+                                                            <th>Total Premium</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                                <span id="tblrenewalhstry" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="tab7primary">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group table-responsive">
+                                                <table class="table  table-striped table-bordered tblIns table-hover" id="assignment_smr_history">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ASSIGNED ID</th>
+                                                            <th>ASSIGNED DATE</th>
+                                                            <th>ASSIGNED BY</th>
+                                                            <th>ASSIGNED TO</th>
+                                                            <th>STATUS</th>
+                                                            <th>LAST DISPOSITION</th>
+                                                            <th>RE-ASSIGNED DONE?</th>
+                                                            <th>RE-ASSIGNMENT HISTORY</th>
+                                                            <th>Reason For Drop</th>
+                                                            <th>STATUS</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+
+                                                </table>
+                                                <span id="tbsmrhstryException" style="font-size:12pt;color:red;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade" id="tab6primary">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group table-responsive">
+                                                <table class="table table-bordered table-responsive table-user-information" width="100%" id="tblfinalQuote" style="overflow: auto;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ResponseCode</th>
+                                                            <th>ResponseMessage</th>
+                                                            <th>PolicyNo</th>
+                                                            <th>HeroTransaction</th>
+                                                            <th>PremAmount</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                                <span id="tblexceptionfinalQuote" style="color:red"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Document Upload part-->
+<div class="row">
+    <div class="col-lg-12 panelsm">
+        <div class="panel panel-primary">
+            <div class="panel-heading" id="docPanel" data-toggle="collapse" onclick="getDocuments();" data-parent="#accordion" data-target="#collapseOne4" align="center" style="background-color:#1797be;">
+                <img src="~/public/images/docUpload.png" style="width:17px">&nbsp;<b>DOCUMENT UPLOAD HISTORY</b><span style="color:#1797be">Premium - 102586</span>
+            </div>
+            <div id="collapseOne4" class="panel-collapse collapse">
+                <div class="panel-body panelsm">
+                    <div class="row animated  bounceInRight">
+                        <div class="col-lg-12">
+                            <div class="form-group table-responsive">
+                                <table class="table table-bordered table-responsive table-user-information" id="tblDocument">
+                                    <thead>
+                                        <tr>
+                                            <th>DEPT</th>
+                                            <th>USER</th>
+                                            <th>UPLOAD DATE TIME</th>
+                                            <th>DOCUMENT NAME</th>
+                                            <th>LINK</th>
+                                            <th>WHATSAPP</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            @using (Ajax.BeginForm("uploadDocument", "customer360", null, new AjaxOptions { OnSuccess = "fileSuccess", OnFailure = "fileFailure", HttpMethod = "POST" }, new { @enctype = "multipart/form-data" }))
+                            {
+
+                                <div class="panel-heading">Upload New document</div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="customerName">Tag to Dept<i style="color:red">*</i>:</label>
+                                        @Html.DropDownListFor(m => m.docHistory.deptName, new List<SelectListItem> {
+                                                    new SelectListItem{Text="Insurance",Value="Insurance"},
+                                                }, new { @class = "form-control", required = "required", @id = "deptName" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="customerName">Document Name<i style="color:red">*</i>:</label>
+                                        @Html.TextBoxFor(m => m.docHistory.documentName, "", new { @class = "form-control", @required = "required", @id = "documentName", @autocomplete = "off", @maxlength = "40" })
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="">@*<i style="color:red">*Maximum 3 files allowed to upload</i>*@</label>
+                                        @Html.TextBoxFor(m => m.docHistory.fileList, "", new { @type = "file", @required = "required", @multiple = "multiple", onchange = "NumOfFile(this)", @autocomplete = "off", @id = "fileList", @accept = "image/gif,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel, image/jpeg, image/png,application/pdf", })
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <input type="submit" value="UPLOAD" id="btnSubmit" />
+                                        @*<button type="button" id="btnSubmit" onclick="postFileData()">Upload</button>*@
+                                        <label for=""><i style="color:red">*Allowed File Formats ['docx','png','xlsx','xls','jpg','jpeg','pdf']</i></label>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="smsPopuId" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="text-align:center;background-color: #106A86;color: #fff;">
+                <button type="button" class="close" data-dismiss="modal"><img src="~/public/images/close1.png"></button>
+                <h4 class="modal-title"><b>SMS OPTIONS</b></h4>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="comment">SMS Type:</label>
+                            @Html.DropDownList("ddl_SMSType", new SelectList(Model.smstemplates, "smsId", "smsType"), "--Select--", new { @class = "form-control", @onchange = "smsTypeChanged(this.id,'sms')", @id = "ddl_SMSType" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="comment">SMS Template:</label>
+                            <textarea class="form-control" rows="5" id="smstemplate"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" id="whatsapp" class="btn btn-default whatsapp" onclick="OpenWhatsApp(this)" data-dismiss="modal"><img src='~/public/images/whatsapp_logo.png' style="width: 20px;">&nbsp;Message</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="whatsAppModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><b>Select Sending Status</b></h4>
+            </div>
+            <div class="modal-body">
+                <select id="whatsAppStatus" name="whatsAppStatus" style="width:200px; height:30px">
+                    <option value="Send Successfully">Send Successfully</option>
+                    <option value="Sending failed">Sending failed</option>
+                    <option value="User not on WhatsApp">User not on WhatsApp</option>
+                </select>
+                <span id="whatsAppBtn" class="btn btn-default smsSendType" data-from="popUp" onclick="putWhatsappResponse(this)" style="float:right" data-dismiss="modal">Submit</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--******************************* Add Customer Modal PopUp winback *********************-->
+<div id="UpdatecustomerEmailPhoneModal" class="modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="padding:1px;text-align:left;color:red;">
+                <button type="button" class="close" data-dismiss="modal"><img src="~/public/images/close1.png"></button>
+                @*<h5 class="modal-title">Alert !!!</h5>*@
+                <h1 style="font-size:20px; font-weight:bold">Alert !!!</h1>
+
+            </div>
+            <div class="modal-body mbheight">
+                <div class="col-lg-12" id="lbl">
+                    <br />
+                    <label class="col-lg-12">Please confirm from customer the below details, as policy copy and its information will be sent to below details:<sup style="color:red;font-size:16px;"><strong></strong></sup> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                </div>
+                <div class="col-lg-12" id="emailid">
+                    <label class="col-lg-3">Email Id<sup style="color:red;font-size:16px;"><strong></strong></sup> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="col-lg-4">
+                        @Html.TextBoxFor(m => m.winbackPolicy.emailid, new { @class = "form-control", @id = "txtemail2", @Value = Model.vehi.email, @readonly = "readonly" })
+                    </div>
+                    <div class="col-lg-2" id="editEmail">
+                        <button type="button" class="btn btn-info" onclick="EditPhoneAndEmailFunction();">Update</button><br /><br />
+                    </div>
+                    <div class="col-lg-2" style="display:none" id="CancelEmail">
+                        <button type="button" value="cancel" class="btn btn-danger" onclick="CancelEmail12();">Cancel</button>
+                    </div>
+
+                    <div class="col-lg-2" style="display:none" id="updatediv">
+                        <button type="button" class="btn btn-info" onclick="UpdateEmailFunction();">Save</button><br /><br />
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12" id="mobilenumber">
+                    <label class="col-lg-3">Mobile No  <sup style="color:red;font-size:16px;"><strong></strong></sup> </label>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control mobilenumberregex" id="txtmobilenumber2" readonly="readonly" , placeholder="Primary" onblur="mobilenumber();" maxlength=10 />
+                        @Html.HiddenFor(model => model.winbackPolicy.mobilenumber, new { @id = "TxtWinbackMobileNumber2", @Value = Model.vehi.Mobile })
+                    </div>
+
+                    <div class="col-lg-2" id="updatePhone1234">
+                        <button type="button" class="btn btn-info" onclick="editPhone();">Update</button><br /><br />
+                    </div>
+                    <div class="col-lg-2" style="display:none" id="CancelMobile">
+                        <button type="button" value="cancel" class="btn btn-danger" onclick="CancelMobileNumber();">Cancel</button>
+                    </div>
+
+                    <div class="col-lg-2" style="display:none" id="updatephone">
+                        <button type="button" class="btn btn-info" onclick="UpdatePhoneAndEmailFunction();">Save</button><br /><br />
+
+                    </div>
+
+                    @*<div class="col-lg-3">
+                            @Html.TextBoxFor(m => m.winbackPolicy.SecondMobileNumber, new { @class = "form-control mobilenumberregex2", @readonly = "readonly", maxlength = 10, @id = "txtsecondmobilenumber", @placeholder = "Secondary", @onblur = "Secondmobilenumber();", @Value = Model.vehi.mobile2 })
+                            <button type="button" class="btn btn-info" onclick="UpdatePhoneAndEmailFunction();">Update</button><br /><br />&nbsp;&nbsp;
+                        </div>*@
+                </div>
+
+
+
+                <div class="modal-footer" style="text-align:center">
+                    <button type="button" data-dismiss="modal" style="display:none" class="btn btn-danger">Close</button><br /><br />
+
+
+
+                    <button type="submit" id="ProposalSubmit" value="Proposalpreview" class="btn btn-success" onclick="ProposalSubmit();">Submit</button>&nbsp;&nbsp;
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Advanced Modal -->
+<div id="LegalModal" class="modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="padding:1px;text-align:center;color:red;">
+                <button type="button" class="close" data-dismiss="modal"><img src="~/public/images/close1.png"></button>
+                <h5 class="modal-title">UPDATE CUSTOMER INFORMATION</h5>
+            </div>
+            <div class="modal-body mbheight">
+                <div class="tabbable ">
+                    <!-- Only required for left/right tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a class="tab1" href="#tab1" data-toggle="tab" onclick="hidepopupdiv();">Contact</a></li>
+                        <li><a href="#tab2" data-toggle="tab" onclick="hidepopupdiv();">Email</a></li>
+                        <li><a href="#tab4" data-toggle="tab" onclick="hidepopupdiv();getAddressForPopUp()">Address</a></li>
+                        <li><a href="#tab3" data-toggle="tab" onclick="hidepopupdiv();">Other</a></li>
+                    </ul>
+                    <div class="tab-content" id="tabs">
+                        <div class="tab-pane active" id="tab1">
+                            <br />
+
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Contact Details</h3>
+                                </div>
+                                <div class=" panel-body">
+                                    @Html.HiddenFor(m => m.cust.id, new { @id = "txtcustId" })
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6" style="margin-bottom: 7px;">
+                                                @Html.DropDownListFor(m => m.prefferedPhone, new SelectList(Model.custPhoneList, "phone_Id", "phoneNumber"), new { @class = "form-control", @id = "preffered_contact_num" })
+
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label></label>
+                                                @*<button type="button" style="margin-top:5px;" id="deleteNum" class="btn btn-danger">Add</button>*@
+                                                <button type="button" class="btn btn-success" onclick="adddeletecontact('add')" aria-label="Left Align"><span class="fa fa-plus-circle fa-lg" aria-hidden="true"></span></button>
+
+                                                <button type="button" class="btn btn-danger" onclick="adddeletecontact('delete')" aria-label="Left Align" id="deletephonebtn"><span class="fa fa-trash-o fa-lg" aria-hidden="true"></span></button>
+                                                @*<button type="button" style="margin-top:5px;" id="deleteNum" class="btn btn-danger">Delete</button>*@
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="adddeletephonenumberDiv" style="display:none">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <br />
+                                                <div class="col-sm-4" id="addphoneno">
+                                                    <div class="form-group">
+                                                        <label>New Phone No.</label>
+                                                        @Html.TextBoxFor(model => model.phoneAdd.phoneNumber, new { @class = "form-control numberOnly", @maxlength = "12", @min = "10", @max = "12", @id = "myPhoneNum" })<br />
+                                                        <span id="phErro" style="color:red;font-size:10pt;"></span>
+                                                        @*   <input type="text" name="myPhoneNum" class="form-control numberOnly" maxlength="10" min="10" max="10" id="myPhoneNum">*@
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6" id="remarksDiv">
+                                                    <div class="form-group">
+
+                                                        <label id="lblremarks"></label><br>
+                                                        @Html.TextAreaFor(model => model.phoneAdd.remarks, new { @class = "form-control characterLimit", @id = "myPhoneRemark" })
+                                                        @*  <textarea name="myPhoneRemark" class="form-control characterLimit" id="myPhoneRemark"></textarea>*@
+                                                    </div>
+                                                </div><br />
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-5 pull-right">
+                                                    <input type="submit" class="btn btn-success" name="submit" value="SavePhone" id="savePhoneCust" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="tab-pane" id="tab2">
+                            <br />
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Email Details</h3>
+                                </div>
+                                <div class=" panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6" style="margin-bottom: 7px;">
+                                                @if (Model.cust.emails.FirstOrDefault(m => m.isPreferredEmail == true) != null)
+                                                {
+                                                    @Html.DropDownListFor(m => m.prefferedEmail, new SelectList(Model.cust.emails, "email_Id", "emailAddress", Model.cust.emails.FirstOrDefault(m => m.isPreferredEmail == true).email_Id), new { @class = "form-control", @id = "email" })
+                                                }
+                                                else
+                                                {
+                                                    @Html.DropDownListFor(m => m.prefferedEmail, new SelectList(Model.cust.emails, "email_Id", "emailAddress"), "--Select--", new { @class = "form-control", @id = "email" })
+                                                }
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label></label>
+                                                <button type="button" class="btn btn-success" onclick="addemail('add')" aria-label="Left Align"><span class="fa fa-plus-circle fa-lg" aria-hidden="true"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="addemailDiv" style="display:none">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <br />
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <label>New Email.</label>
+                                                        @Html.TextBoxFor(model => model.emailAdd.emailAddress, new { @class = "form-control email", @maxlength = "60", @min = "5", @max = "60", @id = "myEmailNum" })
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-5 pull-right">
+                                                    <input type="submit" class="btn btn-success" name="submit" value="Save" id="savebtnemail" onclick="savecustomerDetails('SaveEmail')" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane" id="tab3">
+                            <br />
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Other Details</h3>
+                                </div>
+                                <div class=" panel-body">
+                                    <div class="row">
+                                        <div class="col-sm-3" id="dndDivadvaithhide">
+                                            <div class="form-group">
+
+                                                <label><b>DND</b></label><br />
+                                                <label class="radio-inline">
+                                                    @Html.RadioButtonFor(model => model.cust.doNotDisturb, true, new { @id = "dndcheckbox1" })YES
+                                                </label>
+                                                <label class="radio-inline">
+                                                    @Html.RadioButtonFor(model => model.cust.doNotDisturb, false, new { @id = "dndcheckbox2" })NO
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+
+                                                <label><b>Date OF Birth:</b></label>
+                                                @Html.TextBoxFor(model => model.cust.dob, new { @class = "blockfuturedate form-control", @id = "dob", @Value = Model.cust.dob, @readonly = "readonly" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+
+                                                <label><b>Date of Anniversary</b></label>
+                                                @Html.TextBoxFor(model => model.cust.anniversary_date, new { @class = "blockfuturedate form-control", @id = "anniversary_date", @Value = Model.cust.anniversary_date, @readonly = "readonly" })
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-7 pull-right">
+                                            <input type="submit" class="btn btn-success" name="submit" value="Save" id="savebtnemail" onclick="savecustomerDetails('SaveCustomer')" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab4">
+                            <br />
+
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Address Details</h3>
+                                </div>
+                                <div class=" panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="col-md-6" style="margin-bottom: 7px;">
+                                                <label>Update</label>
+                                                <textarea id="newAddress" class="form-control paddr_line1 characterLimit" rows="3" placeholder="Please enter Company Name/Flat No &amp; Building name."></textarea>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label>State</label><br>
+                                                @Html.DropDownList("pstateId", Model.citystatesList, "--Select--", new { @class = "form-control paddr_line5", @style = "", @id = "pstateId", @onchange = "getCityByStateSelection('pstateId','paddrrCity');" })
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label>City</label>
+                                                <select class="form-control paddr_line4" id="paddrrCity"></select>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label>PinCode</label>
+                                                <input type="text" class="form-control paddr_line6 numberOnly" id="ppincode" maxlength="6" rows="1" placeholder="Please enter PinCode">
+                                            </div><br /><br />
+                                            <div class="col-md-2">
+                                                <label>Make Default</label>
+                                                <input type="checkbox" id="IsPrimary" name="checkBoxPrimary" value="checkBoxPrimary" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-8">
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-success paddr_submit" data-dismiss="modal" onclick="updateNewAddress();">Add</button>
+                                                <button type="button" class="btn btn-danger paddr_submit" onclick="reset();">Reset</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Available Address Details</label>
+                                            <table id="allAddress" class="table table-striped table-bordered" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Preferred</th>
+                                                        <th>Address</th>
+                                                        <th>State</th>
+                                                        <th>City</th>
+                                                        <th>Pincode</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@******************* MODAL POP UP START *********************@
+<div class="modal fade" id="AddressUpdatePopup" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <label>Add New Address</label>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12" style="padding-left: 0px;padding-right:0px; border-style: solid; border-color: #64aeef; margin-bottom: 7px;">
+                        <div class="col-md-6" style="margin-bottom: 7px;">
+                            <label>Update Address: </label>
+                            <textarea id="newAddress" class="form-control paddr_line1 characterLimit" rows="3" placeholder="Please enter Company Name/Flat No &amp; Building name."></textarea>
+                        </div>
+                        <div class="col-md-2">
+                            <label>State</label><br>
+                            @Html.DropDownList("pstateId", Model.citystatesList, "--Select--", new { @class = "form-control paddr_line5", @style = "", @id = "pstateId", @onchange = "getCityByStateSelection('pstateId','paddrrCity');" })
+                        </div>
+                        <div class="col-md-2">
+                            <label>City</label>
+                            <select class="form-control paddr_line4" id="paddrrCity"></select>
+                        </div>
+                        <div class="col-md-2">
+                            <label>PinCode</label>
+                            <input type="text" class="form-control paddr_line6 numberOnly" id="ppincode" maxlength="6" rows="1" value="0" placeholder="Please enter PinCode">
+                        </div>
+                        <div class="col-md-2">
+                            <label>Is Primary</label>
+                            <input type="checkbox" id="IsPrimary" name="checkBoxPrimary" value="checkBoxPrimary" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label>Available Address Details</label>
+                        <div class="table-responsive divscroll">
+                            <table id="allAddress" style="border-style:solid;border-color: #64aeef;" class="table table-striped table-bordered dt-responsive nowrap table-fixed" cellspacing="0" border="2">
+                                <thead class="makefixed">
+                                    <tr style="font-size: small;">
+                                        <th>Preffered</th>
+                                        <th>Address</th>
+                                        <th>City</th>
+                                        <th>Pincode</th>
+                                        <th>Update On</th>
+                                        <th>Updated By</th>
+                                        @if (Session["UserRole"].ToString() == "CREManager")
+                                        {
+                                            <th>Delete</th>
+                                        }
+
+                                    </tr>
+                                </thead>
+                                <tbody style="font-size: smaller; color:black" id="popUpBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary paddr_submit" onclick="updateNewAddress();">Add</button>
+                <button type="button" class="btn btn-primary paddr_submit" onclick="reset();">Reset</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+@******************* MODAL POP UP END *********************@
+
+
+
+
+@section scripts
+   {
+    @Scripts.Render("~/bundles/CallLoggingJS")
+    <script>
+
+        $(document).ready(function () {
+            var phoneCount = Number('@phoneCount');
+            if (phoneCount > 1) {
+                $('#deletephonebtn').show();
+            }
+            else {
+                $('#deletephonebtn').hide();
+            }
+            var renewalpolicyexist = ('@Model.vehi.isrenewalquotation');
+            if (renewalpolicyexist == 'False') {
+                $('#spnrenewalpolicyTotAMT').text("No  Details Found");
+            }
+            var dndbtn = ('@DNDbtnshow');
+            if (dndbtn == 'True') {
+                $("#btnDND").css("display", "block")
+
+            }
+            else {
+                $("#btnDND").css("display", "none")
+
+            }
+             var phoneList = @Html.Raw(Json.Encode(Model.custPhoneList));
+            phoneMasking(phoneList);
+
+          });
+
+        function checksmsenable() {
+            if (!$("#sendbookingsmschk").is(":checked")) {
+                $('#issmsenbledsave').val("false");
+            }
+            else {
+                $('#issmsenbledsave').val("true");
+
+            }
+        }
+
+        function phoneMasking(phoneList) {
+            var listphone = "";
+            var len = phoneList.length - 2;
+
+            for (var i = 0; i < phoneList.length; i++) {
+                // phoneList[i].phoneNumber = phoneList[i].phoneNumber.substring(, phoneList[i].phoneNumber.length - 2);
+                phoneList[i].phoneNumber = phoneList[i].phoneNumber.slice(- 4);
+                phoneList[i].phoneNumber = "******" + phoneList[i].phoneNumber;
+
+                if (listphone == "") {
+                    listphone = phoneList[i].phoneNumber;
+                }
+                else {
+                    listphone = listphone + "," + phoneList[i].phoneNumber;
+                }
+            }
+            $('#prefPhone').html("");
+
+            $('#ddl_phone_noMask').empty();
+            $('#preffered_contact_num').empty();
+            for (var i = 0; i < phoneList.length; i++) {
+                $('#ddl_phone_noMask').append('<option value="' + phoneList[i].phone_Id + '">' + phoneList[i].phoneNumber + '</option>');
+                $('#preffered_contact_num').append('<option value="' + phoneList[i].phone_Id + '">' + phoneList[i].phoneNumber + '</option>');
+            }
+            $('#prefPhone').html(listphone);
+        }
+
+        function EditphoneMasking(phoneList) {
+            var listphone = "";
+            for (var i = 0; i < phoneList.length; i++) {
+                //phoneList[i].phoneNo = phoneList[i].phoneNo.substring(0, phoneList[i].phoneNo.length - 2);
+                //phoneList[i].phoneNo = phoneList[i].phoneNo + "XX";
+                phoneList[i].phoneNo = phoneList[i].phoneNo.slice(- 4);
+                phoneList[i].phoneNo = "******" + phoneList[i].phoneNo;
+
+                if (listphone == "") {
+                    listphone = phoneList[i].phoneNo;
+                }
+                else {
+                    listphone = listphone + "," + phoneList[i].phoneNo;
+                }
+            }
+            $('#prefPhone').html("");
+
+            $('#ddl_phone_noMask').empty();
+            $('#preffered_contact_num').empty();
+            for (var i = 0; i < phoneList.length; i++) {
+                $('#ddl_phone_noMask').append('<option value="' + phoneList[i].id + '">' + phoneList[i].phoneNo + '</option>');
+                $('#preffered_contact_num').append('<option value="' + phoneList[i].id + '">' + phoneList[i].phoneNo + '</option>');
+            }
+            $('#prefPhone').html(listphone);
+        }
+        function copyselectedIndex() {
+            $('#ddl_phone_no').val($('#ddl_phone_noMask').val().trim()).change();
+          }
+    function onrenewalSaved(res) {
+        Lobibox.notify('info', {
+            continueDelayOnInactiveTab: true,
+            msg: 'Saved Successfully'
+        });
+        renewalHistoryOfVehicle();
+        $('#mainLoader').hide();
+    }
+    function onrenewalSaveFailed() {
+
+        }
+
+    $.fn.tooltipOnOverflow = function (options) {
+        $(this).on("mouseenter", function () {
+            if (this.offsetWidth < this.scrollWidth) {
+                options = options || { placement: "auto" }
+                options.title = $(this).text();
+                $(this).tooltip(options);
+                $(this).tooltip("show");
+            } else {
+                if ($(this).data("bs.tooltip")) {
+                    $tooltip.tooltip("hide");
+                    $tooltip.removeData("bs.tooltip");
+                }
+            }
+        });
+    };
+
+    $('.mightOverflow').tooltipOnOverflow();
+
+    </script>
+
+
+}

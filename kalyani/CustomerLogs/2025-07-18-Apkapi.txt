@@ -1,0 +1,219 @@
+2025-07-18 10:15:05.1655|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-18 10:15:34.2121|INFO|apkRegLogger|
+
+2025-07-18 10:15:34.2711|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:15:34 am
+2025-07-18 10:15:34.2711|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-18 10:15:34.2711|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-18 10:15:34.2711|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:15:34 am
+
+2025-07-18 10:15:39.0635|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:15:39 am
+2025-07-18 10:15:39.0635|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:15:39 am
+2025-07-18 10:15:43.0485|INFO|apkRegLogger|
+
+2025-07-18 10:15:43.0485|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:15:43 am
+2025-07-18 10:15:43.0528|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:15:43.0708|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-07-18 10:15:43.0900|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:15:43 am
+
+2025-07-18 10:15:43.1359|INFO|apkRegLogger|
+
+2025-07-18 10:15:43.1359|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:15:43 am
+2025-07-18 10:15:43.1359|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:15:43.1359|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 * * ? *
+2025-07-18 10:15:43.1359|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:15:43 am
+
+2025-07-18 10:15:50.6031|INFO|apkRegLogger|
+
+2025-07-18 10:15:50.6031|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:15:50 am
+2025-07-18 10:15:50.6143|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:15:50.6143|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 * * ? *
+2025-07-18 10:15:50.6143|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:15:50 am
+
+2025-07-18 10:16:01.1664|INFO|apkRegLogger|
+
+2025-07-18 10:16:01.1777|INFO|apkRegLogger|============= Get Renewal Data API Started ============= | AT: 18-07-2025 10:16:01 am
+2025-07-18 10:16:01.1777|INFO|apkRegLogger|Application Site Root: /
+2025-07-18 10:16:02.5680|INFO|apkRegLogger|[INFO] Renewal Policy Data API Response status OK | AT: 18-07-2025 10:16:02 am
+2025-07-18 10:16:22.8833|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-18 10:16:25.4613|INFO|apkRegLogger|
+
+2025-07-18 10:16:25.4613|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:16:25 am
+2025-07-18 10:16:25.4613|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-18 10:16:25.4753|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-18 10:16:25.4753|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:16:25 am
+
+2025-07-18 10:16:29.6844|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:16:29 am
+2025-07-18 10:16:29.6844|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:16:29 am
+2025-07-18 10:16:33.6456|INFO|apkRegLogger|
+
+2025-07-18 10:16:33.6456|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:16:33 am
+2025-07-18 10:16:33.6456|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:16:33.6649|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-07-18 10:16:33.6832|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:16:33 am
+
+2025-07-18 10:16:33.7285|INFO|apkRegLogger|
+
+2025-07-18 10:16:33.7285|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:16:33 am
+2025-07-18 10:16:33.7285|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:16:33.7285|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 * * ? *
+2025-07-18 10:16:33.7285|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:16:33 am
+
+2025-07-18 10:16:39.5506|INFO|apkRegLogger|
+
+2025-07-18 10:16:39.5582|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:16:39 am
+2025-07-18 10:16:39.5582|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:16:39.5582|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 * * ? *
+2025-07-18 10:16:39.5582|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:16:39 am
+
+2025-07-18 10:16:49.1619|INFO|apkRegLogger|
+
+2025-07-18 10:16:50.0814|INFO|apkRegLogger|============= Get Renewal Data API Started ============= | AT: 18-07-2025 10:16:50 am
+2025-07-18 10:16:51.0295|INFO|apkRegLogger|Application Site Root: /
+2025-07-18 10:17:04.6619|INFO|apkRegLogger|[INFO] Renewal Policy Data API Response status OK | AT: 18-07-2025 10:17:04 am
+2025-07-18 10:22:01.3022|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-18 10:22:01.3501|INFO|apkRegLogger|
+
+2025-07-18 10:22:01.3501|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:22:01 am
+2025-07-18 10:22:01.3501|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-18 10:22:01.3693|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-18 10:22:01.3972|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:22:01 am
+
+2025-07-18 10:22:01.3972|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:22:01 am
+2025-07-18 10:22:01.3972|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:22:01 am
+2025-07-18 10:22:05.5770|INFO|apkRegLogger|
+
+2025-07-18 10:22:05.5770|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:22:05 am
+2025-07-18 10:22:05.5770|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:22:05.5855|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-07-18 10:22:05.5855|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:22:05 am
+
+2025-07-18 10:22:05.6358|INFO|apkRegLogger|
+
+2025-07-18 10:22:05.6358|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:22:05 am
+2025-07-18 10:22:05.6358|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:22:05.6358|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 * * ? *
+2025-07-18 10:22:05.6358|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:22:05 am
+
+2025-07-18 10:22:09.9150|INFO|apkRegLogger|
+
+2025-07-18 10:22:09.9150|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:22:09 am
+2025-07-18 10:22:09.9150|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:22:09.9150|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 * * ? *
+2025-07-18 10:22:09.9150|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:22:09 am
+
+2025-07-18 10:22:14.6403|INFO|apkRegLogger|
+
+2025-07-18 10:22:15.0479|INFO|apkRegLogger|============= Get Previous Policy Number API Job Started ============= | AT: 18-07-2025 10:22:15 am
+2025-07-18 10:22:15.2094|INFO|apkRegLogger|Application Site Root: /
+2025-07-18 10:30:01.3511|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:30:01 am
+2025-07-18 10:30:01.3511|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:30:01 am
+2025-07-18 10:38:01.3517|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:38:01 am
+2025-07-18 10:38:01.3517|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:38:01 am
+2025-07-18 10:42:11.8154|INFO|apkRegLogger|[SUCCESS] Previous Policy Numbers Fetched and Saved Successfully | AT: 18-07-2025 10:42:11 am
+Total PPN count recieved: 16608
+2025-07-18 10:42:12.6008|INFO|apkRegLogger|============= Get Previous Policy Number API Job Stopped ============= | AT: 18-07-2025 10:42:12 am
+
+2025-07-18 10:44:50.6774|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-18 10:44:50.7418|INFO|apkRegLogger|
+
+2025-07-18 10:44:50.7549|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:44:50 am
+2025-07-18 10:44:50.7549|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-18 10:44:50.7707|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-18 10:44:50.7946|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:44:50 am
+
+2025-07-18 10:44:50.8019|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 10:44:50 am
+2025-07-18 10:44:50.8019|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 10:44:50 am
+2025-07-18 10:44:55.0166|INFO|apkRegLogger|
+
+2025-07-18 10:44:55.0166|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:44:55 am
+2025-07-18 10:44:55.0216|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:44:55.0216|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-07-18 10:44:55.0216|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:44:55 am
+
+2025-07-18 10:45:10.2920|INFO|apkRegLogger|
+
+2025-07-18 10:45:10.2920|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:45:10 am
+2025-07-18 10:45:10.2920|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:45:10.2920|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 * * ? *
+2025-07-18 10:45:10.2920|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:45:10 am
+
+2025-07-18 10:45:17.8341|INFO|apkRegLogger|
+
+2025-07-18 10:45:17.8341|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 18-07-2025 10:45:17 am
+2025-07-18 10:45:17.8520|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 10:45:17.8520|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 * * ? *
+2025-07-18 10:45:17.8520|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 18-07-2025 10:45:17 am
+
+2025-07-18 10:45:21.9377|INFO|apkRegLogger|
+
+2025-07-18 10:45:22.1246|INFO|apkRegLogger|============= Online Payment Verification API Job Started ============= | AT: 18-07-2025 10:45:22 am
+2025-07-18 10:45:22.3415|INFO|apkRegLogger|Application Site Root: /
+2025-07-18 10:45:45.5984|INFO|apkRegLogger|[INFO]  No Data Found between the DateTime From 17-07-2025 12:00:00 am - 17-07-2025 11:59:59 pm to Verify the Online Payment Status
+2025-07-18 10:45:46.3587|INFO|apkRegLogger|============= Online Payment Verification API Job Stopped ============= | AT: 18-07-2025 10:45:46 am
+
+2025-07-18 13:58:14.0841|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-18 13:58:14.1559|INFO|apkRegLogger|
+
+2025-07-18 13:58:14.1611|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 18-07-2025 1:58:14 pm
+2025-07-18 13:58:14.1611|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-18 13:58:14.1861|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-18 13:58:14.2079|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 18-07-2025 1:58:14 pm
+
+2025-07-18 13:58:14.2079|INFO|apkRegLogger|
+ Android CallSynch Started at: 18-07-2025 1:58:14 pm
+2025-07-18 13:58:14.2079|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 18-07-2025 1:58:14 pm
+2025-07-18 13:58:30.0745|ERROR|apkRegLogger|[ERROR]  Get Master Location Data Job Scheduler Initialization Failed | AT: 18-07-2025 1:58:30 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-07-18 13:58:30.0745|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Stopped ============= | AT: 18-07-2025 1:58:30 pm
+
+2025-07-18 13:58:45.1296|ERROR|apkRegLogger|[ERROR]  Online Payment Verification Job Scheduler Initialization Failed | AT: 18-07-2025 1:58:45 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-07-18 13:58:45.1307|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Stopped ============= | AT: 18-07-2025 1:58:45 pm
+
+2025-07-18 13:58:53.9231|INFO|apkRegLogger|
+
+2025-07-18 13:58:53.9231|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 18-07-2025 1:58:53 pm
+2025-07-18 13:58:53.9281|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-18 13:58:53.9281|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 14 * * ? *
+2025-07-18 13:58:53.9281|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 18-07-2025 1:58:53 pm
+
+2025-07-18 14:00:21.3642|INFO|apkRegLogger|
+
+2025-07-18 14:00:22.0912|INFO|apkRegLogger|============= Get Previous Policy Number API Job Started ============= | AT: 18-07-2025 2:00:22 pm
+2025-07-18 14:00:26.7873|INFO|apkRegLogger|Application Site Root: /
+2025-07-18 14:00:37.0486|ERROR|apkRegLogger|[ERROR] Get Previous Policy Number Job API Call Failed: Main Exception | AT: 18-07-2025 2:00:37 pm
+Exception: The remote certificate is invalid according to the validation procedure.
+Method: Void EndWrite(System.IAsyncResult)
+StackTrace:    at System.Net.TlsStream.EndWrite(IAsyncResult asyncResult)
+   at System.Net.ConnectStream.WriteHeadersCallback(IAsyncResult ar)
+2025-07-18 14:00:37.8312|INFO|apkRegLogger|============= Get Previous Policy Number API Job Stopped ============= | AT: 18-07-2025 2:00:37 pm
+

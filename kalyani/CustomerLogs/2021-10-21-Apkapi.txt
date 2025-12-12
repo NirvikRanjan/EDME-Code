@@ -1,0 +1,14 @@
+2021-10-21 19:44:00.6457|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 21/10/2021 7:44:00 pm
+ CustId: 3253 VehId: 22211 User: barti1_cre
+2021-10-21 19:44:12.2737|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":103,"vehicleregno":"pb03ab6362","vehicleregdate":"2021-10-20T00:00:00","modelname":"GLAMOUR","modelvarinat":"HGLMNDRSCFI","email":"sdcsds@gmail.com","mobile":"7873082806","salutation":null,"customername":"JAGANNATH PARIJA","middlename":null,"lastname":null,"Address":"AT- MUNIGUDAPS- MUNIGUDA","Address_Line_2":null,"cityname":"RAYAGADA","cityid":0,"pincode":"0","insurancecompany":null,"policynumber":"1111111/11111111/111111/000","policyexpirydate":"2021-05-15","nomineename":null,"nomineeage":0,"nomineerelationship":null,"nomineerelationshipid":0,"renewwaltype":"Package","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":0,"RTI_Tenure":0,"Basic_IDV_Tenure":0,"NCB_Per_Tenure":0,"NCB_Value_Tenure":0,"GST_Per":18,"grosspremium":0.0,"totalpremium":0.0,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":3253,"vehicleid":22211,"disposeddate":"2021-10-21","disposedtime":"07:44 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"N","additionalcoverRTI":"N","riskstartdate":null,"state":null,"stateid":0,"totalgstamt":0.0,"creID":1258,"creName":"barti1_cre","campaignName":"Winback","ispolicygenerated":false,"insuranceassignedinteractionId":30773,"herodealerId":720,"ResponseCode":null,"ResponseMessage":null}
+2021-10-21 19:44:12.5515|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"Package","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":0,"cpa_opted":"Y","zd_opted":"N","rti_opted":"N","risk_start_date":"2021-10-21","policy_expiry_date":"2021-05-15","first_name":"JAGANNATH PARIJA","middle_name":null,"last_name":null,"email":"sdcsds@gmail.com","mobile_no":"7873082806","address1":"AT- MUNIGUDAPS- MUNIGUDA","address2":null,"address3":null,"city":0,"state":0,"pin":"0","nominee_name":null,"nominee_age":0,"nominee_relationship":0,"vehRegDate":"2021-10-20T00:00:00","vehReg1":"pb","vehReg2":"03","vehReg3":"ab","vehReg4":"6362","total_premium_collected":0,"pre_Policy_No":"1111111/11111111/111111/000","GrossPremiumWoGST":0.0,"TotalGSTAmount":0.0,"GSTPercentage":18}
+2021-10-21 19:44:13.8568|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 21/10/2021 7:44:13 pm

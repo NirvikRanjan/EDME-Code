@@ -1,0 +1,245 @@
+﻿
+@{
+    ViewBag.Title = "fetchWinbackRollover";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .fetch-btn {
+        background-color: #286090;
+        border-color: #204d74;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff !important;
+        width: 75px;
+        text-align: center;
+    }
+
+        .fetch-btn:hover {
+            color: white;
+            background-color: #243E6D;
+        }
+</style>
+
+<!-- API Call Page Loader -->
+<div id="apicall-page-loader" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.6); padding: 20px; color: white; font-size: 18px; border-radius: 50px; width: 40%; text-align: center; z-index: 9999;">
+    <span id="apicall-page-loader-message"><b>Gathering  the  Response...</b></span>
+</div>
+<!-- API Call Page Loader-->
+
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>FETCH WINBACK/ROLLOVER DATA</strong> </div>
+    <div class="panel-body">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>OEM<sup style="color:red;font-size:16px;"><strong>*</strong></sup></label>
+                        <br />
+                        @Html.DropDownList("OEMId", new SelectList(ViewBag.BrandList, "id", "brandname"), "--Select--", new { @class = "form-control", @id = "winroll-oemid-ddl", @onchange = "GetDealerBasedOnOEM('winroll-oemid-ddl','winroll-dealer-ddl')" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Dealer Code and Name<sup style="color:red;font-size:16px;"><strong>*</strong></sup></label>
+                        <br />
+                        @Html.DropDownList("DealerCodeAndName", new SelectList(Enumerable.Empty<SelectListItem>(), "DealerCode", "DealerName"), new { @class = "form-control selectpicker", @id = "winroll-dealer-ddl", @multiple = "multiple" })
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Policy From Date<sup style="color:red;font-size:16px;"><strong>*</strong></sup></label>
+                        <input type="text" class="form-control datepicker" id="winroll-policyfromdate" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Policy To Date<sup style="color:red;font-size:16px;"><strong>*</strong></sup></label>
+                        <input type="text" class="form-control datepicker" id="winroll-policytodate" />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Campaign Type<sup style="color:red;font-size:16px;"><strong>*</strong></sup></label>
+                        <br />
+                        @Html.DropDownList("CampaignType", new List<SelectListItem> {
+                        //new SelectListItem { Text = "Renewal", Value = "1" },
+                        new SelectListItem { Text = "Winback", Value = "1" }}, " -- Select --", new { @class = "form-control", @id = "winroll-campaigntype-ddl" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row text-center">
+                <div class="col-12">
+                    <button type="button" class="btn fetch-btn" id="fetch-winrollpolicydata-btn">FETCH</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                duration: "down",
+                showOptions: { direction: "up" },
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true
+
+            });
+        });
+
+        $("#fetch-winrollpolicydata-btn").click(function (e) {
+            var SAOemCode = $('#winroll-oemid-ddl').val();
+            var dealerCodes = $('#winroll-dealer-ddl').val();
+            var fromDate = $('#winroll-policyfromdate').val();
+            var toDate = $('#winroll-policytodate').val();
+            var camptype = $('#winroll-campaigntype-ddl').val();
+
+            if (SAOemCode == null || SAOemCode == "") {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Select OEM'
+                });
+                e.preventDefault();
+                return false;
+            }
+
+            if (dealerCodes == null || dealerCodes == "") {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Select Dealer Name'
+                });
+                e.preventDefault();
+                return false;
+            }
+
+            if (camptype == null || camptype == "") {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Select Campaign Type'
+                });
+                e.preventDefault();
+                return false;
+            }
+
+            if ((fromDate == "" || fromDate == null) || (toDate == null || toDate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                e.preventDefault();
+                return false;
+            }
+
+            fetchWinbackRolloverPolicyDetails();
+        });
+
+        function fetchWinbackRolloverPolicyDetails() {
+            let oemId = $('#winroll-oemid-ddl').val();
+            let DealerCode = $('#winroll-dealer-ddl').val();
+            let fromDate = $('#winroll-policyfromdate').val();
+            let toDate = $('#winroll-policytodate').val();
+            let type = $('#winroll-campaigntype-ddl').val();
+            DealerCode = $('#winroll-dealer-ddl option:selected').toArray().map(item => item.value).join();
+
+            $('body').append($('#apicall-page-loader'));
+            $('#fetch-winrollpolicydata-btn').prop('disabled', true);
+            $('#fetch-winrollpolicydata-btn').css('opacity', '70%');
+            $('#apicall-page-loader').show();
+
+            $.ajax({
+                url: siteRoot + '/SuperAdmin/FetchWinbackRolloverPolicyCustomerDetailsAsync/',
+                type: 'POST',
+                dataType: 'json',
+                data: { oemId: oemId, dealerId: DealerCode, fromDate: fromDate, toDate: toDate, type: type },
+                success: function (res) {
+                    if (res.success == true) {
+                        Swal.fire({
+                            title: 'Success',
+                            html: res.message,
+                            icon: 'success',
+                            width: '30%'
+                        });
+                    }
+                    else {
+                        Swal.fire({
+                            title: 'Failed!',
+                            html: res.message,
+                            icon: 'error',
+                            width: '30%'
+                        });
+                    }
+                },
+                error: (xhr, status, error) => {
+                    Swal.fire({
+                        title: 'Failed!',
+                        text: `An error occurred while fetching data: ${xhr.status} - ${xhr.statusText}. Please try again later.`,
+                        icon: 'error',
+                        width: '30%'
+                    });
+                },
+                complete: () => {
+                    $('#fetch-winrollpolicydata-btn').prop('disabled', false);
+                    $('#fetch-winrollpolicydata-btn').css('opacity', '100%');
+                    $('#apicall-page-loader').hide();
+                }
+            });
+        }
+
+        function GetDealerBasedOnOEM(oemId, dealerId) {
+            let id = $('#' + oemId).val();
+            let dealerid = $('#' + dealerId).val();
+            $('#' + dealerId).html("");
+
+            $.ajax({
+                url: siteRoot + '/SuperAdmin/GetDealerBasedOnOEMAsync/',
+                type: "POST",
+                dataType: "JSON",
+                data: { "oemid": id },
+                success: function (response) {
+                    if (response.dealerNames && response.dealerNames.length > 0) {
+                        $("#" + dealerId).html("");
+
+                        $.each(response.dealerNames, function (index, value) {
+                            $("#" + dealerId).append(
+                                $('<option></option>').val(value.DealerID).html(value.DealerCode + " (" + value.DealerName + ")")
+                            );
+                        });
+
+                        $('#' + dealerId).multiselect('rebuild');
+                    } else {
+                        Lobibox.notify('warning', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'No Dealer Name found for selected OEM.'
+                        });
+                    }
+
+                },
+                error: function (xhr, status, error) {
+                    Lobibox.notify('error', {
+                        continueDelayOnInactiveTab: true,
+                        msg: 'Error fetching dealer data. Please try again later.'
+                    });
+                }
+            });
+        }
+
+    </script>
+}

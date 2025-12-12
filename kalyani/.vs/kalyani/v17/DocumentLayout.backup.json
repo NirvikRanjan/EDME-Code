@@ -1,0 +1,475 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|c:\\adithyabirlacode\\edme360\\kalyani\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\customer360\\_renewalpolicy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\customer360\\_renewalpolicy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\customer360\\customer360.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\customer360\\customer360.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\controllers\\customer360controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:controllers\\customer360controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\getpreviouspolicynoapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\getpreviouspolicynoapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\getpreviouspolicynoapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\getpreviouspolicynoapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\eibl api\\generatetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\eibl api\\generatetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\onlinepaymentverificationapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\onlinepaymentverificationapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\insurance\\insurance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\insurance\\insurance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360js\\ajaxcallscriptsjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:public\\customer360js\\ajaxcallscriptsjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\javascripts\\disposition.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:public\\javascripts\\disposition.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\controllers\\policyassignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:controllers\\policyassignmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:controllers\\superadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\renewalapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\renewalapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\autosherdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\autosherdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\controllers\\insurancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:controllers\\insurancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\policyassignment\\policyassignment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\policyassignment\\policyassignment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\onlinepaymentverificationapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\onlinepaymentverificationapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\eiblmasterdataapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\eiblmasterdataapijobscheduler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\schedulers\\eiblmasterdataapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\schedulers\\eiblmasterdataapijob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\previouspolicynumbers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\previouspolicynumbers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360js\\insuranceoutboundjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:public\\customer360js\\insuranceoutboundjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\viewmodels\\insurenceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\viewmodels\\insurenceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\customer360\\_insuranceoutbound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\customer360\\_insuranceoutbound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\models\\insurancedisposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:models\\insurancedisposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|C:\\AdithyaBirlaCode\\Edme360\\kalyani\\views\\calllogreminder\\insurancereminder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6E7A3978-894E-46CF-B945-27B7316AC3C1}|kalyani.csproj|solutionrelative:views\\calllogreminder\\insurancereminder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "customer360Controller.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\customer360Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\customer360Controller.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\customer360Controller.cs",
+              "RelativeToolTip": "Controllers\\customer360Controller.cs",
+              "ViewState": "AgIAAAcRAAAAAAAAAAAIwBsRAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T10:06:50.633Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "customer360.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\customer360.cshtml",
+              "RelativeDocumentMoniker": "Views\\customer360\\customer360.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\customer360.cshtml",
+              "RelativeToolTip": "Views\\customer360\\customer360.cshtml",
+              "ViewState": "AgIAAF0CAAAAAAAAAAAQwG8CAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T10:16:22.386Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Insurance.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\Insurance\\Insurance.cshtml",
+              "RelativeDocumentMoniker": "Views\\Insurance\\Insurance.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\Insurance\\Insurance.cshtml",
+              "RelativeToolTip": "Views\\Insurance\\Insurance.cshtml",
+              "ViewState": "AgIAAJcDAAAAAAAAAAArwKoDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T11:31:52.986Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InsuranceController.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\InsuranceController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InsuranceController.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\InsuranceController.cs",
+              "RelativeToolTip": "Controllers\\InsuranceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T10:01:34.749Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RenewalApi.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\RenewalApi.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\RenewalApi.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\RenewalApi.cs",
+              "RelativeToolTip": "Models\\Schedulers\\RenewalApi.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAwwLYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T05:06:06.008Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetPreviousPolicyNoAPIJobScheduler.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\GetPreviousPolicyNoAPIJobScheduler.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\GetPreviousPolicyNoAPIJobScheduler.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\GetPreviousPolicyNoAPIJobScheduler.cs",
+              "RelativeToolTip": "Models\\Schedulers\\GetPreviousPolicyNoAPIJobScheduler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T07:19:47.153Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "disposition.js",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\javascripts\\disposition.js",
+              "RelativeDocumentMoniker": "public\\javascripts\\disposition.js",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\javascripts\\disposition.js",
+              "RelativeToolTip": "public\\javascripts\\disposition.js",
+              "ViewState": "AgIAAOwJAAAAAAAAAAAkwP0JAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-01T08:46:22.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_renewalpolicy.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\_renewalpolicy.cshtml",
+              "RelativeDocumentMoniker": "Views\\customer360\\_renewalpolicy.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\_renewalpolicy.cshtml",
+              "RelativeToolTip": "Views\\customer360\\_renewalpolicy.cshtml",
+              "ViewState": "AgIAAJgKAAAAAAAAAAAAAKoKAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T06:45:03.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAtwJEAAACXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-23T12:14:00.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SuperAdminController.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\SuperAdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SuperAdminController.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\SuperAdminController.cs",
+              "RelativeToolTip": "Controllers\\SuperAdminController.cs",
+              "ViewState": "AgIAAF8IAAAAAAAAAAAAAHwIAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T11:17:12.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AutoSherDBContext.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\AutoSherDBContext.cs",
+              "RelativeDocumentMoniker": "Models\\AutoSherDBContext.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\AutoSherDBContext.cs",
+              "RelativeToolTip": "Models\\AutoSherDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T09:52:20.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "policyAssignment.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\policyAssignment\\policyAssignment.cshtml",
+              "RelativeDocumentMoniker": "Views\\policyAssignment\\policyAssignment.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\policyAssignment\\policyAssignment.cshtml",
+              "RelativeToolTip": "Views\\policyAssignment\\policyAssignment.cshtml",
+              "ViewState": "AgIAAGICAAAAAAAAAAAQwIECAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-25T09:38:38.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T10:59:43.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetPreviousPolicyNoAPIJob.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\GetPreviousPolicyNoAPIJob.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\GetPreviousPolicyNoAPIJob.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\GetPreviousPolicyNoAPIJob.cs",
+              "RelativeToolTip": "Models\\Schedulers\\GetPreviousPolicyNoAPIJob.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:39:14.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "policyAssignmentController.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\policyAssignmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\policyAssignmentController.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Controllers\\policyAssignmentController.cs",
+              "RelativeToolTip": "Controllers\\policyAssignmentController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowJMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T06:31:51.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EIBLMasterDataAPIJobScheduler.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\EIBLMasterDataAPIJobScheduler.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\EIBLMasterDataAPIJobScheduler.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\EIBLMasterDataAPIJobScheduler.cs",
+              "RelativeToolTip": "Models\\Schedulers\\EIBLMasterDataAPIJobScheduler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwCIAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T05:40:41.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OnlinePaymentVerificationAPIJobScheduler.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\OnlinePaymentVerificationAPIJobScheduler.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\OnlinePaymentVerificationAPIJobScheduler.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\OnlinePaymentVerificationAPIJobScheduler.cs",
+              "RelativeToolTip": "Models\\Schedulers\\OnlinePaymentVerificationAPIJobScheduler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T05:04:33.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OnlinePaymentVerificationAPIJob.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\OnlinePaymentVerificationAPIJob.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\OnlinePaymentVerificationAPIJob.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\OnlinePaymentVerificationAPIJob.cs",
+              "RelativeToolTip": "Models\\Schedulers\\OnlinePaymentVerificationAPIJob.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAgwLcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T05:05:31.57Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EIBLMasterDataAPIJob.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\EIBLMasterDataAPIJob.cs",
+              "RelativeDocumentMoniker": "Models\\Schedulers\\EIBLMasterDataAPIJob.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\Schedulers\\EIBLMasterDataAPIJob.cs",
+              "RelativeToolTip": "Models\\Schedulers\\EIBLMasterDataAPIJob.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T04:50:34.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PreviousPolicyNumbers.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\PreviousPolicyNumbers.cs",
+              "RelativeDocumentMoniker": "Models\\PreviousPolicyNumbers.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\PreviousPolicyNumbers.cs",
+              "RelativeToolTip": "Models\\PreviousPolicyNumbers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T07:26:35.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenerateToken.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\EIBL API\\GenerateToken.cs",
+              "RelativeDocumentMoniker": "Models\\EIBL API\\GenerateToken.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\EIBL API\\GenerateToken.cs",
+              "RelativeToolTip": "Models\\EIBL API\\GenerateToken.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T11:58:07.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AjaxCallScriptsJS.js",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360JS\\AjaxCallScriptsJS.js",
+              "RelativeDocumentMoniker": "public\\customer360JS\\AjaxCallScriptsJS.js",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360JS\\AjaxCallScriptsJS.js",
+              "RelativeToolTip": "public\\customer360JS\\AjaxCallScriptsJS.js",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-21T04:45:13.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "vehicle.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\vehicle.cs",
+              "RelativeDocumentMoniker": "Models\\vehicle.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\vehicle.cs",
+              "RelativeToolTip": "Models\\vehicle.cs",
+              "ViewState": "AgIAAA8CAAAAAAAAAIA6wCECAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T05:37:50.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "insuranceReminder.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\callLogReminder\\insuranceReminder.cshtml",
+              "RelativeDocumentMoniker": "Views\\callLogReminder\\insuranceReminder.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\callLogReminder\\insuranceReminder.cshtml",
+              "RelativeToolTip": "Views\\callLogReminder\\insuranceReminder.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAIwHoAAACdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T10:14:49.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_insuranceOutBound.cshtml",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\_insuranceOutBound.cshtml",
+              "RelativeDocumentMoniker": "Views\\customer360\\_insuranceOutBound.cshtml",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Views\\customer360\\_insuranceOutBound.cshtml",
+              "RelativeToolTip": "Views\\customer360\\_insuranceOutBound.cshtml",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAkwNoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T10:13:12.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "insuranceoutboundJS.js",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360JS\\insuranceoutboundJS.js",
+              "RelativeDocumentMoniker": "public\\customer360JS\\insuranceoutboundJS.js",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\public\\customer360JS\\insuranceoutboundJS.js",
+              "RelativeToolTip": "public\\customer360JS\\insuranceoutboundJS.js",
+              "ViewState": "AgIAAMwCAAAAAAAAAAApwEkDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-21T10:54:35.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "insurancedisposition.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\insurancedisposition.cs",
+              "RelativeDocumentMoniker": "Models\\insurancedisposition.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\insurancedisposition.cs",
+              "RelativeToolTip": "Models\\insurancedisposition.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T10:41:11.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "InsurenceViewModel.cs",
+              "DocumentMoniker": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\ViewModels\\InsurenceViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\InsurenceViewModel.cs",
+              "ToolTip": "C:\\AdithyaBirlaCode\\Edme360\\kalyani\\Models\\ViewModels\\InsurenceViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModels\\InsurenceViewModel.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAIA3wA8BAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T11:28:17.119Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

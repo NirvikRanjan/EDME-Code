@@ -1,0 +1,312 @@
+2022-03-09 00:07:33.4506|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:07:33 am
+2022-03-09 00:07:33.4506|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:07:33 am
+2022-03-09 00:12:32.0531|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 00:12:32.1473|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 00:12:32.1933|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:12:32 am
+2022-03-09 00:12:32.1933|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:12:32 am
+2022-03-09 00:26:10.9465|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 00:26:11.0444|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 00:26:11.0984|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:26:11 am
+2022-03-09 00:26:11.0994|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:26:11 am
+2022-03-09 00:34:11.0532|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:34:11 am
+2022-03-09 00:34:11.1588|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:34:11 am
+2022-03-09 01:00:29.5696|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 1:00:29 am
+2022-03-09 01:00:29.5696|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 1:00:29 am
+2022-03-09 01:06:11.0632|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 1:06:11 am
+2022-03-09 01:06:11.0682|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 1:06:11 am
+2022-03-09 09:17:17.6313|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 09:17:17.8534|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 09:17:18.0152|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:17:18 am
+2022-03-09 09:17:18.0152|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:17:18 am
+2022-03-09 09:25:17.8665|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:25:17 am
+2022-03-09 09:25:17.8665|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:25:17 am
+2022-03-09 09:33:17.8578|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:33:17 am
+2022-03-09 09:33:17.9577|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:33:17 am
+2022-03-09 09:41:17.8605|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:41:17 am
+2022-03-09 09:41:17.8964|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:41:17 am
+2022-03-09 09:49:17.8654|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:49:17 am
+2022-03-09 09:49:17.8654|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:49:17 am
+2022-03-09 09:57:17.8650|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:57:17 am
+2022-03-09 09:57:17.8650|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:57:17 am
+2022-03-09 10:05:17.8718|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:05:17 am
+2022-03-09 10:05:17.8718|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:05:17 am
+2022-03-09 10:13:17.8662|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:13:17 am
+2022-03-09 10:13:17.8936|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:13:17 am
+2022-03-09 10:21:17.8664|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:21:17 am
+2022-03-09 10:21:17.8664|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:21:17 am
+2022-03-09 10:29:17.8587|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:29:17 am
+2022-03-09 10:29:17.8587|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:29:17 am
+2022-03-09 10:37:17.8692|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:37:17 am
+2022-03-09 10:37:17.8692|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:37:17 am
+2022-03-09 10:45:17.8653|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:45:17 am
+2022-03-09 10:45:17.8902|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:45:17 am
+2022-03-09 11:09:17.8713|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:09:17 am
+2022-03-09 11:09:17.8713|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:09:17 am
+2022-03-09 11:17:17.8581|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:17:17 am
+2022-03-09 11:17:17.8581|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:17:17 am
+2022-03-09 11:23:25.9118|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 11:23:26.0446|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 11:23:28.3770|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:23:28 am
+2022-03-09 11:23:28.3770|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:23:28 am
+2022-03-09 11:27:43.3430|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":1077,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"4","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":36,"proposerstatename":"TELANGANA","proposercity":6583,"proposercityname":"Khairatabad","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8500717090,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"fhfhh@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-14T00:00:00","registrationno":"ww","registrationno2":"11","registrationno3":"ww","registrationno4":"1111","BasicIDV":"1200","effectivedate":"2022-03-09T00:00:00","expirydate":"2023-03-08T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":false,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"4"}
+2022-03-09 11:27:47.3527|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"4","Vehicle_Class":"P","RTOId":"884","zd_opted":"N","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"03-09-2022","Prev_Policy_ExpiryDate":"03-08-2023","PolicyeffetiveDate":"03-09-2022","PolicyexpiryDate":"03-08-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"03-09-2022","KitMgtDate":"03-09-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-03-09 11:28:54.2981|INFO|apkRegLogger|
+
+ -------- WinBack Policy FinalProposal AutoJob--------
+{"id":1110,"ResponseCode":200,"ResponseMessage":"Success","PolicyNo":"","HeroQuoteID":"HEROQ00009032022112757","Basic_Prem_Vehicle":591.0,"Basic_Prem_Access":0.00,"Basic_Prem_Electr_Access":0.00,"Extra_Prem_Geographic_ExtOD":0.00,"Extra_Prem_Geographic_ExtTP":0.00,"Discount_AntiTheft":0.00,"Discount_AA_Mem":0.00,"DisCount_HandiCaped":0.00,"Discount_Others":0.00,"NCB_Per":0.0,"NCB_Value":0.0,"Total_Deductions":0.0,"Total_ODP_A":591.0,"TPPD_Vehicle_Prem":0.00,"Ext_TPPD":0.00,"PA_Owner_Driver":0.00,"PA_UnNamed_Driver":0.00,"PA_Pillion_Rider":0.00,"NilDepreciation_Premium":0.00,"LLiab_Paid_Driver":0.00,"LLiab_Other":0.00,"Total_Liability_Prem_B":0.00,"Total_Prem_A_B":591.0,"Grand_Total":591.00,"Service_Tax":0.00,"Service_Tax_Per":0.00,"Gross_Prem":697.0,"RTI_Premium":0.00,"IGST_Per":0.0,"IGST_Amt":0.0,"SGST_Per":9.00,"SGST_Amt":53.00,"CGST_Per":9.00,"CGST_Amt":53.00,"UGST_Per":0.00,"UGST_Amt":0.00,"GST_Cal_Amt":106.00,"Gst_No":"27AABCT3518Q1ZW","Flood_Cess_Per":0.00,"Flood_Cess_Amt":0.00,"CPA_disc_amt":0.00,"IMT44":"false","Prev_policy_No":"","IsNDTaken":"N","IsRTITaken":"N","Product_id":4,"Vehicle_Class":"P","RTOId":884,"FirstSaleDate":"2019-02-01T00:00:00","PolicyeffetiveDate":"2022-03-10T00:00:00","AssignDate":"2022-03-09T11:27:48","IDV":null,"Basic_IDV":"38460.00","ShowRoomPrice":64100.0,"Cubic_Capacity":125,"policy_Tenure":1,"IsIMT43":"False","CPATenure":0,"OemDMapId":2,"customerId":13400,"vehicleid":28975,"TariffDisc":10,"wibbackid":1077,"Insur_Comp_ID":0,"productName":null,"ICName":null}
+2022-03-09 11:28:58.5079|INFO|apkRegLogger|
+
+ WinBack Policy FinalProposal AutoJob: {"ExShowroom_Price":"64100","hero_transaction_id":"HEROQ00009032022112757","HeroQuoteID":"HEROQ00009032022112757","Productid":4,"Vehicle_Class":"P","RTOId":884,"FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"03-10-2022","Prev_Policy_ExpiryDate":"02-01-2019","PolicyeffetiveDate":"03-10-2022","PolicyexpiryDate":"02-01-2019","Cubic_Capacity":125,"policy_tenure":"1","IsIMT43":"False","IsIMT44":"false","CPA_Tenure":"0","cpa_opted":"N","zd_opted":"N","rti_opted":"N","OemDMapId":2,"Pre_Policy_No":"","policy_type":"SAOD","AssessoryType":"","Fitmentdate":"01/01/1900","KitMgtDate":"01/01/1900","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"isHandicapped":"false","AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":"0","current_ncb":"0","IsAntiTheft":false,"is_AA_membership":false,"FrameNo":"MBLJAS028J9G04877","EngineNo":"JA06EHJ9G40233","ModelName":"1211","Model_Id":"1211","Color":"SBK","ManuftreYr":"2018","BasicIDV":"1200","isvehicleinspection":false,"inspectionnumber":0,"inspectiondate":"03-09-2022","CPA_Exclusion_Code":null,"CPA_Exclusion_Text":null,"cpA_Reason":"NODL","VehRegDate":"02-14-2022","VehReg1":"ww","VehReg2":"11","VehReg3":"ww","VehReg4":"1111","CompContactPersonDesignation":"","CompanyName":"","business_industry":null,"annual_turnover":null,"CompRegistrationNo":"ww","GSTNo":null,"CompFax1":null,"CompFax2":"","ProposerType":"I","Buyer_GSTIN_number":null,"total_premium_collected":"697","total_GST":"106.00","GSTPer":"18","CustomerId":"0","Salutation":"Mr","FirstName":"VEMULA","MiddleName":null,"LastName":"RAVI","Gender":"M","Address1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","Address2":null,"Address3":null,"StateId":36,"StateName":"TELANGANA","CityID":6583,"CityName":"Khairatabad","PinCode":500016,"Mobile1":8500717090,"Mobile2":"0","Std1":522,"CompLandLine1":0,"Std2":522,"LandLine2":0,"EmailId":"fhfhh@gmail.com","DOB":"06-10-1995","Age":0,"MaritalStatus":"S","IDProofID":"Voter ID No","IDProof":"Voter ID No","IncomeLevel":"5000To10000","EducationLevel":"12th","OccupationLevel":"NA","EmployerName":"","ParkingType":"NA","AvgKmDaily":20,"ExecutiveName":"10852_Apporva","NomineeName":"VEMULA BOJJAMMA","NGender":"F","NomRelation":"Mother","AnniversryDate":"03-09-2022","NomAge":41,"InsuranceCompanyId":"13","InsuranceCompanyName":null,"TP_InsuranceCompanyId":"","TP_Policy_No":0,"TP_CPA_End_Date":"03-09-2022","TP_Policy_Expiry_Date":"01-31-2024","ST_TP_Policy_Effective_Date":"03-09-2022","Branch_Office_Location_Code":null,"ST_OD_EndDate":"01-31-2020","NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"SumInsurePerPerson":null,"Membership_No":0,"NCB_Level":"1"}
+2022-03-09 11:31:26.0581|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:31:26 am
+2022-03-09 11:31:26.0581|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:31:26 am
+2022-03-09 11:39:26.0530|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:39:26 am
+2022-03-09 11:39:26.0697|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:39:26 am
+2022-03-09 11:47:26.0656|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:47:26 am
+2022-03-09 11:47:26.0696|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:47:26 am
+2022-03-09 11:55:26.0611|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 11:55:26 am
+2022-03-09 11:55:26.0611|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 11:55:26 am
+2022-03-09 12:03:26.0640|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:03:26 pm
+2022-03-09 12:03:26.0640|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:03:26 pm
+2022-03-09 12:11:26.0641|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:11:26 pm
+2022-03-09 12:11:26.0641|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:11:26 pm
+2022-03-09 12:19:26.0634|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:19:26 pm
+2022-03-09 12:19:26.0634|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:19:26 pm
+2022-03-09 12:27:26.0566|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:27:26 pm
+2022-03-09 12:27:26.0566|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:27:26 pm
+2022-03-09 12:35:26.0605|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:35:26 pm
+2022-03-09 12:35:26.0605|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:35:26 pm
+2022-03-09 12:43:26.0527|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 12:43:26 pm
+2022-03-09 12:43:26.0527|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 12:43:26 pm
+2022-03-09 16:18:40.0389|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 16:18:40.9397|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 16:18:42.4089|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 4:18:42 pm
+2022-03-09 16:18:42.4089|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 4:18:42 pm
+2022-03-09 16:26:40.9437|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 4:26:40 pm
+2022-03-09 16:26:41.0028|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 4:26:41 pm
+2022-03-09 16:34:40.9528|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 4:34:40 pm
+2022-03-09 16:34:40.9850|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 4:34:40 pm
+2022-03-09 17:13:19.8648|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 17:13:20.0780|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 17:13:20.7986|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 5:13:20 pm
+2022-03-09 17:13:20.7986|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 5:13:20 pm
+2022-03-09 17:21:20.0947|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 5:21:20 pm
+2022-03-09 17:21:20.1179|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 5:21:20 pm
+2022-03-09 17:29:20.0846|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 5:29:20 pm
+2022-03-09 17:29:20.1116|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 5:29:20 pm
+2022-03-09 17:33:27.8662|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 17:33:27.9849|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 17:33:28.1049|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 5:33:28 pm
+2022-03-09 17:33:28.1049|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 5:33:28 pm
+2022-03-09 17:52:28.6617|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 17:52:28.9999|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 17:52:29.4575|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 5:52:29 pm
+2022-03-09 17:52:29.4584|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 5:52:29 pm
+2022-03-09 18:00:29.0119|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 6:00:29 pm
+2022-03-09 18:00:29.0419|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 6:00:29 pm
+2022-03-09 18:08:29.0059|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 6:08:29 pm
+2022-03-09 18:08:29.0059|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 6:08:29 pm
+2022-03-09 18:16:29.0127|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 6:16:29 pm
+2022-03-09 18:16:29.0127|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 6:16:29 pm
+2022-03-09 18:48:29.0213|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 6:48:29 pm
+2022-03-09 18:48:29.0213|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 6:48:29 pm
+2022-03-09 19:26:09.3814|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 19:26:09.6829|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 19:26:12.2718|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 7:26:12 pm
+2022-03-09 19:26:12.2718|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 7:26:12 pm
+2022-03-09 19:34:09.6947|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 7:34:09 pm
+2022-03-09 19:34:09.7277|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 7:34:09 pm
+2022-03-09 20:21:33.8960|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 20:21:34.1505|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 20:21:36.6257|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 8:21:36 pm
+2022-03-09 20:21:36.6257|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 8:21:36 pm
+2022-03-09 20:29:34.1698|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 8:29:34 pm
+2022-03-09 20:29:34.2070|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 8:29:34 pm
+2022-03-09 21:33:34.1672|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:33:34 pm
+2022-03-09 21:33:34.4550|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:33:34 pm
+2022-03-09 21:41:34.1587|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:41:34 pm
+2022-03-09 21:41:34.1937|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:41:34 pm
+2022-03-09 21:49:34.1639|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:49:34 pm
+2022-03-09 21:49:34.1639|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:49:34 pm
+2022-03-09 21:55:31.0703|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 21:55:31.2913|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 21:55:31.3582|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:55:31 pm
+2022-03-09 21:55:31.3582|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:55:31 pm
+2022-03-09 21:59:05.7116|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 21:59:05.7886|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 21:59:05.8649|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 9:59:05 pm
+2022-03-09 21:59:05.8649|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 9:59:05 pm
+2022-03-09 22:11:51.3193|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-09 22:11:51.8916|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-09 22:11:52.2500|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:11:52 pm
+2022-03-09 22:11:52.2500|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:11:52 pm
+2022-03-09 22:19:51.9106|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:19:51 pm
+2022-03-09 22:19:51.9406|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:19:51 pm
+2022-03-09 22:27:51.9138|INFO|apkRegLogger|
+ Android CallSynch Started at: 09-03-2022 10:27:51 pm
+2022-03-09 22:27:51.9357|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 09-03-2022 10:27:51 pm

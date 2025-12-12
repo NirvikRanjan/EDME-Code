@@ -1,0 +1,47 @@
+2025-06-03 15:36:55.9122|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-06-03 15:36:55.9738|INFO|apkRegLogger|
+
+2025-06-03 15:36:55.9738|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 03-06-2025 3:36:55 pm
+2025-06-03 15:36:55.9738|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-06-03 15:36:55.9937|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-06-03 15:36:56.0212|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 03-06-2025 3:36:56 pm
+
+2025-06-03 15:36:56.0361|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-06-2025 3:36:56 pm
+2025-06-03 15:36:56.0361|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-06-2025 3:36:56 pm
+2025-06-03 15:37:12.0075|ERROR|apkRegLogger|[ERROR]  Get Master Location Data Job Scheduler Initialization Failed | AT: 03-06-2025 3:37:12 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-06-03 15:37:12.0075|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Stopped ============= | AT: 03-06-2025 3:37:12 pm
+
+2025-06-03 15:37:27.0548|ERROR|apkRegLogger|[ERROR]  Online Payment Verification Job Scheduler Initialization Failed | AT: 03-06-2025 3:37:27 pm
+Exception: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Method: System.IO.Stream GetTcpStream(MySql.Data.MySqlClient.MySqlConnectionStringBuilder)
+StackTrace:    at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+2025-06-03 15:37:27.0548|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Stopped ============= | AT: 03-06-2025 3:37:27 pm
+
+2025-06-03 15:37:27.0548|INFO|apkRegLogger|
+
+2025-06-03 15:37:27.0548|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 03-06-2025 3:37:27 pm
+2025-06-03 15:37:27.0548|INFO|apkRegLogger|Scheduler started successfully.
+2025-06-03 15:37:27.0682|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 ? * *
+2025-06-03 15:37:27.0682|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 03-06-2025 3:37:27 pm
+
+2025-06-03 15:44:55.9743|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-06-2025 3:44:55 pm
+2025-06-03 15:44:55.9743|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-06-2025 3:44:55 pm
+2025-06-03 15:52:55.9665|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-06-2025 3:52:55 pm
+2025-06-03 15:52:55.9756|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-06-2025 3:52:55 pm
+2025-06-03 16:00:55.9763|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-06-2025 4:00:55 pm
+2025-06-03 16:00:55.9889|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-06-2025 4:00:55 pm

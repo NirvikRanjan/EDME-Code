@@ -1,0 +1,153 @@
+﻿
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string oem = Session["OEM"].ToString();
+
+}
+
+<style>
+    /*Changing Sorting Color START*/
+
+    table.dataTable thead tr th.sorting_asc,
+    table.dataTable thead tr td.sorting_asc {
+        background-color: lightgrey;
+    }
+
+    table.dataTable thead tr th.sorting_desc,
+    table.dataTable thead tr td.sorting_desc {
+        background-color: lightblue;
+    }
+
+    /*Changing Sorting Color END*/
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .dataTables_filter {
+            float: left;
+        }
+    }
+
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .dataTables_scroll {
+            overflow-x: hidden !important;
+            overflow-y: scroll !important;
+        }
+
+        .table {
+            width: 350px !important;
+        }
+
+        .dataTables_scrollBody {
+            overflow-x: hidden !important;
+            overflow-y: scroll !important;
+            margin-left: 18px !important;
+        }
+
+
+        .dataTables_scrollHeadInner {
+            width: 350px !important
+        }
+
+        .tbodycls {
+            text-align: left !important;
+        }
+    }
+</style>
+
+<style>
+    .dashImg1 {
+        width: 37px;
+    }
+
+    .dashImg2 {
+        width: 20px;
+    }
+
+    .tbodycls {
+        text-align: center;
+    }
+</style>
+
+<div class="container-fluide">
+    <div class="row">
+        <div class="col-lg-2 col-sm-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+                <div class="inner">
+                    <h3 id="FreeCalls"><img class="dashImg1" src="~/public/img/loading.gif" /></h3>
+                    <p>Fresh Calls</p>
+                </div>
+                <div class="icon">
+                    <i class="ion-android-call"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-2 col-sm-6">
+            <!-- small box -->
+            <div class="small-box bg-green">
+                <div class="inner">
+                    <h3 id="pendingFollow"><img class="dashImg1" src="~/public/img/loading.gif" /></h3>
+                    <p>Pending Follow Ups</p>
+                </div>
+                <div class="icon">
+                    <i class="ion-android-checkbox-outline "></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-2 col-sm-6">
+            <!-- small box -->
+            <div class="small-box bg-yellow">
+                <div class="inner">
+                    <h3 id="nonContact"><img class="dashImg1" src="~/public/img/loading.gif" /></h3>
+                    <p>Non Contacts</p>
+                </div>
+                <div class="icon">
+                    <i class="ion-person-add"></i>
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-2 col-sm-6">
+            <!-- small box -->
+            <div class="small-box bg-red">
+                <div class="inner">
+                    <h3 id="overDue"><img class="dashImg1" src="~/public/img/loading.gif" /></h3>
+                    <p>Over Due Appointments</p>
+                </div>
+                <div class="icon">
+                    <i class="ion-android-download"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <!-- small box -->
+            <div class="small-box" style="background-color:#0000A0;">
+                <div class="inner">
+                    <p style="color:#fff;">Due&nbsp;Today&nbsp;-&nbsp;<span id="totalRedFlag"><img class="dashImg2" src="~/public/img/loading.gif" /></span></p>
+                    <p style="color:#fff;">Attempts&nbsp;-&nbsp;<span id="attemptsIns"><img class="dashImg2" src="~/public/img/loading.gif" /></span></p>
+                    <p style="color:#fff;"></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <!-- small box -->
+            <div class="small-box" style="background-color:#806517;">
+                <div class="inner">
+                    <p style="margin:0 0 1px;color:#fff;">Appointments&nbsp;-&nbsp;<span id="totalAppointments"><img class="dashImg2" src="~/public/img/loading.gif" /></span></p>
+                    <p style="margin:0 0 1px;color:#fff;">Contacts&nbsp;-&nbsp;<span id="totalContacts"><img class="dashImg2" src="~/public/img/loading.gif" /></span></p>
+                    <p style="margin:0 0 1px;color:#fff;">Total Calls&nbsp;-&nbsp;<span id="totalCall"><img class="dashImg2" src="~/public/img/loading.gif" /></span></p>
+                    <p style="margin:0 0 -6px;color:#fff;">Date&nbsp;-&nbsp;@DateTime.Now.ToString("dd-MM-yyyy")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</div>
+
+
+   

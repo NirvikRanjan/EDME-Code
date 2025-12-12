@@ -1,0 +1,533 @@
+﻿
+@{
+    ViewBag.Title = "insuranceChangeAssignment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Change Assignment</strong> </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Year Of Sale :</label><br />
+                    <select id="ddlyearofsale" class="form-control selectpicker" multiple>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Make</label><br />
+                    @Html.DropDownList("brandList", new SelectList(ViewBag.brandlist, "id", "brandname"), "--Select--", new { @class = "selectpicker show-tick form-control", @data_live_search = "true", @id = "brand_list"/*, @onchange = "getBrandModel('brand_list','model_list')"*/ })
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Policy Expiry From Date :</label>
+                    <input type="text" class="datePicker form-control" id="txtpolicyfromdate" name="singleData" value="" readonly>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Policy Expiry To Date :</label>
+                    <input type="text" class="datePicker form-control" id="txtpolicytodate" name="tranferData" value="" readonly>
+                </div>
+            </div>
+            @*<div class="col-md-3 firstHalf">
+            <div class="form-group">
+                <label for="">Insurance Company</label><br />
+                @Html.DropDownList("icName", new SelectList(ViewBag.ddlinsurancelist, "id", "companyName"), new { @class = "form-control selectpicker", @multiple = "multiple", @id = "icName" })
+            </div>
+        </div>*@
+            @*@if (Session["UserRole"].ToString() == "ICManager")
+        {
+            <div class="col-md-3 firstHalf">
+                <div class="form-group">
+                    <label>Dealer : </label>
+                    <br />
+                    @Html.DropDownList("ddldealerCode", new SelectList(ViewBag.dealerlist, "id", "name"), new { @class = "form-control selectpicker", @data_field = "ddldealerCode", @id = "ddldealerCode" })
+                </div>
+            </div>
+        }
+        else if (Session["UserName"].ToString() == "HO_Manager")
+        {
+            <div class="col-md-3 firstHalf">
+                <div class="form-group">
+                    <label>Dealer : </label>
+                    <br />
+                    @Html.DropDownList("ddldealerCode", new SelectList(ViewBag.dealerlist, "id", "name"), new { @class = "form-control selectpicker", @data_field = "ddldealerCode", @id = "ddldealerCode", })
+                </div>
+            </div>
+
+        }*@
+
+            @*<div class="col-md-3 ">
+            <div class="form-group">
+                <label>Segment</label><br />
+                @Html.DropDownList("segmentList", new SelectList(ViewBag.segmentList, "id", "name"), new { @class = "form-control selectpicker", @id = "segment_list", @multiple = "multiple" })
+            </div>
+        </div>*@
+
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>CRE's</label><br />
+                    @Html.DropDownList("creList", new SelectList(ViewBag.creList, "id", "name"), new { @class = "form-control selectpicker", @id = "cre_list", @multiple = "multiple" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Campaign: </label>
+                    <br />
+                    @Html.DropDownList("ddlcampaign", new SelectList(ViewBag.campaignList, "id", "name"), new { @class = "form-control selectpicker", @id = "ddlcampaign", @multiple = "multiple" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Policy Type: </label>
+                    <br />
+                    <select class="form-control multiSelectClass" id="ddlPolicyType">
+                        <option value="">--Select--</option>
+                        <option value="Package">Package</option>
+                        <option value="SAOD">SAOD</option>
+                        <option value="SATP">SATP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Disposition Status :<sup class="text-danger">*</sup> </label>
+                    <div class="form-group">
+                        <select class="form-control multiSelectClass" id="ddldispositionStatus">
+                            <option value="">--Select--</option>
+                            <option value="100">Transfer All Calls</option>
+                            <option value="0">Not yet called</option>
+                            <option value="25">Book Appointment</option>
+                            <option value="26">Renewal Not Required</option>
+                            <option value="4">Call me later</option>
+                            <option value="6,7,8,9,43">Non Contact</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-md-3">
+                <div class="form-group">
+                    <label>Model</label><br />
+                    <select class="form-control" id="model_list"></select>
+                </div>
+            </div>*@
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Priority: </label>
+                    <br />
+                    @Html.DropDownList("ddlpriority", new SelectList(ViewBag.priorityList, "id", "name"), new { @class = "form-control selectpicker", @id = "ddlpriority", @multiple = "multiple" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Status: </label>
+                    <br />
+                    <select class="form-control multiSelectClass selectpicker" id="ddlQuoteStatus" multiple>
+                        <option value="KYC Pending">KYC Pending</option>
+                        <option value="Not Verified">Not Verified</option>
+                        <option value="Initiate Payment">Initiate Payment</option>
+                        <option value="Pending Payment">Pending Payment</option>
+                        <option value="Pre-Validation Failed">Pre-Validation Failed</option>
+                        <option value="Payment Success">Payment Success</option>
+                        <option value="Payment Expired">Payment Expired</option>
+                    </select>
+                </div>
+            </div>
+            @*<div class="col-md-3">
+                <div class="form-group">
+                    <label>Marketing Campaign: </label>
+                    <br />
+                    @Html.DropDownList("ddlmarketingcampaign", new SelectList(ViewBag.marketingcampaignList, "id", "name"), new { @class = "form-control selectpicker", @id = "ddlmarketingcampaign", @multiple = "multiple" })
+                </div>
+            </div>*@
+
+            @*<div class="col-md-3">
+                <div class="form-group">
+                    <label>Premium Size: </label>
+                    <br />
+                    <select class="form-control multiSelectClass" id="ddlPremiumSize">
+                        <option value="">--Select--</option>
+                        <option value="5000">>5000</option>
+                        <option value="5000-3000">5000 - 3000</option>
+                        <option value="3000-2000">3000-2000</option>
+                        <option value="2000-1000">2000 - 1000</option>
+                        <option value="1000"><1000</option>
+                    </select>
+                </div>
+            </div>*@
+        </div>
+        <div class="form-group pull-right">
+            <label></label>
+            <button type="submit" class="btn btn-sm btn-primary" onclick="getchangeassigningdata();" name="selectedFile" style="margin-top:26px" value="assignCalls">Fetch</button>
+        </div>
+    </div>
+</div>
+<div class="row"  style="display:none" id="changeassignmentDiv">
+    <div class="col-lg-12">
+        <div class="panel panel-success">
+            <div class="panel-heading">List Of  Calls To Assign</div>
+            <div class="panel-body">
+                <div class="col-lg-12">
+                    <div class="row">
+                        @*<strong style="color:blue">Data Available as per filter Selection-<span id="totalcl">0</span> </strong>*@<br />
+                        <button class="btn btn-success" style="float:right" data-toggle="modal" data-target="#changeAssignment" id="btnchangeassign">Assign</button>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="dataTable_wrapper">
+                            <table class="table table-striped table-bordered table-hover" id="tblAssignList" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>CRE Name</th>
+                                        <th>Total Calls</th>
+                                    </tr>
+                                </thead>
+                                @*<thead>
+                                        <tr>
+                                            <th>Customer Name</th>
+                                            <th>Frame No</th>
+                                            <th>Policy Due Date</th>
+                                            <th>Year Of Sale</th>
+                                            <th>Insurance Company</th>
+                                            <th>Assigned CRE</th>
+                                        </tr>
+                                    </thead>*@
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span id="tblException" style="font-size:12pt;color:red"></span>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
+
+
+<div class="modal fade" id="changeAssignment" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title center">Change Assignment</h4>
+            </div>
+            <div class="modal-body">
+                <label>CRE's</label><br />
+                @Html.DropDownList("targetcreLists", new SelectList(ViewBag.creList, "id", "name"), new { @class = "form-control selectpicker", @id = "targetcreLists", @multiple = "multiple" })
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnassignpolicydata" onclick="changeAssignment();">Change Assignment</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            let dateDropdown = document.getElementById('ddlyearofsale');
+
+            let currentYear = new Date().getFullYear();
+            let earliestYear = 1990;
+            while (currentYear >= earliestYear) {
+                let dateOption = document.createElement('option');
+                dateOption.text = currentYear;
+                dateOption.value = currentYear;
+                dateDropdown.add(dateOption);
+                currentYear -= 1;
+            }
+            //$("#ddlyearofsale").addClass("selectpicker");
+            $('#ddlyearofsale').multiselect('rebuild');
+        });
+
+        function getchangeassigningdata() {
+
+            var frmdate = $('#txtpolicyfromdate').val();
+            var todate = $('#txtpolicytodate').val();
+            var renewalType = $('#ddlrenewalType').val();
+            if ((frmdate == "" || frmdate == null) || (todate == null || todate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                return false;
+            }
+
+            dealerCodes = $('#ddldealerCode option:selected').toArray().map(item => item.value).join();
+            icnames = $('#icName option:selected').toArray().map(item => item.value).join();
+            cre_list = $('#cre_list option:selected').toArray().map(item => item.value).join();
+            ddlyearofsale = $('#ddlyearofsale option:selected').toArray().map(item => item.value).join();
+            var dispositionStatus = $('#ddldispositionStatus').val();
+            var Priority = $('#ddlpriority option:selected').toArray().map(item => item.value).join();
+            var Campaign = $('#ddlcampaign option:selected').toArray().map(item => item.value).join();
+            //var marketingCampaign = $('#ddlmarketingcampaign option:selected').toArray().map(item => item.value).join();
+            //if (icnames == null || icnames == "") {
+            //    icnames = $('#icName option').toArray().map(item => item.value).join();
+            //}
+            if (cre_list == null || cre_list == "") {
+                cre_list = $('#cre_list option').toArray().map(item => item.value).join();
+
+            }
+            if (ddlyearofsale == null || ddlyearofsale == "") {
+                ddlyearofsale = $('#ddlyearofsale option').toArray().map(item => item.value).join();
+
+            }
+            //var segment = $('#segment_list option:selected').toArray().map(item => item.value).join();
+            var make = $('#brand_list option:selected').toArray().map(item => item.value).join();
+            //var model = $('#model_list option:selected').toArray().map(item => item.value).join();
+            //var premium = $('#ddlPremiumSize option:selected').toArray().map(item => item.value).join();
+            var policyType = $('#ddlPolicyType option:selected').toArray().map(item => item.value).join();
+            let quotationStatus = $('#ddlQuoteStatus option:selected').toArray().map(item => item.value).join();
+
+            changeassignmentFilters = { /*icnames: icnames, */cre_list: cre_list, frmdate: frmdate, todate: todate, yearofsale: ddlyearofsale, renewalType: renewalType, dispositionStatus: dispositionStatus, Priority: Priority, Campaign: Campaign, /*marketingCampaign: marketingCampaign,*/ dealerCodes: dealerCodes, /*segment: segment,*/ make: make, /*model: model, premium: premium,*/ policyType: policyType, quoteStatus: quotationStatus }
+            $('#changeassignmentDiv').show();
+
+            //$.ajax({
+            //    url: siteRoot + "/policyAssignment/getChangeAssignmentData/",
+            //    type: 'post',
+            //    dataType: 'json',
+            //    data: { changeassignmentFilters: JSON.stringify(changeassignmentFilters) },
+            //    success: function (res) {
+            //        if (res.success == true) {
+            //            if (res.totaldataavailable > 0) {
+            //                $('#totalcl').text(res.totaldataavailable);
+            //                $('#btnchangeassign').show();
+            //            }
+            //            else {
+            //                $('#btnchangeassign').hide();
+            //            }
+            //        }
+            //        else if (res.success == false) {
+            //            Lobibox.notify('warning', {
+            //                msg: res.message
+            //            });
+            //            $('#btnchangeassign').hide();
+            //        }
+            //    }
+            //});
+
+            //$('#tblAssignList').dataTable({
+            //    "destroy": true,
+            //    "ajax": {
+            //        'type': 'POST',
+            //        url: siteRoot + "/policyAssignment/getChangeAssignmentData",
+            //        'data': { changeassignmentFilters: JSON.stringify(changeassignmentFilters) },
+            //        "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+            //    },
+            //    "columns": [
+            //        { "data": "CustomerName", "name": "CustomerName" },
+            //        { "data": "FrameNo", "name": "FrameNo" },
+            //        {
+            //            "data": "policyDueDate", "render": function (data, type, row) {
+            //                return reverDate(data);
+            //            }
+            //        },
+            //        { "data": "YearOfSale", "name": "YearOfSale" },
+            //        { "data": "insuranceCompanyName", "name": "insuranceCompanyName" },
+            //        { "data": "AssignedCRE", "name": "AssignedCRE" }
+            //    ],
+            //    "processing": "true",
+            //    "lengthMenu": [100, 200, 500, 1000],
+            //    "pageLength": 100,
+            //    "serverSide": true,
+            //    "scrollX": "true",
+            //    "scrollY": "300",
+            //    "paging": true,
+            //    "searching": false,
+            //    "timeout": 2000,
+            //    "bInfo": false,
+            //    "language": {
+            //        "processing": "Loading Please Wait.....!"
+            //    },
+            //    columnDefs: [{
+            //        targets: "_all",
+            //        orderable: false
+            //    }],
+            //    "initComplete": function (data) {
+            //        $('#tblException').text(data.json.exception);
+            //        $('#totalcl').text(data.json.totaldataavailable);
+            //        $('#bbbb').text(data.json.totaldataavailable);
+            //        if (data.json.totaldataavailable > 0) {
+            //            $('#btnchangeassign').show();
+            //        }
+            //        else {
+            //            $('#btnchangeassign').hide();
+            //        }
+            //    }
+            //});
+
+            $('#tblAssignList').dataTable({
+                "destroy": true,
+                "ajax": {
+                    'type': 'POST',
+                    url: siteRoot + "/policyAssignment/getChangeAssignmentData",
+                    'data': { changeassignmentFilters: JSON.stringify(changeassignmentFilters) },
+                    "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+                },
+                "columns": [
+                    { "data": "creName", "name": "creName" },
+                    { "data": "Count", "name": "Count" }
+                ],
+                "processing": "true",
+                "lengthMenu": [100, 200, 500, 1000],
+                "pageLength": 100,
+                "serverSide": true,
+                "scrollX": "true",
+                "scrollY": "300",
+                "paging": true,
+                "searching": false,
+                "timeout": 2000,
+                "bInfo": false,
+                "language": {
+                    "processing": "Loading Please Wait.....!"
+                },
+                columnDefs: [{
+                    targets: "_all",
+                    orderable: false
+                }],
+                "initComplete": function (data) {
+                    //$('#tblException').text(data.json.exception);
+                    //$('#totalcl').text(data.json.totaldataavailable);
+                    //$('#bbbb').text(data.json.totaldataavailable);
+                    if (data.json.totaldataavailable > 0) {
+                        $('#btnchangeassign').show();
+                    }
+                    else {
+                        $('#btnchangeassign').hide();
+                    }
+                }
+            });
+
+        }
+        function changeAssignment()
+        {
+            dealerCodes = $('#ddldealerCode option:selected').toArray().map(item => item.value).join();
+            var frmdate = $('#txtpolicyfromdate').val();
+            var todate = $('#txtpolicytodate').val();
+            var renewalType = $('#ddlrenewalType').val();
+            var dispositionStatus = $('#ddldispositionStatus').val();
+            var Priority = $('#ddlpriority option:selected').toArray().map(item => item.value).join();
+            var Campaign = $('#ddlcampaign option:selected').toArray().map(item => item.value).join();
+            var marketingCampaign = $('#ddlmarketingcampaign option:selected').toArray().map(item => item.value).join();
+            if ((frmdate == "" || frmdate == null) || (todate == null || todate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                return false;
+            }
+            $('#mainLoader').css({ 'display': 'block' });
+            cre_list = $('#targetcreLists option:selected').toArray().map(item => item.value).join();
+
+            if (cre_list == null || cre_list == "") {
+                cre_list = $('#targetcreLists option').toArray().map(item => item.value).join();
+
+            }
+            changeassignmentFilters = { frmdate: frmdate, todate: todate, cre_list: cre_list, renewalType: renewalType, dispositionStatus: dispositionStatus, Priority: Priority, Campaign: Campaign, marketingCampaign: marketingCampaign, dealerCodes: dealerCodes}
+
+            $.ajax({
+                url: siteRoot + "/policyAssignment/changeassignmentasign/",
+                type: 'post',
+                dataType: 'json',
+                data: { changeassignmentFilters: JSON.stringify(changeassignmentFilters) },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#changeAssignment').modal('hide');
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                        // $('#ddlyearofsale').removeClass('selectpicker');
+                        //// $('#ddlyearofsale').prop('selectedIndex', 0);
+                        // $('#ddlyearofsale').addClass('selectpicker');
+                        // $('#ddlyearofsale').multiselect('rebuild');
+
+                        // $('#icName').removeClass('selectpicker');
+                        //// $('#icName').prop('selectedIndex', 0);
+                        // $('#icName').addClass('selectpicker');
+                        // $('#icName').multiselect('rebuild');
+
+                        // $('#cre_list').removeClass('selectpicker');
+                        // $('#cre_list').prop('selectedIndex', 0);
+                        // $('#cre_list').addClass('selectpicker');
+                        // $('#cre_list').multiselect('rebuild');
+
+                        // $('#targetcreLists').removeClass('selectpicker');
+                        // //$('#targetcreLists').prop('selectedIndex', 0);
+                        // $('#targetcreLists').addClass('selectpicker');
+                        // $('#targetcreLists').multiselect('rebuild');
+                        // $('#tblAssignList').dataTable().fnClearTable();
+
+                        // $('#txtpolicyfromdate').val('');
+                        // $('#txtpolicytodate').val('');
+                        $('#changeassignmentDiv').hide();
+
+                        Lobibox.notify('success', {
+                            msg: 'Change Assignment is in Progress...'
+                        });
+                        location.reload();
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.message
+                        });
+                        $('#changeAssignment').modal('hide');
+                        $('#mainLoader').css({ 'display': 'none' });
+                    }
+                }
+            });
+
+        }
+
+        function getBrandModel(brandId,modelId) {
+            var brand = $('#' + brandId).val();
+            var model_list = modelId;
+            $.ajax({
+                url: siteRoot + '/policyAssignment/getBrandByModel/',
+                type: "POST",
+                dataType: "JSON",
+                data: { "brand": brand },
+                success: function (response) {
+                    console.log("res = " + response.modelName.length);
+                    if (response.modelName.length > 0) {
+                        $("#" + model_list).html("");
+                        $.each(response.modelName, function (index, value) {
+                            $("#" + model_list).append(
+                                $('<option></option>').val(value.model).html(value.model)
+                            );
+                        });
+                    } else {
+                        Lobibox.notify('warning', {
+                            continueDelayOnInactiveTab: true,
+                            msg: 'No Model found.'
+                        });
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("AJAX error: " + status + ", " + error);
+                }
+            });
+        }
+
+
+    </script>
+} 

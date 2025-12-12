@@ -1,0 +1,10 @@
+2025-04-28 12:44:34.9697|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-04-28 12:45:11.9372|INFO|apkRegLogger|
+
+2025-04-28 12:45:11.9372|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 28-04-2025 12:45:11 pm
+2025-04-28 12:45:11.9372|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-04-28 12:45:11.9372|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 0 6 * * ? *
+2025-04-28 12:45:11.9372|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 28-04-2025 12:45:11 pm
+

@@ -1,0 +1,14 @@
+2025-02-28 10:41:34.4434|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-02-28 10:41:34.4902|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-02-28 10:41:34.5545|INFO|apkRegLogger|
+
+ -------- Renewal Data Job Scheduler -------
+'/' must be followed by an integer.
+2025-02-28 10:41:34.5751|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-02-2025 10:41:34 am
+2025-02-28 10:41:34.5751|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-02-2025 10:41:34 am

@@ -1,0 +1,105 @@
+﻿@model AutoSherpa_project.Models.paymentconfirmation
+@{
+    ViewBag.Title = "paymentConfirmationView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Payment Confirmation
+                </div>
+                <div class="panel-body">
+                    <div class="col-lg-12">
+
+                        <div class="row">
+
+                            <table id="paymentconfirmation" class="table table-bordered" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Payment Date</th>
+                                        <th>New Policy Number</th>
+                                        <th>Transaction Reference Number</th>
+                                        <th>Transaction Amount</th>
+                                        <th>Previous Policy Number</th>
+                                        <th>Chassis Number</th>
+                                        <th>Engine Number</th>
+                                        <th>Updated Date</th>
+                                        <th>Updated Time</th>
+                                        <th>Response</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+    @section scripts
+{
+        <script>
+            $(document).ready(function () {
+                GetDetails();
+            });
+
+            $(document).ready(function () {
+
+                $('.datepicker').datepicker({
+                    duration: "slow",
+                    showOptions: { direction: "up" },
+                    dateFormat: 'yy-mm-dd',
+                    changeMonth: true,
+                    changeYear: true 
+
+                });
+            });
+
+            function GetDetails() {
+
+                uploadlistTable = $("#paymentconfirmation").DataTable({
+                    "bServerSide": true,
+                    "sAjaxSource": siteRoot + "/SuperAdmin/GetPaymentDetails",
+                    'bProcessing': true,
+                    "fnServerData": function (sSource, aoData, fnCallback) {
+                        aoData.push({ });
+
+                        $.ajax({
+                            type: "Get",
+                            data: aoData,
+                            url: sSource,
+                            success: fnCallback,
+                            "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+                        })
+
+                    },
+                    "aoColumns": [
+                        { "mData": "Payment_DateTime", "name": "Payment_DateTime" },
+                        { "mData": "New_PolicyNumber", "name": "New_PolicyNumber" },
+                        { "mData": "Transaction_Reference_Number", "name": "Transaction_Reference_Number" },
+                        { "mData": "TransactionAmount", "name": "TransactionAmount" },
+                        { "mData": "Previous_PolicyNumber", "name": "Previous_PolicyNumber" },
+                        { "mData": "ChassisNumber", "name": "ChassisNumber" },
+                        { "mData": "EngineNumber", "name": "EngineNumber" },
+
+                        {
+                            "mData": "updateddate", "render": function (data, type, row) {
+                                return parseJsonDateTime(data);
+                            }
+                        },
+                        { "mData": "updatetime", "name": "updatetime" },
+                        { "mData": "responseStatus", "name": "responseStatus" }
+
+                    ],
+                    "pageLength": 50,
+                    "responsive": true,
+                    columnDefs: [
+                        { targets: [1, 2, 5,  8], className: 'dt-body-right' }
+                    ],
+                    "initComplete": function (mData) {
+                        //$('#tblException').text(data.json.exception);
+                    }
+
+                });
+
+            }
+        </script>
+    }

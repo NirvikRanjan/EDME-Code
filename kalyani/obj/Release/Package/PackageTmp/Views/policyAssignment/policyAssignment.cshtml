@@ -1,0 +1,503 @@
+﻿
+@{
+    ViewBag.Title = "policyAssignment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Assignment</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-3" id="workshopDiv">
+                <div class="form-group">
+                    <label>Dealer Classification: </label>
+                    <br />
+                    @Html.DropDownList("ddldealerCode", new SelectList(ViewBag.dealerClassification, "DealerClassification", "DealerClassification"), "--Select--", new { @class = "form-control ", @data_field = "dealerclasification", @id = "dealerclasification", @onchange = "loaddelerfromclassification();" })
+
+                </div>
+            </div>
+            <div class="col-md-3" id="workshopDiv">
+                <div class="form-group">
+                    <label>Dealer : </label>
+                    <br />
+                    @Html.DropDownList("ddldealerCode", new SelectList(ViewBag.dealerlist, "id", "name"), new { @class = "form-control selectpicker", @multiple = "multiple", @data_field = "ddldealerCode", @id = "ddldealerCode" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label>Insurance Company :<sup class="text-danger">*</sup> </label>
+                <div class="form-group">
+                    @Html.DropDownList("icName", new SelectList(ViewBag.ddlinsurancelist, "id", "companyName"), new { @class = "form-control selectpicker", @multiple = "multiple", @data_field = "icName", @id = "icName" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label id='labelFromDate'>Policy From Date :<sup class="text-danger">*</sup> </label>
+                    <input type="text" class="form-control AssFromDtClass datepicker" id="assignFromDate" readonly>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label id='labelToDate'>Policy To Date :<sup class="text-danger">*</sup> </label>
+                    <input type="text" class="form-control AssToDtClass range1datepicker" id="assignToDate" readonly>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label id=''>Type :<sup class="text-danger">*</sup> </label>
+                    <select id="policyType" class="form-control">
+                        <option value="Renewal">Renewal</option>
+                        <option value="Winback">Winback</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label></label>
+
+                <div class="form-group">
+                    <button type="button" class="btn btn-info" id="btnshowpopup">Fetch</button>
+                    <button type="button" class="btn btn-danger" id="btnshowpopup" onclick="droppolicydata();">Delete</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12" id="popupdispDiv" style="display:none">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Assignment Details</h3>
+                </div>
+                <div class=" panel-body">
+                    <div class="col-lg-12">
+                        <div class="row">
+
+                            <strong style="color:blue">Data Available as per filter Selection   -<span id="totalcl">0</span> </strong><br />
+                            @*<strong style="color:green" >Already Assigned to CRE   -<span id="alreadyassgnd">  </span></strong><br />
+                                <strong style="color:red">Not Assigned -<span  id="notassgnd">0</span>  </strong><br />*@
+                            <div class="col-lg-9 pull-right">
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Assign</button>
+                            </div>
+                        </div><br />
+                        <div class="row" id="selectAllDIv" style="display:none">
+                            <div class=" table-responsive">
+                                <table id="tblChangeAssign" class="table table-bordered " width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Vehicle Reg No</th>
+                                            <th>Customer Name</th>
+                                            <th>Insurance Company </th>
+                                            <th>Renewal Type</th>
+                                            <th>Policy Date</th>
+                                            <th>Dealer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <span id="tblException" style="font-size:12pt;color:red"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title center">Assign Data</h4>
+            </div>
+            <div class="modal-body">
+                <strong style="color:green">Are You Sure You Want to Assign <span id="bbbb">0</span> Data ?</strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="btnassignpolicydata" onclick="assignpolicydata();">Assign</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="tbldisplaydata" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" onclick="refreshpage();">&times;</button>
+                <h4 class="modal-title center">Assigned Details</h4>
+            </div>
+            <div class="modal-body">
+                <table id="tblshowassignedcresdata" class="table table-bordered " width="100%">
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="refreshpage();">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@section scripts{
+
+    <script type="text/javascript">
+        function loaddelerfromclassification() {
+            var dealers = @Html.Raw(ViewBag.dealerclassificationData);
+
+            var $multiSelectOptions = $('#ddldealerCode option');
+
+            $multiSelectOptions.each(function (index, element) {
+                element.remove();
+            });
+                                $('#ddldealerCode').multiselect('rebuild');
+
+            var dealerclasificationId = $('#dealerclasification').val();
+            if (dealerclasificationId == "") {
+                var filtereddealer = dealers;
+                var dropdown = document.getElementById("ddldealerCode");
+
+                for (var i = 0; i < filtereddealer.length; i++) {
+
+                    dropdown[dropdown.length] = new Option(filtereddealer[i].name, filtereddealer[i].id);
+
+                }
+            }
+            else {
+                var filtereddealer = dealers.filter(x => x.DealerClassification === dealerclasificationId);
+                var dropdown = document.getElementById("ddldealerCode");
+
+                for (var i = 0; i < filtereddealer.length; i++) {
+
+                    dropdown[dropdown.length] = new Option(filtereddealer[i].name, filtereddealer[i].id);
+
+                }
+            }
+
+          //  $("#ddldealerCode").addClass("selectpicker");
+            $('#ddldealerCode').multiselect('rebuild');
+        }
+        $("#btnshowpopup").click(function ()
+        {
+            var frmdate = $('#assignFromDate').val();
+            var todate = $('#assignToDate').val();
+            if ((frmdate == "" || frmdate == null) || (todate == null || todate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                return false;
+            }
+            else {
+                $('#popupdispDiv').show();
+                $('#selectAllDIv').show();
+                getassigningdata();
+            }
+            });
+            $("#btnassignauto").click(function () {
+                $('#popupdispDiv').hide();
+            });
+
+
+
+        function getassigningdata() {
+            var frmdate = $('#assignFromDate').val();
+            var todate = $('#assignToDate').val();
+            if ((frmdate == "" || frmdate == null) || (todate == null || todate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                return false;
+            }
+            icnames = $('#icName option:selected').toArray().map(item => item.value).join();
+            dealerCodes = $('#ddldealerCode option:selected').toArray().map(item => item.value).join();
+            if (icnames == null || icnames == "") {
+                icnames = $('#icName option').toArray().map(item => item.value).join();
+            }
+            if (dealerCodes == null || dealerCodes == "")
+            {
+              dealerCodes = $('#ddldealerCode option').toArray().map(item => item.value).join();
+
+            }
+            procedureName = $('#policyType').val();
+            assignmentFilters = { icnames: icnames, dealerCodes: dealerCodes, frmdate: frmdate, todate: todate, procedureName: procedureName}
+
+            $('#tblChangeAssign').dataTable({
+                "destroy": true,
+                "ajax": {
+                    'type': 'POST',
+                    timeout: 60000,
+                    url: siteRoot + "/policyAssignment/getratecarddata/",
+                    'data': { assignmentFilters: JSON.stringify(assignmentFilters) },
+                    "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+                },
+                "columns": [
+                    { "data": "frameno", "name": "frameno" },
+                    { "data": "firstname", "name": "firstname" },
+                    { "data": "previousinsurername", "name": "previousinsurername" },
+                    { "data": "previouspolicytype", "name": "previouspolicytype" },
+                    {
+                        "data": "previouspolicyexpiry", "render": function (data, type, row) {
+                            return reverDate (data);
+                        }
+                    },
+                    { "data": "cpname", "name": "cpname" },
+                ],
+                "processing": "true",
+                "serverSide": true,
+                "scrollX": "true",
+                "scrollY": "300",
+                "paging": true,
+                "searching": false,
+                "timeout": 2000,
+                "bInfo": false,
+                "lengthMenu": [100, 200, 500, 1000],
+                "pageLength": 100,
+                "language": {
+                    "processing": "Loading Please Wait.....!"
+                },
+                columnDefs: [{
+                    targets: "_all",
+                    orderable: false
+                }],
+                "initComplete": function (data) {
+                    ////console.log(+data.json.filterls);
+                    $('#tblException').text(data.json.exception);
+                    $('#totalcl').text(data.json.totaldataavailable);
+                    $('#bbbb').text(data.json.totaldataavailable);
+                    //$('#alreadyassgnd').text(0);
+                    //$('#notassgnd').text(data.json.recordsTotal);
+                    //$('#bbbb').text(data.json.recordsTotal);
+                    //totalFilterCount = data.json.recordsTotal;
+                    //$('#mainLoader').css({ 'display': 'none' });
+                }
+            });
+
+        }
+
+        var dictCRE_selected = {}, isAllSelected = false, totalFilterCount;
+        $(document).ready(function () {
+
+
+
+            $('.datepicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                autoclose: true,
+                dateFormat: 'yy-mm-dd',
+
+                onSelect: function (date) {
+                    $('.range1datepicker').datepicker("destroy");
+                    $('.range1datepicker').datepicker({
+                        changeMonth: true,
+                        changeYear: true,
+                        autoclose: true,
+                        dateFormat: 'yy-mm-dd',
+                        minDate: $('.datepicker').datepicker('getDate')
+                    });
+                    var dt1 = $('.datepicker').datepicker('getDate');
+                    var dt2 = $('.range1datepicker').datepicker('getDate');
+                    if (dt2 <= dt1) {
+                        var minDate = $('#dt2').datepicker('option', 'minDate');
+                        $('.range1datepicker').datepicker('setDate', null);
+                    }
+                }
+
+
+
+            });
+            $(".datepickerchange").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'yy-mm-dd',
+                maxDate: "+30d",
+                minDate: 0,
+
+            });
+
+
+            $('.multiSelectClass').multiselect({
+                includeSelectAllOption: true,
+                enableFiltering: true,
+                buttonWidth: '190px'
+
+            });
+            $('.multiSelectTop').multiselect({
+                includeSelectAllOption: true,
+                enableFiltering: true,
+                buttonWidth: '190px',
+                maxHeight: 150,
+                dropUp: true
+
+            });
+
+            $('.range1datepicker').datepicker({
+                autoclose: true,
+                dateFormat: 'yy-mm-dd',
+                changeMonth: true,
+                changeYear: true,
+                minDate: new Date()
+            });
+
+            $('.datePickerFilterFromChange').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                autoclose: true,
+                dateFormat: 'yy-mm-dd',
+                maxDate: new Date(),
+                onSelect: function (date) {
+                    $('.range1datepicker').datepicker("destroy");
+                    $('.range1datepicker').datepicker({
+                        autoclose: true,
+                        dateFormat: 'yy-mm-dd',
+                        minDate: $('.datePickerFilterFromChange').datepicker('getDate')
+                    });
+                    var dt1 = $('.datePickerFilterFromChange').datepicker('getDate');
+                    var dt2 = $('.range1datepicker').datepicker('getDate');
+                    if (dt2 <= dt1) {
+                        var minDate = $('#dt2').datepicker('option', 'minDate');
+                        $('.range1datepicker').datepicker('setDate', null);
+                    }
+                }
+            })
+
+        });
+
+        function assignpolicydata()
+        {
+            var frmdate = $('#assignFromDate').val();
+            var todate = $('#assignToDate').val();
+            if ((frmdate == "" || frmdate == null) || (todate == null || todate == "")) {
+                Lobibox.notify('warning', {
+                    size: 'mini',
+                    rounded: true,
+                    delayIndicator: false,
+                    msg: 'Please Enter Policy Expiry From and To Date.'
+                });
+                return false;
+            }
+            $('#mainLoader').css({ 'display': 'block' });
+            procedureName = $('#policyType').val();
+            assignmentFilters = { frmdate: frmdate, todate: todate, procedureName: procedureName }
+
+            $.ajax({
+                url: siteRoot + "/policyAssignment/assignpolicydata/",
+                type: 'post',
+                dataType: 'json',
+                data: { assignmentFilters: JSON.stringify(assignmentFilters) },
+                success: function (res)
+                {
+                    if (res.success == true)
+                    {
+                        Lobibox.notify('success', {
+                            msg: 'Data Assignment is in Progress...'
+                        });
+
+                        $('#myModal').modal('hide');
+
+                        $('#mainLoader').css({ 'display': 'none' });
+
+
+                        //var jsonrecords = JSON.parse(res.data);
+                        //var my_columns = [];
+                        //if (jsonrecords.length > 0) {
+                        //    $.each(jsonrecords[0], function (key, value) {
+                        //        var my_item = {};
+                        //        my_item.data = key;
+                        //        my_item.title = key;
+                        //        my_columns.push(my_item);
+                        //    });
+
+                        //    $('#tblshowassignedcresdata').DataTable({
+                        //        data: jsonrecords,
+                        //        "columns": my_columns,
+                        //        "paging": false,
+                        //        "searching": false,
+                        //        "order": [[0, "asc"]],
+                        //        "pageLength": 50,
+                        //        "scrollX": true,
+                        //        "scrollY": "300",
+                        //        "initComplete": function (settings, exception) {
+
+                        //        }
+
+                        //    });
+
+
+
+                        //    $('#tbldisplaydata').modal('show');
+
+                        //}
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.message
+                        });
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    }
+                }
+            });
+
+        }
+
+        function droppolicydata() {
+
+            $('#mainLoader').css({ 'display': 'block' });
+
+
+            $.ajax({
+                url: siteRoot + "/policyAssignment/droppolicyData/",
+                type: 'post',
+                dataType: 'json',
+                data: { },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#mainLoader').css({ 'display': 'none' });
+                        Lobibox.notify('warning', {
+                            size: 'mini',
+                            rounded: true,
+                            delayIndicator: false,
+                            msg: 'Policy Details Removed Succesfully.'
+                        });
+                    }
+                    else if (res.success == false) {
+                        $('#mainLoader').css({ 'display': 'none' });
+                        Lobibox.notify('warning', {
+                            msg: res.message
+                        });
+
+                    }
+                }
+            });
+
+        }
+        function refreshpage() {
+            $('#tbldisplaydata').modal('hide');
+            location.reload();
+        }
+    </script>
+
+}
+

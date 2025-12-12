@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "assignmentSummary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "policyAssignment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <div class="col-lg-12" id="popupdispDiv" style="display: block">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <b>Data Assignment Summary</b>
+                    <button style="float:right;color:#000000;" data-toggle="modal" data-target="#assignmntsumaryModal" class="btn-info"><i class="fa fa-download"></i> Download</button>
+
+                </div>
+                <div class=" panel-body">
+                    <div class="col-lg-12">
+                        <div class="row" id="selectAllDIv" style="display:block">
+                            <table id="tblassignmentsummary" class="table table-bordered " width="100%">
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="assignmntsumaryModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"   data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center">Assignment Filters</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <div class="row">
+                    <div class="col-md-5" id="expiryFromDateDiv">
+                        <label>Upload From Date: </label>
+                        <input type="text" class="filter form-control datePicker" placeholder="Enter From Date" data-column-index="1"  onchange="getfilters(this);" id="txtfromuploaadDate" name="txtfromuploaadDate" readonly>
+                    </div>
+                    <div class="col-md-5" id="expiryFromDateDiv">
+                        <label>Upload To Date: </label>
+                        <input type="text" class="filter form-control datePicker" placeholder="Enter From Date" data-column-index="1"  onchange="getfilters(this);" id="txttouploaadDate" name="txttouploaadDate" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="callDownloadAssignmentSummary()" class="btn btn-info">Downloads</button>
+                <button type="button" class="btn btn-danger"  data-dismiss="modal" onclick="clearControl();">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            viewAssignmentSummary();
+
+        });
+
+        function viewAssignmentSummary() {
+            $('#mainLoader').css({ 'display': 'block' });
+            assignmentFilters = { frmdate: "", todate: "" }
+
+            $.ajax({
+                url: siteRoot + "/policyAssignment/viewAssignmentSummary/",
+                type: 'post',
+                dataType: 'json',
+                data: { assignmentFilters: JSON.stringify(assignmentFilters) },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                        var jsonrecords = JSON.parse(res.data);
+                        var my_columns = [];
+                        if (jsonrecords.length > 0) {
+                            $.each(jsonrecords[0], function (key, value) {
+                                var my_item = {};
+                                my_item.data = key;
+                                my_item.title = key;
+                                my_columns.push(my_item);
+                            });
+                            $('#tblassignmentsummary').DataTable({
+                                data: jsonrecords,
+                                "columns": my_columns,
+                                "paging": true,
+                                "searching": false,
+                                "pageLength": 100,
+                                "scrollX": true,
+                                "scrollY": "300",
+                                "initComplete": function (settings, exception) {
+
+                                }
+                            });
+                        }
+                        else {
+                            var dataset = [{ "Result": "No Data Uploaded from Last 3 Days" }];
+
+                            var my_columns = [];
+                            $.each(dataset[0], function (key, value) {
+                                var my_item = {};
+                                my_item.data = key;
+                                my_item.title = key;
+                                my_columns.push(my_item);
+                            });
+
+                            $('#tblassignmentsummary').DataTable({
+                                data: dataset,
+                                "columns": my_columns,
+                                "paging": false,
+                                "searching": false,
+                                "bLengthChange": false,
+                                "bInfo": false,
+                                "order": [[0, "asc"]],
+                                "pageLength": 50,
+                                "initComplete": function (settings, exception) {
+                                   
+                                }
+                            });
+
+
+                            $('#tblException').text(records.exception);
+                        }
+
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.message
+                        });
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    }
+                }
+            });
+
+        }
+
+
+
+        function downloadAssignmentsummary()
+        {
+            var fromDate = $('#txtfromuploaadDate').val();
+            var toDate = $('#txttouploaadDate').val();
+            if (fromDate=="" || toDate == "")
+            {
+                Lobibox.notify('warning', {
+                    msg: 'Please Enter From and Todate'
+                });
+                return false;
+            }
+            return $.ajax({
+                url: siteRoot + "/policyAssignment/downloadAssignmentReport/",
+                type: 'post',
+                data: { fromDate: fromDate, toDate: toDate  }
+            });
+        }
+        function callDownloadAssignmentSummary() {
+            $('#mainLoader').css({ 'display': 'block' });
+
+            $.when(downloadAssignmentsummary()).then
+                (function successHandler(res) {
+                    console.log(res);
+                    if (res.success == true) {
+                        clearControl();
+                        window.location.href = siteRoot + "/policyAssignment/DownloadALL/";
+                        
+                        $('#mainLoader').css({ 'display': 'none' });
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.error
+                        });
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                        return false;
+                    }
+                    else {
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    }
+                },
+                    function errorHandler(res) {
+                        console.log(err);
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    })
+        }
+        function clearControl()
+            {
+            $('#txtfromuploaadDate').val('');
+            $('#txttouploaadDate').val('');
+        }
+    </script>
+
+}
+
+
+

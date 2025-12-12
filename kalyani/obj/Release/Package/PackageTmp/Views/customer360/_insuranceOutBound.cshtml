@@ -1,0 +1,686 @@
+﻿
+@model AutoSherpa_project.Models.ViewModels.CallLoggingViewModel
+<style>
+
+
+
+    ul.multiselect-container.dropdown-menu {
+        position: relative;
+    }
+</style>
+@{
+    List<SelectListItem> ComplaintOrFB_TagTo = new List<SelectListItem>();
+
+    string lastServiceDate = string.Empty;
+
+    #region Reschedule data Binding
+    string typeofApptmnt = "";
+    string onlineapptmntTime = "";
+    string nomineeName = "";
+    string nomineeRelation = "";
+    string nomineeAge = "";
+    string appointeName = "";
+    string purpose = "";
+    string fieldsummary = "";
+    string discount = "0";
+    long premiumdiscount = 0;
+    string fieldscheduledate = "";
+    string onlineapptmntDate = "";
+    string picode = "";
+    if ((Model.cust.addresses.Count > 0)&& (Model.cust.addresses.Count(m=>m.isPreferred==true)>0) && (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != null) && (Model.cust.addresses.FirstOrDefault(m => m.isPreferred == true).concatenatedAdress != ""))
+    {
+        picode = Model.cust.addresses.Where(m => m.isPreferred == true).Select(m => m.pincode).FirstOrDefault().ToString();
+        Model.appointbooked.pincodeValue = picode;
+    }
+    if (Model.callinteraction.appointmentbooked != null)
+    {
+        typeofApptmnt = Model.callinteraction.appointmentbooked.typeOfPickup;
+        onlineapptmntTime = Model.callinteraction.appointmentbooked.appointmentFromTime;
+        onlineapptmntDate = Convert.ToDateTime(Model.callinteraction.appointmentbooked.appointmentDate).ToString("dd-MM-yyyy");
+        discount = Model.callinteraction.appointmentbooked.discountValue;
+        premiumdiscount = Model.callinteraction.appointmentbooked.premiumwithdiscount;
+        nomineeName = Model.callinteraction.appointmentbooked.nomineeName;
+        nomineeRelation = Model.callinteraction.appointmentbooked.nomineeRelationWithOwner;
+        nomineeAge = Model.callinteraction.appointmentbooked.nomineeAge;
+        appointeName = Model.callinteraction.appointmentbooked.appointeeName;
+        purpose = Model.callinteraction.appointmentbooked.purpose;
+        fieldsummary = Model.callinteraction.appointmentbooked.fieldsummary;
+        picode = Model.callinteraction.appointmentbooked.pincodeValue;
+
+    }
+    #endregion
+
+}
+
+
+<div style="display:none;" class="animated  bounceInRight" id="INSNoSpeechDiv">
+    <br>
+    <label for=""><b>Choose reason for not being able to talk to customer:</b></label>
+    <br>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Ringing No response")
+            Ringing No response
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Wrong Number")
+            Wrong Number
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Busy")
+            Busy
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Switched Off / Unreachable")
+            Switched Off / Unreachable
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Invalid Number")
+            Invalid Number
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            @Html.RadioButtonFor(m => m.insudisposition.dispoNotTalk, "Other")
+            Other
+        </label>
+    </div>
+    <div class="row animated  bounceInRight" style="display:none;" id="NoOthers">
+        <div class="col-md-3">
+            <label><b>Please Specify</b></label>
+            @Html.TextAreaFor(m => m.insudisposition.other, new { @class = "form-control NoOthersText1 characterLimit", @rows = "1",@id="nonContactOther" })
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="col-md-12 animated" id="INSOnlineOfflineDiv" style="display:none;">
+    <div class="row">
+        <label>Mode Of Appointment</label>
+        <div class="form-group">
+            <div class="radio-inline">
+                <label>
+                    @Html.RadioButtonFor(model => model.appointbooked.modeofappointment, "Online", new { @id = "rdoOnline" })
+                    Online
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    @Html.RadioButtonFor(model => model.appointbooked.modeofappointment, "Offline", new { @id = "rdoOffline" })
+                    Dealership
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 animated" id="INSBookingDiv" style="display:none;">
+    <div class="row">
+        <label>Type Of Appointment</label>
+        <div class="form-group">
+            <div class="radio-inline">
+                <label>
+                    @Html.RadioButtonFor(model => model.appointbooked.typeOfPickup, "Field", new { @id = "Field", @checked = true })
+                    Field
+                </label>
+            </div>
+            <div class="radio-inline">
+                <label>
+                    @Html.RadioButtonFor(model => model.appointbooked.typeOfPickup, "Walk-in", new { @id = "Walk-in" })
+                    Walk-In
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="animated" style="display:none" id="INSBookingDetailsDIV">
+    <div class="col-md-12">
+        <div class="row">
+            <div id="fieldbookingDiv" style="display:none">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Confirm Address</label>
+                        <div class="input-group">
+                            @Html.DropDownListFor(m => m.appointbooked.addressOfVisit, new SelectList(Model.cust.addresses, "concatenatedAdress", "concatenatedAdress"), new { @class = "form-control", @id = "txtfieldaddress" })
+                            <span class="input-group-addon" style="cursor:pointer; color:#dd4b39; padding: 1px 12px;" data-target="#LegalModal" data-toggle="modal" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil fa-2x"></i> </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="">Pincode</label>
+                        @Html.TextBoxFor(model => model.appointbooked.pincodeValue, new { @class = "form-control numberOnly", @maxlength = "6", @rows = "1"})
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" id="walkinLocDivId" style="display:none">
+                <div class="form-group">
+                    <label for="">Walk-In Location</label>
+                    @Html.DropDownListFor(m => m.appointbooked.fieldWalkinLocation, new SelectList(Model.walkinlocationLists, "id", "name"), "ANY", new { @class = "form-control", @id = "walkinLocation", onchange = "executiveBasedOnWalkinLocation()" })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Date</label>
+                    @Html.TextBoxFor(model => model.appointbooked.appointmentDate, new { @class = "form-control datePickerFilterTo15days", @id = "txtappointmentDate", @Value = onlineapptmntDate, @autocomplete = "off" })
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="">Prefered Time</label>
+                    @Html.TextBoxFor(model => model.appointbooked.appointmentFromTime, new { @class = "timepicker_7 form-control", @id = "txtappointmentTime", @Value = onlineapptmntTime, @autocomplete = "off" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- call me later -->
+
+<div class="animated  " style="display:none;" id="INScallMeLattteDiv">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="followUpDate">Follow Up Date<i class="lblStar">*</i></label>
+                    @Html.TextBoxFor(model => model.insudisposition.followUpDate, new { @class = "form-control datePickerFilterToINSfolowuplater", @id = "txtfollowupdate", @readonly = "readonly" })
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="followUpTime">Follow Up Time<i class="lblStar">*</i></label>
+                    @Html.TextBoxFor(model => model.insudisposition.followUpTime, new { @class = "timepicker_7 form-control", @id = "txtfollowuptime", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Renewal Not Required -->
+<div class="row animated  bounceInRight" style="display:none;" id="INSRenewalNotRequiredDiv">
+    <!--No Service Required-->
+    <div class="col-md-12">
+        <div class="col-md-12">
+            <div class="form-group">
+
+                <div class="checkbox AlreadyServiced">
+                    <label>
+                        @Html.HiddenFor(m => m.insudisposition.renewalNotRequiredReason, new { @id = "chkrenewalNotRequired" })
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Already Renewed" id="AlreadyServiced">
+                        Already Renewed
+                    </label>
+                </div>
+                <div class="animated  bounceInRight alreadyservicedDiv1" style="display:none;" id="alreadyservicedDiv1">
+                    <div class="col-md-12">
+                        <div class="radio ServicedMyDealer">
+                            <label>
+                                @Html.RadioButtonFor(model => model.insudisposition.renewalDoneBy, "Renewed At My Dealer", new { @id = "ServicedMyDealer" })
+                                Renewed At My Dealer
+                            </label>
+                        </div>
+                        <div class="radio ServicedOtherDealer">
+                            <label>
+                                @Html.RadioButtonFor(model => model.insudisposition.renewalDoneBy, "Renewed At Other Dealer", new { @id = "renewedOtherDealer" })
+                                Renewed with Others
+                            </label>
+                        </div>
+                        <div class="row animated  bounceInRight" style="display:none;" id="ServicedAtOtherDealerDiv">
+                            <div class="col-md-12">
+
+                                <div class="col-md-12">
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.insudisposition.typeOfAutherization, "Dealer", new { @id = "Autorizedworkshopid" })
+                                            DEALER
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="animated  bounceInRight" style="display:none;" id="AutorizedworkshopDIV">
+                                    <div class="col-md-12">
+
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="dealerName"><b>Dealer Name<b></label><br />
+                                                @Html.TextBoxFor(model => model.insudisposition.dealerName, new { @class = "form-control", @id = "dealerNameId" })
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="dateOfService"><b>Date of Renewal<b></label>
+                                            @Html.TextBoxFor(model => model.insudisposition.dateOfRenewal, new { @class = "blockfuturedate form-control", @id = "dateofrnwal", @autocomplete = "off" })
+                                        </div>
+
+                                        <div class="col-md-3">
+                                            <label for="mileageAtService"><b>Insurance Provider<b></label>
+                                            @Html.DropDownListFor(m => m.listingForm.insuranceProvidedByOEM, new SelectList(Model.companiesList, "companyName", "companyName"), "--Select--", new { @class = "form-control ", @id = "insuranceProvidedByOEM" })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.insudisposition.typeOfAutherization, "OTHERS", new { @id = "NonAutorizedworkshopid" })
+                                            OTHERS
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="animated  bounceInRight" style="display:none;" id="NonAutorizedworkshopDiv">
+                                    <div class="col-md-12">
+                                        <div class="col-md-3">
+                                            <label for="dateOfRenewalNonAuth"><b>Date of Renewal<b></label>
+                                            @Html.TextBoxFor(model => model.listingForm.dateOfRenewalNonAuth, new { @class = "blockfuturedate form-control", @id = "dateofrennonauth", @autocomplete = "off" })
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="mileageAsOnDate"><b> Insurance Provider<b></label>
+                                            @Html.TextBoxFor(model => model.listingForm.insuranceProvidedUnAuth, new { @class = "form-control", @id = "insuranceProvidedUnAuth" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="radio InfoNotAvailable">
+                            <label>
+                                @Html.RadioButtonFor(model => model.insudisposition.renewalDoneBy, "Info Not Available", new { })
+                                Info Not Available
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="checkbox VehicleSold">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Vehicle Sold" id="VehicleSold">
+                        Vehicle Sold
+                    </label>
+                </div>
+
+
+                <div class="row animated  bounceInRight" style="display:none;" id="VehicelSoldYesRNo">
+                    <div class="col-md-12">
+                        <label>	Do you have the contact details of the new owner ?</label>
+                        <br>
+                        <div class="col-sm-3">
+                            <label class="radio-inline">
+                                @Html.RadioButtonFor(model => model.listingForm.VehicleSoldYes, "VehicleSold Yes", new { @id = "VehicleSoldYesbtn" })
+                                Yes
+                            </label>
+                            <label class="radio-inline">
+
+                                @Html.RadioButtonFor(model => model.listingForm.VehicleSoldYes, "VehicleSoldYes No", new { @id = "VehicleSoldNobtn", @checked = "true" })
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row animated  bounceInRight" style="display:none;" id="VehicleSoldClickYes">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label>Please confirm the name of the new owner. </label><br>
+                            <div class="col-sm-1">
+                                <div class="form-group">
+
+                                    @Html.DropDownListFor(model => model.listingForm.initial, new SelectListItem[]{
+                                   new SelectListItem() { Text="Mr.",Value="Mr."},
+                                   new SelectListItem() { Text="Ms.",Value="Ms."},
+                                   new SelectListItem() { Text = "Mrs.", Value = "Mrs." } }, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.listingForm.customerFName, new { @class = "form-control onlyAlphabetOnly", @id = "customerFNameConfirm", @placeholder = "First Name", @maxlength = "30" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    @Html.TextBoxFor(model => model.listingForm.customerLName, new { @class = "form-control onlyAlphabetOnly", @id = "customerLNameConfirm", @placeholder = "Last Name", @maxlength = "30" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.listingForm.phoneList[0], new { @class = "form-control numberOnly", @maxlength = "10", @placeholder = "Mobile1", @id = "Mobile1" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.listingForm.phoneList[1], new { @class = "form-control numberOnly", @maxlength = "10", @placeholder = "Mobile2", @id = "Mobile2" })
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.listingForm.phoneList[2], new { @class = "form-control numberOnly", @maxlength = "4", @placeholder = "STD", @id = "STDCodeInput" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.listingForm.phoneList[3], new { @class = "form-control numberOnly", @maxlength = "8", @placeholder = "Landline No.", @id = "LandlineInput" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+
+                                        @Html.TextAreaFor(model => model.listingForm.addressLine1, new { @rows = "2", @class = "form-control characterLimit", @placeholder = "Address Line1", @id = "addreline1", @maxlength = "50" })
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    @Html.TextAreaFor(model => model.listingForm.addressLine2, new { @class = "form-control characterLimit", @placeholder = "Address Line2", @rows = "2", @id = "addreline2", @maxlength = "50" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+
+                                    @Html.DropDownListFor(m => m.listingForm.state, Model.citystatesList, "--Select--", new { @placeholder = "State", @id = "stateInput", @class = "form-control", @onchange = "getCityByStateSelection('stateInput','cityInput');" })
+
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+
+                                    @Html.DropDownListFor(m => m.listingForm.city, Enumerable.Empty<SelectListItem>(), "--Select--", new { @class = "form-control", @placeholder = "City", @id = "cityInput" })
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+
+                                    @Html.TextBoxFor(model => model.listingForm.pincode, new { @class = "form-control numberOnly", @maxlength = "6", @value = "0", @placeholder = "Pin", @id = "PinInput" })
+                                    <input type="hidden" name="country" value="India">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row animated  bounceInRight" style="display:none;" id="VehicleSoldClickNo">
+                    <br />
+                    <div class="col-md-12">
+                        <label for=""><b>	Did you purchase another Vehicle?</b></label><br>
+                        <div class="col-md-3">
+                            <label class="radio-inline">@Html.RadioButtonFor(model => model.listingForm.PurchaseYes, "Purchase Yes", new { @id = "PurchaseYes" })Yes</label>
+                            <label class="radio-inline">@Html.RadioButtonFor(model => model.listingForm.PurchaseYes, "Purchase No", new { @id = "Purchaseno" })No</label>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row animated  bounceInRight" style="display:none;" id="PurchaseClickYes">
+                    <br />
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="">New Vehicle Reg No</label>
+                                    @Html.TextBoxFor(model => model.listingForm.vehicleRegNo, new { @class = "form-control", @id = "vehicleRegNo", @maxlength = "10" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> New Vehicle Frame No</label>
+                                    @Html.TextBoxFor(model => model.listingForm.chassisNo, new { @class = "form-control", @id = "chassisNo", @maxlength = "10" })
+                                </div>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> New Vehicle Engine No</label>
+                                    @Html.TextBoxFor(model => model.listingForm.engineNo, new { @class = "form-control", @id = "txtengineNo", @maxlength = "10" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> Brand</label>
+                                    @Html.TextBoxFor(model => model.listingForm.variant, new { @class = "form-control", @id = "variant" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> Model</label>
+                                    @Html.TextBoxFor(model => model.listingForm.model, new { @class = "form-control", @id = "model" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> Dealership Name</label>
+                                    @Html.TextBoxFor(model => model.listingForm.dealershipName, new { @class = "form-control", @id = "dealershipName" })
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for=""> Purchase Date</label>
+                                    @Html.TextBoxFor(model => model.listingForm.saleDate, new { @class = "form-control blockfuturedate", @id = "saleDate" })
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="checkbox ExcBillingId">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="High Renewal Premium" id="ExcBillingId">
+                        High Renewal Premium
+                    </label>
+                </div>
+                <div class="checkbox Totalloss">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="TP Already Covered" id="Totalloss">
+                        TP Already Covered
+                    </label>
+
+                </div>
+                <div class="checkbox Distancefrom">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Distance from Dealer Location" id="Distancefrom">
+                        Distance from Dealer Location
+                    </label>
+                </div>
+                <div style="display:none;" class="animated  bounceInRight" id="DistancefromDealerLocationDIV">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <label for=""><b>city<b></label>
+                            @Html.TextBoxFor(model => model.insudisposition.cityName, new { @class = "form-control", @id = "citydistance" })
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="checkbox DissatisfiedwithInsuranceId">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Dissatisfied with Claim" id="DissatisfiedwithInsuranceId">
+                        Dissatisfied with Claim
+                    </label>
+                </div>
+                @*<div class="row animated  bounceInRight" style="display:none;" id="DissatisfactionwithInsuranceREmarksDiv">
+            <div class="col-md-12">
+
+                <div class="col-md-3">
+                    <label for="">Tag the case to</label>
+                    @Html.DropDownListFor(m => m.listingForm.noServiceReasonTaggedTo1, Enumerable.Empty<SelectListItem>(), new { @class = "form-control", @id = "noServiceReasonTaggedTo1" })
+                </div>
+            </div>
+
+        </div>*@
+                <div class="checkbox DissatisfiedwithSalesID">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Dissatisfied with Sales" id="DissatisfiedwithSalesID">
+                        Dissatisfaction with Sales
+                    </label>
+                </div>
+
+                <div class="checkbox Dissatisfiedwithpreviousservice">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Dissatisfied with previous service" id="Dissatisfiedwithpreviousservice">
+                        Dissatisfied with previous service
+                    </label>
+                </div>
+
+                <div class="checkbox Stolen">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Need TP Insurance Only" id="Stolen">
+                        Need TP Insurance Only
+                    </label>
+
+                </div>
+
+                <div class="checkbox OtherLast">
+                    <label>
+                        <input type="checkbox" class="NoService" name="renewalNotRequiredReason" value="Other Service" id="Other">
+                        Other
+                    </label>
+                </div>
+                <div class="animated  bounceInRight" style="display:none;" id="OtherSeriveRemarks">
+
+                    <div class="col-md-3">
+                        <label for="comments">Enter other reason for no insurance</label>
+                        @Html.TextAreaFor(model => model.insudisposition.reason, new { @class = "form-control characterLimit", @rows = "1", @id = "commentsOtherRemarks" })
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<br />
+
+<div class="row animated " style="display: none;" id="INSCancelInsuDiv">
+    <div class="col-md-12">
+        <div class="col-sm-12" id="SMRInteractionFirst">
+            <label for="">Do you want to cancel?</label> <br>
+            <div class="radio-inline">
+                <label>
+                    <input type="radio" name="InsuranceAppointment" value="Insurance Appointment" id="rdoinscancelAppointment">
+                    Insurance Appointment
+                </label>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br />
+<div class="col-md-12" id="dispositionRemarksDiv" style="display:none;">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">CRE Remarks</label>
+                @Html.TextAreaFor(model => model.insudisposition.comments, new { @class = "form-control characterLimit", @rows = "2", @id = "textareaCRERemarks" })
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="">Customer Feedback</label>
+                @Html.TextAreaFor(model => model.insudisposition.customerComments, new { @class = "form-control characterLimit", @rows = "2", @id = "textareaCustomerRemarks" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" id="btnsubmitDispositionDIV" style="display:none;">
+    <div class="row">
+        <div class="col-lg-offset-5 col-lg-8">
+            <button type="submit" class="btn btn-success" id="btnsubmitdisposition">SAVE</button>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var dealerCode = $('#PkDealercode').val();
+
+    });
+
+
+    $("input[type='checkbox']").on('change', function () {
+        if ($(this).attr('id') == "AlreadyServiced") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "VehicleSold") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "Dissatisfiedwithpreviousservice") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "Distancefrom") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "DissatisfiedwithSalesID") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "DissatisfiedwithInsuranceId") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "ExcBillingId") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "Stolen") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "Totalloss") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+        else if ($(this).attr('id') == "Other") {
+            $('#chkrenewalNotRequired').val($(this).attr('value'));
+            clearCheckboxes();
+        }
+    });
+</script>

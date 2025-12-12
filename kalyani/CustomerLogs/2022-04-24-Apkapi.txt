@@ -1,0 +1,257 @@
+2022-04-24 10:40:40.4050|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 10:40:40.5629|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 10:40:40.7421|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 10:40:40 am
+2022-04-24 10:40:40.7421|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 10:40:40 am
+2022-04-24 10:48:40.5822|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 10:48:40 am
+2022-04-24 10:48:40.5822|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 10:48:40 am
+2022-04-24 10:56:40.5753|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 10:56:40 am
+2022-04-24 10:56:40.5753|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 10:56:40 am
+2022-04-24 11:04:40.5790|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 11:04:40 am
+2022-04-24 11:04:40.5790|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 11:04:40 am
+2022-04-24 11:10:15.5262|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 11:10:15 am
+
+
+2022-04-24 11:18:52.2762|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 11:18:52.3902|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 11:18:53.7335|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 11:18:53 am
+2022-04-24 11:18:53.7335|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 11:18:53 am
+2022-04-24 11:21:17.8929|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 11:21:17 am
+
+
+2022-04-24 12:04:54.0728|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 12:04:54.2089|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 12:04:54.3531|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 12:04:54 pm
+2022-04-24 12:04:54.3541|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 12:04:54 pm
+2022-04-24 12:08:44.3283|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 12:08:44 pm
+
+
+2022-04-24 12:17:04.6174|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 12:17:04.8272|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 12:17:04.9841|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 12:17:04 pm
+2022-04-24 12:17:04.9841|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 12:17:04 pm
+2022-04-24 12:25:04.8335|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 12:25:04 pm
+2022-04-24 12:25:04.8335|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 12:25:04 pm
+2022-04-24 12:26:34.3375|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 12:26:34 pm
+
+
+2022-04-24 12:29:52.2038|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 12:29:52.2308|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 12:30:23.5417|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2022-04-24 12:33:04.8442|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 12:33:04 pm
+2022-04-24 12:33:04.8442|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 12:33:04 pm
+2022-04-24 13:29:04.8385|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 1:29:04 pm
+2022-04-24 13:29:04.8385|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 1:29:04 pm
+2022-04-24 13:33:03.4609|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 1:33:03 pm
+
+
+2022-04-24 13:43:09.1662|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 13:43:09.1842|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 13:43:09.8668|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2022-04-24 13:44:41.1771|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 1:44:41 pm
+
+
+2022-04-24 13:44:58.0107|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 13:44:58.0406|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 13:44:58.7722|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2022-04-24 13:45:04.8391|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 1:45:04 pm
+2022-04-24 13:45:04.8391|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 1:45:04 pm
+2022-04-24 13:53:04.8477|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 1:53:04 pm
+2022-04-24 13:53:04.8477|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 1:53:04 pm
+2022-04-24 13:57:17.3323|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 1:57:17 pm
+
+
+2022-04-24 14:12:04.0577|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 14:12:04.3593|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 14:12:04.4543|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 2:12:04 pm
+2022-04-24 14:12:04.4543|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 2:12:04 pm
+2022-04-24 14:13:22.6276|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 2:13:22 pm
+
+
+2022-04-24 14:15:08.2619|INFO|apkRegLogger|
+
+ -------- Change Assignment Catch--------Unable to cast object of type 'System.Data.Entity.Infrastructure.DbQuery`1[System.Nullable`1[System.Int64]]' to type 'System.IConvertible'.
+
+
+2022-04-24 14:15:20.1862|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 2:15:20 pm
+
+
+2022-04-24 14:17:25.5161|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 14:17:25.5490|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 14:17:25.6702|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2022-04-24 14:17:31.3005|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 2:17:31 pm
+
+
+2022-04-24 14:17:32.5396|INFO|apkRegLogger|
+
+ -------- Change Assignment Catch--------LINQ to Entities does not recognize the method 'Int32 ToInt32(System.String)' method, and this method cannot be translated into a store expression.
+
+
+2022-04-24 14:18:00.5463|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 2:18:00 pm
+
+
+2022-04-24 14:21:16.6983|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-04-24 14:21:16.9364|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-04-24 14:21:16.9984|INFO|apkRegLogger|
+ Android CallSynch Started at: 24-04-2022 2:21:16 pm
+2022-04-24 14:21:16.9984|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 24-04-2022 2:21:16 pm
+2022-04-24 14:22:24.4016|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 2:22:24 pm
+
+
+2022-04-24 14:23:22.8076|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 14:23:22.9156|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 14:23:24.1439|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2022-04-24 16:48:01.7601|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------24/04/2022 4:48:01 pm
+
+
+2022-04-24 16:48:14.2263|INFO|apkRegLogger|
+
+ -------- IC Aded--------
+
+
+2022-04-24 16:48:14.2393|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2022-04-24 16:48:15.4456|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+

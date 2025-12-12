@@ -1,0 +1,368 @@
+﻿
+@{
+    ViewBag.Title = "searchCustomerData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    AjaxOptions Taboptions = new AjaxOptions();
+    Taboptions.OnSuccess = "TabSuccess";
+    Taboptions.OnFailure = "TabFailure";
+    Taboptions.HttpMethod = "POST";
+
+    string userRole1 = "";
+
+    if (Session["UserRole1"] != null)
+    {
+        userRole1 = Session["UserRole1"].ToString();
+    }
+}
+<style>
+    @@media only screen and (max-width: 768px) {
+        .dataTables_filter {
+            float: left;
+        }
+    }
+</style>
+<div class="row">
+    <input type="hidden" id="assignId" value="0">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <b>Customer Search</b>@Html.ActionLink("Back", "Insurance", "Insurance", null, new { @class = "fa fa-arrow-left btn btn-danger btn-l pull-right" })
+            </div>
+
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-8 ">
+                                <div class="input-group">
+                                    <div class="input-group-btn search-panel ">
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                            <span id="search_concept">Filter by</span> <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu" style="background-color:#bfb8b8;">
+                                            <li><a href="#1">Vehicle Register Number</a></li>
+                                            <li><a href="#2">Phone Number</a></li>
+                                            <li><a href="#3">Policy Holder Name</a></li>
+                                            <li><a href="#4">Policy Number </a></li>
+                                            <li><a href="#5">Chassis Number </a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" id="patternVal" class="form-control" placeholder="Filter by Vehicle Register Number" />
+                                    <input type="hidden" id="patternId" value="1" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" id="searchCust" type="submit" onclick="searchcustomerDetails()"><span class="glyphicon glyphicon-search"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="tblDiv" style="display:block">
+                    <div class="panel-body">
+                        <div class="dataTable_wrapper">
+                            <table class="table table-striped table-bordered table-hover" id="customerSearchDataTable" width="100%">
+                                <thead style="text-align:center;">
+                                    <tr>
+                                        <th>Customer Name</th>
+                                        <th>Phone Number</th>
+                                        <th>Reg Number</th>
+                                        <th>Frame No</th>
+                                        <th>Model</th>
+                                        <th>Variant</th>
+                                        <th>Policy Expiry Date</th>
+                                        <th>Assigned CRE</th>
+                                        <th>Assign</th>
+                                        <th>360 Degree Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody style="text-align:center;"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <span class="code" id="tblException" style="font-size:11pt;font-weight:bold;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal popup for manual assignment -->
+
+<div class="modal fade" id="manualAssignmentDiv" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center"><b>Assign CRE</b></h4>
+            </div>
+            <div class="modal-body">
+                <div align="center">
+                    <div>
+                        <label>Cre Name</label><br />
+                        <select class=" filter form-control" id="manualCREId">
+                            <option value="0">--Select--</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="txtcustId" />
+                    <input type="hidden" id="txtvehicleId" />
+                    <input type="hidden" id="assggnedId" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" id="manualAssign">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+@section scripts
+{
+
+    <script>
+        var custmerId;
+        var vehicleId;
+
+        var SearchFor = '@ViewBag.SearchPage';
+        var input = document.getElementById("patternVal");
+        var searchBy = "";
+        var givenAccess = '@ViewBag.givenAccess';
+
+
+        $(document).ready(function ()
+        {
+            $('.search-panel .dropdown-menu').find('a').click(function (e) {
+                e.preventDefault();
+                var serachByValuesID = $(this).attr("href").replace("#", "");
+                var SearchByValues = $(this).text();
+                $('#patternVal').attr('placeholder', 'Filter By ' + SearchByValues);
+                $('#patternId').val(serachByValuesID);
+
+            });
+
+            $('#customerSearchDataTable').DataTable({
+                responsive: true,
+                "destroy": true,
+                "scrollX": "true",
+                "scrollY": "300",
+                "paging": true,
+                "ordering": false,
+                "info": true,
+                "searching": false,
+                "bLengthChange": false,
+
+            });
+        });
+
+
+        input.addEventListener("keyup", function (event) {
+            $('#searchCust').attr('onclick', "bindsearcResults()");
+          if (event.keyCode === 13) {
+            event.preventDefault();
+              document.getElementById("searchCust").click();
+          }
+        });
+
+
+        function bindsearcResults()
+        {
+                var role = '@Session["UserRole"].ToString()';
+
+            searchpattern = $('#patternVal').val().trim();
+            searchtype = $('#patternId').val().trim();
+            if (searchpattern == "" || searchpattern.length == "0") {
+
+                Lobibox.notify('warning', {
+                    continueDelayOnInactiveTab: true,
+                    msg: 'Please enter valid Search Pattern'
+                });
+
+                return false;
+
+            }
+
+            $('#mainLoader').css({ 'display': 'block' });
+            var tablesearchCust = $('#customerSearchDataTable').dataTable({
+                "destroy": true,
+                "ajax": {
+                    "url": siteRoot + "/Customer/searchCustomerDetails/",
+                    "type": "POST",
+                    "datatype": "json",
+                    "data": { searchtype: searchtype, searchpattern: searchpattern },
+                    "error": function (xhr, error, thrown) { console.log(xhr, error, thrown); }
+                },
+                "columns": [
+                    { "data": "customerName", "name": "customerName" },
+
+                    {
+                        "data": "phoneNumber", "render": function (data, type, row) {
+                            return singlephoneMasking(data);
+                        }
+                    },
+                    { "data": "vehicleRegNo", "name": "vehicleRegNo" },
+                    { "data": "chassisNo", "name": "chassisNo" },
+                    { "data": "model", "name": "model" },
+                    { "data": "variant", "name": "variant" },
+                    {
+                        "data": "policyDueDate", "render": function (data, type, row) {
+                            return reverDate(data);
+                        }
+                    },
+                    { "data": "assignedCre", "name": "assignedCre" },
+                    {
+                        "data": "assignment", "render": function (data, type, row) {
+                            return `<span id="popUpAssign"  onclick="assignManually(${row.customer_id},${row.vehicle_id},${row.insuranceassignedinteraction_id},'${row.assignSearch}')"><i class="fa fa-sign-out" data-toggel="tooltip" title="Manual Assignment" style="font-size:30px;color:#DD4B39;"></i></span>`;
+                        }
+                    },
+                    {
+                         "data": "Action", "render": function (data, type, row)
+
+                        {
+                            if (row.finaldispoId == "35") {
+                                return `<span style='color:red;font-size:13pt'>Vehicle is Blocked</span>`;
+                            }
+                            else if (role != "CRE" && row.userControl == "Hdd") {
+                                return `<a href="${siteRoot}/Home/redirectToCallLogging/Hdd%2cI%2c${row.customer_id}%2c${row.vehicle_id}"><i class="fa fa-id-card-o" data-toggel="tooltip" title="Insurance Disposition" style="font-size:30px;color:#DD4B39;"></i></a>`;
+                            }
+                            else if (row.userControl == "Shw") {
+                                return `<a href="${siteRoot}/Home/redirectToCallLogging/Shw%2cI%2c${row.customer_id}%2c${row.vehicle_id}"><i class="fa fa-pencil-square" data-toggel="tooltip" title="Insurance Disposition" style="font-size:30px;color:#DD4B39;"></i></a>`;
+
+                            }
+                            else {
+                                return `<a href="${siteRoot}/Home/redirectToCallLogging/Hdd%2cI%2c${row.customer_id}%2c${row.vehicle_id}"><i class="fa fa-id-card-o" data-toggel="tooltip" title="Insurance Disposition" style="font-size:30px;color:#DD4B39;"></i></a>`;
+                            }
+                        }
+                    },
+                ],
+                responsive: screen.width < 500 ? true : false,
+                columnDefs: [
+                    { className: 'compact' }
+                ],
+                "initComplete": function (data) {
+                    if (role == "CREManager") {
+                        tablesearchCust.api().columns(8).visible(true);
+
+                    }
+                    else {
+                tablesearchCust.api().columns(8).visible(false);
+                    }
+                    $('#mainLoader').css({ 'display': 'none' });
+                    console.log(+data.json.filterls); $('#tblException').text(data.json.error);
+
+                },
+                "processing": "true",
+                "serverSide": false,
+                "scrollY": "300",
+                "scrollX": "300",
+                "searching": false,
+                "paging": true,
+                "ordering": false,
+                "info": true,
+                "bLengthChange": false,
+                "language": {
+                    "processing": "Loading Please Wait.....!"
+                },
+                "fnRowCallback": function (nRow, aData, iDisplayIndex) {
+                    $('td', nRow).attr('nowrap', 'nowrap');
+                    return nRow;
+                }
+            });
+        }
+
+        function assignManually(custId, vehieId,insassignedId, allowChangeAssignment)
+        {
+            if (allowChangeAssignment == "Yes")
+            {
+                $('#txtcustId').val(custId);
+                $('#txtvehicleId').val(vehieId);
+                $('#assggnedId').val(insassignedId);
+                custmerId = custId;
+                vehicleId = vehieId;
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("getCREofCREManager")',
+                    datatype: 'json',
+                    data: { customerId: custId, vehicleId: vehicleId },
+                    cache: false,
+                    success: function (response) {
+                        if (response != null) {
+                            $('#manualCREId').empty();
+                            $("#manualCREId").html("");
+                            $("#manualCREId").append($('<option></option>').val("0").html("--Select--"));
+                            $.each(response.data, function (index, value) {
+                                $("#manualCREId").append(
+                                    $('<option></option>').val(value.id).html(value.name));
+                            });
+                            $('#manualCREId').addClass('selectpicker');
+                            $('#manualCREId').multiselect('rebuild');
+
+                            $('#manualAssignmentDiv').modal('show');
+                        }
+                    },
+                    error: function (ex) {
+                        alert(ex);
+                    }
+                });
+            }
+            else {
+                Lobibox.notify('warning', {
+	            continueDelayOnInactiveTab: true,
+	            msg: "Call assigned to different Manager."
+	        });
+		  return false;
+            }
+        }
+
+$('#manualAssign').click(function ()
+        {
+    creId = $('#manualCREId').val();
+    var assignId = $('#assggnedId').val();
+    var custmerId = $('#txtcustId').val();
+    var vehicleId = $('#txtvehicleId').val();
+    if (creId == "0") {
+        Lobibox.notify('warning', {
+            continueDelayOnInactiveTab: true,
+            msg: "Please Select CRE."
+        });
+        return false;
+    }
+                $.ajax({
+                    type: 'POST',
+                    url: siteRoot+"/Customer/assignCallManually",
+                    datatype: 'json',
+                    data: { custmerId: custmerId, vehicleId: vehicleId,creId: creId, assignId: assignId},
+                                cache: false,
+                    success: function (res) {
+                        if (res.success == true)
+                        {
+                            Lobibox.notify('success', {
+			                        continueDelayOnInactiveTab: true,
+			                        msg: 'Assignment Done'
+                                });
+                        }
+                        if (res.success == false) {
+
+	        		            Lobibox.notify('success', {
+			                        continueDelayOnInactiveTab: true,
+                                    msg: res.exception
+                                });
+	        	            }
+
+                    },
+                    error: function (ex) {
+                        alert(ex);
+                    }
+                });
+});
+
+    </script>
+}

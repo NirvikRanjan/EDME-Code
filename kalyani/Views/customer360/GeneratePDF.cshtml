@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIBL</title>
+    <style>
+        body {
+            /*font-family: Arial, sans-serif;*/
+            font-family: 'Century Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            background: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; /* Positions the items to the left and right */
+            align-items: center; /* Vertically center the items */
+            padding: 10px 20px;
+            /*background-color: #002d72;*/
+            /*background-color: #f4f4f4;*/
+            color: #fff;
+            text-align:center;
+        }
+
+        .header-text {
+            /*flex-grow: 1;*/
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            /*top: 125px;*/
+            /*top: 90px;*/
+
+        }
+
+        .header-logo img {
+            height: 90px;
+            max-width: 100%;
+            object-fit: contain;
+            position:relative;
+            bottom:30px;
+            /*margin: 0 auto;*/
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            border-top: 2px solid #ddd;
+/*            padding-top: 10px;
+            padding: 10px 10px; */
+            background-color: red;
+        }
+
+        .table-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .important-note {
+            font-size: 11px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .note {
+            font-size: 11px;
+            color: #555;
+        }
+
+        /* Additional Styles for Sections */
+        .section-title {
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 0;
+            background-color: #e6f0ff;
+        }
+
+        .section-content {
+            padding: 10px 0;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-text" style="color:#000">
+                INSURANCE QUOTE
+            </div>
+            <div class="header-logo">
+                @*<img src="~/public/img/tagicLogo.png" alt="EIBL Logo">*@
+            </div>
+        </div>
+
+        <div style="margin-top:30px;">
+            <strong>Customer Name</strong><br />@(ViewData.Model.cust.customerName != null ? ViewData.Model.cust.customerName : "-")
+        </div>
+
+        <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%; margin-top: 30px;">
+            <tr>
+                <th colspan="9" style="text-align: center; font-weight: bold; padding: 8px; font-size: 18px;">Vehicle Details</th>
+            </tr>
+            <tr>                
+                <td colspan="3"><strong>Make</strong><br>@(ViewData.Model.vehi.Make != null ? ViewData.Model.vehi.Make : "-")</td>
+                <td colspan="2"><strong>Model</strong><br>@(ViewData.Model.vehi.model != null ? ViewData.Model.vehi.model : "-")</td>
+                <td colspan="3"><strong>Variant</strong><br>@(ViewData.Model.vehi.variant != null ? ViewData.Model.vehi.variant : "-")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Cubic Capacity/KVW</strong><br>@(ViewData.Model.vehi.Cubic_capacity != null ? ViewData.Model.vehi.Cubic_capacity : "-")</td>
+                <td colspan="2"><strong>Chassis No.</strong><br>@(ViewData.Model.vehi.chassisNo != null ? ViewData.Model.vehi.chassisNo : "-")</td>
+                <td colspan="3"><strong>Seating Capacity</strong><br>@(ViewData.Model.vehi.seating != null ? ViewData.Model.vehi.seating : "-")</td>
+                @*<td><strong>Fuel Type</strong><br>@(ViewData.Model.vehi.fuelType != null ? ViewData.Model.vehi.fuelType : "-")</td>*@
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Previous NCB</strong><br>@(ViewData.Model.vehi.Prev_Ncb_per != null ? ViewData.Model.vehi.Prev_Ncb_per : "-")</td>
+                <td colspan="2"><strong>Invoice Date</strong><br>@(ViewData.Model.vehi.invDate != null ? ViewData.Model.vehi.invDate : "-")</td>
+                <td colspan="3"><strong>Year of Registration/Manufacturing</strong><br>@(ViewData.Model.vehi.yearofmanufacture != null ? ViewData.Model.vehi.yearofmanufacture : "-")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Registration City</strong><br>@(ViewData.Model.vehi.city != null ? ViewData.Model.vehi.city : "-")</td>
+                <td colspan="2"><strong>Claim in Previous Policy</strong><br>@(ViewData.Model.vehi.Previous_Policy_Insurer != null ? ViewData.Model.vehi.Previous_Policy_Insurer : "-")</td>
+                <td colspan="3"><strong>OD Expiry Date</strong><br>@(ViewData.Model.vehi.OD_TENURE != null ? ViewData.Model.vehi.OD_TENURE : "-")</td>
+                
+            </tr>
+            <tr>                
+                <td colspan="4"><strong>Vehicle Registration Number</strong><br>@(ViewData.Model.vehi.vehicleRegNo != null ? ViewData.Model.vehi.vehicleRegNo : "-")</td>
+                <td colspan="5"><strong>TP Expiry Date</strong><br>@(ViewData.Model.vehi.TP_End_Date != null ? ViewData.Model.vehi.TP_End_Date : "-")</td>
+                @*<td colspan="3"><strong>Vehicle Age</strong><br>@(ViewData.Model.vehi.age_of_vehicle != null ? ViewData.Model.vehi.age_of_vehicle : "-")</td>*@
+            </tr>
+        </table>        
+
+        <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%; margin-top: 30px;">            
+            <tr>
+                <th colspan="6" style="text-align: center; font-weight: bold; padding: 8px; font-size: 18px;">PREMIUM BREAK UP</th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <strong>Date</strong><br>@(ViewData.Model.quotationData.QuoteDate != null ? ViewData.Model.quotationData.QuoteDate.ToString("yyyy-MM-dd") : "-")
+                </td>
+                <td colspan="2"><strong>Insurance Company</strong><br>@(ViewData.Model.quotationData.InsuranceCompany != null ? ViewData.Model.quotationData.InsuranceCompany : "-")</td>
+                <td colspan="3"><strong>IDV</strong><br>@(ViewData.Model.quotationData.BasicIDV != null ? ViewData.Model.quotationData.BasicIDV : "-")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Vehicle Basic Premium</strong><br>@(ViewData.Model.quotationData.Vehicle_Basic_Premium != null ? ViewData.Model.quotationData.Vehicle_Basic_Premium : "-")</td>
+                <td colspan="2">
+                    <strong>Non-Elec. Accessories + Elec. Accessories (IMT-24)</strong><br>
+                    @(ViewData.Model.quotationData.Non_Electric_Acc != null ? ViewData.Model.quotationData.Non_Electric_Acc : 0
+    + ViewData.Model.quotationData.Electric_Acc != null ? ViewData.Model.quotationData.Electric_Acc : 0)
+                </td>
+                <td colspan="3"><strong>NCB</strong><br>@(ViewData.Model.quotationData.NCBValue != null ? ViewData.Model.quotationData.NCBValue : "-")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Sub Total(Basic Premium)</strong><br>@(ViewData.Model.quotationData.Basic != null ? ViewData.Model.quotationData.Basic : "-")</td>
+                @*<td><strong>Fuel Type</strong><br>@(ViewData.Model.quotationData.fuelType != null ? ViewData.Model.quotationData.fuelType : "-")</td>*@
+                <td colspan="2"><strong>Add On (NIL DEP,RTI)</strong><br>@(ViewData.Model.quotationData.ADDONTOTAL != null ? ViewData.Model.quotationData.ADDONTOTAL : "-")</td>
+                <td colspan="3"><strong>Sub Total-Addition</strong><br>@(ViewData.Model.quotationData.Sub_Total_Addition != null ? ViewData.Model.quotationData.Sub_Total_Addition : "-")</td>
+            </tr>
+            <tr>
+                <td colspan="3"><strong>Basic Third-Party Liability (including TPPD)</strong><br>@(ViewData.Model.quotationData.Basic_Third_Party_Liability != null ? ViewData.Model.quotationData.Basic_Third_Party_Liability : "-")</td>
+                <td colspan="2"><strong>PA Cover For Owner Driver Of Rs. 1,500,000</strong><br>@(ViewData.Model.quotationData.PA_Cover_Owner_Driver != null ? ViewData.Model.quotationData.PA_Cover_Owner_Driver : "-")</td>
+                <td colspan="3"><strong>Net Liability Premium (B)</strong><br>@(ViewData.Model.quotationData.Liability != null ? ViewData.Model.quotationData.Liability : "-")</td>
+
+            </tr>
+            <tr>
+                <td colspan="6"><strong>Total Premium (A+B)</strong><br>@(ViewData.Model.quotationData.Gross != null ? ViewData.Model.quotationData.Gross : "-")</td>
+                @*<td colspan="3"><strong>Vehicle Age</strong><br>@(ViewData.Model.vehi.age_of_vehicle != null ? ViewData.Model.vehi.age_of_vehicle : "-")</td>*@
+            </tr>
+        </table>
+
+        <table border="1" cellspacing="0" cellpadding="10" style="border-collapse: collapse; width: 100%; margin-top:30px;">     
+            <tr>
+                <th colspan="6" style="font-weight: bold; padding: 8px; font-size: 14px;">Note: Above mentioned premium is subject to Positive Vehicle Inspection, If required as per Underwriting Guidelines</th>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Important Note:</strong> <br />
+                    Insurance is subject matter of the solicitation. For more details on benefits/exclusions, risk factors, terms and conditions please
+                    refer policy wordings/sales brochure carefully before concluding a sale. You are requested to visit our website www.edmeinsurance.com
+                    for policy wording. <br /> <br />
+                    This Quote will remain valid only for today (up to midnight 11:59:59 PM).This is a system generated quote and does not require
+                    signature. <br /> <br />
+                    Premium and Risk period may change at the time of issuance of Policy. <br /> <br />
+                    Quotation may vary upon final review <br />
+                </td>                
+            </tr>
+        </table>
+
+    <div class="footer" style="text-align: center; font-weight: bold; font-size: 15px; margin-top: 30px;">
+        @*EDME INSURANCE BROKERS LTD. (FORMERLY KNOWN AS ADITYA BIRLA INSURANCE BROKERS LTD.) <br />
+        Registered Office: 2nd Floor, Privillion, East Wing, Sarkhej - Gandhinagar Highway, Vikram Nagar, Bodakdev,<br />
+        Ahmedabad, Gujarat 380054. IRDAI License Number: 146 | Composite Broker | License Valid Till: 9th April, 2027 | CIN: <br />
+        U99999GJ2001PLC062239 Corporate Office: VIOS Tower, 6th Floor, Off Eastern Express Highway, Sewri - Chembur <br />
+        Rd, Mumbai - 400037 Telephone: +91 22 4356 8585/1800 270 7000 | Website: www.edmeinsurance.com In case of<br />
+        any queries/complaints/grievances, please write to us at clientfeedback@edmeinsurance.com <br />*@
+    </div>
+    </div>
+</body>
+</html>

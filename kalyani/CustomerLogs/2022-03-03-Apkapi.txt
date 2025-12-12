@@ -1,0 +1,130 @@
+2022-03-03 00:06:37.7928|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 12:06:37 am
+2022-03-03 00:06:37.8155|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 12:06:37 am
+2022-03-03 08:56:17.4019|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-03 08:56:17.6280|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-03 08:56:19.6603|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 8:56:19 am
+2022-03-03 08:56:19.6603|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 8:56:19 am
+2022-03-03 09:04:17.6474|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:04:17 am
+2022-03-03 09:04:17.6474|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:04:17 am
+2022-03-03 09:12:17.6464|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:12:17 am
+2022-03-03 09:12:17.6624|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:12:17 am
+2022-03-03 09:20:17.6496|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:20:17 am
+2022-03-03 09:20:17.6496|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:20:17 am
+2022-03-03 09:28:17.6547|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:28:17 am
+2022-03-03 09:28:17.6727|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:28:17 am
+2022-03-03 09:36:17.6436|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:36:17 am
+2022-03-03 09:36:17.6466|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:36:17 am
+2022-03-03 09:44:17.6473|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:44:17 am
+2022-03-03 09:44:17.6473|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:44:17 am
+2022-03-03 09:52:17.6399|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 9:52:17 am
+2022-03-03 09:52:17.7039|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 9:52:17 am
+2022-03-03 10:00:17.6344|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:00:17 am
+2022-03-03 10:00:17.6484|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:00:17 am
+2022-03-03 10:08:17.6402|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:08:17 am
+2022-03-03 10:08:17.6639|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:08:17 am
+2022-03-03 10:16:26.8185|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-03 10:16:27.0497|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-03 10:16:27.1356|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:16:27 am
+2022-03-03 10:16:27.1466|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:16:27 am
+2022-03-03 10:24:27.0539|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:24:27 am
+2022-03-03 10:24:27.0809|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:24:27 am
+2022-03-03 10:30:26.6315|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-03 10:30:26.8554|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-03 10:30:26.9783|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:30:26 am
+2022-03-03 10:30:26.9783|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:30:26 am
+2022-03-03 10:38:26.8646|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:38:26 am
+2022-03-03 10:38:26.8646|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:38:26 am
+2022-03-03 10:44:09.8042|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-03 10:44:09.9041|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-03 10:44:09.9661|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:44:09 am
+2022-03-03 10:44:09.9661|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:44:09 am
+2022-03-03 10:52:09.9209|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:52:09 am
+2022-03-03 10:52:09.9479|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:52:09 am
+2022-03-03 11:00:09.9195|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:00:09 am
+2022-03-03 11:00:09.9195|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:00:09 am
+2022-03-03 11:08:09.9199|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:08:09 am
+2022-03-03 11:08:09.9199|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:08:09 am
+2022-03-03 11:16:09.9171|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:16:09 am
+2022-03-03 11:16:09.9171|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:16:09 am
+2022-03-03 11:24:09.9133|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:24:09 am
+2022-03-03 11:24:09.9133|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:24:09 am
+2022-03-03 11:32:09.9232|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:32:09 am
+2022-03-03 11:32:09.9232|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:32:09 am
+2022-03-03 11:40:09.9279|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 11:40:09 am
+2022-03-03 11:40:09.9279|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 11:40:09 am
+2022-03-03 20:38:53.0078|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-03-03 20:38:53.3829|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-03-03 20:38:53.6045|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 8:38:53 pm
+2022-03-03 20:38:53.6045|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 8:38:53 pm
+2022-03-03 22:31:00.3506|INFO|apkRegLogger|
+ Android CallSynch Started at: 03-03-2022 10:31:00 pm
+2022-03-03 22:31:00.3829|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 03-03-2022 10:31:00 pm

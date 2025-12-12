@@ -1,0 +1,52 @@
+2023-04-28 09:20:08.1733|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-04-28 09:20:08.3962|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-04-28 09:20:09.2427|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:20:09 am
+2023-04-28 09:20:09.2427|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:20:09 am
+2023-04-28 09:28:08.4218|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:28:08 am
+2023-04-28 09:28:08.4218|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:28:08 am
+2023-04-28 09:36:08.4440|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:36:08 am
+2023-04-28 09:36:08.4520|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:36:08 am
+2023-04-28 09:41:40.8904|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-04-28 09:41:41.0633|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-04-28 09:41:41.5890|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:41:41 am
+2023-04-28 09:41:41.5890|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:41:41 am
+2023-04-28 09:45:30.7708|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-04-28 09:45:30.9278|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-04-28 09:45:31.0697|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:45:31 am
+2023-04-28 09:45:31.0697|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:45:31 am
+2023-04-28 09:54:13.2029|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:54:13 am
+2023-04-28 09:54:13.2029|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:54:13 am
+2023-04-28 09:54:53.0461|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2023-04-28 09:54:53.1890|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2023-04-28 09:54:53.2980|INFO|apkRegLogger|
+ Android CallSynch Started at: 28-04-2023 9:54:53 am
+2023-04-28 09:54:53.2980|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 28-04-2023 9:54:53 am

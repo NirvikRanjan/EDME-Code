@@ -1,0 +1,14 @@
+2021-10-06 11:46:18.8744|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 6/10/2021 11:46:18 am
+ CustId: 1558 VehId: 5663 User: barti1_cre
+2021-10-06 11:46:20.9008|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":101,"vehicleregno":"TEST00426","vehicleregdate":"2018-08-27T00:00:00","modelname":"TVS Motor Company","modelvarinat":"TVS SPECTRA EX","email":"0","mobile":"9000000426","salutation":"Mr   ","customername":"NITIN VINAYAK","middlename":"vcnbvc","lastname":null,"Address":"nbvcnbv","Address_Line_2":null,"cityname":"Amravati","cityid":1254,"pincode":"405465","insurancecompany":"Bharti AXA General Insurance","policynumber":"9005/10103462/12365/000","policyexpirydate":"2021-04-17","nomineename":"dsafdsa","nomineeage":34,"nomineerelationship":"Niece","nomineerelationshipid":10,"renewwaltype":"Package","madeexistingclaim":null,"Basic_OD_Tenure":349,"Basic_TP_Tenure":752,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":330,"Zero_Dep_Tenure":0,"RTI_Tenure":0,"Basic_IDV_Tenure":22034,"NCB_Per_Tenure":0,"NCB_Value_Tenure":0,"GST_Per":18,"grosspremium":1431.0,"totalpremium":1688.58,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":1558,"vehicleid":5663,"disposeddate":"2021-10-06","disposedtime":"11:46 am","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"N","additionalcoverRTI":"N","riskstartdate":null,"state":null,"stateid":21,"totalgstamt":257.58,"creID":1258,"creName":"barti1_cre","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":4357,"herodealerId":11,"ResponseCode":null,"ResponseMessage":null}
+2021-10-06 11:46:21.8971|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"Package","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":0,"cpa_opted":"Y","zd_opted":"N","rti_opted":"N","risk_start_date":"2021-10-21","policy_expiry_date":"2021-04-17","first_name":"NITIN VINAYAK","middle_name":"vcnbvc","last_name":null,"email":"0","mobile_no":"9000000426","address1":"nbvcnbv","address2":null,"address3":null,"city":1254,"state":21,"pin":"405465","nominee_name":"dsafdsa","nominee_age":34,"nominee_relationship":10,"vehRegDate":"2018-08-27T00:00:00","vehReg1":"TE","vehReg2":"ST","vehReg3":"00","vehReg4":"426","total_premium_collected":1689,"pre_Policy_No":"9005/10103462/12365/000","GrossPremiumWoGST":1431.0,"TotalGSTAmount":257.58,"GSTPercentage":18}
+2021-10-06 11:46:23.1316|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 6/10/2021 11:46:23 am

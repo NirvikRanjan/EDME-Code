@@ -1,0 +1,462 @@
+﻿
+@{
+    ViewBag.Title = "assignmentSummary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    ViewBag.Title = "policyAssignment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+        <div class="col-lg-12" id="popupdispDiv" style="display: block">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <b>Data Assignment Summary</b>
+                    <button style="float:right;color:#000000;position:relative; bottom:7px;" data-toggle="modal" data-target="#assignmntsumaryModal" class="btn btn-info"><i class="fa fa-download"></i> Download</button>
+
+                </div>
+                @if (Session["UserRole"].ToString() == "Admin")
+                {
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label id='expiryFromDate'>Expiry From Date :@*<sup class="text-danger">*</sup>*@ </label>
+                                        @*<input type="text" class="filter form-control datepickerprev60days" placeholder="Enter From Date" data-column-index="1" onchange="getfilters(this);" id="expfromuploaadDate" name="expfromuploaadDate" readonly>*@
+                                        <input type="text"
+                                               class="filter form-control datepickerprev60days"
+                                               placeholder="Enter From Date"
+                                               data-column-index="1"
+                                               onchange="updateToDateRestrictions('expfromuploaadDate');"
+                                               id="expfromuploaadDate"
+                                               name="expfromuploaadDate"
+                                               readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label id='expiryToDate'>Expiry To Date :@*<sup class="text-danger">*</sup>*@ </label>
+                                       @* <input type="text" class="filter form-control datepickerToDate" placeholder="Enter To Date" data-column-index="1" onchange="getfilters(this);" id="exptouploaadDate" name="exptouploaadDate" readonly>*@
+                                    <input type="text"
+                                           class="filter form-control datepickerSecond"
+                                           placeholder="Enter To Date"
+                                           data-column-index="2"
+                                           onchange="getfilters(this);"
+                                           id="exptouploaadDate"
+                                           name="exptouploaadDate"
+                                           readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Assigned Status :@*<sup class="text-danger">*</sup>*@ </label>
+                                        <select id="assignedStatus1" class="form-control">
+                                            <option value="Select">Select</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+
+                                    <button type="button" class="btn btn-md btn-success" onclick="downloadAssignmentsummary();" style="margin-top:25px; width:50%;">Show</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class=" panel-body">
+                    <div class="col-lg-12">
+                        <div class="row" id="selectAllDIv" style="display:block">
+                            <table id="tblassignmentsummary" class="table table-bordered " width="100%">
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                </div>
+
+<div class="modal fade" id="assignmntsumaryModal" role="dialog" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"   data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" align="center">Assignment Filters</h4>
+            </div>
+            <div class="modal-body" align="center">
+                <div class="row">
+                    <div class="col-md-5" id="expiryFromDateDiv">
+                        <label>Expiry From Date: </label>
+                        @*<input type="text" class="filter form-control datepickerprev60days" placeholder="Enter From Date" data-column-index="1" onchange="getfilters(this);" id="txtfromuploaadDate" name="txtfromuploaadDate" readonly>*@
+                        <input type="text"
+                               class="filter form-control datepickerprev60days"
+                               placeholder="Enter From Date"
+                               data-column-index="3"
+                               onchange="updateToDateRestrictions('txtfromuploaadDate');"
+                               id="txtfromuploaadDate"
+                               name="txtfromuploaadDate"
+                               readonly>
+                    </div>
+                    <div class="col-md-5" id="expiryFromDateDiv">
+                        <label>Expiry To Date: </label>
+                        @* <input type="text" class="filter form-control datepicker60days" placeholder="Enter To Date" data-column-index="1" onchange="getfilters(this);" id="txttouploaadDate" name="txttouploaadDate" readonly>*@
+                        <input type="text"
+                               class="filter form-control datepickerSecond"
+                               placeholder="Enter To Date"
+                               data-column-index="4"
+                               onchange="getfilters(this);"
+                               id="txttouploaadDate"
+                               name="txttouploaadDate"
+                               readonly>
+                    </div>
+                </div>
+
+                <div class="col-md-5" id="assignedStatusDiv">
+                    <label>Assigned Status: </label>
+                    <select class="form-control multiSelectClass" id="assignedStatus" name="assignedStatus">
+                        <option value="">--Select--</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" onclick="callDownloadAssignmentSummary()" class="btn btn-info">Downloads</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="clearControl();">Close</button>
+                </div>
+            </div>
+            </div>
+          
+        </div>
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".datepicker60days").datepicker({
+                changeMonth: true,
+                changeYear: false,
+                dateFormat: 'yy-mm-dd',
+                maxDate: "+60d",
+                minDate: 0,
+            });
+
+            viewAssignmentSummary();
+
+
+            $(function () {
+                // Initialize "From Date" datepicker for multiple instances
+                $(".datepickerprev60days").each(function () {
+                    $(this).datepicker({
+                        changeMonth: true,
+                        changeYear: false,
+                        dateFormat: 'yy-mm-dd',
+                        minDate: "-60d", // 60 days ago from today
+                        maxDate: "+60d", // 60 days in the future from today
+                        onSelect: function (selectedDate) {
+                            var selectedDateObj = $.datepicker.parseDate('yy-mm-dd', selectedDate);
+
+                            // Calculate the maximum "To Date" as 60 days from the selected "From Date"
+                            var maxToDate = new Date(selectedDateObj);
+                            maxToDate.setDate(maxToDate.getDate() + 60);
+
+                            // Find the corresponding "To Date" input (assuming it's the next sibling element)
+                            var toDateInputId = $(this).attr('id').replace('from', 'to'); // e.g., from "txtfromuploadDate1" to "txttouploadDate1"
+                            $("#" + toDateInputId).datepicker("option", {
+                                minDate: selectedDate,
+                                maxDate: maxToDate
+                            }).datepicker("setDate", selectedDate);
+                        }
+                    });
+                });
+
+                // Initialize "To Date" datepicker for multiple instances
+                $(".datepickerSecond").datepicker({
+                    changeMonth: true,
+                    changeYear: false,
+                    dateFormat: 'yy-mm-dd'
+                });
+            });
+
+
+
+            $(".datepickerToDate").datepicker({
+                changeMonth: true,
+                changeYear: false,
+                dateFormat: 'yy-mm-dd',
+                minDate: 0, // Default minDate is today
+                maxDate: "+60d" // Default maxDate is 60 days from today (before updating dynamically)
+            });
+        });
+
+       
+        function updateToDateRestrictions(date) {
+            // Get the selected "From Date" value
+            var fromDate = $('#' + date).val();
+
+            if (fromDate) {
+                // Try parsing the selected "From Date" into a date object
+                var fromDateObj = $.datepicker.parseDate('yy-mm-dd', fromDate);
+
+                if (fromDateObj) {
+                    // Set the minDate for To Date to be the selected "From Date"
+                    var minToDate = new Date(fromDateObj);
+
+                    // Set the maxDate for To Date to be 60 days after the selected "From Date"
+                    var maxToDate = new Date(fromDateObj);
+                    maxToDate.setDate(fromDateObj.getDate() + 60); // 60 days after
+
+                    // Update the To Date datepicker with dynamic minDate and maxDate
+                    $(".datepickerToDate").datepicker("option", "minDate", minToDate);
+                    $(".datepickerToDate").datepicker("option", "maxDate", maxToDate);
+                } else {
+                    console.error("Invalid 'From Date' format.");
+                }
+            } else {
+                // If From Date is not selected, reset the To Date restrictions to default (0 to 60 days)
+                $(".datepickerToDate").datepicker("option", "minDate", 0);
+                $(".datepickerToDate").datepicker("option", "maxDate", "+60d");
+            }
+        }
+
+
+
+        function viewAssignmentSummary() {
+            $('#mainLoader').css({ 'display': 'block' });
+            assignmentFilters = { frmdate: "", todate: "" }
+
+            $.ajax({
+                url: siteRoot + "/policyAssignment/viewAssignmentSummary/",
+                type: 'post',
+                dataType: 'json',
+                data: { assignmentFilters: JSON.stringify(assignmentFilters) },
+                success: function (res) {
+                    if (res.success == true) {
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                        var jsonrecords = JSON.parse(res.data);
+                        var my_columns = [];
+                        if (jsonrecords.length > 0) {
+                            $.each(jsonrecords[0], function (key, value) {
+                                var my_item = {};
+                                my_item.data = key;
+                                my_item.title = key;
+                                my_columns.push(my_item);
+                            });
+                            $('#tblassignmentsummary').DataTable({
+                                data: jsonrecords,
+                                "columns": my_columns,
+                                "paging": true,
+                                "searching": false,
+                                "pageLength": 100,
+                                "scrollX": true,
+                                "scrollY": "300",
+                                "initComplete": function (settings, exception) {
+
+                                }
+                            });
+                        }
+                        else {
+                            var dataset = [{ "Result": "No Data Uploaded from Last 3 Days" }];
+
+                            var my_columns = [];
+                            $.each(dataset[0], function (key, value) {
+                                var my_item = {};
+                                my_item.data = key;
+                                my_item.title = key;
+                                my_columns.push(my_item);
+                            });
+
+                            $('#tblassignmentsummary').DataTable({
+                                data: dataset,
+                                "columns": my_columns,
+                                "paging": false,
+                                "searching": false,
+                                "bLengthChange": false,
+                                "bInfo": false,
+                                "order": [[0, "asc"]],
+                                "pageLength": 50,
+                                "initComplete": function (settings, exception) {
+
+                                }
+                            });
+
+
+                            $('#tblException').text(records.exception);
+                        }
+
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.message
+                        });
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    }
+                }
+            });
+
+        }
+
+
+      
+        function downloadAssignmentsummary() {
+            var fromDate = $('#txtfromuploaadDate').val();
+            var toDate = $('#txttouploaadDate').val();
+            var status = $('#assignedStatus').val();
+
+            var expFromDate = $('#expfromuploaadDate').val();
+            var expToDate = $('#exptouploaadDate').val();
+            var expStatus = $('#assignedStatus1').val();
+
+            if (fromDate != "" || toDate != "" || status != "") {
+                if (fromDate == "" || toDate == "") {
+                    Lobibox.notify('warning', {
+                        msg: 'Please Enter From and Todate'
+                    });
+                    return false;
+                }
+                return $.ajax({
+                    url: siteRoot + "/policyAssignment/downloadAssignmentReport/",
+                    type: 'post',
+                    data: { fromDate: fromDate, toDate: toDate, status: status }
+                });
+            }
+
+            if (expFromDate != "" || expToDate != "" || expStatus != "") {
+                $.ajax({
+                    url: siteRoot + "/policyAssignment/downloadAssignmentReport/",
+                    type: 'post',
+                    dataType: 'json',
+                    data: { expFromDate, expToDate, expStatus },
+                    success: function (res) {
+                        if (res.success == true) {
+                            $('#mainLoader').css({ 'display': 'none' });
+                            if ($.fn.dataTable.isDataTable('#tblassignmentsummary')) {
+                                $('#tblassignmentsummary').DataTable().clear().destroy(); // Destroy the existing DataTable
+                            }
+                            // Clear existing table content
+                            $('#tblassignmentsummary').empty();
+                            var jsonrecords = JSON.parse(res.data);
+                            var my_columns = [];
+                            if (jsonrecords.length > 0) {
+                                $.each(jsonrecords[0], function (key, value) {
+                                    var my_item = {};
+                                    my_item.data = key;
+                                    my_item.title = key;
+                                    my_columns.push(my_item);
+                                });
+                                $('#tblassignmentsummary').DataTable({
+                                    data: jsonrecords,
+                                    "columns": my_columns,
+                                    "paging": true,
+                                    "searching": false,
+                                    "pageLength": 100,
+                                    "scrollX": true,
+                                    "scrollY": "300",
+                                    "initComplete": function (settings, exception) {
+
+                                    }
+                                });
+                            }
+                            else {
+                                var dataset = [{ "Result": "No Data Uploaded from Last 3 Days" }];
+
+                                var my_columns = [];
+                                $.each(dataset[0], function (key, value) {
+                                    var my_item = {};
+                                    my_item.data = key;
+                                    my_item.title = key;
+                                    my_columns.push(my_item);
+                                });
+
+                                $('#tblassignmentsummary').DataTable({
+                                    data: dataset,
+                                    "columns": my_columns,
+                                    "paging": false,
+                                    "searching": false,
+                                    "bLengthChange": false,
+                                    "bInfo": false,
+                                    "order": [[0, "asc"]],
+                                    "pageLength": 50,
+                                    "initComplete": function (settings, exception) {
+
+                                    }
+                                });
+
+
+                                $('#tblException').text(records.exception);
+                            }
+
+                        }
+                        else if (res.success == false) {
+                            Lobibox.notify('warning', { msg: res.error || res.message || 'An error occurred' });
+                            $('#mainLoader').css({ 'display': 'none' });
+                        }
+
+                    }
+                });
+            }
+
+        }
+
+
+        function callDownloadAssignmentSummary() {
+            $('#mainLoader').css({ 'display': 'block' });
+
+            $.when(downloadAssignmentsummary()).then
+                (function successHandler(res) {
+                    console.log(res);
+                    $('#assignedStatus').val('');
+                    if (res.success == true) {
+                        clearControl();
+                        window.location.href = siteRoot + "/policyAssignment/DownloadALL/";
+
+                        $('#mainLoader').css({ 'display': 'none' });
+                    }
+                    else if (res.success == false) {
+                        Lobibox.notify('warning', {
+                            msg: res.error
+                        });
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                        return false;
+                    }
+                    else {
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    }
+                },
+                    function errorHandler(res) {
+                        console.log(err);
+                        $('#mainLoader').css({ 'display': 'none' });
+
+                    })
+        }
+        function clearControl()
+            {
+            $('#txtfromuploaadDate').val('');
+            $('#txttouploaadDate').val('');
+        }
+
+
+
+    </script>
+
+}
+
+
+

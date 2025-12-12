@@ -1,0 +1,812 @@
+﻿
+@{
+    ViewBag.Title = "liveReports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/public/liveReportCSS/custom.css" rel="stylesheet" />
+
+<style>
+
+
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .dataTables_filter {
+            float: left;
+        }
+    }
+
+    .table thead {
+        background-color: lightskyblue;
+    }
+
+    @@media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        .dataTables_scroll {
+            overflow-x: hidden !important;
+            overflow-y: scroll !important;
+        }
+
+        .table {
+            width: 350px !important;
+        }
+
+
+        .dataTables_scrollBody {
+            overflow-x: hidden !important;
+            overflow-y: scroll !important;
+            margin-left: 18px !important;
+        }
+
+
+        .dataTables_scrollHeadInner {
+            width: 350px !important
+        }
+
+        .tbodycls {
+            text-align: left !important;
+        }
+
+        .dashImg1 {
+            width: 30px;
+        }
+
+        .dashImg2 {
+            width: 20px;
+        }
+
+        .scroll {
+            width: 20px;
+            height: 12px;
+            overflow: auto;
+            margin: 0 10px;
+        }
+
+        .scroll4::-webkit-scrollbar {
+            width: 10px;
+            height: 6px;
+        }
+
+        .scroll4::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 20px;
+        }
+
+        .scroll4::-webkit-scrollbar-track {
+            background: #ddd;
+            border-radius: 20px;
+        }
+
+        .panel-heading {
+            cursor: pointer;
+        }
+
+        div#container {
+            height: 400px;
+            width: 400px;
+            border: 2px solid #000;
+            overflow: scroll;
+        }
+
+        .accordion-toggle:after {
+            font-family: 'FontAwesome';
+            content: "\f077";
+            float: right;
+            color: inherit;
+        }
+
+        .panel-heading.collapsed .accordion-toggle:after {
+            content: "\f078";
+        }
+
+        .box-body {
+            padding: 0px;
+        }
+
+        hr {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border: 0;
+        }
+
+        #slideOut {
+            position: fixed;
+            width: 230px;
+            height: 800px;
+            top: 147px;
+            right: -230px;
+            /* Animation  */
+            transition-property: all;
+            transition-duration: .5s;
+            transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+            z-index: 999;
+        }
+        /* Display slideOut */
+
+        .showSlideOut {
+            right: 0px !important;
+        }
+        /* Tab */
+
+        .slideOutTab {
+            margin-top: 50px;
+            position: absolute;
+            left: -40px;
+            height: 200px;
+            width: 40px;
+            -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            background: #F2AB34;
+            border-radius: 15px 0px 0px 15px
+        }
+
+            .slideOutTab div {
+                text-align: center;
+                position: relative;
+                right: 70px;
+                top: 90px;
+                background: #F2AB34;
+                width: 180px;
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                -o-transform: rotate(270deg);
+                writing-mode: lr-tb;
+            }
+
+        .modal-content {
+            height: 325px;
+            background-color: white;
+        }
+
+        .modal-body {
+            height: 400px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        .dbbgcolor1 {
+            background-color: #03a9f4;
+        }
+
+        .dbbgcolor2 {
+            background-color: #ffc107;
+        }
+
+        .dbbgcolor3 {
+            background-color: #d559ea;
+        }
+
+        .dbbgcolor4 {
+            background-color: #ff5652;
+        }
+
+        .dbbgcolor5 {
+            background-color: #69afff;
+        }
+
+        .dbbgcolor6 {
+            background-color: #4edec1;
+        }
+
+        .dbbgcolor7 {
+            background-color: #ffc107;
+        }
+
+        .dbbgcolor8 {
+            background-color: #d559ea;
+        }
+
+        .dbbgcolor9 {
+            background-color: #ff5652;
+        }
+
+        ul.multiselect-container.dropdown-menu {
+            height: 121px;
+            overflow: auto;
+        }
+
+        .tile-stats span {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .boxes {
+            margin: 6px;
+        }
+
+        .x_title h2 {
+            float: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        /*.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+                padding: 3px;
+                line-height: 1;
+                vertical-align: top;
+                border-top: 1px solid #ddd;
+                color: #000 !important;
+                font-size: 13px;
+                background-color: #fff;
+            }
+
+            .dataTables_length,
+            .dataTables_filter,
+            .dataTables_info {
+                font-size: 12px;
+            }
+    */
+
+
+        .btn {
+            display: inline-block;
+            /* padding: 0px 4px;  */
+            margin-bottom: 0;
+            font-size: 12px;
+        }
+
+        .nav-tabs > li > a:hover {
+            border-color: #b14b4b #b93131 #b33;
+            color: #000;
+        }
+
+        .html5buttons {
+            display: none;
+        }
+    }
+</style>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Live Reports
+        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#myModal1"><i class="fa fa-filter" aria-hidden="true">Filter</i></button>
+        <button class="btn btn-danger btn-xs pull-right" type="submit" onclick="ReloadInsuranceData();  ">
+            <i class="fa fa-refresh" aria-hidden="true">Refresh</i>
+
+        </button>
+    </div>
+    <div class="panel-body" style=" background-color: #ece3e3;">
+        <br />
+
+        <div class="row" id="NationalwiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <b>National Wise</b>
+                        <ul class="nav navbar-right panel_toolbox">
+
+                            <li><a id="tblnationalwise_xl"></a></li>
+                            <li>
+                                <button type="button" class="btn btn-primary btn-xs pull-right" id="tblnationalwise_button" data-toggle="collapse" data-target="#tblnationalwiseDiv" onclick="calllivereportProcedure(1,'tblnationalwise');">Show</button>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content collapse" id="tblnationalwiseDiv">
+                        <div class="">
+                            <div>
+                                <img id="tblnationalwise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                            </div>
+                            <table id="tblnationalwise" class="table table-striped  table-bordered  table-hover" style="width:100%;margin:0px;">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="ZonewiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                Zone Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tblzonewise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tblzonewise_button" data-toggle="collapse" data-target="#tblzonewiseDiv" onclick="calllivereportProcedure(2,'tblzonewise');">Show</button>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tblzonewiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tblzonewise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tblzonewise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="StatewiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b id='CallScoreCardlivetable'>
+                                State Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tblstatewise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tblstatewise_button" data-toggle="collapse" data-target="#tblstatewiseDiv" onclick="calllivereportProcedure(3,'tblstatewise');">Show</button>
+
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tblstatewiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tblstatewise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tblstatewise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="CitywiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                City Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tblcitywise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tblcitywise_button" data-toggle="collapse" data-target="#tblcitywiseDiv" onclick="calllivereportProcedure(4,'tblcitywise');">Show</button>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tblcitywiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tblcitywise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tblcitywise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div>
+
+        <div class="row">   -->
+
+        </div>
+
+        <div class="row" id="DealerwiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                Dealer Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tbldealerwise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tbldealerwise_button" data-toggle="collapse" data-target="#tbldealerwiseDiv" onclick="calllivereportProcedure(5,'tbldealerwise');">Show</button>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                     
+                        <div class="x_content collapse" id="tbldealerwiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tbldealerwise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tbldealerwise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="CampaignwiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                Campaign Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tbcampaignwise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tbcampaignwise_button" data-toggle="collapse" data-target="#tbcampaignwiseDiv" onclick="calllivereportProcedure(6,'tbcampaignwise');">Show</button>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tbcampaignwiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tbcampaignwise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tbcampaignwise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="PolicytypewiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                Policy Type Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tblpolicytypewise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tblpolicytypewise_button" data-toggle="collapse" data-target="#tblpolicytypewiseDiv" onclick="calllivereportProcedure(7,'tblpolicytypewise');">Show</button>
+
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tblpolicytypewiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tblpolicytypewise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tblpolicytypewise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="CREwiseDiv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <b>
+                                CRE Wise
+                            </b>
+                            <ul class="nav navbar-right panel_toolbox">
+
+                                <li>
+                                    <a id="tblcrewise_xl"></a>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" id="tblcrewise_button" data-toggle="collapse" data-target="#tblcrewiseDiv" onclick="calllivereportProcedure(8,'tblcrewise');">Show</button>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content collapse" id="tblcrewiseDiv">
+                            <div class="">
+                                <div>
+                                    <img id="tblcrewise_Spinner" style=" display: block; margin-left: auto; margin-right: auto; width: 20%;" src="~/public/img/fe.gif" />
+                                </div>
+                                <table id="tblcrewise" class="table table-striped table-bordered table-hover " style="width:100%;margin:0px;">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <span class="code" id="tblException" style="font-size:11pt;font-weight:bold;color:red;"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="myModal1" role="dialog" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header" style="text-align:center;background-color: #106A86;color: #fff;">
+                <button type="button" class="close" data-dismiss="modal" style="opacity:2;"><img src="~/public/images/close1.png" alt="X"></button>
+                <h4 class="modal-title">Insurance Live Data Filter</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row col-lg-offset-0">
+                    <div id="dealerFiltersDiv">
+
+                        <div class="col-lg-4">
+                            <label>Zone</label>
+                            <div class="form-group">
+                                @Html.DropDownList("ddldealerzone", new SelectList(ViewBag.DealerZone, "DealerZone", "DealerZone"), new { @class = "form-control  selectpickerAll", @multiple = "multiple", @data_field = "DealerZone", @id = "ddldealerzone", @onchange = "getdealerDetails('state','ddldealerstate')" })
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <label>State</label>
+                            <div class="form-group">
+                                <select class="form-control selectpickerAll " multiple data-field="DealerState" id="ddldealerstate" onchange="getdealerDetails('city','ddldealercity')"></select>
+                                @*@Html.DropDownList("ddldealerstate", new SelectList(ViewBag.DealerState, "DealerState", "DealerState"), new { @class = "form-control selectpickerAll", @multiple = "multiple", @data_field = "DealerState", @id = "ddldealerstate" })*@
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>City</label>
+                            <div class="form-group">
+                                <select class="form-control selectpickerAll" multiple data-field="DealerCity" id="ddldealercity" onchange="getdealerDetails('dealername','ddldealername')"></select>
+                                @*@Html.DropDownList("ddldealercity", new SelectList(ViewBag.DealerCity, "DealerCity", "DealerCity"), new { @class = "form-control selectpickerAll", @multiple = "multiple", @data_field = "DealerCity", @id = "ddldealercity" })*@
+
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label>Dealer Name</label>
+                            <div class="form-group">
+                                <select class="form-control selectpickerAll" multiple data-field="DealerName" id="ddldealername"></select>
+                                @*@Html.DropDownList("ddldealername", new SelectList(ViewBag.DealerName, "DealerName", "DealerName"), new { @class = "form-control selectpickerAll", @multiple = "multiple", @data_field = "DealerName", @id = "ddldealername" })*@
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Campaign Name</label>
+                        <div class="form-group">
+                            @Html.DropDownList("ddlCampaignid", new SelectList(ViewBag.ddlcampaignList, "id", "campaignName"), new { @class = "form-control selectpickerAll", @multiple = "multiple", @data_field = "campaignName", @id = "ddlCampaignid" })
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label>Renewal Type</label>
+                        <div class="form-group">
+                            @Html.DropDownList("ddlrenewalType", new SelectList(ViewBag.renewalList, "id", "renewalTypeName"), new { @class = "form-control selectpickerAll", @multiple = "multiple", @data_field = "renewalTypeName", @id = "ddlrenewalType" })
+
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="modal-footer">
+                            <div class=" pull-right">
+                                <button class="btn btn-danger" onclick="return clearFilter(); ">Clear</button>
+                                <button class="btn btn-success" data-dismiss="modal" onclick="ReloadInsuranceData();">Filter</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+@section scripts
+        {
+    @Scripts.Render("~/bundles/liveRptJqury")
+
+    <script>
+        var role = '@Session["UserRole"].ToString()';
+           var dealers = @Html.Raw(ViewBag.dealerclassificationData);
+    function getdealerDetails(filter, ddlId) {
+        var filtereddealer;
+
+        if (filter == "state")
+        {
+            function filter(list, filter)
+            {
+                return $.grep(list, function (obj)
+                {
+                    return $.inArray(obj.DealerZone, filter) !== -1;
+                });
+            }
+            var ddldealerzone = $('#ddldealerzone option:selected').toArray().map(item => item.value);
+
+            var filtereddealer = filter(dealers, ddldealerzone);
+            let dropdownValue = [...new Set(filtereddealer.map(item => item.DealerState))];
+
+            $('#ddldealerstate').empty();
+
+            var dropdown = document.getElementById(ddlId);
+
+            for (var i = 0; i < dropdownValue.length; i++) {
+
+                dropdown[dropdown.length] = new Option(dropdownValue[i], dropdownValue[i]);
+            }
+            $('#' + ddlId).multiselect('rebuild');
+            $('#ddldealername').empty();
+            $('#ddldealercity').empty();
+            $('#ddldealername').multiselect('rebuild');
+            $('#ddldealercity').multiselect('rebuild');
+
+        }
+        if (filter == "city")
+        {
+            var ddldealerstate = $('#ddldealerstate option:selected').toArray().map(item => item.value);
+
+            function filter(list, filter)
+            {
+                return $.grep(list, function (obj)
+                {
+                    return $.inArray(obj.DealerState, filter) !== -1;
+                });
+            }
+            var filtereddealer = filter(dealers, ddldealerstate);
+            let dropdownValue = [...new Set(filtereddealer.map(item => item.DealerCity))];
+
+            $('#ddldealercity').empty();
+
+            var dropdown = document.getElementById(ddlId);
+
+            for (var i = 0; i < dropdownValue.length; i++) {
+
+                dropdown[dropdown.length] = new Option(dropdownValue[i], dropdownValue[i]);
+            }
+            $('#' + ddlId).multiselect('rebuild');
+            $('#ddldealername').empty();
+            $('#ddldealername').multiselect('rebuild');
+
+
+        }
+        if (filter == "dealername")
+        {
+            var ddldealercity = $('#ddldealercity option:selected').toArray().map(item => item.value);
+
+            function filter(list, filter)
+            {
+                return $.grep(list, function (obj)
+                {
+                    return $.inArray(obj.DealerCity, filter) !== -1;
+                });
+            }
+            var filtereddealer = filter(dealers, ddldealercity);
+            let dropdownValue = [...new Set(filtereddealer.map(item => item.DealerName))];
+
+            $('#ddldealername').empty();
+
+            var dropdown = document.getElementById(ddlId);
+
+            for (var i = 0; i < dropdownValue.length; i++) {
+
+                dropdown[dropdown.length] = new Option(dropdownValue[i], dropdownValue[i]);
+            }
+            $('#' + ddlId).multiselect('rebuild');
+        }
+    }
+        $(document).ready(function () {
+
+            $('.selectpickerAll').multiselect({
+
+                allSelectedText: 'All',
+                enableFiltering: true,
+                enableCaseInsensitiveFiltering: true,
+                numberDisplayed: 1,
+                buttonWidth: '140px',
+                maxHeight: 250,
+                includeSelectAllOption: true
+            });
+
+            if (role == "Admin") {
+                $('#dealerFiltersDiv').show();
+            }else {
+                $('#dealerFiltersDiv').hide();
+            }
+            enabledisableReports(role);
+        });
+
+    function enabledisableReports(roletype) {
+        if (roletype == "Admin") {
+            $('#NationalwiseDiv').show();
+            $('#ZonewiseDiv').show();
+            $('#StatewiseDiv').show();
+            $('#CitywiseDiv').show();
+            $('#DealerwiseDiv').show();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "ZoneManager") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').show();
+            $('#StatewiseDiv').show();
+            $('#CitywiseDiv').show();
+            $('#DealerwiseDiv').show();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "StateManager") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').hide();
+            $('#StatewiseDiv').show();
+            $('#CitywiseDiv').show();
+            $('#DealerwiseDiv').show();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "CityManager") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').hide();
+            $('#StatewiseDiv').hide();
+            $('#CitywiseDiv').show();
+            $('#DealerwiseDiv').show();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "DealerManager") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').hide();
+            $('#StatewiseDiv').hide();
+            $('#CitywiseDiv').hide();
+            $('#DealerwiseDiv').show();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "CREManager") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').hide();
+            $('#StatewiseDiv').hide();
+            $('#CitywiseDiv').hide();
+            $('#DealerwiseDiv').hide();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+        else if (roletype == "CRE") {
+            $('#NationalwiseDiv').hide();
+            $('#ZonewiseDiv').hide();
+            $('#StatewiseDiv').hide();
+            $('#CitywiseDiv').hide();
+            $('#DealerwiseDiv').hide();
+            $('#CampaignwiseDiv').show();
+            $('#PolicytypewiseDiv').show();
+            $('#CREwiseDiv').show();
+        }
+
+    }
+    </script>
+}
+

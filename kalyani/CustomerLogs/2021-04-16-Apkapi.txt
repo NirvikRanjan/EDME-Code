@@ -1,0 +1,79 @@
+2021-04-16 23:28:55.7869|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0/15 0-08 ? * *
+2021-04-16 23:28:56.0841|INFO|apkRegLogger|
+
+ -------- Events Scheduler Started -------------|AT: 0 30 08 ? * *
+2021-04-16 23:28:56.1888|INFO|apkRegLogger|
+ Android CallSynch Started at: 16-04-2021 11:28:56 pm
+2021-04-16 23:28:56.2287|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 16-04-2021 11:28:56 pm
+2021-04-16 23:32:32.6297|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 16/04/2021 11:32:32 pm
+ CustId: 1001320 VehId: 1336729 User: test_indus_ins
+2021-04-16 23:32:33.2750|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 16/04/2021 11:32:33 pm
+ CustId: 1001326 VehId: 1336736 User: test_indus_ins
+2021-04-16 23:32:42.5472|INFO|apkRegLogger|_insuranceBound Lock: 
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at AutoSherpa_project.Controllers.CallLoggingController._insuranceOutBoundSubmit(callinteraction callinteraction, insurancedisposition ir_disposition, ListingForm listingForm, appointmentbooked appointmentbooked, String bookingMode) in E:\Live Project\Autosherpa\KalyaniMotors\kalyani\Controllers\CallLoggingController.cs:line 10841
+Deadlock found when trying to get lock; try restarting transaction line 10841
+2021-04-16 23:32:42.5621|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 16/04/2021 11:32:42 pm
+2021-04-16 23:32:43.4288|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 16/04/2021 11:32:43 pm
+2021-04-16 23:32:43.5106|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1336736SMS Type - APPOINTMENTDateTime - 16-04-2021 11:32:43 pm
+2021-04-16 23:32:51.6538|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1336736SMS Type - APPOINTMENTDateTime - 16-04-2021 11:32:51 pm
+2021-04-16 23:35:48.8107|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 16/04/2021 11:35:48 pm
+ CustId: 1001373 VehId: 1336784 User: test_indus_ins
+2021-04-16 23:35:49.4650|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 16/04/2021 11:35:49 pm
+ CustId: 1001326 VehId: 1336736 User: test_indus_ins
+2021-04-16 23:35:52.2555|INFO|apkRegLogger|_insuranceBound Lock: 
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+   at System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   at System.Data.Entity.DbContext.SaveChanges()
+   at AutoSherpa_project.Controllers.CallLoggingController._insuranceOutBoundSubmit(callinteraction callinteraction, insurancedisposition ir_disposition, ListingForm listingForm, appointmentbooked appointmentbooked, String bookingMode) in E:\Live Project\Autosherpa\KalyaniMotors\kalyani\Controllers\CallLoggingController.cs:line 10603
+Deadlock found when trying to get lock; try restarting transaction line 10603
+2021-04-16 23:35:52.2555|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 16/04/2021 11:35:52 pm
+2021-04-16 23:35:52.3353|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 16/04/2021 11:35:52 pm
+2021-04-16 23:35:52.3682|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1336784SMS Type - APPOINTMENTDateTime - 16-04-2021 11:35:52 pm
+2021-04-16 23:35:58.3651|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1336784SMS Type - APPOINTMENTDateTime - 16-04-2021 11:35:58 pm
+2021-04-16 23:42:23.3421|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 16/04/2021 11:42:23 pm
+ CustId: 1001326 VehId: 1336736 User: test_indus_ins
+2021-04-16 23:42:31.0534|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 16/04/2021 11:42:31 pm
+2021-04-16 23:42:31.0694|INFO|apkRegLogger|
+
+ AutoSMS Code started  : vehicle Id -  1336736SMS Type - APPOINTMENTDateTime - 16-04-2021 11:42:31 pm
+2021-04-16 23:42:36.6524|INFO|apkRegLogger|
+
+ AutoSMS Code Ended  : vehicle Id -  1336736SMS Type - APPOINTMENTDateTime - 16-04-2021 11:42:36 pm
+2021-04-16 23:43:56.0390|INFO|apkRegLogger|
+ Android CallSynch Started at: 16-04-2021 11:43:56 pm
+2021-04-16 23:43:56.0390|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 16-04-2021 11:43:56 pm

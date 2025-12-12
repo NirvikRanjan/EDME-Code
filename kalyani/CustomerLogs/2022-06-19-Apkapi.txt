@@ -1,0 +1,111 @@
+2022-06-19 19:32:42.8444|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-06-19 19:32:44.7090|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-06-19 19:32:47.0685|INFO|apkRegLogger|
+ Android CallSynch Started at: 19-06-2022 7:32:47 pm
+2022-06-19 19:32:47.0685|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 19-06-2022 7:32:47 pm
+2022-06-19 19:40:44.7831|INFO|apkRegLogger|
+ Android CallSynch Started at: 19-06-2022 7:40:44 pm
+2022-06-19 19:40:44.7831|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 19-06-2022 7:40:44 pm
+2022-06-19 19:48:44.8533|INFO|apkRegLogger|
+ Android CallSynch Started at: 19-06-2022 7:48:44 pm
+2022-06-19 19:48:44.8533|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 19-06-2022 7:48:44 pm
+2022-06-19 19:52:15.8925|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 7:52:15 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-06-19 19:53:26.5642|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":137,"vehicleregno":"sd32dew32","vehicleregdate":"2022-06-02T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR IBS DRSCAST SPORT","email":"123@qwe.com","mobile":"7095287124","salutation":"Mr   ","customername":"NALLAPU","middlename":null,"lastname":"RAMESH","Address":"H.NO-4-1249 G-2 ROOM NO-2","Address_Line_2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","cityname":"RANGAREDDY","cityid":3354,"pincode":"500049","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"3191878843/000000/00","policyexpirydate":"2021-03-22","nomineename":"N MANEMMA","nomineeage":42,"nomineerelationship":"Mother","nomineerelationshipid":5,"renewwaltype":"SAOD","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":150,"RTI_Tenure":149,"Basic_IDV_Tenure":49840,"NCB_Per_Tenure":0,"NCB_Value_Tenure":153,"GST_Per":18,"grosspremium":912.0,"totalpremium":1076.16,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":21,"vehicleid":21,"disposeddate":"2022-06-19","disposedtime":"07:53 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":36,"totalgstamt":164.16,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42786,"herodealerId":24,"ResponseCode":null,"ResponseMessage":null}
+2022-06-19 19:56:13.7856|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":153,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-03-22","first_name":"NALLAPU","middle_name":null,"last_name":"RAMESH","email":"123@qwe.com","mobile_no":"7095287124","address1":"H.NO-4-1249 G-2 ROOM NO-2","address2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","address3":null,"city":3354,"state":36,"pin":"500049","nominee_name":"N MANEMMA","nominee_age":42,"nominee_relationship":5,"vehRegDate":"2022-06-02T00:00:00","vehReg1":"sd","vehReg2":"32","vehReg3":"de","vehReg4":"w32","total_premium_collected":1076,"pre_Policy_No":"3191878843/000000/00","GrossPremiumWoGST":912.0,"TotalGSTAmount":164.16,"GSTPercentage":18}
+2022-06-19 19:56:44.9282|INFO|apkRegLogger|
+ Android CallSynch Started at: 19-06-2022 7:56:44 pm
+2022-06-19 19:56:45.5556|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 19-06-2022 7:56:45 pm
+2022-06-19 19:56:46.8846|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":153,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-03-22","first_name":"NALLAPU","middle_name":null,"last_name":"RAMESH","email":"123@qwe.com","mobile_no":"7095287124","address1":"H.NO-4-1249 G-2 ROOM NO-2","address2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","address3":null,"city":3354,"state":36,"pin":"500049","nominee_name":"N MANEMMA","nominee_age":42,"nominee_relationship":5,"vehRegDate":"2022-06-02T00:00:00","vehReg1":"sd","vehReg2":"32","vehReg3":"de","vehReg4":"w32","total_premium_collected":1076,"pre_Policy_No":"3191878843/000000/00","GrossPremiumWoGST":912.0,"TotalGSTAmount":164.16,"GSTPercentage":18}
+2022-06-19 19:57:49.8451|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 19-06-2022 7:57:49 pm
+2022-06-19 20:02:13.5027|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 8:02:13 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-06-19 20:02:30.7964|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":138,"vehicleregno":"sd32dew32","vehicleregdate":"2022-06-02T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR IBS DRSCAST SPORT","email":"123@qwe.com","mobile":"7095287124","salutation":"Mr   ","customername":"NALLAPU","middlename":null,"lastname":"RAMESH","Address":"H.NO-4-1249 G-2 ROOM NO-2","Address_Line_2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","cityname":"RANGAREDDY","cityid":3354,"pincode":"500049","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"3191878843/000000/00","policyexpirydate":"2021-03-22","nomineename":"N MANEMMA","nomineeage":42,"nomineerelationship":"Mother","nomineerelationshipid":5,"renewwaltype":"SAOD","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":150,"RTI_Tenure":149,"Basic_IDV_Tenure":49840,"NCB_Per_Tenure":0,"NCB_Value_Tenure":153,"GST_Per":18,"grosspremium":912.0,"totalpremium":1076.16,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":21,"vehicleid":21,"disposeddate":"2022-06-19","disposedtime":"08:02 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":36,"totalgstamt":164.16,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42786,"herodealerId":24,"ResponseCode":null,"ResponseMessage":null}
+2022-06-19 20:02:33.5231|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":153,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-03-22","first_name":"NALLAPU","middle_name":null,"last_name":"RAMESH","email":"123@qwe.com","mobile_no":"7095287124","address1":"H.NO-4-1249 G-2 ROOM NO-2","address2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","address3":null,"city":3354,"state":36,"pin":"500049","nominee_name":"N MANEMMA","nominee_age":42,"nominee_relationship":5,"vehRegDate":"2022-06-02T00:00:00","vehReg1":"sd","vehReg2":"32","vehReg3":"de","vehReg4":"w32","total_premium_collected":1076,"pre_Policy_No":"3191878843/000000/00","GrossPremiumWoGST":912.0,"TotalGSTAmount":164.16,"GSTPercentage":18}
+2022-06-19 20:02:36.9017|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 19-06-2022 8:02:36 pm
+2022-06-19 20:02:51.1712|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 8:02:51 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-06-19 20:03:01.8586|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":139,"vehicleregno":"sd32dew32","vehicleregdate":"2022-06-02T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR IBS DRSCAST SPORT","email":"123@qwe.com","mobile":"7095287124","salutation":"Mr   ","customername":"NALLAPU","middlename":null,"lastname":"RAMESH","Address":"H.NO-4-1249 G-2 ROOM NO-2","Address_Line_2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","cityname":"RANGAREDDY","cityid":3354,"pincode":"500049","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"3191878843/000000/00","policyexpirydate":"2021-03-22","nomineename":"N MANEMMA","nomineeage":42,"nomineerelationship":"Mother","nomineerelationshipid":5,"renewwaltype":"SAOD","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":150,"RTI_Tenure":149,"Basic_IDV_Tenure":49840,"NCB_Per_Tenure":0,"NCB_Value_Tenure":153,"GST_Per":18,"grosspremium":912.0,"totalpremium":1076.16,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":21,"vehicleid":21,"disposeddate":"2022-06-19","disposedtime":"08:02 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":36,"totalgstamt":164.16,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42786,"herodealerId":24,"ResponseCode":null,"ResponseMessage":null}
+2022-06-19 20:03:42.1514|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":153,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-03-22","first_name":"NALLAPU","middle_name":null,"last_name":"RAMESH","email":"123@qwe.com","mobile_no":"7095287124","address1":"H.NO-4-1249 G-2 ROOM NO-2","address2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","address3":null,"city":3354,"state":36,"pin":"500049","nominee_name":"N MANEMMA","nominee_age":42,"nominee_relationship":5,"vehRegDate":"2022-06-02T00:00:00","vehReg1":"sd","vehReg2":"32","vehReg3":"de","vehReg4":"w32","total_premium_collected":1076,"pre_Policy_No":"3191878843/000000/00","GrossPremiumWoGST":912.0,"TotalGSTAmount":164.16,"GSTPercentage":18}
+2022-06-19 20:05:39.3305|INFO|apkRegLogger|
+ Android CallSynch Started at: 19-06-2022 8:05:39 pm
+2022-06-19 20:05:39.3305|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 19-06-2022 8:05:39 pm
+2022-06-19 20:05:40.6735|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 19-06-2022 8:05:40 pm
+2022-06-19 20:07:56.7941|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 8:07:56 pm
+ CustId: 38 VehId: 38 User: 11514_Apporva
+2022-06-19 20:08:12.3647|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":140,"vehicleregno":"AP16CG8483","vehicleregdate":"2022-06-02T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR(GLRDDRSCC)","email":"123@qwe.com","mobile":"7095863989","salutation":"Mr   ","customername":"P","middlename":"GOPINATH","lastname":null,"Address":"DNO:1-50B","Address_Line_2":"POLISETTIPADU A KONDURU GOWDA BAZAR","cityname":"Krishna","cityid":65,"pincode":"511227","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"0183964816/000001/00","policyexpirydate":"2021-04-02","nomineename":"SIVAKUMARI","nomineeage":29,"nomineerelationship":"Wife","nomineerelationshipid":1,"renewwaltype":"Package","madeexistingclaim":null,"Basic_OD_Tenure":345,"Basic_TP_Tenure":752,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":0,"RTI_Tenure":0,"Basic_IDV_Tenure":21760,"NCB_Per_Tenure":50,"NCB_Value_Tenure":173,"GST_Per":18,"grosspremium":924.0,"totalpremium":1090.32,"reasonoptingoutcpa":"Owner not having valid Driving license","existingpolicyclaim":"NO","customerid":38,"vehicleid":38,"disposeddate":"2022-06-19","disposedtime":"08:08 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":2,"totalgstamt":166.32,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42788,"herodealerId":11,"ResponseCode":null,"ResponseMessage":null}
+2022-06-19 20:14:14.0151|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"NODL","policy_type":"Package","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":173,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-04-02","first_name":"P","middle_name":"GOPINATH","last_name":null,"email":"123@qwe.com","mobile_no":"7095863989","address1":"DNO:1-50B","address2":"POLISETTIPADU A KONDURU GOWDA BAZAR","address3":null,"city":65,"state":2,"pin":"511227","nominee_name":"SIVAKUMARI","nominee_age":29,"nominee_relationship":1,"vehRegDate":"2022-06-02T00:00:00","vehReg1":"AP","vehReg2":"16","vehReg3":"CG","vehReg4":"8483","total_premium_collected":1090,"pre_Policy_No":"0183964816/000001/00","GrossPremiumWoGST":924.0,"TotalGSTAmount":166.32,"GSTPercentage":18}
+2022-06-19 20:14:18.0751|INFO|apkRegLogger|
+
+ -------- heroibipl OutBlock Exception --------
+The operation has timed out
+2022-06-19 20:14:18.0751|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 19-06-2022 8:14:18 pm
+2022-06-19 20:15:12.8116|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 8:15:12 pm
+ CustId: 21 VehId: 21 User: 11514_Apporva
+2022-06-19 20:15:26.5634|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":141,"vehicleregno":"sd32dew33","vehicleregdate":"2022-06-18T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR IBS DRSCAST SPORT","email":"test@gmail.com","mobile":"7095287124","salutation":"Mr   ","customername":"NALLAPU","middlename":null,"lastname":"RAMESH","Address":"H.NO-4-1249 G-2 ROOM NO-2","Address_Line_2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","cityname":"RANGAREDDY","cityid":3354,"pincode":"500049","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"3191878843/000000/00","policyexpirydate":"2021-03-22","nomineename":"N MANEMMA","nomineeage":42,"nomineerelationship":"Mother","nomineerelationshipid":5,"renewwaltype":"SAOD","madeexistingclaim":null,"Basic_OD_Tenure":0,"Basic_TP_Tenure":0,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":150,"RTI_Tenure":149,"Basic_IDV_Tenure":49840,"NCB_Per_Tenure":0,"NCB_Value_Tenure":153,"GST_Per":18,"grosspremium":912.0,"totalpremium":1076.16,"reasonoptingoutcpa":null,"existingpolicyclaim":"NO","customerid":21,"vehicleid":21,"disposeddate":"2022-06-19","disposedtime":"08:15 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":36,"totalgstamt":164.16,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42786,"herodealerId":24,"ResponseCode":null,"ResponseMessage":null}
+2022-06-19 20:16:18.9472|INFO|apkRegLogger|
+
+ heroibipl Create Policy Request: {"cpA_Tenure":1,"cpA_Reason":"","policy_type":"SAOD","policy_tenure":1,"claim_on_previous_policy":"NO","current_ncb":153,"cpa_opted":"Y","zd_opted":"Y","rti_opted":"Y","risk_start_date":"2022-06-22","policy_expiry_date":"2021-03-22","first_name":"NALLAPU","middle_name":null,"last_name":"RAMESH","email":"test@gmail.com","mobile_no":"7095287124","address1":"H.NO-4-1249 G-2 ROOM NO-2","address2":"SERILINGAMPALLY MARTHANDA NAGAR NEW HAFEEZPET","address3":null,"city":3354,"state":36,"pin":"500049","nominee_name":"N MANEMMA","nominee_age":42,"nominee_relationship":5,"vehRegDate":"2022-06-18T00:00:00","vehReg1":"sd","vehReg2":"32","vehReg3":"de","vehReg4":"w33","total_premium_collected":1076,"pre_Policy_No":"3191878843/000000/00","GrossPremiumWoGST":912.0,"TotalGSTAmount":164.16,"GSTPercentage":18}
+2022-06-19 20:16:24.1867|INFO|apkRegLogger|
+
+ heroibipl Create Policy Code Ended: 19-06-2022 8:16:24 pm
+2022-06-19 20:18:36.9451|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 19/06/2022 8:18:36 pm
+ CustId: 38 VehId: 38 User: 11514_Apporva
+2022-06-19 20:18:43.6781|INFO|apkRegLogger|
+
+ -------- Create Policy Sending Data to heroibipl--------
+{"id":142,"vehicleregno":"AP16CG8483","vehicleregdate":"2022-06-18T00:00:00","modelname":"Hero MotoCorp","modelvarinat":"GLAMOUR(GLRDDRSCC)","email":"123@qwe.com","mobile":"7095863989","salutation":"Mr   ","customername":"P","middlename":"GOPINATH","lastname":null,"Address":"DNO:1-50B","Address_Line_2":"POLISETTIPADU A KONDURU GOWDA BAZAR","cityname":"Krishna","cityid":65,"pincode":"511227","insurancecompany":"Tata AIG General Insurance Co. Ltd.","policynumber":"0183964816/000001/00","policyexpirydate":"2021-04-02","nomineename":"SIVAKUMARI","nomineeage":29,"nomineerelationship":"Wife","nomineerelationshipid":1,"renewwaltype":"Package","madeexistingclaim":null,"Basic_OD_Tenure":345,"Basic_TP_Tenure":752,"Geo_OD_Ext":0,"Geo_TP_Ext":0,"CompulsoryPremium_Amt":0,"Zero_Dep_Tenure":0,"RTI_Tenure":0,"Basic_IDV_Tenure":21760,"NCB_Per_Tenure":50,"NCB_Value_Tenure":173,"GST_Per":18,"grosspremium":924.0,"totalpremium":1090.32,"reasonoptingoutcpa":"Owner having standalone PA Cover(Motor Product)","existingpolicyclaim":"NO","customerid":38,"vehicleid":38,"disposeddate":"2022-06-19","disposedtime":"08:18 pm","packagetype":"Package1","policytenure":1,"cpaopted":"Y","cpatenure":null,"additionalcoverzerodep":"Y","additionalcoverRTI":"Y","riskstartdate":null,"state":null,"stateid":2,"totalgstamt":166.32,"creID":5,"creName":"11514_Apporva","campaignName":"Renewal","ispolicygenerated":false,"insuranceassignedinteractionId":42788,"herodealerId":11,"ResponseCode":null,"ResponseMessage":null}

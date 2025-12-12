@@ -1,0 +1,39 @@
+2025-07-17 12:44:03.5609|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-07-17 12:44:03.6857|INFO|apkRegLogger|
+
+2025-07-17 12:44:03.7054|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Started ============= | AT: 17-07-2025 12:44:03 pm
+2025-07-17 12:44:03.7136|INFO|apkRegLogger|[INFO] Scheduler started successfully.
+2025-07-17 12:44:03.7448|INFO|apkRegLogger|[INFO] Job scheduled with CRON expression: 0 30 19 * * ? *
+2025-07-17 12:44:03.7612|INFO|apkRegLogger|============= Renewal Data Job Scheduler Initialization Completed ============= | AT: 17-07-2025 12:44:03 pm
+
+2025-07-17 12:44:03.7757|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-07-2025 12:44:03 pm
+2025-07-17 12:44:03.7757|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-07-2025 12:44:03 pm
+2025-07-17 12:44:08.0571|INFO|apkRegLogger|
+
+2025-07-17 12:44:08.0571|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Started ============= | AT: 17-07-2025 12:44:08 pm
+2025-07-17 12:44:08.0571|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-17 12:44:08.0571|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 6 ? * MON *
+2025-07-17 12:44:08.0571|INFO|apkRegLogger|============= Get Master Location Data Job Scheduler Initialization Completed ============= | AT: 17-07-2025 12:44:08 pm
+
+2025-07-17 12:44:08.1152|INFO|apkRegLogger|
+
+2025-07-17 12:44:08.1152|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Started ============= | AT: 17-07-2025 12:44:08 pm
+2025-07-17 12:44:08.1152|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-17 12:44:08.1152|INFO|apkRegLogger|Job scheduled with CRON expression: 0 0 7 * * ? *
+2025-07-17 12:44:08.1152|INFO|apkRegLogger|============= Online Payment Verification Job Scheduler Initialization Completed ============= | AT: 17-07-2025 12:44:08 pm
+
+2025-07-17 12:44:16.1220|INFO|apkRegLogger|
+
+2025-07-17 12:44:16.3147|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Started ============= | AT: 17-07-2025 12:44:16 pm
+2025-07-17 12:44:16.8091|INFO|apkRegLogger|Scheduler started successfully.
+2025-07-17 12:44:17.9866|INFO|apkRegLogger|Job scheduled with CRON expression: 0 30 7 * * ? *
+2025-07-17 12:44:19.8452|INFO|apkRegLogger|============= Get Previous Policy Number Job Scheduler Initialization Completed ============= | AT: 17-07-2025 12:44:19 pm
+
+2025-07-17 12:44:28.8145|INFO|apkRegLogger|
+
+2025-07-17 12:44:29.6353|INFO|apkRegLogger|============= Get Previous Policy Number API Job Started ============= | AT: 17-07-2025 12:44:29 pm
+2025-07-17 12:44:38.8456|INFO|apkRegLogger|Application Site Root: /

@@ -1,0 +1,361 @@
+2022-02-11 00:07:23.4618|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:07:23 am
+2022-02-11 00:07:23.4901|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:07:23 am
+2022-02-11 00:15:23.4752|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:15:23 am
+2022-02-11 00:15:23.4752|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:15:23 am
+2022-02-11 00:19:54.7435|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 00:19:54.8795|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 00:19:56.8622|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:19:56 am
+2022-02-11 00:19:56.8942|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:19:56 am
+2022-02-11 00:27:54.8956|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:27:54 am
+2022-02-11 00:27:54.8956|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:27:54 am
+2022-02-11 00:35:54.8913|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:35:54 am
+2022-02-11 00:35:54.8953|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:35:54 am
+2022-02-11 09:52:41.7048|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 09:52:42.0987|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 09:52:44.4027|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 9:52:44 am
+2022-02-11 09:52:44.4027|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 9:52:44 am
+2022-02-11 10:00:42.1175|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:00:42 am
+2022-02-11 10:00:42.1175|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:00:42 am
+2022-02-11 10:08:42.1088|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:08:42 am
+2022-02-11 10:08:42.1088|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:08:42 am
+2022-02-11 10:16:42.1053|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:16:42 am
+2022-02-11 10:16:42.1053|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:16:42 am
+2022-02-11 10:24:42.1136|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:24:42 am
+2022-02-11 10:24:42.1136|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:24:42 am
+2022-02-11 10:32:53.2408|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 10:32:53.3048|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 10:32:53.5596|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:32:53 am
+2022-02-11 10:32:53.5596|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:32:53 am
+2022-02-11 10:34:50.1754|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":975,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"4","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":31,"proposerstatename":"TAMIL NADU","proposercity":1897,"proposercityname":"Erode","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8652760258,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"anjali@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-02T00:00:00","registrationno":"f","registrationno2":"12","registrationno3":"m","registrationno4":"4563","BasicIDV":"1200","effectivedate":"2022-02-11T00:00:00","expirydate":"2023-02-10T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"4"}
+2022-02-11 10:34:52.7656|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"4","Vehicle_Class":"P","RTOId":"884","zd_opted":"Y","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"02-11-2022","Prev_Policy_ExpiryDate":"02-10-2023","PolicyeffetiveDate":"02-11-2022","PolicyexpiryDate":"02-10-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"02-11-2022","KitMgtDate":"02-11-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-02-11 10:40:53.3175|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:40:53 am
+2022-02-11 10:40:53.3175|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:40:53 am
+2022-02-11 10:41:35.5834|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 10:41:35.6514|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 10:41:35.9552|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:41:35 am
+2022-02-11 10:41:35.9552|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:41:35 am
+2022-02-11 10:44:42.7565|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":976,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"2","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":31,"proposerstatename":"TAMIL NADU","proposercity":1897,"proposercityname":"Erode","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8652760258,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"anjali@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-02T00:00:00","registrationno":"ff","registrationno2":"12","registrationno3":"mn","registrationno4":"4563","BasicIDV":"1200","effectivedate":"2022-02-11T00:00:00","expirydate":"2023-02-10T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"2"}
+2022-02-11 10:44:45.2902|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"2","Vehicle_Class":"P","RTOId":"884","zd_opted":"Y","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"02-11-2022","Prev_Policy_ExpiryDate":"02-10-2023","PolicyeffetiveDate":"02-11-2022","PolicyexpiryDate":"02-10-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"02-11-2022","KitMgtDate":"02-11-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-02-11 10:46:08.1415|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":977,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"2","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":31,"proposerstatename":"TAMIL NADU","proposercity":1897,"proposercityname":"Erode","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8652760258,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"anjali@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-02T00:00:00","registrationno":"ff","registrationno2":"12","registrationno3":"mn","registrationno4":"4563","BasicIDV":"1200","effectivedate":"2022-02-11T00:00:00","expirydate":"2023-02-10T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"2"}
+2022-02-11 10:46:09.6215|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"2","Vehicle_Class":"P","RTOId":"884","zd_opted":"Y","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"02-11-2022","Prev_Policy_ExpiryDate":"02-10-2023","PolicyeffetiveDate":"02-11-2022","PolicyexpiryDate":"02-10-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"02-11-2022","KitMgtDate":"02-11-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-02-11 10:49:35.6771|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 10:49:35 am
+2022-02-11 10:49:35.6771|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 10:49:35 am
+2022-02-11 11:05:35.6667|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:05:35 am
+2022-02-11 11:05:35.6667|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:05:35 am
+2022-02-11 11:13:35.6671|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:13:35 am
+2022-02-11 11:13:35.6671|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:13:35 am
+2022-02-11 11:21:35.6720|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:21:35 am
+2022-02-11 11:21:35.6720|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:21:35 am
+2022-02-11 11:29:35.6648|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:29:35 am
+2022-02-11 11:29:35.6648|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:29:35 am
+2022-02-11 11:31:56.5674|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 11:31:56.6294|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 11:31:57.0661|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:31:57 am
+2022-02-11 11:31:57.0661|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:31:57 am
+2022-02-11 11:33:55.3043|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":978,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"2","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":31,"proposerstatename":"TAMIL NADU","proposercity":1897,"proposercityname":"Erode","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8652760258,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"anjali@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-02T00:00:00","registrationno":"ff","registrationno2":"12","registrationno3":"mn","registrationno4":"4563","BasicIDV":"1200","effectivedate":"2022-02-11T00:00:00","expirydate":"2023-02-10T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"2"}
+2022-02-11 11:33:59.9497|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"2","Vehicle_Class":"P","RTOId":"884","zd_opted":"Y","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"02-11-2022","Prev_Policy_ExpiryDate":"02-10-2023","PolicyeffetiveDate":"02-11-2022","PolicyexpiryDate":"02-10-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"02-11-2022","KitMgtDate":"02-11-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-02-11 11:39:56.6399|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:39:56 am
+2022-02-11 11:39:56.6399|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:39:56 am
+2022-02-11 11:47:56.6475|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:47:56 am
+2022-02-11 11:47:56.6475|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:47:56 am
+2022-02-11 11:55:56.6421|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 11:55:56 am
+2022-02-11 11:55:56.6461|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 11:55:56 am
+2022-02-11 12:03:56.6461|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:03:56 pm
+2022-02-11 12:03:56.6461|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:03:56 pm
+2022-02-11 12:11:56.6619|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:11:56 pm
+2022-02-11 12:11:56.6619|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:11:56 pm
+2022-02-11 12:15:44.9115|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 12:15:44.9604|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 12:15:45.5331|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:15:45 pm
+2022-02-11 12:15:45.5331|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:15:45 pm
+2022-02-11 12:23:19.0840|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 12:23:19.1469|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 12:23:19.3428|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:23:19 pm
+2022-02-11 12:23:19.3428|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:23:19 pm
+2022-02-11 12:31:19.1591|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:31:19 pm
+2022-02-11 12:31:19.1777|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:31:19 pm
+2022-02-11 12:39:19.1650|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:39:19 pm
+2022-02-11 12:39:19.1650|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:39:19 pm
+2022-02-11 12:47:19.1534|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:47:19 pm
+2022-02-11 12:47:19.1534|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:47:19 pm
+2022-02-11 12:55:19.1531|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 12:55:19 pm
+2022-02-11 12:55:19.1531|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 12:55:19 pm
+2022-02-11 13:03:19.1612|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 1:03:19 pm
+2022-02-11 13:03:19.1612|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 1:03:19 pm
+2022-02-11 13:52:40.4140|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 1:52:40 pm
+2022-02-11 13:52:40.4140|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 1:52:40 pm
+2022-02-11 13:59:34.0581|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 1:59:34 pm
+2022-02-11 13:59:34.0841|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 1:59:34 pm
+2022-02-11 14:02:21.7754|INFO|apkRegLogger|
+
+ -------- Winback Policy AutoJob--------
+{"id":979,"nonNsure":false,"cubiccapacity":125,"previouspolicyno":0,"insurancecompany":"13","insurancecompanyname":null,"officeaddress":null,"dateoffirstsale":"2019-01-02T00:00:00","yearofmanufacture":"2018","policystartdate":null,"previouspolicytenure":0,"policyenddate":null,"premium":0,"vehicleinspection":false,"SAODvehicleInspectioncheckBox":false,"inspectionnumber":0,"inspectiondate":null,"transfercase":false,"lastpolicy":false,"ncbdiscount":"0","entitledNCBdiscount":null,"proof":false,"whetheravailedclaims":null,"previouspolicycopy":false,"certificationfrominsure":false,"undertakingfromcustomer":false,"noproof":false,"customertype":false,"product":"2","policytenure":1,"oem":"2","proposerdetails":false,"Proposertype":"I","proposername":"Mr","ProposerFirstName":"VEMULA","ProposerMiddleName":null,"ProposerLastName":"RAVI","contactperson":null,"ContactpersonFirstName":null,"ContactpersonMiddleName":null,"ContactpersonLastName":null,"gender":"M","CompanyName":null,"addressline1":"S/O VEMULA TIRUPATHAIAH PLOT NO:32,JAGADEESH NAGAR COLONY,","addressline2":null,"addressline3":null,"proposerstate":31,"proposerstatename":"TAMIL NADU","proposercity":1897,"proposercityname":"Erode","registrationnumber":null,"pincode":500016,"PincodeDropdownOne":null,"PincodeDropdownTwo":0,"registergst":"No","Gstno":null,"fax":null,"fax2":null,"Designation":null,"mobilenumber":8652760258,"SecondMobileNumber":0,"designationmobilenumber":0,"designationlandline":522,"designationlandline2":0,"designationlandline3":522,"designationlandline4":0,"landlinenumber":null,"emailid":"anjali@gmail.com","dateofbirth":"1995-06-10T00:00:00","RadioButtonDateofBirth":false,"age":0,"RadioButton_Age":false,"agebracket":null,"RadioButton_AgeBracket":false,"maritalstatus":"S","idproof":"Voter ID No","IdproofValue":"999999999","policy_type":"SAOD","vehicleclass":"P","vehicleclassprivate":null,"vehicleclasscommercial":null,"vehicleclasshirertheft":null,"chkvehicleclasshirertheft":false,"dateoffirst":null,"rto":"884","frameno":"MBLJAS028J9G04877","engineno":"JA06EHJ9G40233","modelname":"1211","color":"SBK","colorDropDown":null,"nomineegender":"F","exshowroomprice":64100.0,"tariff":null,"dateofregistration":"2022-02-02T00:00:00","registrationno":"ff","registrationno2":"12","registrationno3":"mn","registrationno4":"4563","BasicIDV":"1200","effectivedate":"2022-02-11T00:00:00","expirydate":"2023-02-10T00:00:00","nomineename":"VEMULA BOJJAMMA","nomineeage":41,"relation":"Mother","fueltype":"Petrol","inbuiltcng":false,"externalcng":false,"ExternalKitPrice":null,"ExternalCNGDateOfFitment":null,"inbuilt":null,"external":null,"cpatenure":"0","CPAexclusionCode":null,"CPAexclusionText":null,"CPAreason":"NODL","Branch_Office_Location_Code":null,"Anniversary_Date":null,"ndcover":true,"NDPlusCover":null,"NDPlusCoverCheckBox":false,"TPPDExtendDiscount":null,"TPPDExtendedDiscountChkBox":false,"rticover":false,"HandicapedDiscount":false,"accessories":false,"AccessoriesCategory":null,"AccessoriesName":null,"FitmentAmount":null,"FitmentDate":null,"GeographicalAreaExtension":null,"GeographicalAreaCheckBox":false,"GeoGraphicalArea_Nepal":false,"GeoGraphicalArea_Bangladesh":false,"GeoGraphicalArea_Srilanka":false,"GeoGraphicalArea_Bhutan":false,"NOIPaidDrvrnCleaners":null,"SOIPaidDrvrnCleaners":null,"NOIEmpOTPaidDrvrnCleaners":null,"SOIEmpOTPaidDrvrnCleaners":null,"MAP_CP_Financer_Mapping":null,"MAP_CP_Financer":null,"IsIMT43":false,"IsIMT44":false,"IsAntiTheft":false,"is_AA_membership":false,"AddOn_Id":0,"OPCover_Amt":0,"OOCover_Amt":0,"PDCover_Amt":0,"VoluntryDisc":0,"VoluntryDiscCheckBox":false,"EntitledNCBDisocunt":false,"financername":null,"financecompanybranch":null,"agreementtypewithfinancer":null,"tenure":null,"loanamount":0,"downpayment":0,"emi":0,"interest":null,"paymentmode":"IPG","incomelevel":"5000To10000","Membership_No":0,"educationlevel":"12th","occupationtype":null,"AnnualTurnover":null,"BusinessIndustry":null,"employeename":null,"PACoverCheckBox":false,"PACoverOtherthanOwnerDriver":null,"Suminsuredperperson":null,"Un_NamedDriver":false,"Un_NamesdPassenger":false,"InstrumentNo":null,"InstrumentDate":null,"DrawnOn":null,"parkingtype":null,"averagekmdriven":20,"excutivename":"10852_Apporva","TPPreviousPolicyNo":0,"Tpinsurancecompany":null,"tpofficeaddress":"414,Veer Savarkar Marg,Near Siddhi Vinayak Te","tpdateoffirstsale":"2019-02-01T00:00:00","tpyearofmanufacture":null,"tppolicystartdate":"2019-02-01T00:00:00","tppolicyenddate":"2024-01-31T00:00:00","Odpolicynumber":0,"odinsurancecompany":"13","odstartdate":"2019-02-01T00:00:00","odenddate":"2020-01-31T00:00:00","previouscpatenure":null,"previouscpastartdate":null,"previouscpaenddate":null,"tppremiun":"5708","saodinspectionnumber":0,"SAODTransferCase":false,"SAODproof":false,"SAODwhetherAvailed":"No","ODRenewalPolicy":false,"customerId":13400,"vehicleid":28975,"productId":"2"}
+2022-02-11 14:02:25.4892|INFO|apkRegLogger|
+
+ Winback Policy AutoJob: {"ExShowroom_Price":64100.0,"Productid":"2","Vehicle_Class":"P","RTOId":"884","zd_opted":"Y","FirstSaleDate":"02-01-2019","Prev_Policy_EffectiveDate":"02-11-2022","Prev_Policy_ExpiryDate":"02-10-2023","PolicyeffetiveDate":"02-11-2022","PolicyexpiryDate":"02-10-2023","Cubic_Capacity":125,"policy_tenure":1,"IsIMT43":false,"IsIMT44":false,"CPA_Tenure":"0","cpa_opted":"Y","rti_opted":"N","OemDMapId":"2","Pre_Policy_No":0,"policy_type":"SAOD","AssessoryType":"","Fitmentdate":"02-11-2022","KitMgtDate":"02-11-2022","ExtCNGPrice":null,"BiFuelType":"Petrol","OOCover_Amt":0,"PDCover_Amt":0,"OPCover_Amt":0,"VoluntryDisc":0,"Model_Id":"1211","isHandicapped":false,"AddOn_Id":0,"GEOID":0,"fkCP_id":"13","claim_on_previous_policy":0,"current_ncb":"1","IsAntiTheft":false,"is_AA_membership":false,"TariffDisc":"10"}
+2022-02-11 14:07:19.1569|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 2:07:19 pm
+2022-02-11 14:07:19.1569|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 2:07:19 pm
+2022-02-11 14:55:19.1667|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 2:55:19 pm
+2022-02-11 14:55:19.1667|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 2:55:19 pm
+2022-02-11 15:03:19.1528|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:03:19 pm
+2022-02-11 15:03:19.1528|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:03:19 pm
+2022-02-11 15:11:19.1640|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:11:19 pm
+2022-02-11 15:11:19.1640|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:11:19 pm
+2022-02-11 15:19:19.1712|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:19:19 pm
+2022-02-11 15:19:19.1712|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:19:19 pm
+2022-02-11 15:27:19.1574|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:27:19 pm
+2022-02-11 15:27:19.1574|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:27:19 pm
+2022-02-11 15:32:14.8348|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 15:32:14.9628|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 15:32:15.6204|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:32:15 pm
+2022-02-11 15:32:15.6204|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:32:15 pm
+2022-02-11 15:40:14.9797|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:40:14 pm
+2022-02-11 15:40:14.9797|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:40:14 pm
+2022-02-11 15:55:24.4594|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 15:55:24.6101|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 15:55:24.6680|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 3:55:24 pm
+2022-02-11 15:55:24.6680|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 3:55:24 pm
+2022-02-11 16:03:24.6242|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:03:24 pm
+2022-02-11 16:03:24.6242|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:03:24 pm
+2022-02-11 16:11:24.6189|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:11:24 pm
+2022-02-11 16:11:24.6189|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:11:24 pm
+2022-02-11 16:19:24.6264|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:19:24 pm
+2022-02-11 16:19:24.6296|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:19:24 pm
+2022-02-11 16:27:24.6195|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:27:24 pm
+2022-02-11 16:27:24.6195|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:27:24 pm
+2022-02-11 16:35:24.6181|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:35:24 pm
+2022-02-11 16:35:24.6181|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:35:24 pm
+2022-02-11 16:42:05.2723|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 16:42:05.3872|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 16:42:05.6671|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:42:05 pm
+2022-02-11 16:42:05.6671|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:42:05 pm
+2022-02-11 16:50:05.4033|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:50:05 pm
+2022-02-11 16:50:05.4033|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:50:05 pm
+2022-02-11 16:58:05.3988|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 4:58:05 pm
+2022-02-11 16:58:05.3988|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 4:58:05 pm
+2022-02-11 17:06:05.4113|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 5:06:05 pm
+2022-02-11 17:06:05.4113|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 5:06:05 pm
+2022-02-11 17:14:05.4004|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 5:14:05 pm
+2022-02-11 17:14:05.4004|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 5:14:05 pm
+2022-02-11 17:22:05.4131|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 5:22:05 pm
+2022-02-11 17:22:05.4131|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 5:22:05 pm
+2022-02-11 17:30:05.4084|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 5:30:05 pm
+2022-02-11 17:30:05.4084|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 5:30:05 pm
+2022-02-11 17:38:05.4006|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 5:38:05 pm
+2022-02-11 17:38:05.4006|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 5:38:05 pm
+2022-02-11 18:02:05.4022|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:02:05 pm
+2022-02-11 18:02:05.4022|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:02:05 pm
+2022-02-11 18:05:03.3357|INFO|apkRegLogger|
+
+ -------- Cron Job MySql To MsSql 0 0 3 1/1 * ? * : 
+2022-02-11 18:05:03.4286|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2022-02-11 18:05:04.0166|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:05:04 pm
+2022-02-11 18:05:04.0166|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:05:04 pm
+2022-02-11 18:13:03.4451|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:13:03 pm
+2022-02-11 18:13:03.4451|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:13:03 pm
+2022-02-11 18:21:03.4472|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:21:03 pm
+2022-02-11 18:21:03.4472|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:21:03 pm
+2022-02-11 18:29:03.4422|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:29:03 pm
+2022-02-11 18:29:03.4422|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:29:03 pm
+2022-02-11 18:37:03.4367|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:37:03 pm
+2022-02-11 18:37:03.4367|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:37:03 pm
+2022-02-11 18:45:03.4424|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:45:03 pm
+2022-02-11 18:45:03.4424|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:45:03 pm
+2022-02-11 18:53:03.4455|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 6:53:03 pm
+2022-02-11 18:53:03.4455|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 6:53:03 pm
+2022-02-11 19:01:03.4436|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 7:01:03 pm
+2022-02-11 19:01:03.4436|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 7:01:03 pm
+2022-02-11 19:09:03.4376|INFO|apkRegLogger|
+ Android CallSynch Started at: 11-02-2022 7:09:03 pm
+2022-02-11 19:09:03.4376|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 11-02-2022 7:09:03 pm

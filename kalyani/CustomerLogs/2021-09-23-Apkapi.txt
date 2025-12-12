@@ -1,0 +1,7 @@
+2021-09-23 16:24:15.0970|INFO|apkRegLogger|
+
+------- INSURANCE Submition started : 23/09/2021 4:24:15 pm
+ CustId: 1558 VehId: 5663 User: barti1_cre
+2021-09-23 16:24:17.0696|INFO|apkRegLogger|
+
+------- INSURANCE Submition Ended : 23/09/2021 4:24:17 pm

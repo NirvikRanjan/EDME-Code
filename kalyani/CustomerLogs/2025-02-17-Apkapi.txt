@@ -1,0 +1,122 @@
+2025-02-17 09:53:29.5680|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-02-17 09:53:29.6680|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-02-17 09:53:29.7759|INFO|apkRegLogger|
+
+ -------- Renewal Data Job Scheduler -------
+'/' must be followed by an integer.
+2025-02-17 09:53:29.9996|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 9:53:29 am
+2025-02-17 09:53:29.9996|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 9:53:30 am
+2025-02-17 10:00:00.0378|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 17-02-2025 10:00:00 am
+2025-02-17 10:00:00.0378|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 17-02-2025 10:00:00 am
+2025-02-17 10:01:29.6673|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:01:29 am
+2025-02-17 10:01:29.6673|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:01:29 am
+2025-02-17 10:09:29.6524|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:09:29 am
+2025-02-17 10:09:29.6524|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:09:29 am
+2025-02-17 10:13:47.4486|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------17/02/2025 10:13:47 am
+
+
+2025-02-17 10:13:50.4442|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2025-02-17 10:13:50.4442|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2025-02-17 10:23:52.3085|INFO|apkRegLogger|
+
+ -------- Change Assignment Started--------17/02/2025 10:23:52 am
+
+
+2025-02-17 10:23:55.7329|INFO|apkRegLogger|
+
+ -------- Year Aded--------
+
+
+2025-02-17 10:23:55.7415|INFO|apkRegLogger|
+
+ -------- CRE Aded--------
+
+
+2025-02-17 10:25:29.6545|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:25:29 am
+2025-02-17 10:25:29.6545|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:25:29 am
+2025-02-17 10:33:29.6618|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:33:29 am
+2025-02-17 10:33:29.6618|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:33:29 am
+2025-02-17 10:41:29.6534|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:41:29 am
+2025-02-17 10:41:29.6534|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:41:29 am
+2025-02-17 10:49:29.6634|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:49:29 am
+2025-02-17 10:49:29.6634|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:49:29 am
+2025-02-17 10:57:29.6617|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 10:57:29 am
+2025-02-17 10:57:29.6617|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 10:57:29 am
+2025-02-17 11:00:00.0062|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 17-02-2025 11:00:00 am
+2025-02-17 11:00:00.0207|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 17-02-2025 11:00:00 am
+2025-02-17 11:05:29.6483|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:05:29 am
+2025-02-17 11:05:29.6640|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:05:29 am
+2025-02-17 11:13:29.6514|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:13:29 am
+2025-02-17 11:13:29.6629|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:13:29 am
+2025-02-17 11:21:29.6526|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:21:29 am
+2025-02-17 11:21:29.6662|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:21:29 am
+2025-02-17 11:29:29.6467|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:29:29 am
+2025-02-17 11:29:29.6467|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:29:29 am
+2025-02-17 11:37:29.6490|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:37:29 am
+2025-02-17 11:37:29.6490|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:37:29 am
+2025-02-17 11:45:29.6621|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 11:45:29 am
+2025-02-17 11:45:29.6621|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 11:45:29 am
+2025-02-17 12:59:51.8513|INFO|apkRegLogger|
+
+ -------- Firebase Cron Scheduler Started -------------|AT: 0 0 19 1/1 * ? *
+2025-02-17 12:59:51.9028|INFO|apkRegLogger|
+
+ -------- PaymentVerifyAPI Cron Scheduler Started -------------|AT: 0 20 20 ? * * *
+2025-02-17 12:59:51.9590|INFO|apkRegLogger|
+
+ -------- Renewal Data Job Scheduler -------
+'/' must be followed by an integer.
+2025-02-17 12:59:52.2115|INFO|apkRegLogger|
+ Android CallSynch Started at: 17-02-2025 12:59:52 pm
+2025-02-17 12:59:52.2115|INFO|apkRegLogger|
+ Android CallSynch Stopped at: 17-02-2025 12:59:52 pm
+2025-02-17 13:00:00.0315|INFO|apkRegLogger|
+ PaymentVerifyAPI Api Started at: 17-02-2025 1:00:00 pm
+2025-02-17 13:00:00.0315|INFO|apkRegLogger|
+ PaymentVerifyAPI StartApi Stopped at: 17-02-2025 1:00:00 pm
